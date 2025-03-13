@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:51
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        13/Mar/2025  15:31:44
 # Copyright 1999-2014 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
@@ -115,7 +115,7 @@
 #
 ###############################################################################
 
-C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c
+C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c
       1          /**
       2           *  @file
       3           *  @brief      Spi GDM module for MV31x and MKV30x implements the Spi Standard API (Application Programming Interface).
@@ -152,19 +152,19 @@ C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c
 
   extern const volatile GPIO_DEF * GPIO_PORT_LIST[];
   ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio_macros.h",34  Remark[Pe083]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Gpio\Gpio_macros.h",34  Remark[Pe083]: 
           type qualifier specified more than once
 
   PACKED typedef struct
          ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\API\Gpio\Gpio.h",41  Remark[Pe082]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\API\Gpio\Gpio.h",41  Remark[Pe082]: 
           storage class is not first
      34          #include "string.h"
      35          #include "Dma.h"
 
   }DMA_INIT_TYPE;;
                  ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Dma\Dma_def.h",84  Remark[Pe381]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Dma\Dma_def.h",84  Remark[Pe381]: 
           extra ";" ignored
      36          #include "Spi_prm.h"
      37          
@@ -870,7 +870,7 @@ Warning[Pe940]: missing return statement at end of non-void function
 
   BOOL_TYPE Spi__Write(SPI_ENUM_DEF spi ,uint8 * buf ,uint16 size )
                                     ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",484  Remark[Pe826]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",484  Remark[Pe826]: 
           parameter "spi" was never referenced
     498          
     499          //---------------------------------------------------------------------------------------------------------------------
@@ -1023,17 +1023,17 @@ Remark[Pe826]: parameter "spi" was never referenced
 
   void Spi__SetConfiguration(SPI_ENUM_DEF spi, SPI_POLARITY_TYPE pol,SPI_EDGE_TYPE edge, SPI_ORDER_TYPE order)
                                                                  ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
           parameter "pol" was never referenced
 
   void Spi__SetConfiguration(SPI_ENUM_DEF spi, SPI_POLARITY_TYPE pol,SPI_EDGE_TYPE edge, SPI_ORDER_TYPE order)
                                                                                    ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
           parameter "edge" was never referenced
 
   void Spi__SetConfiguration(SPI_ENUM_DEF spi, SPI_POLARITY_TYPE pol,SPI_EDGE_TYPE edge, SPI_ORDER_TYPE order)
                                                                                                         ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",594  Remark[Pe826]: 
           parameter "order" was never referenced
     595          {
     596          
@@ -2357,29 +2357,29 @@ Remark[Pe826]: parameter "dma_engine" was never referenced
 
       static SPI_BUFFER_TYPE Spi0_Tx_Write;
                              ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",287  Warning[Pe550]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",287  Warning[Pe550]: 
           variable "Spi0_Tx_Write" was set but never used
 
       static SPI_BUFFER_TYPE Spi0_Tx_Read;
                              ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",288  Warning[Pe550]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",288  Warning[Pe550]: 
           variable "Spi0_Tx_Read" was set but never used
 
                   handle->last_command = (handle->last_command & 0xffff0000U) | handle->tx_data[bufferIndex - 1];
                   ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",825  Warning[Pa082]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",825  Warning[Pa082]: 
           undefined behavior: the order of volatile accesses is undefined in
           this statement
 
                       handle->last_command = (handle->last_command & 0xffff0000U) | handle->tx_data[bufferIndex - 2]
                       ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",831  Warning[Pa082]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",831  Warning[Pa082]: 
           undefined behavior: the order of volatile accesses is undefined in
           this statement
 
                       handle->last_command = (handle->last_command & 0xffff0000U)
                       ^
-"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c",836  Warning[Pa082]: 
+"C:\Data\Repository\WindyStrip_DTC_Orca\source\XCategory\Driver\Spi\Spi.c",836  Warning[Pa082]: 
           undefined behavior: the order of volatile accesses is undefined in
           this statement
    1139          {

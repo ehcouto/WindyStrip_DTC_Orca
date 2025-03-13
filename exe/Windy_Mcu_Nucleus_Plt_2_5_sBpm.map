@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.20.5.7591/W32 for ARM                 19/Nov/2024  13:16:01
+# IAR ELF Linker V7.20.5.7591/W32 for ARM                 13/Mar/2025  15:31:56
 # Copyright 2007-2014 IAR Systems AB.
 #
 #    Output file  =  exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.out.tmp
@@ -74,7 +74,7 @@ __SystemLibrary = DLib
   .intvec                 const    0x00000600   0x168  InterruptVector.obj [1]
                                  - 0x00000768   0x168
 
-"P5":                                          0xdd76
+"P5":                                          0xdd70
   .text                   ro code  0x00000768  0x8488  Mci.obj [1]
   .text                   ro code  0x00008bf0   0xad8  BoardDebugging.obj [1]
   .text                   ro code  0x000096c8   0x130  Gpio.obj [1]
@@ -127,8 +127,8 @@ __SystemLibrary = DLib
   .text                   ro code  0x0000de88    0x10  InterruptVector.obj [1]
   .rodata                 const    0x0000de98     0x0  zero_init3.o [5]
   .rodata                 const    0x0000de98     0x0  packbits_init.o [5]
-  Initializer bytes       ro data  0x0000de98   0x646  <for P6 s0>
-                                 - 0x0000e4de  0xdd76
+  Initializer bytes       ro data  0x0000de98   0x640  <for P6 s0>
+                                 - 0x0000e4d8  0xdd70
 
 "A3":                                             0x2
   .MICRO_CRC_region       const    0x0000fffc     0x2  Place holder MICRO_FLASH_CRC
@@ -210,8 +210,8 @@ Zero (__iar_zero_init3)
           0x20000004  0x124e
 
 Copy/packbits (__iar_packbits_init3)
-    1 source range, total size 0x646 (45% of destination):
-          0x0000de98   0x646
+    1 source range, total size 0x640 (45% of destination):
+          0x0000de98   0x640
     1 destination range, total size 0xdb4:
           0x1fffe07c   0xdb4
 
@@ -224,7 +224,7 @@ Copy/packbits (__iar_packbits_init3)
     Module                          ro code  ro data  rw data  rw data
                                                                 (abs)
     ------                          -------  -------  -------  -------
-C:\Data\Python\Windy_sBpm_Floating\Obj: [1]
+C:\Data\Repository\WindyStrip_DTC_Orca\Obj: [1]
     BoardDebugging.obj                2 776       37       80
     CommandManager.obj                            33       72
     Comparator.obj                      392
@@ -234,11 +234,11 @@ C:\Data\Python\Windy_sBpm_Floating\Obj: [1]
     Gpio.obj                            304       19       40
     InterruptVector.obj                  16      368
     MasterCommander.obj                  34
-    Mci.obj                          33 928      939    2 248
-    MciParametersLoader.obj             136      499    1 092
+    Mci.obj                          33 928      935    2 248
+    MciParametersLoader.obj             136      498    1 092
     Micro.obj                         3 956       16      136        8
     Params.obj                            4             1 756
-    ProtocolInfo.obj                    272       79      172
+    ProtocolInfo.obj                    272       78      172
     ProtocolMainExternal.obj            140               332
     SRClockMonitor.obj                  288                 8
     SRData.obj                          872
@@ -260,7 +260,7 @@ C:\Data\Python\Windy_sBpm_Floating\Obj: [1]
     mc_scope.obj                        180                44
     mc_serial.obj                       490                80
     ------------------------------------------------------------------
-    Total:                           54 134    2 334    8 348        8
+    Total:                           54 134    2 328    8 348        8
 
 command line: [2]
     ------------------------------------------------------------------
@@ -299,7 +299,7 @@ shb_l.a: [6]
     Gaps                                 16                 7
     Linker created                                52    1 056
 ----------------------------------------------------------------------
-    Grand Total:                     54 692    2 388    9 411        8
+    Grand Total:                     54 692    2 382    9 411        8
 
 
 *******************************************************************************
@@ -1130,7 +1130,7 @@ step_inv_pwm_comp       0x1fffe81c     0x4  Data  Gb  Mci.obj [1]
 switching_angle         0x1fffe3d5     0x1  Data  Gb  Mci.obj [1]
 
 
-[1] = C:\Data\Python\Windy_sBpm_Floating\Obj
+[1] = C:\Data\Repository\WindyStrip_DTC_Orca\Obj
 [2] = command line
 [3] = dl7M_tln.a
 [4] = m7M_tlv.a
@@ -1138,7 +1138,7 @@ switching_angle         0x1fffe3d5     0x1  Data  Gb  Mci.obj [1]
 [6] = shb_l.a
 
   54 692 bytes of readonly  code memory
-   2 388 bytes of readonly  data memory
+   2 382 bytes of readonly  data memory
    9 411 bytes of readwrite data memory (+ 8 absolute)
 
 Errors: none
