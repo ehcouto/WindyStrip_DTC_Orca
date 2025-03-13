@@ -33,7 +33,7 @@
 
 
 // selected motor
-#define MCL_MOTOR   ORCA_H24
+#define MCL_MOTOR   ATLAS_H32
 
 //Some Mci Class-A displacements are not from setting file
 #if (MCL_MOTOR == HEFEI_H27)
