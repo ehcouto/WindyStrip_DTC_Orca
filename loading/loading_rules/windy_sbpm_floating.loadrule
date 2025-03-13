@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Built from the sandbox "C:\Data\Projects" and the workspace "windy_sbpm_floating_beatoa"--><!--Generated: 2019-01-09 16.34.47--><scm:sourceControlLoadRule eclipseProjectOptions="import" version="1" xmlns:scm="http://com.ibm.team.scm">
+    <itemLoadRule alternateName="SRMcuSpeedMonitor">
+        <component itemId="_Cm7ZIL5PEeeow_BfH2MPwg"/>
+        <!-- <component name="SR_MCU_SPEED_MONITOR" /> -->
+        <item itemId="_hzPrML5PEeeow_BfH2MPwg" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMcuSpeedMonitor_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Common"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_taILYEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Flash" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_tZkKsEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/DataFlash" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_rkY9AN6KEeWXkssuegdLeQ" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Comparator" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_taUYoEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Gpio" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_tazg0EhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Micro" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_tbsRoEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/TimerInterrupt" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_tbYIkEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Spi" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_tb1bkEhEEeWSL47MeF0_5w" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Uart" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_WmqaoEhEEeWJ9ss2TZmwzw"/>
+        <!-- <component name="Driver_APIs" /> -->
+        <item itemId="_2F6TkEpkEeWbXJqRx6mxQQ" itemType="folder"/>
+        <!-- <item repositoryPath="/DriverAPIs/Dma" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_JlIIoI09EeWjWf37Tgbr8A"/>
+        <!-- <component name="GENERIC_TOOLS" /> -->
+        <parentFolder itemId="_JlIIpI09EeWjWf37Tgbr8A" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <exclude>
+            <filter name="StateEngineCrank"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/tools"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_xV3tQHgdEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_ACU_HMI" /> -->
+        <parentFolder itemId="_FOCKgHgeEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Reveal_Acu_Hmi" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="MciParametersLoader">
+        <component itemId="_XpgOIb4aEeeow_BfH2MPwg"/>
+        <!-- <component name="MCI_PARAMETERS_LOADER" /> -->
+        <item itemId="_0yNa8L4gEeeow_BfH2MPwg" itemType="folder"/>
+        <!-- <item repositoryPath="/MciParametersLoader_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Mcl">
+        <component itemId="_jr0W4Gf3Eei_07QsEZx7jg"/>
+        <!-- <component name="MCL_DTC_FLOATING" /> -->
+        <item itemId="_wQsXQGf4Eei_07QsEZx7jg" itemType="folder"/>
+        <!-- <item repositoryPath="/Mcl_DTC_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMotorSafetyMgr">
+        <component itemId="_bJG5kPsWEeWKr7Rd5zMvWQ"/>
+        <!-- <component name="SRMOTORSAFETY_2_0" /> -->
+        <item itemId="_MqOTEIuuEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMotorSafetyMgr_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Extraction">
+        <component itemId="_4g5Q4LV8Eeamrb_I84GFsQ"/>
+        <!-- <component name="APPLICATION_WASHER_HA_ACU_PROCESS_EXTRACTION" /> -->
+        <item itemId="__y754BNFEeiQmNIBGgm28g" itemType="folder"/>
+        <!-- <item repositoryPath="/source/code" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_O71MwfsIEeWKr7Rd5zMvWQ"/>
+        <!-- <component name="APPLICATION_SPECIFIC_MCU_INDESIT" /> -->
+        <parentFolder itemId="_MVe1UIuyEean-eoFEMCrog" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/IndesitApplicationSpecific_Core" /> -->
+        <exclude>
+            <filter name="SensorsAlgorithms"/>
+            <filter name="Prescaler"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <item itemId="_QpGDEHjjEeWTDOwD0PNOEg" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/SFUpdater" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_fvLt4HjiEeWmyYImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_ACU_HMI" /> -->
+        <item itemId="_QoY4cHjjEeWTDOwD0PNOEg" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/Mode" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_oQpc8EZ_EeWJ9ss2TZmwzw"/>
+        <!-- <component name="SERVICE_CORE" /> -->
+        <parentFolder itemId="_HPn2kEaAEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Service" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <parentFolder itemId="_gxdhEPOLEea_a8_GixO0pw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/editor" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_9NClQXYXEei_07QsEZx7jg" itemType="file"/>
+        <!-- <item repositoryPath="/mfc/build_mfc.bat" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_GS4vcHYYEei_07QsEZx7jg" itemType="file"/>
+        <!-- <item repositoryPath="/mfc/makefile_mfc.dat" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_KxQYMXYYEei_07QsEZx7jg" itemType="file"/>
+        <!-- <item repositoryPath="/mfc/source_makefile_mfc" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_A4_SkXYYEei_07QsEZx7jg" itemType="file"/>
+        <!-- <item repositoryPath="/mfc/lnkarm_flash_mfc.xcl" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <parentFolder itemId="_VeByQSvkEeeOz5rKiOqiDQ" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/McuBuildTemplateMkv3x/tools" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/tools"/>
+    </parentLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_RqpnQCvkEeeOz5rKiOqiDQ" itemType="file"/>
+        <!-- <item repositoryPath="/McuBuildTemplateMkv3x/makefile.dat" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_C-QPEfpyEeaVgpcRXWg3kQ" itemType="file"/>
+        <!-- <item repositoryPath="/McuBuildTemplateMkv3x/project_specific_settings" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_AjHCUPpyEeaVgpcRXWg3kQ" itemType="file"/>
+        <!-- <item repositoryPath="/McuBuildTemplateMkv3x/config.icf" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Project">
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_skerkPdOEeaVgpcRXWg3kQ" itemType="folder"/>
+        <!-- <item repositoryPath="/ProjectSpecificDocs" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/docs/PE13"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_VnJDUI7mEeapsOrIG8CNhg" itemType="folder"/>
+        <!-- <item repositoryPath="/ProjectSpecific" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="loading_rules">
+        <component itemId="_2vYE8I7lEeapsOrIG8CNhg"/>
+        <!-- <component name="PROJECT_SPECIFIC" /> -->
+        <item itemId="_6Hiv4PLYEeakbIgaJrd2Gg" itemType="folder"/>
+        <!-- <item repositoryPath="/loading" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/loading"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="BoardDebugging">
+        <component itemId="_-hLN4NDmEeWnN6hSMszwjA"/>
+        <!-- <component name="BOARD_DEBUGGING" /> -->
+        <item itemId="_miqi0YvREeapsOrIG8CNhg" itemType="folder"/>
+        <!-- <item repositoryPath="/BoardDebugging_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Common"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMCAtod">
+        <component itemId="_CCD80Ih8EeWjWf37Tgbr8A"/>
+        <!-- <component name="MKV3X_MC_DRIVERS" /> -->
+        <item itemId="_kf52IIurEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMCDrivers/SRMCAtod/SRMCAtod_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMCPwm">
+        <component itemId="_CCD80Ih8EeWjWf37Tgbr8A"/>
+        <!-- <component name="MKV3X_MC_DRIVERS" /> -->
+        <item itemId="_kgUs4IurEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMCDrivers/SRMCPwm/SRMCPwm_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_cxSW0L9WEeW-EstoBRGxnA"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_MCU" /> -->
+        <item itemId="_W4E_MMlcEeaJZu1ctJh4lQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_MCU_Laundry/API221MotionCtrl" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_V5y3EDrHEeaI3vY7N47oiA"/>
+        <!-- <component name="APPLICATION_WASHER_MCU" /> -->
+        <parentFolder itemId="_V5y3FDrHEeaI3vY7N47oiA" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </parentLoadRule>
+    <parentLoadRule>
+        <component itemId="_0w-gIOJLEeaade-ccGl3ig"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_RMTFUNC" /> -->
+        <parentFolder itemId="_TXZP0OJMEeaade-ccGl3ig" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Reveal_RmtFunc" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="SRException">
+        <component itemId="_0UfaQHi8EeWmyYImHGY9Dw"/>
+        <!-- <component name="VORTEX_SRSYSTEM" /> -->
+        <item itemId="_B35oEJLsEeWHUdbCPRjpAw" itemType="folder"/>
+        <!-- <item repositoryPath="/System/SRException/SRException_Template" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Common"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRFlow">
+        <component itemId="_0UfaQHi8EeWmyYImHGY9Dw"/>
+        <!-- <component name="VORTEX_SRSYSTEM" /> -->
+        <item itemId="_B3-gkZLsEeWHUdbCPRjpAw" itemType="folder"/>
+        <!-- <item repositoryPath="/System/SRFlow/SRFlow_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Common"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMCAtod">
+        <component itemId="_OyLKMHmSEeWm_O98ucCJwg"/>
+        <!-- <component name="MC_DRIVER_APIS" /> -->
+        <item itemId="_e8e1YIuhEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMCAPI/SRMCAtodAPI/SRMCAtodAPI_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMCPwm">
+        <component itemId="_OyLKMHmSEeWm_O98ucCJwg"/>
+        <!-- <component name="MC_DRIVER_APIS" /> -->
+        <item itemId="_e8utAIuhEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMCAPI/SRMCPwmAPI/SRMCPwmAPI_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Driver/API"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Cr0QsENWEeaI3vY7N47oiA"/>
+        <!-- <component name="SRMOTORSAFETY_INFOPARAMS" /> -->
+        <item itemId="_MT6vEIuyEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/SRMotorSafetyInfoParamsMgr_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_ujmdIHghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/SystemTimers" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_p_ZU0GPDEeaVwv9WJUPdEQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/SystemConfig" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_uj4xAHghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/Utilities" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_uh4l4HghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/Crc8" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_ui7uwHghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/Log" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_uhMpYHghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/Crc16" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule>
+        <component itemId="_Ra_vQHghEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_BASIC" /> -->
+        <item itemId="_ujUJQHghEeWVvcZ-3iBwJA" itemType="folder"/>
+        <!-- <item repositoryPath="/Common/SettingFile" /> -->
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="SRMain">
+        <component itemId="_0W0VgHi8EeWmyYImHGY9Dw"/>
+        <!-- <component name="VORTEX_SRAPPLICATION" /> -->
+        <item itemId="_BWm44JLsEeWHUdbCPRjpAw" itemType="folder"/>
+        <!-- <item repositoryPath="/Application/SRMain/_SRMain_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Common"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Mci">
+        <component itemId="_7Vi6gMXREeW88t8mV_4v7Q"/>
+        <!-- <component name="MCI_2_0" /> -->
+        <item itemId="_D3LqwIubEean-eoFEMCrog" itemType="folder"/>
+        <!-- <item repositoryPath="/Mci2_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Beagle">
+        <component itemId="_a6Ax8bCiEeamrb_I84GFsQ"/>
+        <!-- <component name="BEAGLE_SPI_DATA_ACQUISITION" /> -->
+        <item itemId="_3ZOkkLCiEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Beagle_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_rltHgI08EeWjWf37Tgbr8A"/>
+        <!-- <component name="IAR_ARM" /> -->
+        <parentFolder itemId="_rltHhI08EeWjWf37Tgbr8A" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="SRAPI020Safety">
+        <component itemId="_5C-WQPhDEeaVgpcRXWg3kQ"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_CLASSB" /> -->
+        <item itemId="_tYE_8PhEEeaVgpcRXWg3kQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_ClassB" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_Drq2UCpLEeaE-bRSAB2xZw"/>
+        <!-- <component name="APPLICATION_CORE_MCU" /> -->
+        <parentFolder itemId="_MJEgcCpLEeaE-bRSAB2xZw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/ApplicationMcu" /> -->
+        <exclude>
+            <filter name="AnalysisMotorServer"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="API">
+        <component itemId="_vdUK8LjGEeamrb_I84GFsQ"/>
+        <!-- <component name="COMM_API220" /> -->
+        <item itemId="_zVF_UL1cEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Comm_Api220_Core_API" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs/API220MotorControl"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="API220MotorControl">
+        <component itemId="_vdUK8LjGEeamrb_I84GFsQ"/>
+        <!-- <component name="COMM_API220" /> -->
+        <item itemId="_bEyzQLriEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/Comm_Api220_Core_Server" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application/Reveal_APIs"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ThermalModel">
+        <component itemId="_Vlc9IV_GEeaVwv9WJUPdEQ"/>
+        <!-- <component name="THERMAL_MODEL_OTE2" /> -->
+        <item itemId="_Yz_akBYaEeiWwbR4db3AKg" itemType="folder"/>
+        <!-- <item repositoryPath="/ThermalModel_API" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ThermalModelCore">
+        <component itemId="_Vlc9IV_GEeaVwv9WJUPdEQ"/>
+        <!-- <component name="THERMAL_MODEL_OTE2" /> -->
+        <item itemId="_zIcDcBJkEeiqaNkxdGoLMg" itemType="folder"/>
+        <!-- <item repositoryPath="/ThermalModel_Core/ThermalModelCore_sBPM" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Application/ThermalModel"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Windy_sBpm_Floating">
+        <component itemId="_Kic38KKcEeamrb_I84GFsQ"/>
+        <!-- <component name="_PROJECT_TEMPLATE" /> -->
+        <item itemId="_P-TcoKKcEeamrb_I84GFsQ" itemType="folder"/>
+        <!-- <item repositoryPath="/ProjectTemplate" /> -->
+    </itemLoadRule>
+    <itemLoadRule alternateName="MasterCommander">
+        <component itemId="_VlY-0IvQEeapsOrIG8CNhg"/>
+        <!-- <component name="MASTER_COMMANDER" /> -->
+        <item itemId="__ATWYIvREeapsOrIG8CNhg" itemType="folder"/>
+        <!-- <item repositoryPath="/MasterCommander_Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/Category/Common"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_5OjZYHggEeWmyYImHGY9Dw"/>
+        <!-- <component name="COMMON_CORE_CLASSB" /> -->
+        <parentFolder itemId="_BKhKYHghEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/SRCommon" /> -->
+        <exclude>
+            <filter name="SRTaskSequence"/>
+            <filter name="SRTaskMonitor"/>
+            <filter name="SRException"/>
+        </exclude>
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Common"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="Reveal_APIs">
+        <component itemId="_r4tiEHdOEeWmyIImHGY9Dw"/>
+        <!-- <component name="APPLICATION_CORE_REVEAL_BASIC" /> -->
+        <item itemId="_NdNycHgeEeWmyYImHGY9Dw" itemType="folder"/>
+        <!-- <item repositoryPath="/Reveal_Basic" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Application"/>
+    </itemLoadRule>
+    <parentLoadRule>
+        <component itemId="_d0kqQUgtEeWJ9ss2TZmwzw"/>
+        <!-- <component name="MKV3x_Drivers" /> -->
+        <parentFolder itemId="_N_S20EgxEeWJ9ss2TZmwzw" itemType="folder"/>
+        <!-- <parentFolder repositoryPath="/Driver" /> -->
+        <exclude>
+            <filter name="EmbOS"/>
+            <filter name="Timer"/>
+            <filter name="Timeout"/>
+            <filter name="Atod"/>
+            <filter name="ExtInterrupt"/>
+            <filter name="I2c"/>
+            <filter name="IntMgr"/>
+            <filter name="MicroExt"/>
+        </exclude>
+        <sandboxRelativePath includeRepositoryPath="true" pathPrefix="/Windy_sBpm_Floating/source/XCategory"/>
+    </parentLoadRule>
+    <itemLoadRule alternateName="Filters">
+        <component itemId="_j7E_oSDgEea8stQX484ryA"/>
+        <!-- <component name="MCL_MICROBLOCKS" /> -->
+        <item itemId="_3F258ATTEeeQT9qnyLe6Eg" itemType="folder"/>
+        <!-- <item repositoryPath="/Filters/Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci/Mcl/MicroBlocks"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Pi">
+        <component itemId="_j7E_oSDgEea8stQX484ryA"/>
+        <!-- <component name="MCL_MICROBLOCKS" /> -->
+        <item itemId="_5fpb0ATTEeeQT9qnyLe6Eg" itemType="folder"/>
+        <!-- <item repositoryPath="/Pi/Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci/Mcl/MicroBlocks"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="Math">
+        <component itemId="_j7E_oSDgEea8stQX484ryA"/>
+        <!-- <component name="MCL_MICROBLOCKS" /> -->
+        <item itemId="_4cn4kATTEeeQT9qnyLe6Eg" itemType="folder"/>
+        <!-- <item repositoryPath="/Math/Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci/Mcl/MicroBlocks"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="PwmModulation">
+        <component itemId="_j7E_oSDgEea8stQX484ryA"/>
+        <!-- <component name="MCL_MICROBLOCKS" /> -->
+        <item itemId="_6Bin8ATTEeeQT9qnyLe6Eg" itemType="folder"/>
+        <!-- <item repositoryPath="/PwmModulation/Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci/Mcl/MicroBlocks"/>
+    </itemLoadRule>
+    <itemLoadRule alternateName="ClrkPark">
+        <component itemId="_j7E_oSDgEea8stQX484ryA"/>
+        <!-- <component name="MCL_MICROBLOCKS" /> -->
+        <item itemId="_zBaNEATTEeeQT9qnyLe6Eg" itemType="folder"/>
+        <!-- <item repositoryPath="/ClrkPark/Core" /> -->
+        <sandboxRelativePath pathPrefix="/Windy_sBpm_Floating/source/XCategory/Hbl/Mci/Mcl/MicroBlocks"/>
+    </itemLoadRule>
+</scm:sourceControlLoadRule>

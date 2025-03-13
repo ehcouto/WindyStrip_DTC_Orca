@@ -1,0 +1,7 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\DataFlash\DataFlash.c (C)
+
+    --- Wrap-up for Module: C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\DataFlash\DataFlash.c
+
+:0: Info: Lint: 728 Symbol 'DataFlash_Status' (line 104, file C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\DataFlash\DataFlash.c) not explicitly initialized
+

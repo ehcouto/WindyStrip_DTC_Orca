@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\Windy_Nucleus_Cim.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Windy_Nucleus_Plt_2_5_sBpm.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

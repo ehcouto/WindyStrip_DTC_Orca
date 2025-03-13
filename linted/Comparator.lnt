@@ -1,0 +1,198 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c (C)
+	SIM.SCGC4 |= SIM_SCGC4_CMP_MASK;		      //Clock Enabled for Comparator module
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:42: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.DACCR.BIT.DACEN = 1;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:78: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.DACCR.BIT.VRSEL = CMP0_SUPPLY_REFERENCE_SELECT;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:79: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.DACCR.BIT.VOSEL = cmp_thr;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:80: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.MUXCR.BIT.MSEL = inverted_input;				//Configure Plus Input of the comparator
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:83: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.MUXCR.BIT.PSEL = noninverted_input;				//Configure Minus Input of the comparator
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:84: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.EN = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:89: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.WE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:93: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.SE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:94: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR0.BIT.FILTER_CNT = COMPARATOR0_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:95: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						CMP0.FPR.BYTE = 1;
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:98: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						CMP0.FPR.BYTE = 0;
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:102: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.WE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:109: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.SE = COMPARATOR0_SAMPLE_ENABLED;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:110: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR0.BIT.FILTER_CNT = COMPARATOR0_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:111: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.FPR.BYTE = COMPARATOR0_FPR;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:112: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.WE = 1;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:118: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR1.BIT.SE = COMPARATOR0_SAMPLE_ENABLED;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:119: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.CR0.BIT.FILTER_CNT = COMPARATOR0_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:120: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP0.FPR.BYTE = COMPARATOR0_FPR;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:121: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.CR1.BIT.OPE = 1;					//Enable Comparator Output Pin
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:128: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP0.CR1.BIT.EN = 1;					//Enable Comparator Module
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:129: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.DACCR.BIT.DACEN = 1;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:156: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.DACCR.BIT.VRSEL = CMP1_SUPPLY_REFERENCE_SELECT;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:157: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.DACCR.BIT.VOSEL= cmp_thr;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:158: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.MUXCR.BIT.MSEL = inverted_input;				//Configure Plus Input of the comparator
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:161: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.MUXCR.BIT.PSEL = noninverted_input;				//Configure Minus Input of the comparator
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:162: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.EN = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:167: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.WE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:171: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.SE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:172: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR0.BIT.FILTER_CNT = COMPARATOR1_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:173: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						CMP1.FPR.BYTE = 1;
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:176: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						CMP1.FPR.BYTE = 0;
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:180: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.WE = 0;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:187: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.SE = COMPARATOR1_SAMPLE_ENABLED;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:188: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR0.BIT.FILTER_CNT = COMPARATOR1_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:189: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.FPR.BYTE = COMPARATOR1_FPR;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:190: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.WE = 1;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:196: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR1.BIT.SE = COMPARATOR1_SAMPLE_ENABLED;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:197: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.CR0.BIT.FILTER_CNT = COMPARATOR1_FILTER_CNT;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:198: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					CMP1.FPR.BYTE = COMPARATOR1_FPR;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:199: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.CR1.BIT.OPE = 1;					//Enable Comparator Output Pin
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:207: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			CMP1.CR1.BIT.EN = 1;					//Enable Comparator Module
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:208: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if (CMP0.SCR.BIT.COUT == 1)
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:232: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			status = CMP0.SCR.BIT.COUT;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:234: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if (CMP1.SCR.BIT.COUT == 1)
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:240: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			status = CMP1.SCR.BIT.COUT;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:242: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		CMP0.DACCR.BIT.VOSEL = cmp_thr;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:262: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		CMP1.DACCR.BIT.VOSEL = cmp_thr;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Comparator\Comparator.c:267: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

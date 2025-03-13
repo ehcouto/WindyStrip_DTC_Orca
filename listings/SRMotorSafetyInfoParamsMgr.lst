@@ -1,0 +1,458 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:28
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        Category\Application\SRMotorSafetyInfoParamsMgr_Core\SRMotorSafetyInfoParamsMgr.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        SRMotorSafetyInfoParamsMgr.obj -l
+#        ..\listings\SRMotorSafetyInfoParamsMgr.lst
+#        Category\Application\SRMotorSafetyInfoParamsMgr_Core\SRMotorSafetyInfoParamsMgr.c
+#    List file    =  ..\listings\SRMotorSafetyInfoParamsMgr.lst
+#    Object file  =  SRMotorSafetyInfoParamsMgr.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\SRMotorSafetyInfoParamsMgr_Core\SRMotorSafetyInfoParamsMgr.c
+      1          /**
+      2           *  @defgroup   CLASS_B
+      3           *  @file       SRMotorSafetyInfoParamsMgr.c
+      4           *  @brief      Safety information manager for the Indesit Communication Protocol
+      5           *
+      6           *  @details    This module handles the safety information that are sent through the serial
+      7           *              channel to the ACU and provides a method for the safety parameters assignment
+      8           *              to the Safety Motor Manager. \n
+      9           *              A check for the communication proper operation is made in the 1 ms handler.
+     10           *              In order for the check to work a communication counter must be reset by calling
+     11           *              the SRMotorSafetyInfoParmsMgr__GetInfo method at least once every 8 seconds.
+     12           *              In case the check fails the motor is stopped.
+     13           *
+     14           *
+     15           *---------------------------------------------------------------------------------------------------------------------
+     16           *------------------- Copyright 2012.  Whirlpool Corporation.  All rights reserved - CONFIDENTIAL ---------------------
+     17           *---------------------------------------------------------------------------------------------------------------------
+     18           */
+     19          
+     20          //-------------------------------------- Include Files ----------------------------------------------------------------
+     21          
+     22          // Standard Vortex libraries
+     23          #include "Compiler_defs.h"
+
+  #if (MICRO_IS_LITTLE_ENDIAN == 1)
+       ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\API\Micro\C_Extensions.h",256  Remark[Pe193]: 
+          zero used for undefined preprocessing identifier
+          "MICRO_IS_LITTLE_ENDIAN"
+
+  #if (MICRO_IS_LITTLE_ENDIAN == 1)
+       ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\API\Micro\C_Extensions.h",296  Remark[Pe193]: 
+          zero used for undefined preprocessing identifier
+          "MICRO_IS_LITTLE_ENDIAN"
+
+  #if (MICRO_IS_LITTLE_ENDIAN == 1)
+       ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\API\Micro\C_Extensions.h",321  Remark[Pe193]: 
+          zero used for undefined preprocessing identifier
+          "MICRO_IS_LITTLE_ENDIAN"
+     24          #include "C_Extensions.h"
+     25          #include "Crc16.h"
+     26          
+     27          // Standard Safety Relevant Class B libraries
+     28          #include "SRMotorSafetyInfoParamsMgr.h"
+     29          #include "SRMotorSafetyMgr.h"
+     30          #include "SRData.h"
+     31          #include "SRException.h"
+     32          
+
+   \                                 In section .bss, align 4
+     33          static volatile SR_MOTOR_SAFETY_INFO_LIST_TYPE Sr_Info;
+   \                     Sr_Info:
+   \   00000000                      DS8 8
+   \   00000008                      DS8 2
+   \   0000000A                      DS8 2
+     34          
+     35          /**
+     36           * Safety communication counter, used to check for the
+     37           * proper communication operation.
+     38           */
+     39          static volatile unsigned short SR_Communication_Cnt;
+     40          static volatile unsigned short NSR_Communication_Cnt;
+     41          
+     42          //lint -emacro( 929, SR_CHECK_COMM_CNT )
+     43          #define SR_CHECK_COMM_CNT()                          SRData__CheckShort((unsigned short *)&SR_Communication_Cnt, (unsigned short *)&NSR_Communication_Cnt) //lint !e929
+     44          //lint -emacro( 929, SR_UPDATE_COMM_CNT )
+     45          #define SR_UPDATE_COMM_CNT(value)					 SRData__UpdateShort((unsigned short *)&SR_Communication_Cnt, (unsigned short *)&NSR_Communication_Cnt, (unsigned short)(value))
+     46          
+     47          /**
+     48           * Communication counter threshold for communication timeout.
+     49           */
+     50          #define SR_COMMUNICATION_TIMEOUT_THR				(8000) // 8s @1 ms
+     51          #define SR_COMMUNICATION_FAIULURE_CODE				(0xE)
+     52          //=====================================================================================================================
+     53          //-------------------------------------- Public Functions -------------------------------------------------------------
+     54          //=====================================================================================================================
+     55          
+     56          
+     57          
+     58          //---------------------------------------------------------------------------------------------------------------------
+     59          /**
+     60           *  @brief      Initialize the safety info structure.
+     61           *
+     62           *  @details    Safety info initialized with zero values.
+     63           */
+
+   \                                 In section .text, align 2, keep-with-next
+     64          void SRMotorSafetyInfoParmsMgr__Initialize(void)
+     65          {
+     66          	Sr_Info.Counter = 0;
+   \                     SRMotorSafetyInfoParmsMgr__Initialize: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable2
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x8001             STRH     R1,[R0, #+0]
+     67          
+     68          	Sr_Info.Info_Flags = 0;
+   \   00000006   0x8041             STRH     R1,[R0, #+2]
+     69          
+     70          	Sr_Info.Crc = 0;
+   \   00000008   0x8081             STRH     R1,[R0, #+4]
+     71          
+     72          	SR_UPDATE_COMM_CNT(0); //Reset the communication counter
+   \   0000000A   0x2200             MOVS     R2,#+0
+   \   0000000C   0xF100 0x010A      ADD      R1,R0,#+10
+   \   00000010   0x3008             ADDS     R0,R0,#+8
+   \   00000012   0x.... 0x....      B.W      SRData__UpdateShort
+     73          }
+     74          
+     75          //
+     76          
+     77          
+     78          //---------------------------------------------------------------------------------------------------------------------
+     79          /**
+     80           *  @brief      Return the safety info structure.
+     81           *
+     82           *  @details    Update the safety info and reset the communication counter.
+     83           *
+     84           *  @return     The safety info structure.
+     85           */
+
+   \                                 In section .text, align 2, keep-with-next
+     86          SR_MOTOR_SAFETY_INFO_LIST_TYPE SRMotorSafetyInfoParmsMgr__GetInfo(void)
+     87          {
+   \                     SRMotorSafetyInfoParmsMgr__GetInfo: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+     88          	uint8 buff[4];
+     89          
+     90          	Sr_Info.Counter++;
+   \   00000002   0x....             LDR.N    R5,??DataTable2
+   \   00000004   0xB084             SUB      SP,SP,#+16
+   \   00000006   0x4604             MOV      R4,R0
+   \   00000008   0x8828             LDRH     R0,[R5, #+0]
+   \   0000000A   0x1C40             ADDS     R0,R0,#+1
+   \   0000000C   0x8028             STRH     R0,[R5, #+0]
+     91          
+     92          	Sr_Info.Info_Flags = (SRMotorSafetyMgr__GetFlag(SR_FLAG_UNLOCK_DOOR_SPEED)<<BIT0) +
+     93          						 (SRMotorSafetyMgr__AnyFaultFound()<<BIT1);
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x.... 0x....      BL       SRMotorSafetyMgr__GetFlag
+   \   00000014   0x4606             MOV      R6,R0
+   \   00000016   0x.... 0x....      BL       SRMotorSafetyMgr__AnyFaultFound
+   \   0000001A   0x0040             LSLS     R0,R0,#+1
+   \   0000001C   0xFA50 0xF086      UXTAB    R0,R0,R6
+   \   00000020   0x8068             STRH     R0,[R5, #+2]
+   \   00000022   0x2204             MOVS     R2,#+4
+     94          
+     95          	buff[0] = (uint8)(Sr_Info.Counter>>8);
+   \   00000024   0x8828             LDRH     R0,[R5, #+0]
+   \   00000026   0x0A00             LSRS     R0,R0,#+8
+   \   00000028   0xF88D 0x0000      STRB     R0,[SP, #+0]
+     96          	buff[1] = (uint8)(Sr_Info.Counter& 0x00FF);
+   \   0000002C   0xA800             ADD      R0,SP,#+0
+   \   0000002E   0x8829             LDRH     R1,[R5, #+0]
+   \   00000030   0x7041             STRB     R1,[R0, #+1]
+     97          	buff[2] = (uint8)(Sr_Info.Info_Flags>>8);
+   \   00000032   0x8869             LDRH     R1,[R5, #+2]
+   \   00000034   0x0A09             LSRS     R1,R1,#+8
+   \   00000036   0x7081             STRB     R1,[R0, #+2]
+   \   00000038   0xF64F 0x71FF      MOVW     R1,#+65535
+     98          	buff[3] = (uint8)(Sr_Info.Info_Flags& 0x00FF);
+   \   0000003C   0x8868             LDRH     R0,[R5, #+2]
+   \   0000003E   0xF88D 0x0003      STRB     R0,[SP, #+3]
+     99          
+    100          	Sr_Info.Crc = Crc16__RangeProcess(buff,0xFFFF,4);
+   \   00000042   0xA800             ADD      R0,SP,#+0
+   \   00000044   0x.... 0x....      BL       Crc16__RangeProcess
+   \   00000048   0x80A8             STRH     R0,[R5, #+4]
+    101          
+    102          
+    103          	//The info packet is sent, the flow communication is correct -> reset communication counter
+    104          	SR_UPDATE_COMM_CNT(0);
+   \   0000004A   0x2200             MOVS     R2,#+0
+   \   0000004C   0xF105 0x010A      ADD      R1,R5,#+10
+   \   00000050   0xF105 0x0008      ADD      R0,R5,#+8
+   \   00000054   0x.... 0x....      BL       SRData__UpdateShort
+    105          
+    106          	return Sr_Info;
+   \   00000058   0xA801             ADD      R0,SP,#+4
+   \   0000005A   0x4629             MOV      R1,R5
+   \   0000005C   0x2206             MOVS     R2,#+6
+   \   0000005E   0x.... 0x....      BL       __aeabi_memcpy
+   \   00000062   0x4620             MOV      R0,R4
+   \   00000064   0xA901             ADD      R1,SP,#+4
+   \   00000066   0x2206             MOVS     R2,#+6
+   \   00000068   0x.... 0x....      BL       __aeabi_memcpy
+   \   0000006C   0xB004             ADD      SP,SP,#+16
+   \   0000006E   0xBD70             POP      {R4-R6,PC}       ;; return
+    107          }
+    108          
+    109          //---------------------------------------------------------------------------------------------------------------------
+    110          /**
+    111           *  @brief      Set Motor Class B parameters address
+    112           *
+    113           *  @param[in]  set_this_address The address of the safety parameters buffer.
+    114           *
+    115           *  @return     The response of the operation.
+    116           *              TRUE - value accepted
+    117           *              FALSE - value denied - default answer.
+    118           *
+    119           */
+    120          
+
+   \                                 In section .text, align 2, keep-with-next
+    121          BOOL_TYPE SRMotorSafetyInfoParamsMgr__SetParams(void* set_this_address)
+    122          {
+    123          	BOOL_TYPE ret_val = FALSE;
+    124          
+    125          	ret_val = SRMotorSafetyMgr__SetParams((void*)set_this_address);
+    126          
+    127          	return ret_val;
+   \                     SRMotorSafetyInfoParamsMgr__SetParams: (+1)
+   \   00000000   0x.... 0x....      B.W      SRMotorSafetyMgr__SetParams
+    128          }
+    129          
+    130          
+    131          
+    132          
+    133          //---------------------------------------------------------------------------------------------------------------------
+    134          /**
+    135           *  @brief      General slot for call rate of 1ms.
+    136           *
+    137           *  @details    This handler checks if a information packet is not sent for 8 seconds.
+    138           *              In this case the motor is stopped. Otherwise, the communication counter is
+    139           *              incremented.
+    140           *
+    141           */
+
+   \                                 In section .text, align 2, keep-with-next
+    142          void SRMotorSafetyInfoParamsMgr__Handler1ms(void)
+    143          {
+   \                     SRMotorSafetyInfoParamsMgr__Handler1ms: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    144          	unsigned short temp;
+    145          	SRMOTORSAFETYINFOPARAMSMGR_1MS_FLOW_BEGIN();
+   \   00000002   0x2005             MOVS     R0,#+5
+   \   00000004   0x.... 0x....      BL       SRFlow__ISRLogEvent
+    146          
+    147          	temp = SR_CHECK_COMM_CNT();
+    148          
+    149          	if (temp == SRDATA_OK)
+   \   00000008   0x....             LDR.N    R4,??DataTable2
+   \   0000000A   0xF104 0x010A      ADD      R1,R4,#+10
+   \   0000000E   0xF104 0x0008      ADD      R0,R4,#+8
+   \   00000012   0x.... 0x....      BL       SRData__CheckShort
+   \   00000016   0xB968             CBNZ.N   R0,??SRMotorSafetyInfoParamsMgr__Handler1ms_0
+    150          	{
+    151          		if(SR_Communication_Cnt > SR_COMMUNICATION_TIMEOUT_THR) //Check if a information packet is not sent for 8 sec
+   \   00000018   0x8920             LDRH     R0,[R4, #+8]
+   \   0000001A   0xF5B0 0x5FFA      CMP      R0,#+8000
+   \   0000001E   0xDC0E             BGT.N    ??SRMotorSafetyInfoParamsMgr__Handler1ms_1
+    152          		{// if the communication is down for more than 8 sec -> Stop the motor
+    153          			//SRMotorSafetyMgr__ForceStop();
+    154          		}
+    155          		else
+    156          		{
+    157          			temp = SR_Communication_Cnt;
+   \   00000020   0x8920             LDRH     R0,[R4, #+8]
+    158          
+    159          			temp++;
+    160          
+    161          			SR_UPDATE_COMM_CNT(temp); //Update the communication counter
+   \   00000022   0x1C42             ADDS     R2,R0,#+1
+   \   00000024   0xB292             UXTH     R2,R2
+   \   00000026   0xF104 0x010A      ADD      R1,R4,#+10
+   \   0000002A   0xF104 0x0008      ADD      R0,R4,#+8
+   \   0000002E   0x.... 0x....      BL       SRData__UpdateShort
+   \   00000032   0xE004             B.N      ??SRMotorSafetyInfoParamsMgr__Handler1ms_1
+    162          		}
+    163          	}
+    164          	else
+    165          	{ // Safety data corrupted -> Reset the micro
+    166          		SRException__Queue(EXCEPTION_ISR_DATA_SHORT, 0, (uint32)(SR_COMMUNICATION_FAIULURE_CODE));
+   \                     ??SRMotorSafetyInfoParamsMgr__Handler1ms_0: (+1)
+   \   00000034   0x220E             MOVS     R2,#+14
+   \   00000036   0x2100             MOVS     R1,#+0
+   \   00000038   0x200A             MOVS     R0,#+10
+   \   0000003A   0x.... 0x....      BL       SRException__Queue
+    167          	}
+    168          	SRMOTORSAFETYINFOPARAMSMGR_1MS_FLOW_END();
+   \                     ??SRMotorSafetyInfoParamsMgr__Handler1ms_1: (+1)
+   \   0000003E   0xE8BD 0x4010      POP      {R4,LR}
+   \   00000042   0x2006             MOVS     R0,#+6
+   \   00000044   0x.... 0x....      B.W      SRFlow__ISRLogEvent
+    169          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     Sr_Info
+    170          
+    171          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   SRMotorSafetyInfoParamsMgr__Handler1ms
+         8   -> SRData__CheckShort
+         8   -> SRData__UpdateShort
+         8   -> SRException__Queue
+         0   -> SRFlow__ISRLogEvent
+         8   -> SRFlow__ISRLogEvent
+       0   SRMotorSafetyInfoParamsMgr__SetParams
+         0   -> SRMotorSafetyMgr__SetParams
+      32   SRMotorSafetyInfoParmsMgr__GetInfo
+        32   -> Crc16__RangeProcess
+        32   -> SRData__UpdateShort
+        32   -> SRMotorSafetyMgr__AnyFaultFound
+        32   -> SRMotorSafetyMgr__GetFlag
+        32   -> __aeabi_memcpy
+       0   SRMotorSafetyInfoParmsMgr__Initialize
+         0   -> SRData__UpdateShort
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+      72  SRMotorSafetyInfoParamsMgr__Handler1ms
+       4  SRMotorSafetyInfoParamsMgr__SetParams
+     112  SRMotorSafetyInfoParmsMgr__GetInfo
+      22  SRMotorSafetyInfoParmsMgr__Initialize
+      12  Sr_Info
+          SR_Communication_Cnt
+          NSR_Communication_Cnt
+
+ 
+  12 bytes in section .bss
+ 214 bytes in section .text
+ 
+ 214 bytes of CODE memory
+  12 bytes of DATA memory
+
+Errors: none
+Warnings: none

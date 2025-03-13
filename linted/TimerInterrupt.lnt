@@ -1,0 +1,34 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c (C)
+	SYSTICK.CTRL &= SYSTICK_COUNTER_DISABLE;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:56: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SYSTICK.LOAD  = TIMER_RELOAD_COUNT();
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:59: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SYSTICK.VAL   = 0;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:64: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SYSTICK.CTRL  = SYSTICK_CTRL_CLKSOURCE_MSK | SYSTICK_CTRL_TICKINT_MSK | SYSTICK_CTRL_ENABLE_MSK;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:67: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SYSTICK.CTRL &= SYSTICK_COUNTER_DISABLE;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:80: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SYSTICK.LOAD  = TIMER_RELOAD_LONG_COUNT();
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:83: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SYSTICK.VAL   = 0;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:88: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SYSTICK.CTRL  = SYSTICK_CTRL_CLKSOURCE_MSK | SYSTICK_CTRL_TICKINT_MSK | SYSTICK_CTRL_ENABLE_MSK;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\TimerInterrupt\TimerInterrupt.c:91: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

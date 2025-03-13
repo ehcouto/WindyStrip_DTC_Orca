@@ -1,0 +1,9 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Service\Reveal\Reveal.c (C)
+                        memcpy((uint8 *)&Reveal_Queue_Priority[Reveal_Queue_Priority_Write],(uint8 *)command,REVEAL_MSG_OVERHEAD + command->length);
+                                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Service\Reveal\Reveal.c:971: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Service\Reveal\Reveal.c:971: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+

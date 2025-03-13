@@ -1,0 +1,1204 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:36
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        XCategory\Application\MciParametersLoader\MciParametersLoader.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        MciParametersLoader.obj -l ..\listings\MciParametersLoader.lst
+#        XCategory\Application\MciParametersLoader\MciParametersLoader.c
+#    List file    =  ..\listings\MciParametersLoader.lst
+#    Object file  =  MciParametersLoader.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c
+      1          /**
+      2           *  @file       MciParametersLoaders.c
+      3           *
+      4           *  @brief      Mci Parameters Loader module
+      5           *
+      6           *  $Header: $
+      7           *
+      8           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+      9           */
+     10          //---------------------------------------------------------------------------------------------------------------------
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          
+     14          //-------------------------------------- Include Files ----------------------------------------------------------------
+     15          #include "MciParametersLoader.h"
+     16          #include "MciParametersLoader_prv.h"
+     17          #include "Mci.h"
+     18          #include "SrMotorSafetyMgr.h"
+     19          
+     20          #include "string.h"
+     21          #include "Crc16.h"
+     22          
+     23          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     24          
+     25          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     26          // ----------------- CLASS A AUTOMATED DEFINITIONS ------------------------
+     27          #ifdef INTERNAL_DISPLS
+
+   \                                 In section .rodata, align 4, keep-with-next
+     28          const uint16 Displ_Idxs_Internal[] = INTERNAL_DISPLS;
+   \                     Displ_Idxs_Internal:
+   \   00000000   0x0001 0x0003      DC16 1, 3, 4, 9, 10, 11
+   \              0x0004 0x0009
+   \              0x000A 0x000B
+
+   \                                 In section .rodata, align 4, keep-with-next
+     29          const uint32 Displ_Sizes_Internal[] = INTERNAL_DISPL_SIZES;
+   \                     Displ_Sizes_Internal:
+   \   00000000   0x000001B4         DC32 436, 200, 104, 136, 136, 11
+   \              0x000000C8   
+   \              0x00000068   
+   \              0x00000088   
+   \              0x00000088   
+   \              0x0000000B   
+     30          #define NUM_INTERNAL_DISPL  sizeof(Displ_Sizes_Internal)/sizeof(uint32)
+     31          #else
+     32          #define NUM_INTERNAL_DISPL 0
+     33          #endif
+     34          
+     35          #ifdef SF_RAM_DISPLS
+     36          const uint16 Displ_Idxs_Ram[] = SF_RAM_DISPLS;
+     37          #define NUM_SF_RAM_DISPL  sizeof(Displ_Idxs_Ram)/sizeof(uint16)
+     38          #else
+     39          #define NUM_SF_RAM_DISPL 0
+     40          #endif
+     41          
+     42          #ifdef SF_FLASH_DISPLS
+     43          const uint16 Displ_Idxs_Flash[] = SF_FLASH_DISPLS;
+     44          #define NUM_SF_FLASH_DISPL  sizeof(Displ_Idxs_Flash)/sizeof(uint16)
+     45          #else
+     46          #define NUM_SF_FLASH_DISPL 0
+     47          #endif
+     48          
+     49          // Total number
+     50          #define  MCI_CLASS_A_DISPLACEMENTS     NUM_INTERNAL_DISPL + NUM_SF_RAM_DISPL + NUM_SF_FLASH_DISPL
+     51          
+     52          // understand if any internally loaded
+     53          #ifdef INTERNAL_DISPLS
+     54              #define MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL                  ENABLED
+     55          #else
+     56              #define MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL                  DISABLED
+     57          #endif
+     58          
+     59          // understand if any loaded from Setting file (to be used directly from flash)
+     60          #ifdef SF_FLASH_DISPLS
+     61              #define MCI_CLASS_A_PARAMETERS_LOADER_SF                  ENABLED
+     62          #else
+     63              #define MCI_CLASS_A_PARAMETERS_LOADER_SF                  DISABLED
+     64          #endif
+     65          
+     66          // understand if any loaded from Setting file (to be buffered in ram)
+     67          #ifdef SF_RAM_DISPLS
+     68              #define MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM                  ENABLED
+     69          #else
+     70              #define MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM                  DISABLED
+     71          #endif
+     72          
+     73          #if (MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL == ENABLED)
+     74          //Some Mci Class-A displacements are not from setting file
+     75              #include INTERNAL_CLASS_A_PARAMS_INCLUDE_FILE
+
+  #endif  /* MCL_PRM_ATLAS_H32_ */
+                                  ^
+"C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Mci\Mcl\Mcl_prm_Atlas_H32.h",267  Remark[Pe001]: 
+          last line of file ends without a newline
+     76          #endif
+     77          
+     78          // ----------------- CLASS B AUTOMATED DEFINITIONS ------------------------
+     79          #ifdef INTERNAL_CLASSB_DISPLS
+
+   \                                 In section .rodata, align 2, keep-with-next
+     80          const uint16 Displ_Sr_Idxs_Internal[] = INTERNAL_CLASSB_DISPLS;
+   \                     Displ_Sr_Idxs_Internal:
+   \   00000000   0x0001             DC16 1
+
+   \                                 In section .rodata, align 4, keep-with-next
+     81          const uint32 Displ_Sr_Sizes_Internal[] = INTERNAL_CLASSB_DISPL_SIZES;
+   \                     Displ_Sr_Sizes_Internal:
+   \   00000000   0x00000034         DC32 52
+
+   \                                 In section .data, align 4
+     82          #define NUM_CLASSB_INTERNAL_DISPL  sizeof(Displ_Sr_Sizes_Internal)/sizeof(uint32)
+     83          #else
+     84          #define NUM_CLASSB_INTERNAL_DISPL 0
+     85          #endif
+     86          
+     87          #ifdef SF_CLASSB_RAM_DISPLS
+     88          const uint16 Displ_Sr_Idxs_Ram[] = SF_CLASSB_RAM_DISPLS;
+     89          #define NUM_CLASSB_SF_RAM_DISPL  sizeof(Displ_Sr_Idxs_Ram)/sizeof(uint16)
+     90          #else
+     91          #define NUM_CLASSB_SF_RAM_DISPL 0
+     92          #endif
+     93          
+     94          #ifdef SF_CLASSB_FLASH_DISPLS
+     95          const uint16 Displ_Sr_Idxs_Flash[] = SF_CLASSB_FLASH_DISPLS;
+     96          #define NUM_CLASSB_SF_FLASH_DISPL  sizeof(Displ_Sr_Idxs_Flash)/sizeof(uint16)
+     97          #else
+     98          #define NUM_CLASSB_SF_FLASH_DISPL 0
+     99          #endif
+    100          
+    101          // Total number
+    102          #define  MCI_CLASS_B_DISPLACEMENTS     NUM_CLASSB_INTERNAL_DISPL + NUM_CLASSB_SF_RAM_DISPL + NUM_CLASSB_SF_FLASH_DISPL
+    103          
+    104          // understand if any internally loaded
+    105          #ifdef INTERNAL_CLASSB_DISPLS
+    106              #define MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL                  ENABLED
+    107          #else
+    108              #define MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL                  DISABLED
+    109          #endif
+    110          
+    111          // understand if any loaded from Setting file (to be used directly from flash)
+    112          #ifdef SF_CLASSB_FLASH_DISPLS
+    113              #define MCI_CLASS_B_PARAMETERS_LOADER_SF                  ENABLED
+    114          #else
+    115              #define MCI_CLASS_B_PARAMETERS_LOADER_SF                  DISABLED
+    116          #endif
+    117          
+    118          // understand if any loaded from Setting file (to be buffered in ram)
+    119          #ifdef SF_CLASSB_RAM_DISPLS
+    120              #define MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM                  ENABLED
+    121          #else
+    122              #define MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM                  DISABLED
+    123          #endif
+    124          
+    125          
+    126          #if (MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL == ENABLED)
+    127          //Some Mci Class-B displacements are not from setting file
+    128              #include INTERNAL_CLASS_B_PARAMS_INCLUDE_FILE
+
+  #endif  /* MCL_PRM_ATLAS_H32_SR_ */
+                                     ^
+"C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Mci\Mcl\Mcl_prm_Atlas_H32_SR.h",50  Remark[Pe001]: 
+          last line of file ends without a newline
+    129          #endif
+    130          //////////////////////////////////////////////////////////////////////////////////////////////
+    131          
+    132          #if ((MCI_CLASS_A_PARAMETERS_LOADER_SF == ENABLED) || (MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED) || \
+    133               (MCI_CLASS_B_PARAMETERS_LOADER_SF == ENABLED) || (MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED))
+    134          #include "Mode.h"
+    135          #include "SettingFile.h"             //Some Mci Class-A displacements are from setting file
+    136          #endif
+    137          
+    138          #if (MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL != ENABLED)
+    139              #ifndef SETTING_FILE_H      // to avoid double inclusion
+    140                  #include "SettingFile.h"
+    141              #endif
+    142          #endif
+    143          
+    144          #ifndef MCI_PARAMETERS_LOADER_ADDITIONAL_CHECK
+    145              #define MCI_PARAMETERS_LOADER_ADDITIONAL_CHECK  TRUE
+    146          #endif
+    147          
+    148          #ifndef PLATFORM_USED
+    149              #define NUCLEUS_BASED                   0
+    150              #define PLATFORM_2_5_BASED              1
+    151          
+    152              #define PLATFORM_USED                  NUCLEUS_BASED
+    153          #endif
+    154          
+    155          #if (PLATFORM_USED == PLATFORM_2_5_BASED)
+    156          #include "Params.h"
+
+  PACKED typedef struct
+         ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Common\SettingFile\SettingFile.h",39  Remark[Pe082]: 
+          storage class is not first
+    157          #endif
+    158          
+    159          #if (MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED)
+    160              // allocate memory in RAM
+    161              uint8 Mci_ClassA_Prm_Ram[MCI_CLASS_A_PARAMETERS_SIZE_RAM];    // sum of parameters in all used displacements from RAM
+    162          #endif
+    163          
+    164          #if ((MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED) || (MCI_CLASS_A_PARAMETERS_LOADER_SF == ENABLED))
+    165          #if (PLATFORM_USED == NUCLEUS_BASED)
+    166              SETTINGFILE_LOADER_TYPE Mci_ClassA_Prm_Flash_Ptr;
+    167          #else
+    168              PARAMS_LOADER_TYPE Mci_ClassA_Prm_Flash_Ptr;
+    169          #endif
+    170          #endif
+    171          
+    172          #if (MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED)
+    173              // allocate memory in RAM
+    174              uint8 Mci_ClassB_Prm_Ram[MCI_CLASS_B_PARAMETERS_SIZE_RAM];    // sum of parameters in all used displacements from RAM
+    175          #endif
+    176          
+    177          #if ((MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED) || (MCI_CLASS_B_PARAMETERS_LOADER_SF == ENABLED))
+    178          
+    179              #if (PLATFORM_USED == NUCLEUS_BASED)
+    180                  SETTINGFILE_LOADER_TYPE Mci_ClassB_Prm_Flash_Ptr;
+    181              #else
+    182                  PARAMS_LOADER_TYPE Mci_ClassB_Prm_Flash_Ptr;
+    183              #endif
+    184          #endif
+    185          
+    186          addr_t Mcl_SF_Displs[MCI_CLASS_A_DISPLACEMENTS];
+   \                     Mcl_SF_Displs:
+   \   00000000   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   00000010   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \   __absolute unsigned long Mcl_Params_SF[253]
+   \                     Mcl_Params_SF:
+   \   00000018   0x3F7FFEB1         DC32 1065352881, 1079278305, 1041865114, 1042536203, 1083179008
+   \              0x40547AE1   
+   \              0x3E19999A   
+   \              0x3E23D70B   
+   \              0x40900000   
+   \   0000002C   0x40860A8B         DC32 1082526347, 0, 1035717942, 1114636288, 1020054733, 1056964608
+   \              0x00000000   
+   \              0x3DBBCD36   
+   \              0x42700000   
+   \              0x3CCCCCCD   
+   \              0x3F000000   
+   \   00000044   0x42278D2D         DC32 1109888301, 1082130432, 500, 1122762752, 1046101361, 948114031
+   \              0x40800000   
+   \              0x000001F4   
+   \              0x42EC0000   
+   \              0x3E5A3D71   
+   \              0x3883126F   
+   \   0000005C   0x4329E148         DC32 1126818120, 1000, 956502639, 1066611507, 1094713344, 1049414861
+   \              0x000003E8   
+   \              0x3903126F   
+   \              0x3F933333   
+   \              0x41400000   
+   \              0x3E8CCCCD   
+   \   00000074   0x44BB8000         DC32 1153138688, 1100349440, 1150730240, 80, 1136525312, 1075000116
+   \              0x41960000   
+   \              0x4496C000   
+   \              0x00000050   
+   \              0x43BE0000   
+   \              0x40133334   
+   \   0000008C   0x463B8000         DC32 1178304512, 1122041857, 1180352512, 120, 1136525312, 1075000116
+   \              0x42E10001   
+   \              0x465AC000   
+   \              0x00000078   
+   \              0x43BE0000   
+   \              0x40133334   
+   \   000000A4   0x463B8000         DC32 1178304512, 1122041857, 1184645120, 120, 1035717942, 1043878380
+   \              0x42E10001   
+   \              0x469C4000   
+   \              0x00000078   
+   \              0x3DBBCD36   
+   \              0x3E3851EC   
+   \   000000BC   0x000003E8         DC32 1000, 953267991, 1101499693, 1067030938, 1056964608, 1053609165
+   \              0x38D1B717   
+   \              0x41A78D2D   
+   \              0x3F99999A   
+   \              0x3F000000   
+   \              0x3ECCCCCD   
+   \   000000D4   0x3F7AE148         DC32 1065017672, 1072211078, 1103036985, 1103036985, 5, 72, 4000, 600
+   \              0x3FE8A486   
+   \              0x41BF0239   
+   \              0x41BF0239   
+   \              0x00000005   
+   \              0x00000048   
+   \              0x00000FA0   
+   \              0x00000258   
+   \   000000F4   0x00000258         DC32 600, 1111683235, 4000, 1073741824, 1077936128, 1065353216, 600
+   \              0x4242F0A3   
+   \              0x00000FA0   
+   \              0x40000000   
+   \              0x40400000   
+   \              0x3F800000   
+   \              0x00000258   
+   \   00000110   0x00000258         DC32 600, 400, 1024416809, 1024416809, 1034147594, 120, 1133903872
+   \              0x00000190   
+   \              0x3D0F5C29   
+   \              0x3D0F5C29   
+   \              0x3DA3D70A   
+   \              0x00000078   
+   \              0x43960000   
+   \   0000012C   0x40547AE1         DC32 1079278305, 1078530000, 14400, 7, 1154859008, 2400, 3, 12000, 3
+   \              0x40490FD0   
+   \              0x00003840   
+   \              0x00000007   
+   \              0x44D5C000   
+   \              0x00000960   
+   \              0x00000003   
+   \              0x00002EE0   
+   \              0x00000003   
+   \   00000150   0x40547AE1         DC32 1079278305, 1130895770, 1050294149, 999108151, 1103626240, 1024
+   \              0x4368199A   
+   \              0x3E9A3785   
+   \              0x3B8D2E37   
+   \              0x41C80000   
+   \              0x00000400   
+   \   00000168   0x42960000         DC32 1117126656, 1097859072, 1126818120, 0, 0, 1066611507, 1114636288
+   \              0x41700000   
+   \              0x4329E148   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x3F933333   
+   \              0x42700000   
+   \   00000184   0x40500001         DC32 1078984705, 1114636288, 1078984705, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x42700000   
+   \              0x40500001   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \   000001B8   0x00000000         DC32 0, 0, 0, 0, 1169915904, 8, 1065353216, 0, 1016285899, 1065353216
+   \              0x00000000   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x45BB8000   
+   \              0x00000008   
+   \              0x3F800000   
+   \              0x00000000   
+   \              0x3C934ACB   
+   \              0x3F800000   
+   \   000001E0   0x3C934ACB         DC32 1016285899, 1073741824, 1016285899, 1077936128, 1016285899
+   \              0x40000000   
+   \              0x3C934ACB   
+   \              0x40400000   
+   \              0x3C934ACB   
+   \   000001F4   0x40800000         DC32 1082130432, 1016285899, 1084227584, 1016285899, 1086324736
+   \              0x3C934ACB   
+   \              0x40A00000   
+   \              0x3C934ACB   
+   \              0x40C00000   
+   \   00000208   0x3C934ACB         DC32 1016285899, 1088421888, 1016285899, 0, 1020323168, 1065353216
+   \              0x40E00000   
+   \              0x3C934ACB   
+   \              0x00000000   
+   \              0x3CD0E560   
+   \              0x3F800000   
+   \   00000220   0x3CD0E560         DC32 1020323168, 1073741824, 1020323168, 1077936128, 1020323168
+   \              0x40000000   
+   \              0x3CD0E560   
+   \              0x40400000   
+   \              0x3CD0E560   
+   \   00000234   0x40800000         DC32 1082130432, 1019947358, 1084227584, 1019528600, 1086324736
+   \              0x3CCB295E   
+   \              0x40A00000   
+   \              0x3CC4C598   
+   \              0x40C00000   
+   \   00000248   0x3CBDA511         DC32 1019061521, 1088421888, 1018589075, 0, 0, 1065353216, 0
+   \              0x40E00000   
+   \              0x3CB66F93   
+   \              0x00000000   
+   \              0x00000000   
+   \              0x3F800000   
+   \              0x00000000   
+   \   00000264   0x40000000         DC32 1073741824, 0, 1077936128, 0, 1082130432, 0, 1084227584, 0
+   \              0x00000000   
+   \              0x40400000   
+   \              0x00000000   
+   \              0x40800000   
+   \              0x00000000   
+   \              0x40A00000   
+   \              0x00000000   
+   \   00000284   0x40C00000         DC32 1086324736, 0, 1088421888, 0, 1108344832, 1083179008, 1035717942
+   \              0x00000000   
+   \              0x40E00000   
+   \              0x00000000   
+   \              0x42100000   
+   \              0x40900000   
+   \              0x3DBBCD36   
+   \   000002A0   0x000003E8         DC32 1000, 3196730737, 0, 1065353216, 1033561129, 935018255, 1144055399
+   \              0xBE8A3D71   
+   \              0x00000000   
+   \              0x3F800000   
+   \              0x3D9AE429   
+   \              0x37BB3F0F   
+   \              0x4430E667   
+   \   000002BC   0x00000014         DC32 20, 1032522963, 927482737, 1147666432, 20, 1027069416, 923807887
+   \              0x3D8B0CD3   
+   \              0x37484371   
+   \              0x44680000   
+   \              0x00000014   
+   \              0x3D37D5E8   
+   \              0x3710308F   
+   \   000002D8   0x45768001         DC32 1165393921, 20, 1023737033, 907030671, 1185095680, 20, 1074580685
+   \              0x00000014   
+   \              0x3D04FCC9   
+   \              0x3610308F   
+   \              0x46A32000   
+   \              0x00000014   
+   \              0x400CCCCD   
+   \   000002F4   0x3E4CCCCD         DC32 1045220557, 1086324736, 16, 1078809437, 1029436552, 1035758207
+   \              0x40C00000   
+   \              0x00000010   
+   \              0x404D535D   
+   \              0x3D5BF488   
+   \              0x3DBC6A7F   
+   \   0000030C   0x3EBB15B5         DC32 1052448181, 1035798472, 1059935853, 1036134017, 1065165311
+   \              0x3DBD07C8   
+   \              0x3F2D566D   
+   \              0x3DC22681   
+   \              0x3F7D21FF   
+   \   00000320   0x3DC9BA5E         DC32 1036630622, 1067873993, 1037180915, 1070488722, 1037878847
+   \              0x3FA676C9   
+   \              0x3DD21FF3   
+   \              0x3FCE5C92   
+   \              0x3DDCC63F   
+   \   00000334   0x3FF6425B         DC32 1073103451, 1038630466, 1074730002, 1039395507, 1076037367
+   \              0x3DE83E42   
+   \              0x400F1412   
+   \              0x3DF3EAB3   
+   \              0x402306F7   
+   \   00000348   0x3E00346E         DC32 1040200814, 1077344731, 1040549780, 1078652096, 1040925590
+   \              0x4036F9DB   
+   \              0x3E058794   
+   \              0x404AECC0   
+   \              0x3E0B4396   
+   \   0000035C   0x405EDFA4         DC32 1079959460, 1041321532, 1081266825, 1041737607, 1082352311
+   \              0x3E114E3C   
+   \              0x4072D289   
+   \              0x3E17A787   
+   \              0x408362B7   
+   \   00000370   0x3E1E4F76         DC32 1042173814, 1083005993, 1042569757, 1083659675, 1042972410, 16
+   \              0x408D5C29   
+   \              0x3E245A1D   
+   \              0x4097559B   
+   \              0x3E2A7EFA   
+   \              0x00000010   
+   \   00000388   0x43003484         DC32 1124086916, 1008552274, 1047361330, 1015974514, 1054213145
+   \              0x3C1D4952   
+   \              0x3E6D7732   
+   \              0x3C8E8A72   
+   \              0x3ED60419   
+   \   0000039C   0x3CCD9E84         DC32 1020108420, 1058831912, 1023853095, 1062021261, 1025920048
+   \              0x3F1C7E28   
+   \              0x3D06C227   
+   \              0x3F4D288D   
+   \              0x3D264C30   
+   \   000003B0   0x3F7E2EB2         DC32 1065234098, 1028013844, 1067007449, 1030080797, 1068526626
+   \              0x3D463F14   
+   \              0x3F993DD9   
+   \              0x3D65C91D   
+   \              0x3FB06C22   
+   \   000003C4   0x3D82DE01         DC32 1031986689, 1069881387, 1033020165, 1071436635, 1034067064
+   \              0x3FC5182B   
+   \              0x3D92A305   
+   \              0x3FDCD35B   
+   \              0x3DA29C78   
+   \   000003D8   0x3FF6CF42         DC32 1073139522, 1035100540, 1074296311, 1036147438, 1074955656
+   \              0x3DB2617C   
+   \              0x400875F7   
+   \              0x3DC25AEE   
+   \              0x40128588   
+   \   000003EC   0x3DD21FF3         DC32 1037180915, 1075580187, 1038227813, 1076075954, 1039261290
+   \              0x401C0D1B   
+   \              0x3DE21965   
+   \              0x40239DB2   
+   \              0x3DF1DE6A   
+   \   00000400   0x402CAF4F         DC32 1076670287, 1040247790, 1083179008
+   \              0x3E00EBEE   
+   \              0x40900000   
+
+   \                                 In section .data, align 4
+    187          addr_t Mci_Sr_SF_Displs[MCI_CLASS_B_DISPLACEMENTS];
+   \                     Mci_Sr_SF_Displs:
+   \   00000000   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \   __absolute unsigned short Motor_Sr_Params_SF[26]
+   \                     Motor_Sr_Params_SF:
+   \   00000004   0x3AF8 0x0019      DC16 15096, 25, 80, 130, 25, 333, 4719, 15107, 0, 16256, 40370, 15599
+   \              0x0050 0x0082
+   \              0x0019 0x014D
+   \              0x126F 0x3B03
+   \              0x0000 0x3F80
+   \              0x9DB2 0x3CEF
+   \   0000001C   0xEAA2 0x37FC      DC16 60066, 14332, 31457, 16468, 47668, 15235, 18350, 15969, 9836
+   \              0x7AE1 0x4054
+   \              0xBA34 0x3B83
+   \              0x47AE 0x3E61
+   \              0x266C       
+   \   0000002E   0x3D9F 0x0000      DC16 15775, 0, 16416, 1724, 0
+   \              0x4020 0x06BC
+   \              0x0000       
+    188          
+    189          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    190          void MciClassAPointerLoading(void);
+    191          void MciClassBPointerLoading(void);
+    192          
+    193          
+    194          //=====================================================================================================================
+    195          //-------------------------------------- Public Functions -------------------------------------------------------------
+    196          //=====================================================================================================================
+    197          
+    198          //---------------------------------------------------------------------------------------------------------------------
+    199          /**
+    200           *  @brief      It Initializes the module MciParametersLoaders and its variables.
+    201           *
+    202           */
+
+   \                                 In section .text, align 2, keep-with-next
+    203          void MciParametersLoader__Initialize(void)
+    204          {
+    205          
+    206          }
+   \                     MciParametersLoader__Initialize: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    207          
+    208          
+    209          
+    210          
+    211          //---------------------------------------------------------------------------------------------------------------------
+    212          /**
+    213           *  @brief      Handle Mci Parameters Loader  events of 25ms.
+    214           *
+    215           */
+
+   \                                 In section .text, align 2, keep-with-next
+    216          void MciParametersLoader__25msHandler(void)
+    217          {
+   \                     MciParametersLoader__25msHandler: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    218          
+    219              if((Mci__GetDigital(MOTOR0, MCI_DI_PARAMETERS_LOADED) == FALSE) && (Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)>2))
+   \   00000004   0x2105             MOVS     R1,#+5
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x.... 0x....      BL       Mci__GetDigital
+   \   0000000C   0xB970             CBNZ.N   R0,??MciParametersLoader__25msHandler_0
+   \   0000000E   0x2118             MOVS     R1,#+24
+   \   00000010   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000014   0x2803             CMP      R0,#+3
+   \   00000016   0xDB09             BLT.N    ??MciParametersLoader__25msHandler_0
+    220              {
+    221          
+    222          #if ((MCI_CLASS_A_PARAMETERS_LOADER_SF == ENABLED) || (MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED) || \
+    223               (MCI_CLASS_B_PARAMETERS_LOADER_SF == ENABLED) || (MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED))
+    224                  if (Mode__IsProgrammingEngaged() == FALSE) //Mci is Initialized and parameters not loaded
+    225          #else
+    226                  if (MCI_PARAMETERS_LOADER_ADDITIONAL_CHECK)
+    227          #endif
+    228                  {
+    229                      // Load Class A Pointer data
+    230                      MciClassAPointerLoading();
+   \   00000018   0x.... 0x....      BL       MciClassAPointerLoading
+    231          
+    232                      // Load Class B Pointer data
+    233                      MciClassBPointerLoading();
+   \   0000001C   0x....             LDR.N    R1,??DataTable8
+   \   0000001E   0x1D08             ADDS     R0,R1,#+4
+   \   00000020   0x6008             STR      R0,[R1, #+0]
+   \   00000022   0xB001             ADD      SP,SP,#+4
+   \   00000024   0xF85D 0xEB04      POP      {LR}
+   \   00000028   0x.... 0x....      B.W      SRMotorSafetyMgr__SetParams
+    234                  }
+    235              }
+    236          }
+   \                     ??MciParametersLoader__25msHandler_0: (+1)
+   \   0000002C   0xB001             ADD      SP,SP,#+4
+   \   0000002E   0xBD00             POP      {PC}             ;; return
+    237          
+    238          
+    239          
+    240          //---------------------------------------------------------------------------------------------------------------------
+    241          /**
+    242           *  @brief      Get a class A displacement address
+    243           *
+    244           *  @param[in]  displacement Displacement to get, as defined in SettingFile_prm.h
+    245           *  @return     The address of the displacement; NULL in case the index is out of range
+    246           */
+
+   \                                 In section .text, align 2, keep-with-next
+    247          addr_t MciParametersLoader__GetClassADispl(uint8 displacement)
+    248          {
+    249              addr_t res = (addr_t)NULL;
+   \                     MciParametersLoader__GetClassADispl: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+    250              uint8 i = 0;
+    251          #if (MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED)
+    252              // Get the index for the given displacement
+    253              for (i = 0; i < MCI_CLASS_A_DISPLACEMENTS; i++)
+    254              {
+    255                  if (Displ_Idxs_Ram[i] == displacement)
+    256                  {
+    257                      res = Mcl_SF_Displs[i];
+    258                  }
+    259              }
+    260          #endif
+    261          #if (MCI_CLASS_A_PARAMETERS_LOADER_SF == ENABLED)
+    262              // Get the index for the given displacement
+    263              for (i = 0; i < MCI_CLASS_A_DISPLACEMENTS; i++)
+    264              {
+    265                  if (Displ_Idxs_Flash[i] == displacement)
+    266                  {
+    267                      res = Mcl_SF_Displs[i];
+    268                  }
+    269              }
+    270          #endif
+    271          #if (MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL == ENABLED)
+    272              // Get the index for the given displacement
+    273              for (i = 0; i < MCI_CLASS_A_DISPLACEMENTS; i++)
+    274              {
+    275                  if (Displ_Idxs_Internal[i] == displacement)
+   \   00000002   0x2801             CMP      R0,#+1
+   \   00000004   0xD103             BNE.N    ??MciParametersLoader__GetClassADispl_0
+   \   00000006   0x....             LDR.N    R0,??DataTable8_1
+   \   00000008   0x6801             LDR      R1,[R0, #+0]
+    276                  {
+    277                      res = Mcl_SF_Displs[i];
+    278                  }
+    279              }
+    280          #endif
+    281          
+    282              return res;
+   \   0000000A   0x4608             MOV      R0,R1
+   \   0000000C   0x4770             BX       LR
+   \                     ??MciParametersLoader__GetClassADispl_0: (+1)
+   \   0000000E   0x2803             CMP      R0,#+3
+   \   00000010   0xD103             BNE.N    ??MciParametersLoader__GetClassADispl_1
+   \   00000012   0x....             LDR.N    R0,??DataTable8_1
+   \   00000014   0x6841             LDR      R1,[R0, #+4]
+   \   00000016   0x4608             MOV      R0,R1
+   \   00000018   0x4770             BX       LR
+   \                     ??MciParametersLoader__GetClassADispl_1: (+1)
+   \   0000001A   0x2804             CMP      R0,#+4
+   \   0000001C   0xD103             BNE.N    ??MciParametersLoader__GetClassADispl_2
+   \   0000001E   0x....             LDR.N    R0,??DataTable8_1
+   \   00000020   0x6881             LDR      R1,[R0, #+8]
+   \   00000022   0x4608             MOV      R0,R1
+   \   00000024   0x4770             BX       LR
+   \                     ??MciParametersLoader__GetClassADispl_2: (+1)
+   \   00000026   0x2809             CMP      R0,#+9
+   \   00000028   0xD103             BNE.N    ??MciParametersLoader__GetClassADispl_3
+   \   0000002A   0x....             LDR.N    R0,??DataTable8_1
+   \   0000002C   0x68C1             LDR      R1,[R0, #+12]
+   \   0000002E   0x4608             MOV      R0,R1
+   \   00000030   0x4770             BX       LR
+   \                     ??MciParametersLoader__GetClassADispl_3: (+1)
+   \   00000032   0x280A             CMP      R0,#+10
+   \   00000034   0xD103             BNE.N    ??MciParametersLoader__GetClassADispl_4
+   \   00000036   0x....             LDR.N    R0,??DataTable8_1
+   \   00000038   0x6901             LDR      R1,[R0, #+16]
+   \   0000003A   0x4608             MOV      R0,R1
+   \   0000003C   0x4770             BX       LR
+   \                     ??MciParametersLoader__GetClassADispl_4: (+1)
+   \   0000003E   0x280B             CMP      R0,#+11
+   \   00000040   0xBF04             ITT      EQ 
+   \   00000042   0x....             LDREQ.N  R0,??DataTable8_1
+   \   00000044   0x6941             LDREQ    R1,[R0, #+20]
+   \   00000046   0x4608             MOV      R0,R1
+   \   00000048   0x4770             BX       LR               ;; return
+    283          }
+    284          
+    285          //---------------------------------------------------------------------------------------------------------------------
+    286          /**
+    287           *  @brief      Get a class B displacement address
+    288           *
+    289           *  @param[in]  displacement Displacement to get, as defined in SettingFile_prm.h
+    290           *  @return     The address of the displacement; NULL in case the index is out of range
+    291           */
+
+   \                                 In section .text, align 2, keep-with-next
+    292          addr_t MciParametersLoader__GetClassBDispl(uint8 displacement)
+    293          {
+    294              addr_t res = (addr_t)NULL;
+   \                     MciParametersLoader__GetClassBDispl: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+    295              uint8 i = 0;
+    296          #if (MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED)
+    297              for (i = 0; i < MCI_CLASS_B_DISPLACEMENTS; i++)
+    298              {
+    299                  if (Displ_Sr_Idxs_Ram[i] == displacement)
+    300                  {
+    301                      res = Mci_Sr_SF_Displs[i];
+    302                  }
+    303              }
+    304          #endif
+    305          #if (MCI_CLASS_B_PARAMETERS_LOADER_SF == ENABLED)
+    306              for (i = 0; i < MCI_CLASS_B_DISPLACEMENTS; i++)
+    307              {
+    308                  if (Displ_Sr_Idxs_Flash[i] == displacement)
+    309                  {
+    310                      res = Mci_Sr_SF_Displs[i];
+    311                  }
+    312              }
+    313          #endif
+    314          #if (MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL == ENABLED)
+    315              for (i = 0; i < MCI_CLASS_B_DISPLACEMENTS; i++)
+    316              {
+    317                  if (Displ_Sr_Idxs_Internal[i] == displacement)
+   \   00000002   0x2801             CMP      R0,#+1
+   \   00000004   0xBF04             ITT      EQ 
+    318                  {
+    319                      res = Mci_Sr_SF_Displs[i];
+   \   00000006   0x....             LDREQ.N  R0,??DataTable8
+   \   00000008   0x6801             LDREQ    R1,[R0, #+0]
+    320                  }
+    321              }
+    322          #endif
+    323          
+    324              return res;
+   \   0000000A   0x4608             MOV      R0,R1
+   \   0000000C   0x4770             BX       LR               ;; return
+    325          }
+    326          
+    327          
+
+   \                                 In section .text, align 2, keep-with-next
+    328          void MciClassAPointerLoading(void)
+    329          {
+    330              uint8 displ_address = 0;
+    331              uint8 i = 0;
+    332          #if MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED
+    333              uint8 *mci_class_a_prm_sf_ptr;           // Pointer to Ram buffer for SF copy
+    334          #endif
+    335          #if MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL == ENABLED
+    336              uint8 *mci_class_a_prm_internal_ptr;     // Pointer to Ram area for internal params (not from setting file)
+    337              uint8 *mci_class_a_prm_internal_ptr_max; // Max Pointer value given the size of internal parameters
+    338          #endif
+    339              // init the displacement address for the vector pointer to be passed to MCI
+    340              displ_address = 0;
+    341          
+    342              // initialize pointer RAM buffer (copy from flash)
+    343          #if MCI_CLASS_A_PARAMETERS_LOADER_SF_RAM == ENABLED
+    344              mci_class_a_prm_sf_ptr = Mci_ClassA_Prm_Ram;
+    345          #endif
+    346          
+    347              // initialize pointer RAM (internal params)
+    348          #if MCI_CLASS_A_PARAMETERS_LOADER_INTERNAL == ENABLED
+    349              mci_class_a_prm_internal_ptr = (uint8*)Mcl_Params_SF;
+    350              mci_class_a_prm_internal_ptr_max = mci_class_a_prm_internal_ptr + sizeof(Mcl_Params_SF);
+    351          #endif
+    352          
+    353              // Loading required displacements of MCI Class A pointer ...
+    354          #ifdef SF_RAM_DISPLS
+    355              for (i = 0; i<NUM_SF_RAM_DISPL; i++)
+    356              {
+    357          
+    358          #if (PLATFORM_USED == NUCLEUS_BASED)
+    359                  // loading from setting file in Flash
+    360                  if(SettingFile__BasicLoader(SF_PTR_MCU_CLASS_A_MCI, Displ_Idxs_Ram[i], &Mci_ClassA_Prm_Flash_Ptr) == PASS)
+    361                  {
+    362                      // copy from Flash to RAM
+    363                      memcpy(mci_class_a_prm_sf_ptr, Mci_ClassA_Prm_Flash_Ptr.Data, Mci_ClassA_Prm_Flash_Ptr.Length); //Copy from Flash to RAM
+    364          
+    365                      // store RAM pointer value to be passed to MCI set params
+    366                      Mcl_SF_Displs[displ_address++] = (sint32)mci_class_a_prm_sf_ptr;
+    367          
+    368                      //update RAM pointer
+    369                      mci_class_a_prm_sf_ptr += Mci_ClassA_Prm_Flash_Ptr.Length;
+    370                  }
+    371                  else
+    372                  {
+    373                      // NULL pointer in case of loading exception
+    374                      Mcl_SF_Displs[displ_address++] = (addr_t)NULL;
+    375                  }
+    376          #else
+    377                  // loading from setting file in Flash
+    378                  if(Params__BasicLoader(SF_PTR_MCU_CLASS_A_MCI, Displ_Idxs_Ram[i], &Mci_ClassA_Prm_Flash_Ptr) == PASS)
+    379                  {
+    380                      Mcl_SF_Displs[displ_address++] = (sint32)Mci_ClassA_Prm_Flash_Ptr.Data;
+    381                  }
+    382                  else
+    383                  {
+    384                      // NULL pointer in case of loading exception
+    385                      Mcl_SF_Displs[displ_address++] = (addr_t)NULL;
+    386                  }
+    387          #endif
+    388          
+    389              }
+    390          #endif
+    391          #ifdef SF_FLASH_DISPLS
+    392              for (i = 0; i<NUM_SF_FLASH_DISPL; i++)
+    393              {
+    394                  // loading from setting file in Flash
+    395                  if((SettingFile__BasicLoader(SF_PTR_MCU_CLASS_A_MCI, Displ_Idxs_Flash[i], &Mci_ClassA_Prm_Flash_Ptr) == PASS) && (!mci_sf_error))
+    396                  {
+    397                      Mcl_SF_Displs[displ_address++] = (sint32)Mci_ClassA_Prm_Flash_Ptr.Data;
+    398                  }
+    399                  else
+    400                  {
+    401                      // NULL pointer in case of loading exception
+    402                      Mcl_SF_Displs[displ_address++] = (addr_t)NULL;
+    403                  }
+    404              }
+    405          #endif
+    406          #ifdef INTERNAL_DISPLS
+    407              for (i = 0; i<NUM_INTERNAL_DISPL; i++)
+   \                     MciClassAPointerLoading: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable8_1
+   \   00000002   0xF200 0x410C      ADDW     R1,R0,#+1036
+    408              {
+    409                  if (mci_class_a_prm_internal_ptr < mci_class_a_prm_internal_ptr_max)
+   \   00000006   0xF100 0x0218      ADD      R2,R0,#+24
+   \   0000000A   0x428A             CMP      R2,R1
+   \   0000000C   0xBF28             IT       CS 
+    410                  {
+    411                      Mcl_SF_Displs[displ_address++] = (addr_t)mci_class_a_prm_internal_ptr;
+    412                  }
+    413                  else
+    414                  {
+    415                      // NULL pointer in case of loading exception
+    416                      Mcl_SF_Displs[displ_address++] = (addr_t)NULL;
+   \   0000000E   0x2200             MOVCS    R2,#+0
+   \   00000010   0x6002             STR      R2,[R0, #+0]
+    417                  }
+    418          
+    419                  mci_class_a_prm_internal_ptr += Displ_Sizes_Internal[i];
+   \   00000012   0xF500 0x72E6      ADD      R2,R0,#+460
+   \   00000016   0x428A             CMP      R2,R1
+   \   00000018   0xBF28             IT       CS 
+   \   0000001A   0x2200             MOVCS    R2,#+0
+   \   0000001C   0x6042             STR      R2,[R0, #+4]
+   \   0000001E   0xF500 0x7225      ADD      R2,R0,#+660
+   \   00000022   0x428A             CMP      R2,R1
+   \   00000024   0xBF28             IT       CS 
+   \   00000026   0x2200             MOVCS    R2,#+0
+   \   00000028   0x6082             STR      R2,[R0, #+8]
+   \   0000002A   0xF500 0x723F      ADD      R2,R0,#+764
+   \   0000002E   0x428A             CMP      R2,R1
+   \   00000030   0xBF28             IT       CS 
+   \   00000032   0x2200             MOVCS    R2,#+0
+   \   00000034   0x60C2             STR      R2,[R0, #+12]
+   \   00000036   0xF500 0x7261      ADD      R2,R0,#+900
+   \   0000003A   0x428A             CMP      R2,R1
+   \   0000003C   0xBF34             ITE      CC 
+   \   0000003E   0xF500 0x7161      ADDCC    R1,R0,#+900
+   \   00000042   0x2100             MOVCS    R1,#+0
+   \   00000044   0x6101             STR      R1,[R0, #+16]
+   \   00000046   0x2100             MOVS     R1,#+0
+   \   00000048   0x6141             STR      R1,[R0, #+20]
+    420              }
+    421          #endif
+    422          
+    423              // complete the process
+    424              Mci__SetParams(&Mcl_SF_Displs);
+   \   0000004A   0x.... 0x....      B.W      Mci__SetParams
+    425          #if (INVERTER_TEMP_SETTINGFILE_SUPPORT == ENABLED)
+                      ^
+Remark[Pe193]: zero used for undefined preprocessing identifier
+          "INVERTER_TEMP_SETTINGFILE_SUPPORT"
+    426              InverterTemp__SetParams((void*)MciParametersLoader__GetClassADispl(SF_DISPL_INVERTER_PARAMS));
+    427          #endif
+    428          #if (POWERMODULE_MANAGER_USED == ENABLED)
+                      ^
+Remark[Pe193]: zero used for undefined preprocessing identifier
+          "POWERMODULE_MANAGER_USED"
+    429              PowerModuleManager__SetParams((void*)MciParametersLoader__GetClassADispl(SF_DISPL_POWERMODULE_MGR_PARAMS));
+    430          #endif
+    431          }
+    432          
+    433          
+
+   \                                 In section .text, align 2, keep-with-next
+    434          void MciClassBPointerLoading(void)
+    435          {
+    436              uint16 crc_calc;
+                            ^
+Warning[Pe177]: variable "crc_calc" was declared but never referenced
+    437              uint16 crc_sf;
+                            ^
+Warning[Pe177]: variable "crc_sf" was declared but never referenced
+    438              uint8 displ_address = 0;
+    439              uint8 i = 0;
+    440          #if MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED
+    441              uint8 *mci_class_b_prm_sf_ptr;           // Pointer to Ram buffer for SF copy
+    442          #endif
+    443          #if MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL == ENABLED
+    444              uint8 *mci_class_b_prm_internal_ptr;     // Pointer to Ram area for internal params (not from setting file)
+    445          #endif
+    446              // init the displacement address for the vector pointer to be passed to MCI
+    447              displ_address = 0;
+    448          
+    449              // initialize pointer RAM buffer (copy from flash)
+    450          #if MCI_CLASS_B_PARAMETERS_LOADER_SF_RAM == ENABLED
+    451              mci_class_b_prm_sf_ptr = Mci_ClassB_Prm_Ram;
+    452          #endif
+    453          
+    454              // initialize pointer RAM (internal params)
+    455          #if MCI_CLASS_B_PARAMETERS_LOADER_INTERNAL == ENABLED
+    456              mci_class_b_prm_internal_ptr = (uint8*)Motor_Sr_Params_SF;
+    457          #endif
+    458          
+    459              // Loading required displacements of MCI Class B pointer ...
+    460          #ifdef SF_CLASSB_RAM_DISPLS
+    461              #if (PLATFORM_USED == NUCLEUS_BASED)
+    462              for (i = 0; i<NUM_CLASSB_SF_RAM_DISPL; i++)
+    463              {
+    464                  // loading from setting file in Flash
+    465                  if(SettingFile__BasicLoader(SF_PTR_MCU_CLASS_B_MCI, Displ_Sr_Idxs_Ram[i], &Mci_ClassB_Prm_Flash_Ptr) == PASS)
+    466                  {
+    467                      // copy from Flash to RAM
+    468                      memcpy(mci_class_b_prm_sf_ptr, Mci_ClassB_Prm_Flash_Ptr.Data, Mci_ClassB_Prm_Flash_Ptr.Length); //Copy from Flash to RAM
+    469          
+    470                      crc_calc = Crc16__RangeProcess((uint8 *)(&mci_class_b_prm_sf_ptr[2]),0xFFFF,(SAFETY_MOTOR_PARAMETERS_NUM-2));
+    471          
+    472                      crc_sf = (uint16)(((mci_class_b_prm_sf_ptr[1])<<8) + (uint8)(mci_class_b_prm_sf_ptr[0]));
+    473          
+    474                      if(crc_calc == crc_sf) //calculated crc is equal to the one from setting file
+    475                      {
+    476                          // store RAM pointer value to be passed to MCI set params
+    477                          Mci_Sr_SF_Displs[displ_address++] = (sint32)mci_class_b_prm_sf_ptr;
+    478          
+    479                          //update RAM pointer
+    480                          mci_class_b_prm_sf_ptr += Mci_ClassB_Prm_Flash_Ptr.Length;
+    481                      }
+    482                      else
+    483                      {
+    484                          // NULL pointer in case of loading exception
+    485                          Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    486                      }
+    487                  }
+    488                  else
+    489                  {
+    490                      // NULL pointer in case of loading exception
+    491                      Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    492                  }
+    493              }
+    494              #else
+    495              for (i = 0; i<NUM_CLASSB_SF_RAM_DISPL; i++)
+    496              {
+    497                  // loading from setting file in Flash
+    498                  if(Params__BasicLoader(SF_PTR_MCU_CLASS_B_MCI, Displ_Sr_Idxs_Ram[i], &Mci_ClassB_Prm_Flash_Ptr) == PASS)
+    499                  {
+    500                      crc_calc = Crc16__RangeProcess(&Mci_ClassB_Prm_Flash_Ptr.Data[2],0xFFFF,(SAFETY_MOTOR_PARAMETERS_NUM-2));
+    501          
+    502                      crc_sf = (uint16)(((Mci_ClassB_Prm_Flash_Ptr.Data[1])<<8) + (Mci_ClassB_Prm_Flash_Ptr.Data[0]));
+    503          
+    504                      if(crc_calc == crc_sf) //calculated crc is equal to the one from setting file
+    505                      {
+    506                          Mci_Sr_SF_Displs[displ_address++] = (sint32)Mci_ClassB_Prm_Flash_Ptr.Data;
+    507                      }
+    508                      else
+    509                      {
+    510                          // NULL pointer in case of loading exception
+    511                          Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    512                      }
+    513                  }
+    514                  else
+    515                  {
+    516                      // NULL pointer in case of loading exception
+    517                      Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    518                  }
+    519              }
+    520              #endif
+    521          #endif
+    522          #ifdef SF_CLASSB_FLASH_DISPLS
+    523              for (i = 0; i<NUM_CLASSB_SF_FLASH_DISPL; i++)
+    524              {
+    525                  // loading from setting file in Flash
+    526                  if((SettingFile__BasicLoader(SF_PTR_MCU_CLASS_B_MCI, Displ_Sr_Idxs_Flash[i], &Mci_ClassB_Prm_Flash_Ptr) == PASS) && (!mci_sf_error))
+    527                  {
+    528                      crc_calc = Crc16__RangeProcess(Mci_ClassB_Prm_Flash_Ptr.Data[2],0xFFFF,(SAFETY_MOTOR_PARAMETERS_NUM-2));
+    529          
+    530                      crc_sf = (uint16)(((*Mci_ClassB_Prm_Flash_Ptr.Data[1])<<8) + (*Mci_ClassB_Prm_Flash_Ptr.Data[0]));
+    531          
+    532                      if(crc_calc == crc_sf) //calculated crc is equal to the one from setting file
+    533                      {
+    534                          Mci_Sr_SF_Displs[displ_address++] = (sint32)Mci_ClassB_Prm_Flash_Ptr.Data;
+    535                      }
+    536                      else
+    537                      {
+    538                          // NULL pointer in case of loading exception
+    539                          Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    540                      }
+    541                  }
+    542                  else
+    543                  {
+    544                      // NULL pointer in case of loading exception
+    545                      Mci_Sr_SF_Displs[displ_address++] = (addr_t)NULL;
+    546                  }
+    547              }
+    548          #endif
+    549          #ifdef INTERNAL_CLASSB_DISPLS
+    550              for (i = 0; i<NUM_CLASSB_INTERNAL_DISPL; i++)
+   \                     MciClassBPointerLoading: (+1)
+   \   00000000   0x....             LDR.N    R1,??DataTable8
+    551              {
+    552                  Mci_Sr_SF_Displs[displ_address++] = (addr_t)mci_class_b_prm_internal_ptr;
+   \   00000002   0x1D08             ADDS     R0,R1,#+4
+   \   00000004   0x6008             STR      R0,[R1, #+0]
+    553          
+    554                  mci_class_b_prm_internal_ptr += Displ_Sr_Sizes_Internal[i];
+    555              }
+    556          #endif
+    557          
+    558              // complete the process
+    559              SRMotorSafetyMgr__SetParams((void *)*Mci_Sr_SF_Displs);
+   \   00000006   0x.... 0x....      B.W      SRMotorSafetyMgr__SetParams
+    560          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     Mci_Sr_SF_Displs
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x........         DC32     Mcl_SF_Displs
+    561          
+    562          
+    563          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   MciClassAPointerLoading
+         0   -> Mci__SetParams
+       0   MciClassBPointerLoading
+         0   -> SRMotorSafetyMgr__SetParams
+       8   MciParametersLoader__25msHandler
+         8   -> MciClassAPointerLoading
+         8   -> Mci__GetAnalog
+         8   -> Mci__GetDigital
+         0   -> SRMotorSafetyMgr__SetParams
+       0   MciParametersLoader__GetClassADispl
+       0   MciParametersLoader__GetClassBDispl
+       0   MciParametersLoader__Initialize
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+      12  Displ_Idxs_Internal
+      24  Displ_Sizes_Internal
+       2  Displ_Sr_Idxs_Internal
+       4  Displ_Sr_Sizes_Internal
+      78  MciClassAPointerLoading
+      10  MciClassBPointerLoading
+      48  MciParametersLoader__25msHandler
+      74  MciParametersLoader__GetClassADispl
+      14  MciParametersLoader__GetClassBDispl
+       2  MciParametersLoader__Initialize
+      56  Mci_Sr_SF_Displs
+          Motor_Sr_Params_SF
+    1036  Mcl_SF_Displs
+          Mcl_Params_SF
+
+ 
+ 1 092 bytes in section .data
+    42 bytes in section .rodata
+   234 bytes in section .text
+ 
+   234 bytes of CODE  memory
+    42 bytes of CONST memory
+ 1 092 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

@@ -1,0 +1,1145 @@
+###############################################################################
+#
+# IAR ELF Linker V7.20.5.7591/W32 for ARM                 19/Nov/2024  13:16:01
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.out.tmp
+#    Map file     =  exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.map
+#    Command line =  
+#        -f source\lnkarm_flash_mfc.xcl (.\Obj\AnalysisAverage.obj
+#        .\Obj\Arbitration.obj .\Obj\Motion.obj .\Obj\BandLimiter.obj
+#        .\Obj\Beagle.obj .\Obj\CommandManager.obj .\Obj\DigitalFilter.obj
+#        .\Obj\Extraction.obj .\Obj\FaultManager.obj .\Obj\MciSensorsWm.obj
+#        .\Obj\MciSetWm.obj .\Obj\ParamEst.obj .\Obj\ParamEstExc.obj
+#        .\Obj\Params.obj .\Obj\ProtocolInfo.obj .\Obj\ProtocolMainExternal.obj
+#        .\Obj\SRMotorSafetyInfoParamsMgr.obj .\Obj\ThermalModel.obj
+#        .\Obj\ThermalModelCore.obj .\Obj\ThermalModelCore_data.obj
+#        .\Obj\BoardDebugging.obj .\Obj\MasterCommander.obj .\Obj\mc_bdm.obj
+#        .\Obj\mc_llmem.obj .\Obj\mc_protocol.obj .\Obj\mc_rec.obj
+#        .\Obj\mc_scope.obj .\Obj\mc_serial.obj .\Obj\Api221FilterMciErr.obj
+#        .\Obj\ModeManagement.obj .\Obj\ProductInfo.obj
+#        .\Obj\RemoteFunctionExtraction.obj .\Obj\RemoteFunctionChildSafety.obj
+#        .\Obj\MciParametersLoader.obj .\Obj\Mode.obj .\Obj\API003Disc.obj
+#        .\Obj\SFUpdater.obj .\Obj\Crc16.obj .\Obj\Crc8.obj .\Obj\Log.obj
+#        .\Obj\SettingFile.obj .\Obj\SRClockMonitor.obj .\Obj\SRData.obj
+#        .\Obj\SRException.obj .\Obj\SRFlow.obj .\Obj\SRIsrMonitor.obj
+#        .\Obj\SRMain.obj .\Obj\SRMCUSpeedMonitor.obj .\Obj\SRPowerMgr.obj
+#        .\Obj\SRSignature.obj .\Obj\SRTimerReference.obj
+#        .\Obj\SystemTimers.obj .\Obj\Utilities.obj .\Obj\Comparator.obj
+#        .\Obj\DataFlash.obj .\Obj\Dma.obj .\Obj\Flash.obj .\Obj\Gpio.obj
+#        .\Obj\InterruptVector.obj .\Obj\Micro.obj .\Obj\Spi.obj
+#        .\Obj\TimerInterrupt.obj .\Obj\Uart.obj .\Obj\Mci.obj .\Obj\Reveal.obj
+#        .\Obj\Win.obj .\Obj\cortexm4_macro.obj) --config source\config.icf
+#        --semihosting --entry Micro__BootTest -o
+#        exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.out.tmp --map
+#        exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.map --place_holder
+#        MICRO_FLASH_CRC,2,.MICRO_CRC_region,4 --keep=MICRO_FLASH_CRC
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"P1":  place in [from 0x1fffe000 to 0x1fffe038] { section .RESET_INFO_HEADER };
+"P2":  place in [from 0x20001fd3 to 0x20001fff] { section .RESET_INFO_FOOTER };
+"A3":  place at end of [0x00000768-0x0000ffff] { ro section .MICRO_CRC_region };
+"A4":  place at 0x00000000 { ro section Non_Maskable_Jump_interrupt_table };
+"A6":  place at 0x00000600 { ro section .intvec };
+"P4":  place in [from 0x00000400 to 0x0000040f] { section FlashConfig };
+"P5":  place in [from 0x00000768 to 0x0000ffff] { ro };
+"P6":  place in [from 0x1fffe038 to 0x20001fd3] { rw };
+"A7":  place at end of [0x1fffe038-0x20001fd3] { block HEAP, block STACKS };
+
+  Section                 Kind        Address    Size  Object
+  -------                 ----        -------    ----  ------
+"A4":                                             0x8
+  Non_Maskable_Jump_interrupt_table
+                          const    0x00000000     0x8  InterruptVector.obj [1]
+                                 - 0x00000008     0x8
+
+"P4":                                            0x10
+  FlashConfig             const    0x00000400    0x10  Micro.obj [1]
+                                 - 0x00000410    0x10
+
+"A6":                                           0x168
+  .intvec                 const    0x00000600   0x168  InterruptVector.obj [1]
+                                 - 0x00000768   0x168
+
+"P5":                                          0xdd76
+  .text                   ro code  0x00000768  0x8488  Mci.obj [1]
+  .text                   ro code  0x00008bf0   0xad8  BoardDebugging.obj [1]
+  .text                   ro code  0x000096c8   0x130  Gpio.obj [1]
+  .text                   ro code  0x000097f8   0x368  SRData.obj [1]
+  .text                   ro code  0x00009b60   0x100  ThermalModel.obj [1]
+  .text                   ro code  0x00009c60   0xed0  Micro.obj [1]
+  .text                   ro code  0x0000ab30   0x188  Comparator.obj [1]
+  .text                   ro code  0x0000acb8   0x1f4  SRFlow.obj [1]
+  .text                   ro code  0x0000aeac   0x1c0  SRIsrMonitor.obj [1]
+  .text                   ro code  0x0000b06c    0x80  SRException.obj [1]
+  .text                   ro code  0x0000b0ec   0x328  Crc16.obj [1]
+  .text                   ro code  0x0000b414    0x22  MasterCommander.obj [1]
+  .text                   ro code  0x0000b436    0x22  zero_init3.o [5]
+  .text                   ro code  0x0000b458   0xbdc  ThermalModelCore.obj [1]
+  .text                   ro code  0x0000c034     0x6  ABImemclr4.o [5]
+  .text                   ro code  0x0000c03c   0x120  SRClockMonitor.obj [1]
+  .text                   ro code  0x0000c15c   0x2aa  cortexm4_macro.obj [1]
+  .text                   ro code  0x0000c408    0x28  data_init.o [5]
+  .text                   ro code  0x0000c430    0xa4  Micro.obj [1]
+  .text                   ro code  0x0000c4d4     0xc  cstartup_M.o [5]
+  .text                   ro code  0x0000c4e0   0x24c  SRMain.obj [1]
+  .text                   ro code  0x0000c72c   0x154  Crc8.obj [1]
+  .text                   ro code  0x0000c880    0x56  ABImemcpy_unaligned.o [5]
+  .text                   ro code  0x0000c8d8    0x3a  ABImemset48.o [5]
+  .text                   ro code  0x0000c914   0x574  Uart.obj [1]
+  .text                   ro code  0x0000ce88   0x27c  mc_protocol.obj [1]
+  .text                   ro code  0x0000d104   0x3ac  mc_rec.obj [1]
+  .text                   ro code  0x0000d4b0   0x1ea  mc_serial.obj [1]
+  .text                   ro code  0x0000d69c    0x1a  fpinit_M.o [4]
+  .text                   ro code  0x0000d6b8    0x1a  cmain.o [5]
+  .text                   ro code  0x0000d6d4    0xb4  mc_scope.obj [1]
+  .text                   ro code  0x0000d788   0x174  mc_llmem.obj [1]
+  .text                   ro code  0x0000d8fc     0x4  low_level_init.o [3]
+  .text                   ro code  0x0000d900     0x4  exit.o [3]
+  .text                   ro code  0x0000d904     0xa  cexit.o [5]
+  .text                   ro code  0x0000d910    0x14  exit.o [6]
+  .text                   ro code  0x0000d924   0x110  ProtocolInfo.obj [1]
+  .text                   ro code  0x0000da34    0x64  SRMotorSafetyInfoParamsMgr.obj [1]
+  .text                   ro code  0x0000da98    0x28  SRSignature.obj [1]
+  .text                   ro code  0x0000dac0    0x14  FaultManager.obj [1]
+  .rodata                 const    0x0000dad4    0xe8  ThermalModelCore_data.obj [1]
+  .text                   ro code  0x0000dbbc    0xd2  packbits_init.o [5]
+  .text                   ro code  0x0000dc8e     0x6  abort.o [3]
+  .text                   ro code  0x0000dc94    0x8c  ProtocolMainExternal.obj [1]
+  .text                   ro code  0x0000dd20     0x4  Params.obj [1]
+  .text                   ro code  0x0000dd24    0x88  MciParametersLoader.obj [1]
+  .rodata                 const    0x0000ddac    0x70  SRMain.obj [1]
+  .text                   ro code  0x0000de1c    0x38  TimerInterrupt.obj [1]
+  .iar.init_table         const    0x0000de54    0x34  - Linker created -
+  .text                   ro code  0x0000de88    0x10  InterruptVector.obj [1]
+  .rodata                 const    0x0000de98     0x0  zero_init3.o [5]
+  .rodata                 const    0x0000de98     0x0  packbits_init.o [5]
+  Initializer bytes       ro data  0x0000de98   0x646  <for P6 s0>
+                                 - 0x0000e4de  0xdd76
+
+"A3":                                             0x2
+  .MICRO_CRC_region       const    0x0000fffc     0x2  Place holder MICRO_FLASH_CRC
+                                 - 0x0000fffe     0x2
+
+"P1":                                            0x34
+  .RESET_INFO_HEADER      uninit   0x1fffe000    0x34  Micro.obj [1]
+                                 - 0x1fffe034    0x34
+
+"P6", part 1 of 2:                              0xdf7
+  .bss                    const    0x1fffe039     0x0  cortexm4_macro.obj [1]
+  .noinit                 uninit   0x1fffe03c    0x3d  SRException.obj [1]
+  .noinit                 uninit   0x1fffe079     0x1  SRException.obj [1]
+  P6 s0                            0x1fffe07c   0xdb4  <Init block>
+    .data                 inited   0x1fffe07c   0x804  Mci.obj [1]
+    .data                 inited   0x1fffe880   0x40c  MciParametersLoader.obj [1]
+    .data                 inited   0x1fffec8c    0xac  ProtocolInfo.obj [1]
+    .data                 inited   0x1fffed38    0x50  BoardDebugging.obj [1]
+    .data                 inited   0x1fffed88    0x48  CommandManager.obj [1]
+    .data                 inited   0x1fffedd0    0x38  MciParametersLoader.obj [1]
+    .data                 inited   0x1fffee08    0x28  Gpio.obj [1]
+                                 - 0x1fffee30   0xdf7
+
+Absolute sections:                                0x8
+  .bss                    zero     0x1ffffffc     0x4  Micro.obj [1]
+  .bss                    zero     0x20000000     0x4  Micro.obj [1]
+                                 - 0x20000004     0x8
+
+"P6", part 2 of 2:                             0x1250
+  .bss                    zero     0x20000004   0x590  Params.obj [1]
+  .bss                    zero     0x20000594   0x454  mc_rec.obj [1]
+  .bss                    zero     0x200009e8    0x3c  ThermalModelCore.obj [1]
+  .bss                    zero     0x20000a28   0x318  ThermalModelCore.obj [1]
+  .bss                    zero     0x20000d40   0x14c  Params.obj [1]
+  .bss                    zero     0x20000e8c   0x14c  ProtocolMainExternal.obj [1]
+  .bss                    zero     0x20000fd8    0xc4  Mci.obj [1]
+  .bss                    zero     0x2000109c    0x9c  Uart.obj [1]
+  .bss                    zero     0x20001138    0x50  mc_serial.obj [1]
+  .bss                    zero     0x20001188    0x30  SRFlow.obj [1]
+  .bss                    zero     0x200011b8    0x2c  mc_scope.obj [1]
+  .bss                    zero     0x200011e4    0x18  ThermalModel.obj [1]
+  .bss                    zero     0x200011fc    0x18  Micro.obj [1]
+  .bss                    zero     0x20001214    0x10  SRIsrMonitor.obj [1]
+  .bss                    zero     0x20001224    0x10  Micro.obj [1]
+  .bss                    zero     0x20001234     0xc  SRMotorSafetyInfoParamsMgr.obj [1]
+  .bss                    zero     0x20001240     0x8  SRClockMonitor.obj [1]
+  .bss                    zero     0x20001248     0x6  SRMain.obj [1]
+  .bss                    zero     0x2000124e     0x4  FaultManager.obj [1]
+                                 - 0x20001252  0x124e
+
+"A7":                                           0x420
+  STACKS                           0x20001bb0   0x420  <Block>
+    STACK_OVERFLOW_SIGNATURE
+                                   0x20001bb0    0x10  <Block>
+      STACK_OVERFLOW_SIGNATURE
+                          uninit   0x20001bb0    0x10  <Block tail>
+    CSTACK                         0x20001bc0   0x400  <Block>
+      CSTACK              uninit   0x20001bc0   0x400  <Block tail>
+    STACK_UNDERFLOW_SIGNATURE
+                                   0x20001fc0    0x10  <Block>
+      STACK_UNDERFLOW_SIGNATURE
+                          uninit   0x20001fc0    0x10  <Block tail>
+                                 - 0x20001fd0   0x420
+
+"P2":                                            0x2c
+  .RESET_INFO_FOOTER      uninit   0x20001fd4    0x2c  Micro.obj [1]
+                                 - 0x20002000    0x2c
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0x1256:
+          0x1ffffffc     0x8
+          0x20000004  0x124e
+
+Copy/packbits (__iar_packbits_init3)
+    1 source range, total size 0x646 (45% of destination):
+          0x0000de98   0x646
+    1 destination range, total size 0xdb4:
+          0x1fffe07c   0xdb4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                          ro code  ro data  rw data  rw data
+                                                                (abs)
+    ------                          -------  -------  -------  -------
+C:\Data\Python\Windy_sBpm_Floating\Obj: [1]
+    BoardDebugging.obj                2 776       37       80
+    CommandManager.obj                            33       72
+    Comparator.obj                      392
+    Crc16.obj                           808
+    Crc8.obj                            340
+    FaultManager.obj                     20                 4
+    Gpio.obj                            304       19       40
+    InterruptVector.obj                  16      368
+    MasterCommander.obj                  34
+    Mci.obj                          33 928      939    2 248
+    MciParametersLoader.obj             136      499    1 092
+    Micro.obj                         3 956       16      136        8
+    Params.obj                            4             1 756
+    ProtocolInfo.obj                    272       79      172
+    ProtocolMainExternal.obj            140               332
+    SRClockMonitor.obj                  288                 8
+    SRData.obj                          872
+    SRException.obj                     128                62
+    SRFlow.obj                          500                48
+    SRIsrMonitor.obj                    448                16
+    SRMain.obj                          588      112        6
+    SRMotorSafetyInfoParamsMgr.obj      100                12
+    SRSignature.obj                      40
+    ThermalModel.obj                    256                24
+    ThermalModelCore.obj              3 036               852
+    ThermalModelCore_data.obj                    232
+    TimerInterrupt.obj                   56
+    Uart.obj                          1 396               156
+    cortexm4_macro.obj                  682
+    mc_llmem.obj                        372
+    mc_protocol.obj                     636
+    mc_rec.obj                          940             1 108
+    mc_scope.obj                        180                44
+    mc_serial.obj                       490                80
+    ------------------------------------------------------------------
+    Total:                           54 134    2 334    8 348        8
+
+command line: [2]
+    ------------------------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    abort.o                               6
+    exit.o                                4
+    low_level_init.o                      4
+    ------------------------------------------------------------------
+    Total:                               14
+
+m7M_tlv.a: [4]
+    fpinit_M.o                           26
+    ------------------------------------------------------------------
+    Total:                               26
+
+rt7M_tl.a: [5]
+    ABImemclr4.o                          6
+    ABImemcpy_unaligned.o                86
+    ABImemset48.o                        58
+    cexit.o                              10
+    cmain.o                              26
+    cstartup_M.o                         12
+    data_init.o                          40
+    packbits_init.o                     210
+    zero_init3.o                         34
+    ------------------------------------------------------------------
+    Total:                              482
+
+shb_l.a: [6]
+    exit.o                               20
+    ------------------------------------------------------------------
+    Total:                               20
+
+    Gaps                                 16                 7
+    Linker created                                52    1 056
+----------------------------------------------------------------------
+    Grand Total:                     54 692    2 388    9 411        8
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address    Size  Type      Object
+-----                      -------    ----  ----      ------
+?main                   0x0000d6b9          Code  Gb  cmain.o [5]
+APPL_BLOCK_1_END {Abs}  0x0000fffb           --   Gb  command line/config [2]
+APPL_BLOCK_1_START {Abs}
+                        0x00000768           --   Gb  command line/config [2]
+Apply_Default_Accel     0x1fffe3e7     0x1  Data  Gb  Mci.obj [1]
+Attempts                0x20000fa2     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+BDRATE                  0x0000ce48    0x34  Data  Lc  Uart.obj [1]
+BD_Level_Rate_x32       0x1fffed60     0x4  Data  Lc  BoardDebugging.obj [1]
+BD_Level_x32            0x1fffed5c     0x4  Data  Lc  BoardDebugging.obj [1]
+BD_Manual_Method        0x1fffed3b     0x1  Data  Lc  BoardDebugging.obj [1]
+BD_Motor                0x1fffed3a     0x1  Data  Lc  BoardDebugging.obj [1]
+BD_Param_Rate_x32       0x1fffed68     0x4  Data  Lc  BoardDebugging.obj [1]
+BD_Param_x32            0x1fffed64     0x4  Data  Lc  BoardDebugging.obj [1]
+BD_Reset                0x1fffed3c     0x1  Data  Lc  BoardDebugging.obj [1]
+BD_Select_Method        0x1fffed39     0x1  Data  Lc  BoardDebugging.obj [1]
+BD_Target_Accel         0x1fffed56     0x2  Data  Lc  BoardDebugging.obj [1]
+BD_Target_Speed         0x1fffed54     0x2  Data  Lc  BoardDebugging.obj [1]
+BD_Target_Stop          0x1fffed44     0x2  Data  Lc  BoardDebugging.obj [1]
+BD_Update_Cmd           0x1fffed38     0x1  Data  Lc  BoardDebugging.obj [1]
+BoardDebugging__250usHandler
+                        0x00008c8b     0x4  Code  Gb  BoardDebugging.obj [1]
+BoardDebugging__25msHandler
+                        0x00008c91   0x98e  Code  Gb  BoardDebugging.obj [1]
+BoardDebugging__Initialize
+                        0x00008bf1    0x96  Code  Gb  BoardDebugging.obj [1]
+BoardDebugging__PwmHandler
+                        0x00008c87     0x4  Code  Gb  BoardDebugging.obj [1]
+Braking__DqRefHandler   0x00002a8d   0x140  Code  Gb  Mci.obj [1]
+Braking__SpeedCtrlHandler
+                        0x00002929   0x15c  Code  Gb  Mci.obj [1]
+Bytes_Received          0x20000f98     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Bytes_To_Receive        0x20000f94     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Bytes_To_Transmit       0x20000f92     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Bytes_Transmitted       0x20000f96     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+CLASS_B_SIGNATURE       0x0000daa0    0x20  Data  Lc  SRSignature.obj [1]
+COM_Global_Attempts     0x20000fc2     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+CRC8_TABLE              0x0000c780   0x100  Data  Gb  Crc8.obj [1]
+CSTACK$$Base            0x20001bc0           --   Gb  - Linker created -
+CSTACK$$Limit           0x20001fc0           --   Gb  - Linker created -
+Calculated_Crc          0x20000fac     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Calculated_Info_Crc     0x20000fb0     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+ClassB_Signature        0x1fffecfc    0x20  Data  Lc  ProtocolInfo.obj [1]
+Clear_Fault_Timer       0x1fffed84     0x4  Data  Gb  BoardDebugging.obj [1]
+Com_Request_Interval    0x20000f8e     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Com_Safety_Flags        0x20000fa8     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Com_Timer_Cnt           0x20000fb6     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Command_Data            0x20000fd0     0x8  Data  Lc  ProtocolMainExternal.obj [1]
+Command_Data_L1         0x20000f74     0x8  Data  Lc  ProtocolMainExternal.obj [1]
+Command_Data_L2         0x20000f7c     0x8  Data  Lc  ProtocolMainExternal.obj [1]
+Command_Params          0x1fffedb8     0x4  Data  Lc  CommandManager.obj [1]
+Command_Params_SF       0x1fffed88    0x14  Data  Gb  CommandManager.obj [1]
+Command_Speed_Negative  0x1fffed9d     0x1  Data  Lc  CommandManager.obj [1]
+Comparator__Config      0x0000ab3d   0x14e  Code  Gb  Comparator.obj [1]
+Comparator__Initialize  0x0000ab31     0xc  Code  Gb  Comparator.obj [1]
+Comparator__SetThr      0x0000ac8b    0x1e  Code  Gb  Comparator.obj [1]
+Cos_Rot_k1              0x2000105c     0x4  Data  Gb  Mci.obj [1]
+Crc16__ConstRangeProcess
+                        0x0000b181    0x92  Code  Gb  Crc16.obj [1]
+Crc16__RangeProcess     0x0000b0ed    0x92  Code  Gb  Crc16.obj [1]
+Crc8                    0x0000c72d    0x52  Code  Gb  Crc8.obj [1]
+DMC_State               0x1fffeda2     0x2  Data  Lc  CommandManager.obj [1]
+Decode_Load_State_Machine
+                        0x20000fba     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Default_Accel           0x1fffe54c     0x4  Data  Gb  Mci.obj [1]
+Delta_Speed_Rot_Ref     0x1fffe4fc     0x4  Data  Gb  Mci.obj [1]
+Delta_Speed_Timer       0x1fffe402     0x2  Data  Gb  Mci.obj [1]
+DriftAdjust             0x200011f4     0x4  Data  Gb  ThermalModel.obj [1]
+Dutycycle_By_Current_LUT
+                        0x1fffe614   0x208  Data  Gb  Mci.obj [1]
+Dyn_Packet              0x20000fbe     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+EM_Torque               0x20001060     0x4  Data  Gb  Mci.obj [1]
+EM_Torque_Filt_Sum      0x20001064     0x4  Data  Gb  Mci.obj [1]
+Err_Lim_Lower           0x20001090     0x4  Data  Gb  Mci.obj [1]
+Err_Lim_Upper           0x20001094     0x4  Data  Gb  Mci.obj [1]
+Error_Delay             0x20000fbc     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Error_Flux_Alpha_1      0x20001084     0x4  Data  Gb  Mci.obj [1]
+Error_Flux_Beta_1       0x20001088     0x4  Data  Gb  Mci.obj [1]
+EulerStep               0x0000bf31    0x2e  Code  Lc  ThermalModelCore.obj [1]
+Every_Interrupt_Tasks   0x0000c710     0xc  Data  Gb  SRMain.obj [1]
+Every_Slot_Tasks        0x0000c6f4     0x8  Data  Gb  SRMain.obj [1]
+Exception_Buffer        0x1fffe03c    0x3c  Data  Gb  SRException.obj [1]
+Exception_Read          0x1fffe079     0x1  Data  Gb  SRException.obj [1]
+Exception_Write         0x1fffe078     0x1  Data  Gb  SRException.obj [1]
+FLASH_TOTAL_SIZE {Abs}  0x00010000           --   Gb  command line/config [2]
+Fault                   0x1fffedb0     0x2  Data  Lc  CommandManager.obj [1]
+Fault                   0x20000fc0     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+FaultManager__GetResetState
+                        0x0000dad1     0x4  Code  Gb  FaultManager.obj [1]
+FaultManager__Reset     0x0000dac1     0xa  Code  Gb  FaultManager.obj [1]
+Fault_To_Publish        0x2000124e     0x2  Data  Gb  FaultManager.obj [1]
+Fault_To_Publish_Holder
+                        0x20001250     0x2  Data  Gb  FaultManager.obj [1]
+Flux_Controller         0x1fffe2fc    0x1c  Data  Gb  Mci.obj [1]
+Flux_Error              0x20001074     0x4  Data  Gb  Mci.obj [1]
+Flux_Min                0x1fffe4d8     0x4  Data  Gb  Mci.obj [1]
+Forced_Gain_Selector    0x1fffe3db     0x1  Data  Gb  Mci.obj [1]
+Forced_Gain_Timer       0x1fffe400     0x2  Data  Gb  Mci.obj [1]
+Free_Down_Cnt           0x1fffedaa     0x2  Data  Lc  CommandManager.obj [1]
+FvtResult               0x1fffedbc    0x14  Data  Gb  CommandManager.obj [1]
+GPIO_PORT_LIST          0x1fffee08    0x14  Data  Gb  Gpio.obj [1]
+GetUpdatedWork          0x0000be4d    0xd0  Code  Lc  ThermalModelCore.obj [1]
+Gpio__Initialize        0x000096c9     0xa  Code  Gb  Gpio.obj [1]
+Gpio__PinConfig         0x00009721    0xa6  Code  Gb  Gpio.obj [1]
+Gpio__PinWrite          0x000097c7    0x22  Code  Gb  Gpio.obj [1]
+Gpio__RefreshConfig     0x000096d3    0x4c  Code  Gb  Gpio.obj [1]
+I1_Rms_Sum              0x1fffe494     0x4  Data  Gb  Mci.obj [1]
+I2_Rms_Sum              0x1fffe498     0x4  Data  Gb  Mci.obj [1]
+I3_Rms_Sum              0x1fffe49c     0x4  Data  Gb  Mci.obj [1]
+IAP_SIZE {Abs}          0x00000600           --   Gb  command line/config [2]
+INTERRUPT_TABLE_SIZE {Abs}
+                        0x00000168           --   Gb  command line/config [2]
+Id_Braking              0x1fffe4d4     0x4  Data  Gb  Mci.obj [1]
+Ident_Table             0x1fffecd8    0x20  Data  Lc  ProtocolInfo.obj [1]
+InStream_Read           0x0000dbbd    0x22  Code  Lc  packbits_init.o [5]
+Increment               0x1fffe550     0x4  Data  Gb  Mci.obj [1]
+Inductance_Correction   0x00003e5d    0x5a  Code  Gb  Mci.obj [1]
+Initialization_Tasks    0x0000c6e0    0x14  Data  Gb  SRMain.obj [1]
+InitializeConditions    0x0000bd69    0xcc  Code  Lc  ThermalModelCore.obj [1]
+Interrupt_Slot          0x20001249     0x1  Data  Lc  SRMain.obj [1]
+Interrupt_Slot0_Tasks   0x0000de08     0x4  Data  Gb  SRMain.obj [1]
+Interrupt_Slot1_Tasks   0x0000de0c     0x8  Data  Gb  SRMain.obj [1]
+Interrupt_Slot2_Tasks   0x0000de14     0x4  Data  Gb  SRMain.obj [1]
+Interrupt_Slot3_Tasks   0x0000de18     0x4  Data  Gb  SRMain.obj [1]
+Interrupt_Tasks         0x0000c71c    0x10  Data  Gb  SRMain.obj [1]
+Inverter_Compensation_Selector
+                        0x1fffe3d9     0x1  Data  Gb  Mci.obj [1]
+Isr_Attempt_Cntr        0x2000121a     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_Attempt_Max_Cntr    0x2000121c     0x1  Data  Gb  SRIsrMonitor.obj [1]
+Isr_Attempt_Min_Cntr    0x2000121b     0x1  Data  Gb  SRIsrMonitor.obj [1]
+Isr_Enter_Cntr          0x20001216     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_Exit_Cntr           0x20001217     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_LowSpeed_Mode       0x2000121d     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_Max                 0x20001214     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_Max_Cntr            0x20001219     0x1  Data  Gb  SRIsrMonitor.obj [1]
+Isr_Min                 0x20001215     0x1  Data  Lc  SRIsrMonitor.obj [1]
+Isr_Min_Cntr            0x20001218     0x1  Data  Gb  SRIsrMonitor.obj [1]
+LUT_Data_Sizes          0x1fffed1c    0x1c  Data  Lc  ProtocolInfo.obj [1]
+LUT_Pointers            0x1fffecb8    0x20  Data  Lc  ProtocolInfo.obj [1]
+Load_Angle_Limiter      0x1fffe350    0x1c  Data  Gb  Mci.obj [1]
+MC_AddressFromBuffer    0x0000d8a9    0x2c  Code  Gb  mc_llmem.obj [1]
+MC_AddressToBuffer      0x0000d8d5    0x28  Code  Gb  mc_llmem.obj [1]
+MC_Compare16S           0x0000d355    0x18  Code  Lc  mc_rec.obj [1]
+MC_Compare16U           0x0000d36d    0x14  Code  Lc  mc_rec.obj [1]
+MC_Compare32S           0x0000d381    0x14  Code  Lc  mc_rec.obj [1]
+MC_Compare32U           0x0000d395    0x12  Code  Lc  mc_rec.obj [1]
+MC_Compare8S            0x0000d329    0x18  Code  Lc  mc_rec.obj [1]
+MC_Compare8U            0x0000d341    0x14  Code  Lc  mc_rec.obj [1]
+MC_Comparefloat         0x0000d3a9    0x1e  Code  Lc  mc_rec.obj [1]
+MC_CopyFromBuffer       0x0000d809    0x40  Code  Gb  mc_llmem.obj [1]
+MC_CopyFromBufferWithMask
+                        0x0000d849    0x60  Code  Gb  mc_llmem.obj [1]
+MC_CopyMemory           0x0000d789    0x3e  Code  Gb  mc_llmem.obj [1]
+MC_CopyToBuffer         0x0000d7c9    0x3e  Code  Gb  mc_llmem.obj [1]
+MC_GetBoardInfo         0x0000cfa1    0x58  Code  Gb  mc_protocol.obj [1]
+MC_GetRecBuff           0x0000d2e1    0x46  Code  Gb  mc_rec.obj [1]
+MC_GetRecBuffSize       0x0000d2db     0x6  Code  Gb  mc_rec.obj [1]
+MC_GetRecStatus         0x0000d2c1    0x1a  Code  Gb  mc_rec.obj [1]
+MC_Init                 0x0000ce8d    0x18  Code  Gb  mc_protocol.obj [1]
+MC_InitRec              0x0000d105    0x12  Code  Gb  mc_rec.obj [1]
+MC_InitScope            0x0000d6d5     0x2  Code  Gb  mc_scope.obj [1]
+MC_InitSerial           0x0000d673    0x20  Code  Gb  mc_serial.obj [1]
+MC_Poll                 0x0000d699     0x2  Code  Gb  mc_serial.obj [1]
+MC_ProcessSCI           0x0000d4b1    0x72  Code  Gb  mc_serial.obj [1]
+MC_ProtocolDecoder      0x0000cea5    0xfc  Code  Gb  mc_protocol.obj [1]
+MC_ReadLF               0x0000d03f    0x52  Code  Gb  mc_protocol.obj [1]
+MC_ReadMem              0x0000cff9    0x46  Code  Gb  mc_protocol.obj [1]
+MC_ReadScope            0x0000d745    0x3e  Code  Gb  mc_scope.obj [1]
+MC_Recorder             0x0000d3c7    0x12  Code  Gb  mc_rec.obj [1]
+MC_Recorder2            0x0000d3d9    0xd2  Code  Lc  mc_rec.obj [1]
+MC_Rx                   0x0000d5af    0xc4  Code  Gb  mc_serial.obj [1]
+MC_SendResponse         0x0000d525    0x8a  Code  Gb  mc_serial.obj [1]
+MC_SetUpRec             0x0000d119   0x126  Code  Gb  mc_rec.obj [1]
+MC_SetUpScope           0x0000d6d7    0x6e  Code  Gb  mc_scope.obj [1]
+MC_SkipInBuffer         0x0000ce89     0x4  Code  Lc  mc_protocol.obj [1]
+MC_StartRec             0x0000d23f    0x4a  Code  Gb  mc_rec.obj [1]
+MC_StopRec              0x0000d289    0x38  Code  Gb  mc_rec.obj [1]
+MC_WriteLF              0x0000d091    0x3a  Code  Gb  mc_protocol.obj [1]
+MC_WriteLF_Byte         0x0000d0cb    0x3a  Code  Gb  mc_protocol.obj [1]
+MICRO_FLASH_CONFIGURATION
+                        0x00000400    0x10  Data  Lc  Micro.obj [1]
+MICRO_FLASH_CRC         0x0000fffc     0x2  Data  Gb  Place holder MICRO_FLASH_CRC
+MICRO_FLASH_END {Abs}   0x0000fffb           --   Gb  command line/config [2]
+MICRO_FLASH_START {Abs}
+                        0x00000768           --   Gb  command line/config [2]
+MICRO_RESETINFO_FOOTER  0x0000ab04    0x2c  Data  Gb  Micro.obj [1]
+MICRO_RESETINFO_HEADER  0x0000aad8    0x2c  Data  Gb  Micro.obj [1]
+MainCrc                 0x20000fae     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Main_Slot               0x20001248     0x1  Data  Lc  SRMain.obj [1]
+Main_Slot0_Tasks        0x0000ddec     0x8  Data  Gb  SRMain.obj [1]
+Main_Slot1_Tasks        0x0000ddf4     0x8  Data  Gb  SRMain.obj [1]
+Main_Slot2_Tasks        0x0000ddfc     0x4  Data  Gb  SRMain.obj [1]
+Main_Slot3_Tasks        0x0000de00     0x4  Data  Gb  SRMain.obj [1]
+Main_Slot4_Tasks        0x0000de04     0x4  Data  Gb  SRMain.obj [1]
+Main_Slot_Timer         0x2000124a     0x1  Data  Lc  SRMain.obj [1]
+Main_Slot_Timer_Diff    0x2000124b     0x1  Data  Lc  SRMain.obj [1]
+Main_Tasks              0x0000c6fc    0x14  Data  Gb  SRMain.obj [1]
+Manual_Inject_Level     0x1fffe488     0x4  Data  Gb  Mci.obj [1]
+Manual_Inject_Param     0x1fffe48c     0x4  Data  Gb  Mci.obj [1]
+Manual_Pos_Reference    0x1fffe490     0x4  Data  Gb  Mci.obj [1]
+MasterCommander__FastHandler
+                        0x0000b433     0x4  Code  Gb  MasterCommander.obj [1]
+MasterCommander__Initialize
+                        0x0000b415    0x1a  Code  Gb  MasterCommander.obj [1]
+MasterCommander__PwmHandler
+                        0x0000b42f     0x4  Code  Gb  MasterCommander.obj [1]
+Master_Comm_Flags       0x20000f90     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+MathCalc__GetInterpolationFastF
+                        0x00004805    0x68  Code  Gb  Mci.obj [1]
+MathCalc__GetSinCosF    0x00005119    0xfe  Code  Gb  Mci.obj [1]
+MathCalc__SinCosF       0x00004871    0x98  Code  Gb  Mci.obj [1]
+Max_Deceleration        0x1fffedb4     0x4  Data  Lc  CommandManager.obj [1]
+Max_Distr_Speed_Rpm_M   0x1fffedac     0x2  Data  Lc  CommandManager.obj [1]
+Mca_Sensor_Wm           0x20000588     0xc  Data  Gb  Params.obj [1]
+Mca_Set_Wm              0x200004fc    0x8c  Data  Gb  Params.obj [1]
+MciClassAPointerLoading
+                        0x0000dd57    0x4e  Code  Gb  MciParametersLoader.obj [1]
+MciParametersLoader__25msHandler
+                        0x0000dd27    0x30  Code  Gb  MciParametersLoader.obj [1]
+MciParametersLoader__Initialize
+                        0x0000dd25     0x2  Code  Gb  MciParametersLoader.obj [1]
+Mci_ClassA_Dtc          0x20000008   0x1b4  Data  Gb  Params.obj [1]
+Mci_ClassA_Motor_Lut    0x200001bc    0xc8  Data  Gb  Params.obj [1]
+Mci_ClassA_Mtpa         0x200002ec    0x88  Data  Gb  Params.obj [1]
+Mci_ClassA_Mtpv         0x20000374    0x88  Data  Gb  Params.obj [1]
+Mci_ClassA_Ote          0x200003fc    0xcc  Data  Gb  Params.obj [1]
+Mci_ClassA_Speed_Ctrl   0x20000284    0x68  Data  Gb  Params.obj [1]
+Mci_ClassB_Prm          0x200004c8    0x34  Data  Gb  Params.obj [1]
+Mci_Control_State       0x1fffe3d0     0x1  Data  Gb  Mci.obj [1]
+Mci_Error               0x1fffe45c     0x4  Data  Gb  Mci.obj [1]
+Mci_Error_Holder        0x1fffe460     0x4  Data  Gb  Mci.obj [1]
+Mci_Flow_Control        0x1fffe464     0x4  Data  Gb  Mci.obj [1]
+Mci_GP_Timer            0x1fffe3f6     0x2  Data  Gb  Mci.obj [1]
+Mci_Sr_SF_Displs        0x1fffedd0     0x4  Data  Gb  MciParametersLoader.obj [1]
+Mci_Status_Control      0x1fffe468     0x4  Data  Gb  Mci.obj [1]
+Mci__1msHandler         0x0000124f     0x4  Code  Gb  Mci.obj [1]
+Mci__250usHandler       0x0000123d    0x12  Code  Gb  Mci.obj [1]
+Mci__25msHandler        0x00001683    0x16  Code  Gb  Mci.obj [1]
+Mci__5msHandler         0x00001255   0x42e  Code  Gb  Mci.obj [1]
+Mci__ClearError         0x00001bbd    0x22  Code  Gb  Mci.obj [1]
+Mci__GetAnalog          0x00001ab1   0x10c  Code  Gb  Mci.obj [1]
+Mci__GetDigital         0x00001a5d    0x52  Code  Gb  Mci.obj [1]
+Mci__GetErrorList       0x00001a41    0x18  Code  Gb  Mci.obj [1]
+Mci__Initialize         0x00000769    0x80  Code  Gb  Mci.obj [1]
+Mci__Manual_Injection   0x000017d1   0x15c  Code  Gb  Mci.obj [1]
+Mci__PwmHandler         0x000007e9   0xa46  Code  Gb  Mci.obj [1]
+Mci__Run                0x00001699   0x132  Code  Gb  Mci.obj [1]
+Mci__SetParams          0x00001bdf     0x4  Code  Gb  Mci.obj [1]
+Mci__Stop               0x0000192d   0x10c  Code  Gb  Mci.obj [1]
+MclDqCtrl__ResetState   0x00002bcd    0x4a  Code  Gb  Mci.obj [1]
+MclDqCtrl__RunningHandler
+                        0x00002c29   0x1bc  Code  Gb  Mci.obj [1]
+MclDqRef_Params         0x1fffe3a4    0x10  Data  Gb  Mci.obj [1]
+MclDqRef__1msHandler    0x000032c5    0x4c  Code  Gb  Mci.obj [1]
+MclDqRef__RunningHandler
+                        0x00002fbd   0x308  Code  Gb  Mci.obj [1]
+MclFvt_Data_Test_Dc_Current
+                        0x1fffe29c    0x24  Data  Gb  Mci.obj [1]
+MclFvt_Error_List       0x1fffe3e0     0x1  Data  Gb  Mci.obj [1]
+MclFvt_Generic_Timer    0x1fffe406     0x2  Data  Gb  Mci.obj [1]
+MclFvt_Injection_Inst_Level
+                        0x1fffe518     0x4  Data  Gb  Mci.obj [1]
+MclFvt_Injection_Level  0x1fffe51c     0x4  Data  Gb  Mci.obj [1]
+MclFvt_Injection_Level_Rate
+                        0x1fffe520     0x4  Data  Gb  Mci.obj [1]
+MclFvt_Injection_Position
+                        0x1fffe524     0x4  Data  Gb  Mci.obj [1]
+MclFvt_State            0x1fffe3de     0x1  Data  Gb  Mci.obj [1]
+MclFvt_Status           0x1fffe3df     0x1  Data  Gb  Mci.obj [1]
+MclFvt_Step             0x1fffe3dd     0x1  Data  Gb  Mci.obj [1]
+MclFvt__Entry           0x00004479    0x7a  Code  Gb  Mci.obj [1]
+MclFvt__PwmHandler      0x000044fd   0x2ee  Code  Gb  Mci.obj [1]
+MclInputProc__1msRunningHandler
+                        0x0000343d    0x84  Code  Gb  Mci.obj [1]
+MclInputProc__RunningHandler
+                        0x0000331d   0x11e  Code  Gb  Mci.obj [1]
+MclObserver_Params      0x1fffe218    0x34  Data  Gb  Mci.obj [1]
+MclObserver__1msHandler
+                        0x00003c7d    0xda  Code  Gb  Mci.obj [1]
+MclObserver__Initialize
+                        0x00003625    0x4a  Code  Gb  Mci.obj [1]
+MclObserver__ResetState
+                        0x000034cd   0x152  Code  Gb  Mci.obj [1]
+MclObserver__RunningHandler
+                        0x00003699   0x5e0  Code  Gb  Mci.obj [1]
+MclPwm_Params           0x1fffe3b4    0x10  Data  Gb  Mci.obj [1]
+MclPwm__ResetState      0x00003ecd    0x66  Code  Gb  Mci.obj [1]
+MclPwm__RunningHandler  0x00003f41   0x1dc  Code  Gb  Mci.obj [1]
+MclSpeedCtrl_Params     0x1fffe394    0x10  Data  Gb  Mci.obj [1]
+MclSpeedCtrl__ResetState
+                        0x0000411d    0x5e  Code  Gb  Mci.obj [1]
+MclSpeedCtrl__RunningHandler
+                        0x000041ad   0x164  Code  Gb  Mci.obj [1]
+Mcl_Cs                  0x1fffe160    0x60  Data  Gb  Mci.obj [1]
+Mcl_DQ_Ctrl_IO          0x1fffe24c    0x2c  Data  Gb  Mci.obj [1]
+Mcl_DQ_Ref_IO           0x1fffe2e0    0x1c  Data  Gb  Mci.obj [1]
+Mcl_Flow_Manager        0x1fffe3d4     0x1  Data  Gb  Mci.obj [1]
+Mcl_IO                  0x1fffe1c0    0x58  Data  Gb  Mci.obj [1]
+Mcl_Input_Proc_IO       0x1fffe2c0    0x20  Data  Gb  Mci.obj [1]
+Mcl_Observer_IO         0x1fffe278    0x24  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ1       0x1fffe470     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ10      0x1fffe480     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ11      0x1fffe484     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ3       0x1fffe474     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ4       0x1fffe478     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_Displ9       0x1fffe47c     0x4  Data  Gb  Mci.obj [1]
+Mcl_Params_SF           0x1fffe898   0x3f4  Data  Gb  MciParametersLoader.obj [1]
+Mcl_Pwm_IO              0x1fffe36c    0x18  Data  Gb  Mci.obj [1]
+Mcl_Quantities          0x1fffe07c    0xe4  Data  Gb  Mci.obj [1]
+Mcl_SF_Displs           0x1fffe880    0x18  Data  Gb  MciParametersLoader.obj [1]
+Mcl_Speed_Ctrl_IO       0x1fffe384    0x10  Data  Gb  Mci.obj [1]
+Mcl_Starting_State      0x1fffe3d3     0x1  Data  Gb  Mci.obj [1]
+Mcl__1msHandler         0x00002059    0x72  Code  Gb  Mci.obj [1]
+Mcl__250usHandler       0x000021d1   0x158  Code  Gb  Mci.obj [1]
+Mcl__25msHandler        0x000020cd    0xfc  Code  Gb  Mci.obj [1]
+Mcl__GetDigital         0x00002589    0xbc  Code  Gb  Mci.obj [1]
+Mcl__Initialize         0x00001bf1   0x27c  Code  Gb  Mci.obj [1]
+Mcl__ParamsInitialize   0x00001e71   0x1e8  Code  Gb  Mci.obj [1]
+Mcl__ResetAll           0x00002511    0x72  Code  Gb  Mci.obj [1]
+Mcl__RunningHandler     0x000023cb    0xea  Code  Gb  Mci.obj [1]
+Mcl__RunningReset       0x00002329    0xa2  Code  Gb  Mci.obj [1]
+Mcl__SetParams          0x00002645    0x48  Code  Gb  Mci.obj [1]
+Mcl__StoppingHandler    0x000024bd    0x42  Code  Gb  Mci.obj [1]
+Mean_Speed_Sum          0x1fffe4a0     0x4  Data  Gb  Mci.obj [1]
+MicroBootFlashTest      0x0000a6e5    0x60  Code  Lc  Micro.obj [1]
+MicroBootWatchdogTest   0x0000a62d    0x52  Code  Lc  Micro.obj [1]
+MicroClearResetData     0x0000a9b5    0x70  Code  Lc  Micro.obj [1]
+MicroFailSafe           0x0000a6d9     0xa  Code  Lc  Micro.obj [1]
+MicroGetClocksStatus    0x0000a529    0xa8  Code  Lc  Micro.obj [1]
+MicroHWInit             0x0000a5d9    0x36  Code  Lc  Micro.obj [1]
+MicroInitClk            0x0000a45d    0x8a  Code  Lc  Micro.obj [1]
+MicroInitClkLowSpeed    0x0000a4e9    0x2e  Code  Lc  Micro.obj [1]
+MicroJumptoResetHandler
+                        0x0000de89    0x10  Code  Lc  InterruptVector.obj [1]
+MicroResetHandling      0x0000a759   0x25a  Code  Lc  Micro.obj [1]
+MicroUpdateResetInfoDataCrc
+                        0x0000aa5d    0x16  Code  Lc  Micro.obj [1]
+MicroValidateResetInfoDataCrc
+                        0x0000aa35    0x28  Code  Lc  Micro.obj [1]
+Micro_ClocksStatus      0x200011fc    0x18  Data  Lc  Micro.obj [1]
+Micro_Flash_Crc         0x20001224     0x2  Data  Lc  Micro.obj [1]
+Micro_Flash_Crc_Holder  0x1fffecf8     0x2  Data  Lc  ProtocolInfo.obj [1]
+Micro_Flash_Crc_Pt      0x20001230     0x4  Data  Lc  Micro.obj [1]
+Micro_ResetInfo         0x1fffe000    0x34  Data  Lc  Micro.obj [1]
+Micro_ResetInfo_Footer  0x20001fd4    0x2c  Data  Lc  Micro.obj [1]
+Micro__BootTest         0x00009e65   0x308  Code  Gb  Micro.obj [1]
+Micro__ConfigureWDT     0x0000a695    0x3e  Code  Gb  Micro.obj [1]
+Micro__EnableWarmResetAction
+                        0x0000c431    0xa4  Code  Gb  Micro.obj [1]
+Micro__ForceReset       0x0000a399    0x1e  Code  Gb  Micro.obj [1]
+Micro__GetClock         0x0000a393     0x6  Code  Gb  Micro.obj [1]
+Micro__GetResetMode     0x0000a3b7    0x2a  Code  Gb  Micro.obj [1]
+Micro__Initialize       0x00009c61   0x17e  Code  Gb  Micro.obj [1]
+Micro__LPTimerInterrupt
+                        0x00009e4f    0x16  Code  Gb  Micro.obj [1]
+Micro__NVICDisableIRQ   0x00009e37    0x18  Code  Gb  Micro.obj [1]
+Micro__NVICEnableIRQ    0x00009ddf    0x58  Code  Gb  Micro.obj [1]
+Micro__SRFlashTest      0x0000a3e3    0x7a  Code  Gb  Micro.obj [1]
+Micro__SRRamTest        0x0000a16d   0x1ca  Code  Gb  Micro.obj [1]
+Micro__ServiceWatchdog  0x0000a36b    0x1c  Code  Gb  Micro.obj [1]
+Micro__SetNormalSpeedMode
+                        0x0000a337    0x34  Code  Gb  Micro.obj [1]
+Micro__Trap             0x0000a387     0xc  Code  Gb  Micro.obj [1]
+Min_Allowed_Speed       0x1fffedae     0x2  Data  Lc  CommandManager.obj [1]
+Min_Params_Num          0x20000faa     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Min_Setting_Bytes_Num   0x20000fa4     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Motor_Displ             0x20000fb8     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Motor_Sr_Params_SF      0x1fffedd4    0x34  Data  Gb  MciParametersLoader.obj [1]
+Movement_State          0x1fffed9e     0x2  Data  Lc  CommandManager.obj [1]
+My_Flux_Gain            0x1fffe4dc     0x4  Data  Gb  Mci.obj [1]
+My_Is_Abs               0x1fffe4c4     0x4  Data  Gb  Mci.obj [1]
+My_MC_Braking           0x1fffed3f     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Counter   0x1fffed78     0x4  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Decel     0x1fffed58     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Phase     0x1fffed4e     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Region    0x1fffed40     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Runs      0x1fffed50     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Braking_Runs_Total
+                        0x1fffed52     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle             0x1fffed3d     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Counter     0x1fffed46     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Counter_Duration
+                        0x1fffed74     0x4  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Counter_Off
+                        0x1fffed4a     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Counter_On  0x1fffed48     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Duration_Min
+                        0x1fffed4c     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Cycle_Phase       0x1fffed3e     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_Max_Spin_Speed    0x1fffed70     0x4  Data  Gb  BoardDebugging.obj [1]
+My_MC_Spin              0x1fffed41     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_Spin_Counter      0x1fffed7c     0x4  Data  Gb  BoardDebugging.obj [1]
+My_MC_Spin_Decel_Stop   0x1fffed5a     0x2  Data  Gb  BoardDebugging.obj [1]
+My_MC_Spin_Phase        0x1fffed42     0x1  Data  Gb  BoardDebugging.obj [1]
+My_MC_TR                0x1fffed6c     0x4  Data  Gb  BoardDebugging.obj [1]
+My_MC_Temp_Stop         0x1fffed80     0x4  Data  Gb  BoardDebugging.obj [1]
+My_Max_Braking_Current  0x1fffe4bc     0x4  Data  Gb  Mci.obj [1]
+My_Max_Braking_Torque   0x1fffe4c0     0x4  Data  Gb  Mci.obj [1]
+My_Max_Torque           0x1fffe4f4     0x4  Data  Gb  Mci.obj [1]
+My_Measured_Temp        0x1fffe46c     0x4  Data  Gb  Mci.obj [1]
+My_Mflux_Flag           0x1fffe3d7     0x1  Data  Gb  Mci.obj [1]
+My_Torque_Gain          0x1fffe50c     0x4  Data  Gb  Mci.obj [1]
+My_TqLim_Flag           0x1fffe3dc     0x1  Data  Gb  Mci.obj [1]
+My_WbLim_Flag           0x1fffe3d6     0x1  Data  Gb  Mci.obj [1]
+NON_MASKABLE_JUMP_INTERRUPT_TABLE
+                        0x00000000     0x8  Data  Gb  InterruptVector.obj [1]
+NSR_Communication_Cnt   0x2000123e     0x2  Data  Lc  SRMotorSafetyInfoParamsMgr.obj [1]
+N_Interrupt_Slot        0x2000124d     0x1  Data  Lc  SRMain.obj [1]
+N_Isr_Attempt_Cntr      0x20001223     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Isr_Enter_Cntr        0x20001220     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Isr_Exit_Cntr         0x20001221     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Isr_LowSpeed_Mode     0x20001222     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Isr_Max               0x2000121e     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Isr_Min               0x2000121f     0x1  Data  Lc  SRIsrMonitor.obj [1]
+N_Main_Slot             0x2000124c     0x1  Data  Lc  SRMain.obj [1]
+N_SRClockMonitor_Counter
+                        0x20001246     0x2  Data  Lc  SRClockMonitor.obj [1]
+N_SRClockMonitor_ErrorCount
+                        0x20001245     0x1  Data  Lc  SRClockMonitor.obj [1]
+N_SRClock_First_Reading
+                        0x20001244     0x1  Data  Lc  SRClockMonitor.obj [1]
+N_Samples               0x1fffe3f8     0x2  Data  Gb  Mci.obj [1]
+N_Samples_inv           0x1fffe4a4     0x4  Data  Gb  Mci.obj [1]
+Obs_Speed_Rotor_Flux    0x2000107c     0x4  Data  Gb  Mci.obj [1]
+Obs_Speed_Rotor_Flux_sum
+                        0x20001080     0x4  Data  Gb  Mci.obj [1]
+Obs_Speed_Stator_Flux   0x20001078     0x4  Data  Gb  Mci.obj [1]
+Over_Flux_Ratio         0x1fffe4d0     0x4  Data  Gb  Mci.obj [1]
+Over_Torque_Time_Counter
+                        0x1fffe3fa     0x2  Data  Gb  Mci.obj [1]
+PCI_PORT_LIST           0x1fffee1c    0x14  Data  Gb  Gpio.obj [1]
+ParamsReady             0x1fffed9c     0x1  Data  Lc  CommandManager.obj [1]
+ParamsReady             0x200011e4     0x1  Data  Lc  ThermalModel.obj [1]
+Params__Initialize      0x0000dd21     0x2  Code  Gb  Params.obj [1]
+Parms_Ready             0x20000004     0x1  Data  Gb  Params.obj [1]
+Pi__CalcPiF             0x0000521d    0x70  Code  Gb  Mci.obj [1]
+Platform_Final_Speed    0x1fffeda4     0x2  Data  Lc  CommandManager.obj [1]
+Pole_Pairs_Inv          0x20001050     0x4  Data  Gb  Mci.obj [1]
+Power_On_Free_Down_Cnt  0x1fffeda0     0x2  Data  Lc  CommandManager.obj [1]
+Prm_Displ_DTC_Ctrl      0x20000f84     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_MTPA          0x20000f87     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_MTPV          0x20000f88     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_Motor_Lut     0x20000f85     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_OTE           0x20000f89     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_SR            0x20000f8a     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_Sensor_Wm     0x20000f8c     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_Set_Wm        0x20000f8b     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+Prm_Displ_Speed_Ctrl    0x20000f86     0x1  Data  Lc  ProtocolMainExternal.obj [1]
+ProtocolInfo__Initialize
+                        0x0000d925    0xf6  Code  Gb  ProtocolInfo.obj [1]
+ProtocolMainExternal__Initialize
+                        0x0000dc95    0x84  Code  Gb  ProtocolMainExternal.obj [1]
+Protocol_Info           0x1fffec94    0x24  Data  Lc  ProtocolInfo.obj [1]
+Protocol_SafetyInfo     0x1fffec8c     0x8  Data  Lc  ProtocolInfo.obj [1]
+PwmModulation__DeadtimeCompensationGradientF
+                        0x00005399   0x15e  Code  Gb  Mci.obj [1]
+PwmModulation__InverterLossCompF
+                        0x00005291   0x102  Code  Gb  Mci.obj [1]
+Pwm_Sector              0x1fffe3da     0x1  Data  Gb  Mci.obj [1]
+RAM_TOTAL_SIZE {Abs}    0x00004000           --   Gb  command line/config [2]
+Ram0_Page_End_Protection
+                        0x1ffffffc     0x4  Data  Lc  Micro.obj [1]
+Ram1_Page_Start_Protection
+                        0x20000000     0x4  Data  Lc  Micro.obj [1]
+Ram_Read_End_Address_Ptr
+                        0x20000fc8     0x4  Data  Lc  ProtocolMainExternal.obj [1]
+Ram_Read_Start_Address_Ptr
+                        0x20000fc4     0x4  Data  Lc  ProtocolMainExternal.obj [1]
+Ramp_End_Speed          0x1fffeda6     0x2  Data  Lc  CommandManager.obj [1]
+Ramp_Time_Or_Acc        0x1fffeda8     0x2  Data  Lc  CommandManager.obj [1]
+Receive_Buffer          0x20000e8c    0x48  Data  Lc  ProtocolMainExternal.obj [1]
+Receive_State_Machine   0x20000f9a     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Receive_Time_Mark       0x20000f9e     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Region$$Table$$Base     0x0000de54           --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000de88           --   Gb  - Linker created -
+Res_Est_IO              0x1fffe3c4     0xc  Data  Gb  Mci.obj [1]
+ResetModel              0x200011f8     0x4  Data  Gb  ThermalModel.obj [1]
+ResistanceEstimation__Calculate
+                        0x00005565   0x302  Code  Gb  Mci.obj [1]
+ResistanceEstimation__Initialize
+                        0x00005501    0x5e  Code  Gb  Mci.obj [1]
+Resistance_Adaptation   0x00003d65    0xf4  Code  Gb  Mci.obj [1]
+Rotor_Curr_Id           0x20001040     0x4  Data  Gb  Mci.obj [1]
+Rotor_Curr_Id_Abs       0x2000104c     0x4  Data  Gb  Mci.obj [1]
+Rotor_Curr_Iq           0x20001044     0x4  Data  Gb  Mci.obj [1]
+Rotor_Curr_Iq_Abs       0x20001048     0x4  Data  Gb  Mci.obj [1]
+Rotor_Lambda            0x20001034     0xc  Data  Gb  Mci.obj [1]
+Rotor_Lambda_Mod        0x20001054     0x4  Data  Gb  Mci.obj [1]
+Rotor_Position          0x20001070     0x4  Data  Gb  Mci.obj [1]
+RunEvents               0x0000bc59    0xfc  Code  Lc  ThermalModelCore.obj [1]
+Run_Time_Stack_Pointer  0x20001228     0x4  Data  Gb  Micro.obj [1]
+Run_Time_Stack_Pointer_Inv
+                        0x2000122c     0x4  Data  Gb  Micro.obj [1]
+SETTINGFILE_SIZE {Abs}  0x00000000           --   Gb  command line/config [2]
+SF_Application_Params   0x20000d40   0x14c  Data  Gb  Params.obj [1]
+SRClockMonitor_Counter  0x20001242     0x2  Data  Lc  SRClockMonitor.obj [1]
+SRClockMonitor_ErrorCount
+                        0x20001241     0x1  Data  Lc  SRClockMonitor.obj [1]
+SRClockMonitor__Initialize
+                        0x0000c03d    0x2c  Code  Gb  SRClockMonitor.obj [1]
+SRClockMonitor__Monitor1ms
+                        0x0000c069    0x4e  Code  Gb  SRClockMonitor.obj [1]
+SRClockMonitor__MonitorExtClk
+                        0x0000c0b7    0xa2  Code  Gb  SRClockMonitor.obj [1]
+SRClock_First_Reading   0x20001240     0x1  Data  Lc  SRClockMonitor.obj [1]
+SRData__CheckByte       0x00009813    0xda  Code  Gb  SRData.obj [1]
+SRData__CheckFloat      0x00009abf    0xa2  Code  Gb  SRData.obj [1]
+SRData__CheckLong       0x000099f7    0xa2  Code  Gb  SRData.obj [1]
+SRData__CheckShort      0x00009907    0xd8  Code  Gb  SRData.obj [1]
+SRData__UpdateByte      0x000097f9    0x1a  Code  Gb  SRData.obj [1]
+SRData__UpdateFloat     0x00009a99    0x26  Code  Gb  SRData.obj [1]
+SRData__UpdateLong      0x000099df    0x18  Code  Gb  SRData.obj [1]
+SRData__UpdateShort     0x000098ed    0x1a  Code  Gb  SRData.obj [1]
+SREvery_Interrupt_Tasks
+                        0x0000c6c8     0x8  Data  Gb  SRMain.obj [1]
+SREvery_Slot_Tasks      0x0000c6ac     0x8  Data  Gb  SRMain.obj [1]
+SRException__Initialize
+                        0x0000b06d     0x8  Code  Gb  SRException.obj [1]
+SRException__Queue      0x0000b075    0x66  Code  Gb  SRException.obj [1]
+SRFLOW_EVENT_ISR_LIST   0x0000ae9c    0x10  Data  Gb  SRFlow.obj [1]
+SRFLOW_EVENT_MAIN_LIST  0x0000ae8c    0x10  Data  Gb  SRFlow.obj [1]
+SRFlow_ISR_Events       0x200011a4    0x10  Data  Lc  SRFlow.obj [1]
+SRFlow_ISR_Pointer      0x20001192     0x1  Data  Lc  SRFlow.obj [1]
+SRFlow_Init_Events      0x20001188     0x8  Data  Lc  SRFlow.obj [1]
+SRFlow_Init_Pointer     0x20001190     0x1  Data  Lc  SRFlow.obj [1]
+SRFlow_LowPower_Events  0x200011b4     0x4  Data  Lc  SRFlow.obj [1]
+SRFlow_LowPower_Pointer
+                        0x20001193     0x1  Data  Lc  SRFlow.obj [1]
+SRFlow_Main_Events      0x20001194    0x10  Data  Lc  SRFlow.obj [1]
+SRFlow_Main_Pointer     0x20001191     0x1  Data  Lc  SRFlow.obj [1]
+SRFlow__ISRCheck        0x0000ae11    0x78  Code  Gb  SRFlow.obj [1]
+SRFlow__ISRLogEvent     0x0000adf5    0x1c  Code  Gb  SRFlow.obj [1]
+SRFlow__InitCheck       0x0000ad1d    0x48  Code  Gb  SRFlow.obj [1]
+SRFlow__InitLogEvent    0x0000ad03    0x1a  Code  Gb  SRFlow.obj [1]
+SRFlow__Initialize      0x0000acb9    0x4a  Code  Gb  SRFlow.obj [1]
+SRFlow__MainCheck       0x0000ad81    0x74  Code  Gb  SRFlow.obj [1]
+SRFlow__MainLogEvent    0x0000ad65    0x1c  Code  Gb  SRFlow.obj [1]
+SRInitialization_Tasks  0x0000c688    0x24  Data  Gb  SRMain.obj [1]
+SRInterrupt_Slot0_Tasks
+                        0x0000ddcc     0x8  Data  Gb  SRMain.obj [1]
+SRInterrupt_Slot1_Tasks
+                        0x0000ddd4     0x8  Data  Gb  SRMain.obj [1]
+SRInterrupt_Slot2_Tasks
+                        0x0000dddc     0x8  Data  Gb  SRMain.obj [1]
+SRInterrupt_Slot3_Tasks
+                        0x0000dde4     0x8  Data  Gb  SRMain.obj [1]
+SRInterrupt_Tasks       0x0000c6d0    0x10  Data  Gb  SRMain.obj [1]
+SRIsrMonitor__EnterIsr  0x0000af09    0x48  Code  Gb  SRIsrMonitor.obj [1]
+SRIsrMonitor__ExitIsr   0x0000af51    0x2e  Code  Gb  SRIsrMonitor.obj [1]
+SRIsrMonitor__Handler   0x0000af7f    0xe8  Code  Gb  SRIsrMonitor.obj [1]
+SRIsrMonitor__Initialize
+                        0x0000aead    0x5c  Code  Gb  SRIsrMonitor.obj [1]
+SRMCAtod__DiagnosticHandler
+                        0x00005c89   0x228  Code  Gb  Mci.obj [1]
+SRMCAtod__GetDiagnosticFeedback
+                        0x00005eb1    0x56  Code  Gb  Mci.obj [1]
+SRMCAtod__ISR           0x00005bf1    0x46  Code  Gb  Mci.obj [1]
+SRMCAtod__Initialize    0x00005b55    0x98  Code  Gb  Mci.obj [1]
+SRMCPDB__ISR            0x00005c37    0x52  Code  Gb  Mci.obj [1]
+SRMCPwm__DiagnosticHandler
+                        0x000063c5   0x2f2  Code  Gb  Mci.obj [1]
+SRMCPwm__EnableDiagnostic
+                        0x00006325    0x8a  Code  Gb  Mci.obj [1]
+SRMCPwm__GetDiagnosticFeedback
+                        0x000066bd    0x62  Code  Gb  Mci.obj [1]
+SRMCPwm__Initialize     0x00006105   0x212  Code  Gb  Mci.obj [1]
+SRMCPwm__Initialize_Before_Boot
+                        0x0000607f    0x86  Code  Gb  Mci.obj [1]
+SRMCPwm__PwmISR         0x00006317     0x2  Code  Gb  Mci.obj [1]
+SRMain_Slot0_Tasks      0x0000ddac     0x8  Data  Gb  SRMain.obj [1]
+SRMain_Slot1_Tasks      0x0000ddb4     0x8  Data  Gb  SRMain.obj [1]
+SRMain_Slot2_Tasks      0x0000ddbc     0x8  Data  Gb  SRMain.obj [1]
+SRMain_Slot3_Tasks      0x0000ddc4     0x4  Data  Gb  SRMain.obj [1]
+SRMain_Slot4_Tasks      0x0000ddc8     0x4  Data  Gb  SRMain.obj [1]
+SRMain_Tasks            0x0000c6b4    0x14  Data  Gb  SRMain.obj [1]
+SRMain__TimerISR        0x0000c5e5    0x9c  Code  Gb  SRMain.obj [1]
+SRMotorSafetyInfoParamsMgr__Handler1ms
+                        0x0000da4b    0x48  Code  Gb  SRMotorSafetyInfoParamsMgr.obj [1]
+SRMotorSafetyInfoParmsMgr__Initialize
+                        0x0000da35    0x16  Code  Gb  SRMotorSafetyInfoParamsMgr.obj [1]
+SRMotorSafetyMgr__Handler1ms
+                        0x000074ad    0x16  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Handler250us
+                        0x00007039   0x45e  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Handler25ms
+                        0x0000856b   0x16e  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Handler5ms
+                        0x000074c5  0x10a6  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Initialize
+                        0x00006731   0x444  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__MCPwmHandler
+                        0x00006ba9   0x48c  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Prepare2StartMotor
+                        0x000086d9    0x64  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__Prepare2StopMotor
+                        0x0000873d    0x56  Code  Gb  Mci.obj [1]
+SRMotorSafetyMgr__SetParams
+                        0x00008795    0xbe  Code  Gb  Mci.obj [1]
+SRSignature__GetClassBSignature
+                        0x0000da99     0x6  Code  Gb  SRSignature.obj [1]
+SR_Communication_Cnt    0x2000123c     0x2  Data  Lc  SRMotorSafetyInfoParamsMgr.obj [1]
+SR_MotorSafety_Params   0x1fffe56c     0x4  Data  Gb  Mci.obj [1]
+STACKS$$Base            0x20001bb0           --   Gb  - Linker created -
+STACKS$$Limit           0x20001fd0           --   Gb  - Linker created -
+STACK_OVERFLOW_SIGNATURE$$Base
+                        0x20001bb0           --   Gb  - Linker created -
+STACK_OVERFLOW_SIGNATURE$$Limit
+                        0x20001bc0           --   Gb  - Linker created -
+STACK_UNDERFLOW_SIGNATURE$$Base
+                        0x20001fc0           --   Gb  - Linker created -
+STACK_UNDERFLOW_SIGNATURE$$Limit
+                        0x20001fd0           --   Gb  - Linker created -
+Send_Buffer             0x20000ed4    0xa0  Data  Lc  ProtocolMainExternal.obj [1]
+Send_Time_Mark          0x20000fa0     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Seq_ID                  0x20000fa6     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Set_File_All_Crc        0x20000fb2     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Set_File_Table          0x20000fcc     0x4  Data  Lc  ProtocolMainExternal.obj [1]
+Set_Temperature_From_Outside
+                        0x200011e8     0x2  Data  Lc  ThermalModel.obj [1]
+Sin_Rot_k1              0x20001058     0x4  Data  Gb  Mci.obj [1]
+SpeedRefGen__Generator  0x00005979    0xc6  Code  Gb  Mci.obj [1]
+SpeedRefGen__GetStatus  0x00005a3f    0x62  Code  Gb  Mci.obj [1]
+SpeedRef_Reference_Speed
+                        0x1fffe558     0x4  Data  Gb  Mci.obj [1]
+SpeedRef_Target_Speed   0x1fffe554     0x4  Data  Gb  Mci.obj [1]
+Speed_Controller        0x1fffe334    0x1c  Data  Gb  Mci.obj [1]
+Speed_Gain_Scheduler    0x00004311   0x164  Code  Gb  Mci.obj [1]
+Speed_PLL               0x20000fd8    0x38  Data  Gb  Mci.obj [1]
+Speed_Threshold         0x1fffe4f0     0x4  Data  Gb  Mci.obj [1]
+Speed_Threshold_High    0x1fffe4e8     0x4  Data  Gb  Mci.obj [1]
+Speed_Threshold_Low     0x1fffe4ec     0x4  Data  Gb  Mci.obj [1]
+Speed_Transition_Counter
+                        0x20001098     0x4  Data  Gb  Mci.obj [1]
+Sr_Info                 0x20001234     0x8  Data  Lc  SRMotorSafetyInfoParamsMgr.obj [1]
+Stator_Emf              0x20001010     0xc  Data  Gb  Mci.obj [1]
+Stator_Emf_Err          0x2000101c     0xc  Data  Gb  Mci.obj [1]
+Stator_Lambda           0x20001028     0xc  Data  Gb  Mci.obj [1]
+Stator_Resistance_Corr  0x2000108c     0x4  Data  Gb  Mci.obj [1]
+SurgeRelay__25msHandler
+                        0x00005aa5    0xa6  Code  Gb  Mci.obj [1]
+Tab_Crc16_Hi            0x0000b214   0x100  Data  Gb  Crc16.obj [1]
+Tab_Crc16_Lo            0x0000b314   0x100  Data  Gb  Crc16.obj [1]
+Table_Size              0x20000fb4     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+TemperatureFromRes      0x200011f0     0x4  Data  Gb  ThermalModel.obj [1]
+ThermalModelCore_ConstP
+                        0x0000dad4    0xe8  Data  Gb  ThermalModelCore_data.obj [1]
+ThermalModelCore_DW     0x20000a28   0x318  Data  Gb  ThermalModelCore.obj [1]
+ThermalModelCore_Params
+                        0x20000a20     0x4  Data  Gb  ThermalModelCore.obj [1]
+ThermalModelCore_U      0x200009e8    0x14  Data  Gb  ThermalModelCore.obj [1]
+ThermalModelCore_Y      0x200009fc    0x20  Data  Gb  ThermalModelCore.obj [1]
+ThermalModelCore_initialize
+                        0x0000bffd    0x16  Code  Gb  ThermalModelCore.obj [1]
+ThermalModelCore_step   0x0000bf61    0x90  Code  Gb  ThermalModelCore.obj [1]
+ThermalModel__GetStatorTemperature
+                        0x00009c37     0x8  Code  Gb  ThermalModel.obj [1]
+ThermalModel__Handler25ms
+                        0x00009b81    0xaa  Code  Gb  ThermalModel.obj [1]
+ThermalModel__Initialize
+                        0x00009b61    0x20  Code  Gb  ThermalModel.obj [1]
+ThermalModel__SetStatorTemperature
+                        0x00009c2b     0xc  Code  Gb  ThermalModel.obj [1]
+Thermal_Model_Reset_Counter
+                        0x200011ec     0x4  Data  Lc  ThermalModel.obj [1]
+Thermal_Model_Start     0x200011e6     0x2  Data  Lc  ThermalModel.obj [1]
+TimeStep                0x20000a1c     0x4  Data  Gb  ThermalModelCore.obj [1]
+TimerInterrupt__Initialize
+                        0x0000de1d    0x32  Code  Gb  TimerInterrupt.obj [1]
+Token_Time_Mark         0x20000f9c     0x2  Data  Lc  ProtocolMainExternal.obj [1]
+Torque_Controller       0x1fffe318    0x1c  Data  Gb  Mci.obj [1]
+Torque_Flux_Gains_Scheduler
+                        0x00002df1   0x1b2  Code  Gb  Mci.obj [1]
+UART0_Break             0x200010a0     0x1  Data  Lc  Uart.obj [1]
+UART0_LastData          0x200010ec     0x4  Data  Lc  Uart.obj [1]
+UART0_Rx_Buffer         0x200010a8    0x2c  Data  Lc  Uart.obj [1]
+UART0_Rx_Read_Index     0x2000109f     0x1  Data  Lc  Uart.obj [1]
+UART0_Rx_Write_Index    0x2000109e     0x1  Data  Lc  Uart.obj [1]
+UART0_Tx_Buffer         0x200010d4    0x18  Data  Lc  Uart.obj [1]
+UART0_Tx_Read_Index     0x2000109d     0x1  Data  Lc  Uart.obj [1]
+UART0_Tx_Write_Index    0x2000109c     0x1  Data  Lc  Uart.obj [1]
+UART1_Break             0x200010a5     0x1  Data  Lc  Uart.obj [1]
+UART1_LastData          0x20001134     0x4  Data  Lc  Uart.obj [1]
+UART1_Rx_Buffer         0x200010f0    0x2c  Data  Lc  Uart.obj [1]
+UART1_Rx_Read_Index     0x200010a4     0x1  Data  Lc  Uart.obj [1]
+UART1_Rx_Write_Index    0x200010a3     0x1  Data  Lc  Uart.obj [1]
+UART1_Tx_Buffer         0x2000111c    0x18  Data  Lc  Uart.obj [1]
+UART1_Tx_Read_Index     0x200010a2     0x1  Data  Lc  Uart.obj [1]
+UART1_Tx_Write_Index    0x200010a1     0x1  Data  Lc  Uart.obj [1]
+UART_PTR                0x0000ce7c     0xc  Data  Lc  Uart.obj [1]
+Uart__Clear             0x0000ca1b    0x3a  Code  Gb  Uart.obj [1]
+Uart__Disable           0x0000ca8f    0x3a  Code  Gb  Uart.obj [1]
+Uart__Enable            0x0000ca55    0x3a  Code  Gb  Uart.obj [1]
+Uart__GetStatus         0x0000cb8d    0xe6  Code  Gb  Uart.obj [1]
+Uart__Handler           0x0000cc73    0x50  Code  Gb  Uart.obj [1]
+Uart__Initialize        0x0000c915   0x106  Code  Gb  Uart.obj [1]
+Uart__Interrupt0        0x0000ccc3    0xaa  Code  Gb  Uart.obj [1]
+Uart__Interrupt1        0x0000cd6d    0xb6  Code  Gb  Uart.obj [1]
+Uart__Interrupt2        0x0000ce23     0xc  Code  Gb  Uart.obj [1]
+Uart__ReadByte          0x0000cb17    0x74  Code  Gb  Uart.obj [1]
+Uart__WriteByte         0x0000cacb    0x4c  Code  Gb  Uart.obj [1]
+__DATAFLASH_SIZE {Abs}  0x000000ff           --   Gb  command line/config [2]
+__DATAFLASH_end__ {Abs}
+                        0x000000fe           --   Gb  command line/config [2]
+__DATAFLASH_start__ {Abs}
+                        0x10000000           --   Gb  command line/config [2]
+__DMB                   0x0000c175          Code  Gb  cortexm4_macro.obj [1]
+__DSB                   0x0000c16f          Code  Gb  cortexm4_macro.obj [1]
+__DataFlash_End {Abs}   0x000000fe           --   Gb  command line/config [2]
+__DataFlash_Start {Abs}
+                        0x10000000           --   Gb  command line/config [2]
+__FlashConfig_end__ {Abs}
+                        0x0000040f           --   Gb  command line/config [2]
+__FlashConfig_start__ {Abs}
+                        0x00000400           --   Gb  command line/config [2]
+__ICFEDIT_INTERRUPT_TABLE_start__ {Abs}
+                        0x00000600           --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20001fff           --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x1fffe000           --   Gb  command line/config [2]
+__ICFEDIT_region_ROM_end__ {Abs}
+                        0x0000ffff           --   Gb  command line/config [2]
+__ICFEDIT_region_ROM_start__ {Abs}
+                        0x00000768           --   Gb  command line/config [2]
+__ICFEDIT_size_stack_bottom__ {Abs}
+                        0x00000010           --   Gb  command line/config [2]
+__ICFEDIT_size_stack_top__ {Abs}
+                        0x00000010           --   Gb  command line/config [2]
+__ISB                   0x0000c169          Code  Gb  cortexm4_macro.obj [1]
+__MRS_MSP               0x0000c195          Code  Gb  cortexm4_macro.obj [1]
+__MRS_PSP               0x0000c189          Code  Gb  cortexm4_macro.obj [1]
+__MSR_CONTROL           0x0000c17f          Code  Gb  cortexm4_macro.obj [1]
+__MSR_MSP               0x0000c19b          Code  Gb  cortexm4_macro.obj [1]
+__MSR_PSP               0x0000c18f          Code  Gb  cortexm4_macro.obj [1]
+__RAM_CODE_SIZE {Abs}   0x00000000           --   Gb  command line/config [2]
+__RAM_Size {Abs}        0x00003fff           --   Gb  command line/config [2]
+__RAM_Start {Abs}       0x1fffe000           --   Gb  command line/config [2]
+__RESETPRIMASK          0x0000c1a1          Code  Gb  cortexm4_macro.obj [1]
+__REV_HalfWord          0x0000c1a5          Code  Gb  cortexm4_macro.obj [1]
+__REV_Word              0x0000c1a9          Code  Gb  cortexm4_macro.obj [1]
+__RunRegisterTest       0x0000c1e9          Code  Gb  cortexm4_macro.obj [1]
+__SEV                   0x0000c165          Code  Gb  cortexm4_macro.obj [1]
+__SVC                   0x0000c17b          Code  Gb  cortexm4_macro.obj [1]
+__SetingFile_End {Abs}  0x00010000           --   Gb  command line/config [2]
+__SetingFile_Size {Abs}
+                        0x00000000           --   Gb  command line/config [2]
+__SetingFile_Start {Abs}
+                        0x00010000           --   Gb  command line/config [2]
+__SettingFile_X_Start__ {Abs}
+                        0x00010000           --   Gb  command line/config [2]
+__StartupRegisterTest   0x0000c1ad          Code  Gb  cortexm4_macro.obj [1]
+__WFE                   0x0000c161          Code  Gb  cortexm4_macro.obj [1]
+__WFI                   0x0000c15d          Code  Gb  cortexm4_macro.obj [1]
+__aeabi_memclr4         0x0000c035          Code  Gb  ABImemclr4.o [5]
+__aeabi_memset4         0x0000c8d9          Code  Gb  ABImemset48.o [5]
+__aeabi_memset8         0x0000c8d9          Code  Gb  ABImemset48.o [5]
+__as_entries_start      0xffffffff           --   Gb  command line/config [2]
+__as_table_start        0xffffffff           --   Gb  command line/config [2]
+__cmain                 0x0000d6b9          Code  Gb  cmain.o [5]
+__exit                  0x0000d911    0x14  Code  Gb  exit.o [6]
+__iar_Memset4_word      0x0000c8e1          Code  Gb  ABImemset48.o [5]
+__iar_Memset8_word      0x0000c8e1          Code  Gb  ABImemset48.o [5]
+__iar_data_init3        0x0000c409    0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x0000d69d          Code  Gb  fpinit_M.o [4]
+__iar_packbits_init3    0x0000dbdf    0xb0  Code  Gb  packbits_init.o [5]
+__iar_program_start     0x0000c4d5          Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x0000c881          Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x0000c881          Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_zero_init3        0x0000b437    0x22  Code  Gb  zero_init3.o [5]
+__low_level_init        0x0000d8fd     0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000600   0x168  Data  Gb  InterruptVector.obj [1]
+_call_main              0x0000d6c5          Code  Gb  cmain.o [5]
+_exit                   0x0000d905          Code  Gb  cexit.o [5]
+_main                   0x0000d6cf          Code  Gb  cmain.o [5]
+abort                   0x0000dc8f     0x6  Code  Gb  abort.o [3]
+dLambdas_alpha_old      0x20001068     0x4  Data  Gb  Mci.obj [1]
+dLambdas_beta_old       0x2000106c     0x4  Data  Gb  Mci.obj [1]
+eev                     0x0000b96d    0x1e  Code  Lc  ThermalModelCore.obj [1]
+eex                     0x0000b9ad   0x198  Code  Lc  ThermalModelCore.obj [1]
+exit                    0x0000d901     0x4  Code  Gb  exit.o [3]
+fastpow                 0x0000b459    0x92  Code  Gb  ThermalModelCore.obj [1]
+fp                      0x0000b50d   0x45a  Code  Lc  ThermalModelCore.obj [1]
+fvt_debug_averaging     0x1fffe3e1     0x1  Data  Gb  Mci.obj [1]
+main                    0x0000c4e1   0x102  Code  Gb  SRMain.obj [1]
+pcm_bTrgVarSigned       0x20000597     0x1  Data  Lc  mc_rec.obj [1]
+pcm_dwRecEndBuffPtr     0x200005d4     0x4  Data  Gb  mc_rec.obj [1]
+pcm_dwRecWritePtr       0x200005d0     0x4  Data  Gb  mc_rec.obj [1]
+pcm_nRecBuffAddr        0x200005e0     0x4  Data  Lc  mc_rec.obj [1]
+pcm_nRecTriggerMode     0x20000594     0x1  Data  Gb  mc_rec.obj [1]
+pcm_nRecVarCount        0x20000595     0x1  Data  Gb  mc_rec.obj [1]
+pcm_nRxCheckSum         0x2000113a     0x1  Data  Lc  mc_serial.obj [1]
+pcm_nRxTodo             0x20001139     0x1  Data  Lc  mc_serial.obj [1]
+pcm_nScopeVarCount      0x200011b8     0x1  Data  Lc  mc_scope.obj [1]
+pcm_nTrgVarAddr         0x200005d8     0x4  Data  Lc  mc_rec.obj [1]
+pcm_nTrgVarSize         0x20000596     0x1  Data  Lc  mc_rec.obj [1]
+pcm_nTxTodo             0x20001138     0x1  Data  Lc  mc_serial.obj [1]
+pcm_pCommBuffer         0x2000113c    0x40  Data  Lc  mc_serial.obj [1]
+pcm_pCompareFunc        0x200005e4     0x4  Data  Lc  mc_rec.obj [1]
+pcm_pOwnRecBuffer       0x200005e8   0x400  Data  Lc  mc_rec.obj [1]
+pcm_pRecVarAddr         0x200005a4    0x20  Data  Gb  mc_rec.obj [1]
+pcm_pRecVarSize         0x200005c4     0x8  Data  Gb  mc_rec.obj [1]
+pcm_pRxBuff             0x20001184     0x4  Data  Lc  mc_serial.obj [1]
+pcm_pScopeVarAddr       0x200011bc    0x20  Data  Lc  mc_scope.obj [1]
+pcm_pScopeVarSize       0x200011dc     0x8  Data  Lc  mc_scope.obj [1]
+pcm_pTxBuff             0x20001180     0x4  Data  Lc  mc_serial.obj [1]
+pcm_uTrgThreshold       0x200005dc     0x4  Data  Lc  mc_rec.obj [1]
+pcm_wFlags              0x2000117c     0x4  Data  Lc  mc_serial.obj [1]
+pcm_wRecBuffStartIx     0x200005a2     0x2  Data  Gb  mc_rec.obj [1]
+pcm_wRecFlags           0x200005cc     0x4  Data  Gb  mc_rec.obj [1]
+pcm_wRecPostTrigger     0x2000059a     0x2  Data  Gb  mc_rec.obj [1]
+pcm_wRecTimeDiv         0x2000059c     0x2  Data  Gb  mc_rec.obj [1]
+pcm_wRecTimeDivCtr      0x2000059e     0x2  Data  Gb  mc_rec.obj [1]
+pcm_wRecTotalSmps       0x20000598     0x2  Data  Gb  mc_rec.obj [1]
+pcm_wStoprecCountDown   0x200005a0     0x2  Data  Gb  mc_rec.obj [1]
+savespace               0x0000bb55    0xf8  Code  Gb  ThermalModelCore.obj [1]
+sinTable_wp_f32         0x00004914   0x804  Data  Gb  Mci.obj [1]
+sizeof_inv_comp_lut     0x1fffe820     0x4  Data  Gb  Mci.obj [1]
+step_inv_pwm_comp       0x1fffe81c     0x4  Data  Gb  Mci.obj [1]
+switching_angle         0x1fffe3d5     0x1  Data  Gb  Mci.obj [1]
+
+
+[1] = C:\Data\Python\Windy_sBpm_Floating\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tlv.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  54 692 bytes of readonly  code memory
+   2 388 bytes of readonly  data memory
+   9 411 bytes of readwrite data memory (+ 8 absolute)
+
+Errors: none
+Warnings: none

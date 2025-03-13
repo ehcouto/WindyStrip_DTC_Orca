@@ -1,0 +1,370 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c (C)
+			SIM.SCGC6 |= SIM_SCGC6_SPI0_MASK;								//Enable the clock for Spi0 module
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:355: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTE.PCR[17] = PORT_PCR_MUX(2);							//Set PortE pin 17 of SPI0 com: SCK
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:359: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTE.PCR[18] = PORT_PCR_MUX(2);							//Set PortE pin 18 of SPI0 com: SOUT(MOSI)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:360: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTE.PCR[19] = PORT_PCR_MUX(2);							//Set PortE pin 19 of SPI0 com: SIN (MISO)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:361: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTA.PCR[15] = PORT_PCR_MUX(2);							//Set PortA pin 15 of SPI0 com: SCK
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:365: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTA.PCR[16] = PORT_PCR_MUX(2);							//Set PortA pin 16 of SPI0 com: SOUT(MOSI)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:366: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTA.PCR[17] = PORT_PCR_MUX(2);							//Set PortA pin 17 of SPI0 com: SIN (MISO)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:367: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTC.PCR[5] = PORT_PCR_MUX(2);							//Set PortC pin 5 of SPI0 com: SCK
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:371: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTE.PCR[18] = PORT_PCR_MUX(2);							//Set PortC pin 6 of SPI0 com: SOUT(MOSI)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:372: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTC.PCR[7] = PORT_PCR_MUX(2);							//Set PortC pin 7 of SPI0 com: SIN (MISO)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:373: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTD.PCR[1] = PORT_PCR_MUX(2);							//Set PortD pin 1 of SPI0 com: SCK
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:377: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTD.PCR[2] = PORT_PCR_MUX(2);							//Set PortD pin 2 of SPI0 com: SOUT(MOSI)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:378: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				PCIPORTD.PCR[3] = PORT_PCR_MUX(2);							//Set PortD pin 3 of SPI0 com: SIN (MISO)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:379: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            SIM.SCGC6 |= SIM_SCGC6_DMAMUX_MASK;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:398: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            DMAMUX->CHCFG[masterRxChannel] = ((DMAMUX->CHCFG[masterRxChannel] & ~DMAMUX_CHCFG_SOURCE_MASK) | DMAMUX_CHCFG_SOURCE(DSPI_MASTER_DMA_RX_REQUEST_SOURCE));
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:399: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:399: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            DMAMUX->CHCFG[masterRxChannel] |= DMAMUX_CHCFG_ENBL_MASK;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:400: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            DMAMUX->CHCFG[masterTxChannel] = ((DMAMUX->CHCFG[masterTxChannel] & ~DMAMUX_CHCFG_SOURCE_MASK)| DMAMUX_CHCFG_SOURCE(DSPI_MASTER_DMA_TX_REQUEST_SOURCE));
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:401: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:401: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            DMAMUX->CHCFG[masterTxChannel] |= DMAMUX_CHCFG_ENBL_MASK;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:402: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            DspiMasterInit(DSPI_MASTER_BASEADDR, &masterConfig, Micro__GetClock()->SYSCLK_Frequency);
+#...                   SPI_0
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:404: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            SPI_0->MCR &= ~SPI_MCR_HALT_MASK;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:421: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            SPI_0->MCR |= SPI_MCR_HALT_MASK;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:437: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        DspiMasterTransferEdma(DSPI_MASTER_BASEADDR, &Spi_Master_Dma_Handle, &master_transfer);
+#...                       SPI_0
+                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:495: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    rxAddr =(uint32)&(base->POPR);
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:617: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    txAddr =(uint32)&(base->PUSHR);
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:618: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    EDMA_TCD *software_tcd = ( EDMA_TCD*)((uint32)(&handle->dspi_software_tcd[1]) & (~0x1FU));
+                                                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:619: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:619: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        handle->fifoSize = FSL_FEATURE_DSPI_FIFO_SIZEn(base);
+#...                                        ((base) == DSPI0 ? (4) : ((base) ==
+#...                                                   SPI_0
+                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:635: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        handle->fifoSize = FSL_FEATURE_DSPI_FIFO_SIZEn(base);
+#...               ((base) == DSPI0 ? (4) : ((base) == DSPI1 ? (1) : (-1)))
+#...                                                   SPI_1
+                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:635: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        transfer_config_a.dest_addr = (uint32) &(handle->rx_data[0]);
+                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:713: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        transfer_config_a.dest_addr = (uint32) &(handle->rx_buff_If_null);
+                                                                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:718: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            transfer_config_b.src_addr = (uint32) (handle->tx_data);
+                                                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:743: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            transfer_config_b.src_addr = (uint32) (&handle->tx_buff_if_null);
+                                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:748: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        transfer_config_b.dest_addr = (uint32) (&handle->command);
+                                                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:752: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                                                   ((base) == DSPI0 ? (1) :
+#...                                                              SPI_0
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:762: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                          ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) :
+#...                                                              SPI_1
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:762: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                                                   ((base) == DSPI0 ? (1) :
+#...                                                              SPI_0
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:778: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                          ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) :
+#...                                                              SPI_1
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:778: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    if (((handle->remaining_send_byte_count > 0) && (1 != FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base)))
+#...                  ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) : (-1)))
+#...                             SPI_0
+                                                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:798: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    if (((handle->remaining_send_byte_count > 0) && (1 != FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base)))
+#... == DSPI0 ? (1) : ((base) == DSPI1 ? (0) : (-1)))
+#...                             SPI_1
+                                                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:798: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     && (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))))
+#...                                            ((base) == DSPI0 ? (1) : ((base
+#...                                                       SPI_0
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:801: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     && (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))))
+#...                   ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) : (-1)))
+#...                                                       SPI_1
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:801: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                                                   ((base) == DSPI0 ? (1) :
+#...                                                              SPI_0
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:807: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                          ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) :
+#...                                                              SPI_1
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:807: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    if ((1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                                            ((base) == DSPI0 ? (1) : ((base
+#...                                                       SPI_0
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:854: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    if ((1 == FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base))
+#...                   ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) : (-1)))
+#...                                                       SPI_1
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:854: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     || ((1 != FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base)) && (handle->remaining_send_byte_count > 0)))
+#...                                             ((base) == DSPI0 ? (1) : ((bas
+#...                                                        SPI_0
+                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:855: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     || ((1 != FSL_FEATURE_DSPI_HAS_SEPARATE_DMA_RX_TX_REQn(base)) && (handle->remaining_send_byte_count > 0)))
+#...                    ((base) == DSPI0 ? (1) : ((base) == DSPI1 ? (0) : (-1))
+#...                                                        SPI_1
+                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:855: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        transfer_config_c.src_addr = (uint32) &(handle->last_command);
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:857: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        transfer_config_c.src_addr = (uint32) (&(handle->command));
+                                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:872: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        DMA0->TCD[DMA_CH2].CSR = (DMA0->TCD[DMA_CH2].CSR & (~DMA_CSR_DREQ_MASK)) | DMA_CSR_DREQ(FALSE);
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:892: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:892: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    DMA0->SERQ = DMA_SERQ_SERQ(DMA_CH0);
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:900: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    DMA0->SERQ = DMA_SERQ_SERQ(DMA_CH1);
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:901: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    DMA0->SERQ = DMA_SERQ_SERQ(DMA_CH2);
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:902: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             DMA0->TCD[DMA_CH2].CITER_ELINKNO |= DMA_CITER_ELINKYES_ELINK_MASK;
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:909: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             DMA0->TCD[DMA_CH2].BITER_ELINKNO  |= DMA_BITER_ELINKYES_ELINK_MASK;
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:910: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             tmpreg = DMA0->TCD[DMA_CH2].CITER_ELINKNO  & (~DMA_CITER_ELINKYES_LINKCH_MASK);
+                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:912: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             DMA0->TCD[DMA_CH2].CITER_ELINKNO  = tmpreg;
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:914: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             tmpreg = DMA0->TCD[DMA_CH2].BITER_ELINKNO & (~DMA_BITER_ELINKYES_LINKCH_MASK);
+                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:915: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+             DMA0->TCD[DMA_CH2].BITER_ELINKNO  = tmpreg;
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:917: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    DMA0->TCD[channel].SADDR = transfer_config->src_addr;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:937: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    DMA0->TCD[channel].DADDR = transfer_config->dest_addr;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:939: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].ATTR = DMA_ATTR_SSIZE(transfer_config->source_transfer_size) | DMA_ATTR_DSIZE(transfer_config->dest_transfer_size);
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:941: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].SOFF = transfer_config->source_offset;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:943: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].DOFF =transfer_config->dest_offset;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:945: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].NBYTES_MLNO = transfer_config->minor_loop_bytes;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:947: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].CITER_ELINKNO = transfer_config->major_loop_counts;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:949: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].BITER_ELINKNO = transfer_config->major_loop_counts;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:951: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+         DMA0->TCD[channel].DLAST_SGA = (uint32)next_tcd;
+         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:954: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:954: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+         DMA0->TCD[channel].CSR = (DMA0->TCD[channel].CSR | DMA_CSR_ESG_MASK) & ~DMA_CSR_DREQ_MASK;
+         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:964: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:964: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].SADDR = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1141: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].SOFF = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1142: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].ATTR = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1143: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].NBYTES_MLNO = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1144: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].SLAST = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1145: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].DADDR = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1146: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].DOFF = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1147: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].CITER_ELINKNO = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1148: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].DLAST_SGA = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1149: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].CSR = DMA_CSR_DREQ(TRUE);
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1151: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+     DMA0->TCD[channel].BITER_ELINKNO = 0U;
+     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Spi\Spi.c:1152: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

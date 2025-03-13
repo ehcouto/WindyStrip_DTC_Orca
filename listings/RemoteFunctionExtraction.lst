@@ -1,0 +1,1234 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:36
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        RemoteFunctionExtraction.obj -l
+#        ..\listings\RemoteFunctionExtraction.lst
+#        ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c
+#    List file    =  ..\listings\RemoteFunctionExtraction.lst
+#    Object file  =  RemoteFunctionExtraction.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c
+      1          /**
+      2           * @file
+      3           * @brief       Implements an AP013 Remote Function server to interface with this remote function.
+      4           *
+      5           * @details
+      6           *
+      7           *      This module implements the Remote Function code for the standard API013 server interface.
+      8           *
+      9           *      A features:
+     10           *          - Implements the four standard functions for Remote Functions.
+     11           *          - A Background function that runs while the Remote Function is enabled.
+     12           *          - A DoCommand handler to accept commands from the client.
+     13           *          - A GetData handler to publish requested calculated results.
+     14           *          - A GetStatus handler to report status if requested by client or pushed by server.
+     15           *
+     16           * @copyright   Copyright 2016 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+     17           */
+     18          
+     19          //  --- Include Files -------------------------------------------------------------------------------------------------
+     20          #include "C_Extensions.h"
+     21          #include "SystemConfig.h"
+     22          
+     23          #include "AccelBaseline.h"
+     24          #if (EXTR_FEATURE_ACCEL_ENABLED != 0)
+                      ^
+Remark[Pe193]: zero used for undefined preprocessing identifier
+          "EXTR_FEATURE_ACCEL_ENABLED"
+     25          #include "Accelerometer.h"
+     26          #endif /* (EXTR_FEATURE_ACCEL_ENABLED != 0) */
+     27          #include "API007App.h"
+
+  PACKED typedef struct
+         ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Common\SettingFile\SettingFile.h",39  Remark[Pe082]: 
+          storage class is not first
+     28          #include "RemoteFunctionExtraction.h"
+     29          #include "API013RemoteFunction_prm.h"
+     30          #include "RemoteFunctionInterface.h"
+     31          #include "API013RemoteFunction.h"
+     32          #include "Extraction.h"
+     33          #include "ExtractionParams.h"
+     34          #include "Utilities.h"
+     35          #include <string.h>
+     36          #include "JtagTestInterface.h"
+     37          #include "MciSensorsWm.h"
+     38          #include "Motion.h"
+     39          
+     40          #define CLEAN_WASHER_LOAD_DET_MASK (((uint32)(1UL << EXTR_FAULT_CLEAN_WASHER_P2P_TORQUE_EXCEEDED)) | \
+     41          									((uint32)(1UL << EXTR_FAULT_CLEAN_WASHER_ACCEL_EXCEEDED)) | \
+     42          									((uint32)(1UL << EXTR_FAULT_CLEAN_WASHER_LOAD_MASS_EXCEEDED)) | \
+     43          									((uint32)(1UL << EXTR_FAULT_CLEAN_WASHER_UNBALANCE_EXCEEDED)))
+     44          
+     45          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     46          typedef enum INDEX_EXTRACTION_STATUS
+     47          {
+     48          	INDEX_EXTR_STATUS_ALGO       	   = 0,
+     49          	INDEX_EXTR_STATUS_ERR        	   = 1,
+     50          	INDEX_EXTR_REPORT_FLAGS  	   	   = 2,
+     51          	INDEX_EXTR_LOWSPD_LOADMASS_0	   = 3,
+     52          	INDEX_EXTR_LOWSPD_LOADMASS_1	   = 4,
+     53          	INDEX_EXTR_LOW_SPD_REB_CNT	   	   = 5,
+     54          	INDEX_EXTR_HIGHT_SPD_REB_CNT	   = 6,
+     55          	INDEX_EXTR_STATUS_FLAGS	   		   = 7,
+     56          	INDEX_EXTR_FAULT_FLAGS_1	   	   = 8,
+     57          	INDEX_EXTR_FAULT_FLAGS_0	   	   = 9,
+     58          	INDEX_EXTR_HIGHSPD_LOADMASS_0	   = 10,
+     59          	INDEX_EXTR_HIGHSPD_LOADMASS_1	   = 11,
+     60          	INDEX_EXTR_FAULT_FLAGS_3	   	   = 12,
+     61          	INDEX_EXTR_FAULT_FLAGS_2	   	   = 13,
+     62          	INDEX_EXTR_HIGHT_SP_STATUS		   = 14,
+     63          	EXTRACTION_STATUS_SIZE
+     64          } INDEX_EXTRACTION_STATUS_TYPE;
+     65          
+     66          // Bit position of flags inside ExtractionProcess_status buffer[INDEX_EXTR_REPORT_FLAGS]
+     67          #define SETTING_FILE_ERROR_BIT			0
+     68          #define DATA_RECEIVED_BIT				1
+     69          #define MOTION_BUSY_BIT					2
+     70          #define ENABLE_BACKGR_FUNC				3
+     71          
+     72          // Bit position of flags inside ExtractionProcess_status buffer[INDEX_EXTR_STATUS_FLAGS]
+     73          #define REBALANCE_IN_PROGRESS			0
+     74          
+     75          #define REMOTE_FUNCTION_EXTRACTION_COUNT_DOWN_INCREMENT 	25
+     76          
+     77          #define STOP_EXTRACTION()			{ Extraction__Stop(); Extraction__Handler5ms(); }
+     78          #define START_EXTRACTION()			{ Extraction__ResetLoadMass(); Extraction__Handler5ms(); Extraction__Start(); Extraction__Handler5ms(); }
+     79          #define NOTIFY_FOAM_DETECTION() { Extraction__NotifyFoamDetection(); Extraction__Handler5ms(); }
+     80          #define END_EXTRACTION()		{ Extraction__End(); Extraction__Handler5ms(); }
+     81          #define RESUME_EXTRACTION()		{ Extraction__Resume(); Extraction__Handler5ms(); }
+     82          
+     83          // -- Private Enumerated Constant Declarations --
+     84          typedef enum REMOTE_FUNCTION_EXTRACTION_COMMAND_ENUM
+     85          {
+     86          	REMOTE_FUNCTION_EXTRACTION_COMMAND_UPDATE = 2,
+     87          	REMOTE_FUNCTION_EXTRACTION_COMMAND_RESET = 3,
+     88          	REMOTE_FUNCTION_EXTRACTION_COMMAND_RETURN_TO_DISTR = 4,
+     89          	REMOTE_FUNCTION_COMMAND_RESUME = 5,
+     90          	REMOTE_FUNCTION_COMMAND_END = 6
+     91          } REMOTE_FUNCTION_EXTRACTION_COMMAND_TYPE;
+     92          
+     93          //! Offset for the parameters in REMOTE_FUNCTION_COMMAND_ENABLE command
+     94          typedef enum ENABLE_PARAMS_DATA_ENUM
+     95          {
+     96              ENABLE_PAR_SPIN_DISPLACEMENT_OFFS	= 0,
+     97          	ENABLE_PAR_TIMEOUT_HIGH_BYTE_OFFS,
+     98          	ENABLE_PAR_TIMEOUT_LOW_BYTE_OFFS,
+     99          	ENABLE_PAR_WASH_TEMPERATURE_OFFS,
+    100          	ENABLE_PAR_LOAD_HIGH_BYTE_MASS_OFFS,
+    101          	ENABLE_PAR_LOAD_LOW_BYTE_MASS_OFFS,
+    102          	ENABLE_PAR_VIBR_MAPPING_CFG_OFFS,
+    103          	ENABLE_PAR_HS_VEL_MIN_REQ_OFFS,
+    104          	ENABLE_PAR_HS_VEL_MAX_LIM_OFFS,
+    105          	ENABLE_PAR_HS_EXTD_PLATEAU_DUR_OFFS,
+    106          	ENABLE_PAR_MAX_ALLOWABLE_RAMP_TIME,
+    107          	ENABLE_PAR_DRUM_TARG_VEL_ERR,
+    108          	ENABLE_PAR_CNT
+    109          } ENABLE_PARAMS_DATA_TYPE;
+    110          
+    111          //! Offset for the parameters in REMOTE_FUNCTION_EXTRACTION_COMMAND_UPDATE command
+    112          typedef enum UPDATE_PARAMS_DATA_ENUM
+    113          {
+    114          	UPDATE_PAR_TIMEOUT_HIGH_BYTE_OFFS 	= 0,
+    115          	UPDATE_PAR_TIMEOUT_LOW_BYTE_OFFS,
+    116          	UPDATE_PAR_WASH_TEMPERATURE_OFFS,
+    117          	UPDATE_PAR_LOAD_HIGH_BYTE_MASS_OFFS,
+    118          	UPDATE_PAR_LOAD_LOW_BYTE_MASS_OFFS,
+    119          	UPDATE_PAR_CNT
+    120          } UPDATE_PARAMS_DATA_TYPE;
+    121          
+    122          //! Extraction High Speed parameters for MCU.
+    123          typedef struct EXTRACTION_HIGH_SPEED_DATA_STRUCT
+    124          {
+    125          	uint8 Velocity_Minimum_Required_Div10;
+    126          	uint8 Velocity_Maximum_Limit_Div10;
+    127          	uint8 Extended_Plateau_Duration_Div10;
+    128          	uint8 Param_Max_Allowable_ramp_time;
+    129          	uint8 Param_Drum_Targ_Vel_Err;
+    130          } EXTRACTION_HIGH_SPEED_DATA_TYPE;
+    131          
+    132          
+    133          // -- Private Variable Definitions --
+    134          
+
+   \                                 In section .bss, align 4
+    135          static uint16 Remote_Function_Extraction_Countdown;
+    136          static uint16 Remote_Function_Extraction_Countdown_Start;
+    137          static uint8 Enabled_remote_function;
+    138          // static uint8 End_Cmd_Send;
+    139          static uint8 ExtractionProcess_status[EXTRACTION_STATUS_SIZE];
+   \                     ExtractionProcess_status:
+   \   00000000                      DS8 16
+    140          static uint8 ExtractionProcess_status_previous[EXTRACTION_STATUS_SIZE];
+    141          static uint16 Load_Mass;
+    142          static uint8 Water_Temperature;
+    143          EXTRACTION_HIGH_SPEED_DATA_TYPE High_Speed_Parameters;
+   \                     High_Speed_Parameters:
+   \   00000010                      DS8 8
+   \   00000018                      DS8 1
+   \   00000019                      DS8 1
+   \   0000001A                      DS8 2
+   \   0000001C                      DS8 2
+   \   0000001E                      DS8 2
+   \   00000020                      DS8 16
+    144          
+    145          
+    146          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    147          
+    148          static void PrepareStatusData(void);
+    149          static void sendStatusData (uint8 server_function_index_local);
+    150          static void ParametersParser(uint8 *start_address);
+    151          
+    152          //=====================================================================================================================
+    153          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    154          //=====================================================================================================================
+    155          
+    156          //---------------------------------------------------------------------------------------------------------------------
+    157          /**
+    158           * Initialize all module variables.
+    159           */
+
+   \                                 In section .text, align 2, keep-with-next
+    160          void RemoteFunctionExtraction__Initialize (void)
+    161          {
+   \                     RemoteFunctionExtraction__Initialize: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    162          	Remote_Function_Extraction_Countdown       = 0;
+   \   00000002   0x....             LDR.N    R4,??DataTable11
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x8360             STRH     R0,[R4, #+26]
+    163          	Remote_Function_Extraction_Countdown_Start = 0;
+   \   00000008   0x83A0             STRH     R0,[R4, #+28]
+    164          
+    165              memset(&ExtractionProcess_status, 0, sizeof(ExtractionProcess_status));
+   \   0000000A   0x250F             MOVS     R5,#+15
+   \   0000000C   0x4602             MOV      R2,R0
+   \   0000000E   0x2600             MOVS     R6,#+0
+   \   00000010   0x4629             MOV      R1,R5
+   \   00000012   0x4620             MOV      R0,R4
+   \   00000014   0x.... 0x....      BL       __aeabi_memset4
+    166              memset(&ExtractionProcess_status_previous, 0, sizeof(ExtractionProcess_status_previous));
+   \   00000018   0x4632             MOV      R2,R6
+   \   0000001A   0x4629             MOV      R1,R5
+   \   0000001C   0xF104 0x0020      ADD      R0,R4,#+32
+   \   00000020   0x.... 0x....      BL       __aeabi_memset4
+    167          
+    168              Load_Mass = 15;
+    169              Water_Temperature = 25;
+   \   00000024   0x2019             MOVS     R0,#+25
+   \   00000026   0x7660             STRB     R0,[R4, #+25]
+   \   00000028   0x83E5             STRH     R5,[R4, #+30]
+    170          
+    171              High_Speed_Parameters.Velocity_Minimum_Required_Div10 = 0;
+    172          	High_Speed_Parameters.Velocity_Maximum_Limit_Div10 = 0;
+    173          	High_Speed_Parameters.Extended_Plateau_Duration_Div10 = 6;
+   \   0000002A   0x2006             MOVS     R0,#+6
+   \   0000002C   0x74A0             STRB     R0,[R4, #+18]
+   \   0000002E   0x8226             STRH     R6,[R4, #+16]
+    174          
+    175              High_Speed_Parameters.Param_Max_Allowable_ramp_time = 5;
+   \   00000030   0x2005             MOVS     R0,#+5
+   \   00000032   0x74E0             STRB     R0,[R4, #+19]
+    176          	High_Speed_Parameters.Param_Drum_Targ_Vel_Err = 10;
+    177          
+    178          	Enabled_remote_function = FALSE;
+   \   00000034   0x7626             STRB     R6,[R4, #+24]
+   \   00000036   0x200A             MOVS     R0,#+10
+   \   00000038   0x7520             STRB     R0,[R4, #+20]
+    179          
+    180          	#if TEST_ACCELEROMETER
+                 	    ^
+Remark[Pe193]: zero used for undefined preprocessing identifier
+          "TEST_ACCELEROMETER"
+    181          	AccelBaseline__MeasureBaseline();
+    182          	#endif
+    183          }
+   \   0000003A   0xBD70             POP      {R4-R6,PC}       ;; return
+    184          
+    185          //---------------------------------------------------------------------------------------------------------------------
+    186          /**
+    187           * Remote Function API Function: Background function that is called periodically while the Remote Function is active.
+    188           * @return ACTIVE if the Remote Function should be called periodically; otherwise INACTIVE.
+    189           *                  If the Remote Function is active, and if this function returns INACTIVE,
+    190           *                  then the REMOTE_FUNCTION_GET_DATA_ELEMENTS API function will be called one more time.
+    191           */
+
+   \                                 In section .text, align 2, keep-with-next
+    192          ACTIVE_TYPE RemoteFunctionExtraction__Background(void)
+    193          {
+   \                     RemoteFunctionExtraction__Background: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+    194              ACTIVE_TYPE retval;
+    195          
+    196              if ((Remote_Function_Extraction_Countdown > REMOTE_FUNCTION_EXTRACTION_COUNT_DOWN_INCREMENT) && (Enabled_remote_function == TRUE))
+   \   00000002   0x....             LDR.N    R4,??DataTable11
+   \   00000004   0x8B60             LDRH     R0,[R4, #+26]
+   \   00000006   0x7E22             LDRB     R2,[R4, #+24]
+   \   00000008   0xB081             SUB      SP,SP,#+4
+   \   0000000A   0x281A             CMP      R0,#+26
+   \   0000000C   0xDB06             BLT.N    ??RemoteFunctionExtraction__Background_0
+   \   0000000E   0x2A01             CMP      R2,#+1
+   \   00000010   0xD104             BNE.N    ??RemoteFunctionExtraction__Background_0
+    197              {
+    198              	Remote_Function_Extraction_Countdown -= REMOTE_FUNCTION_EXTRACTION_COUNT_DOWN_INCREMENT;
+    199              	ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_NO_ERR;
+   \   00000012   0x2100             MOVS     R1,#+0
+   \   00000014   0x3819             SUBS     R0,R0,#+25
+   \   00000016   0x7061             STRB     R1,[R4, #+1]
+    200          
+    201                  retval = ACTIVE;
+   \   00000018   0x2501             MOVS     R5,#+1
+   \   0000001A   0xE005             B.N      ??RemoteFunctionExtraction__Background_1
+    202              }
+    203              else
+    204              {
+    205              	Remote_Function_Extraction_Countdown = 0;
+   \                     ??RemoteFunctionExtraction__Background_0: (+1)
+   \   0000001C   0x2000             MOVS     R0,#+0
+    206          
+    207          		if (Enabled_remote_function == TRUE)
+   \   0000001E   0x2A01             CMP      R2,#+1
+   \   00000020   0xBF04             ITT      EQ 
+    208          		{   // TimeOut Expired
+    209          			ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_ERR_STATUS_BACKFUNC;
+   \   00000022   0x2102             MOVEQ    R1,#+2
+   \   00000024   0x7061             STRBEQ   R1,[R4, #+1]
+    210          		}
+    211          
+    212          		// Trigger Extraction stop sequence
+    213                  retval = INACTIVE;
+   \   00000026   0x2500             MOVS     R5,#+0
+   \                     ??RemoteFunctionExtraction__Background_1: (+1)
+   \   00000028   0x8360             STRH     R0,[R4, #+26]
+    214              }
+    215          
+    216          
+    217              if (retval == ACTIVE)
+    218              {
+    219          		#if TEST_ACCELEROMETER
+                 		    ^
+Remark[Pe193]: zero used for undefined preprocessing identifier
+          "TEST_ACCELEROMETER"
+    220              	//
+    221          		#endif
+    222              }
+    223          
+    224          	sendStatusData((uint8)API013_CLIENT_FUNCTION_EXTRACTION);
+   \   0000002A   0x.... 0x....      BL       PrepareStatusData
+   \   0000002E   0x220F             MOVS     R2,#+15
+   \   00000030   0xF104 0x0120      ADD      R1,R4,#+32
+   \   00000034   0x4620             MOV      R0,R4
+   \   00000036   0x.... 0x....      BL       memcmp
+   \   0000003A   0xB150             CBZ.N    R0,??RemoteFunctionExtraction__Background_2
+   \   0000003C   0x220F             MOVS     R2,#+15
+   \   0000003E   0x4621             MOV      R1,R4
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x.... 0x....      BL       API013RemoteFunction__PublishStatus
+   \   00000046   0x220F             MOVS     R2,#+15
+   \   00000048   0x4621             MOV      R1,R4
+   \   0000004A   0xF104 0x0020      ADD      R0,R4,#+32
+   \   0000004E   0x.... 0x....      BL       __aeabi_memcpy4
+    225          	//
+    226          
+    227              return retval;
+   \                     ??RemoteFunctionExtraction__Background_2: (+1)
+   \   00000052   0x4628             MOV      R0,R5
+   \   00000054   0xB001             ADD      SP,SP,#+4
+   \   00000056   0xBD30             POP      {R4,R5,PC}       ;; return
+    228          }
+    229          
+    230          
+    231          //---------------------------------------------------------------------------------------------------------------------
+    232          /**
+    233           * Remote Function API Function: Execute a Remote Function command.
+    234           * @param command = The command that the Remote Function should execute.
+    235           *                  A command value of 0 indicates that the Remote Function should disable itself.
+    236           *                  A command value of 1 indicates that the Remote Function should enable itself.
+    237           * @param params = A pointer to the parameter bytes that are being passed along with the command.
+    238           *                  The params memory is only valid during the function call.
+    239           * @param size = The number of parameter bytes that are being passed along with the command.
+    240           * @retval ANALYSIS_COMMAND_RESPONSE_INACTIVE = The analysis is inactive. Do not call the remote function.
+    241           * @retval ANALYSIS_COMMAND_RESPONSE_ACTIVE = The analysis is active. Call the remote function periodically.
+    242           * @retval ANALYSIS_COMMAND_RESPONSE_INVALID = The command is not supported.
+    243           */
+
+   \                                 In section .text, align 4, keep-with-next
+    244          REMOTE_FUNCTION_CONTROL_RESPONSE_TYPE  RemoteFunctionExtraction__DoCommand(uint8 command, uint8* params, uint8 size)
+    245          {
+   \                     RemoteFunctionExtraction__DoCommand: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0x4606             MOV      R6,R0
+   \   00000006   0x460D             MOV      R5,R1
+   \   00000008   0x4690             MOV      R8,R2
+    246          	REMOTE_FUNCTION_CONTROL_RESPONSE_TYPE response;
+    247          
+    248          	if(SettingFile__IsValid() == FALSE)
+   \   0000000A   0x....             LDR.N    R4,??DataTable11
+   \   0000000C   0x.... 0x....      BL       SettingFile__IsValid
+   \   00000010   0xB140             CBZ.N    R0,??RemoteFunctionExtraction__DoCommand_1
+    249          	{
+    250          	    // When Setting file is not valid force an invalid command to prevent any action
+    251          	    command = REMOTE_FUNCTION_COMMAND_DISABLE;
+    252          	}
+    253          
+    254              switch (command)
+   \   00000012   0x2E06             CMP      R6,#+6
+   \   00000014   0xF200 0x8091      BHI.W    ??RemoteFunctionExtraction__DoCommand_2
+   \   00000018   0xE8DF 0xF006      TBB      [PC, R6]
+   \                     ??RemoteFunctionExtraction__DoCommand_0:
+   \   0000001C   0x04 0x0C          DC8      0x4,0xC,0x40,0x56
+   \              0x40 0x56    
+   \   00000020   0x5A 0x68          DC8      0x5A,0x68,0x7C,0x0
+   \              0x7C 0x00    
+    255              {
+    256                  case REMOTE_FUNCTION_COMMAND_DISABLE:
+    257          			{
+    258          				Remote_Function_Extraction_Countdown = 0;
+   \                     ??RemoteFunctionExtraction__DoCommand_1: (+1)
+   \   00000024   0x2000             MOVS     R0,#+0
+   \   00000026   0x8360             STRH     R0,[R4, #+26]
+    259          				// Stop the Spin Activities with the displacement.
+    260          				Enabled_remote_function = FALSE;
+   \   00000028   0x7620             STRB     R0,[R4, #+24]
+    261          
+    262          				// Trigger Extraction stop sequence
+    263          				STOP_EXTRACTION();
+   \   0000002A   0x.... 0x....      BL       Extraction__Stop
+   \   0000002E   0x.... 0x....      BL       Extraction__Handler5ms
+    264          
+    265          #if (EXTR_FEATURE_ACCEL_ENABLED != 0)
+    266          				Accelerometer__Disable();
+    267          				Accelerometer__FlushData();
+    268          #endif /* (EXTR_FEATURE_ACCEL_ENABLED != 0) */
+    269          
+    270          				ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_STATUS_DISABLE;
+   \   00000032   0xE076             B.N      ??RemoteFunctionExtraction__DoCommand_3
+    271          				ExtractionParams__ResetSettingFileError();
+    272          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_INACTIVE;
+    273          				// End_Cmd_Send = FALSE;
+    274          
+    275          				// Force status trasmission
+    276          				memset(&ExtractionProcess_status_previous, 0xFF, sizeof(ExtractionProcess_status_previous));
+    277          			}
+    278                      break;
+    279          
+    280                  case REMOTE_FUNCTION_COMMAND_ENABLE:
+    281                  	response = REMOTE_FUNCTION_CONTROL_RESPONSE_INACTIVE;
+   \                     ??RemoteFunctionExtraction__DoCommand_4: (+1)
+   \   00000034   0x2700             MOVS     R7,#+0
+    282          
+    283          			if ((params != NULL) && (size >= ENABLE_PAR_CNT))
+   \   00000036   0xB375             CBZ.N    R5,??RemoteFunctionExtraction__DoCommand_5
+   \   00000038   0xF1B8 0x0F0C      CMP      R8,#+12
+   \   0000003C   0xDB2B             BLT.N    ??RemoteFunctionExtraction__DoCommand_5
+    284          			{
+    285          				if (ExtractionParams__Initialize(params[ENABLE_PAR_SPIN_DISPLACEMENT_OFFS], params[ENABLE_PAR_VIBR_MAPPING_CFG_OFFS]) == PASS)
+   \   0000003E   0x79A9             LDRB     R1,[R5, #+6]
+   \   00000040   0x7828             LDRB     R0,[R5, #+0]
+   \   00000042   0x.... 0x....      BL       ExtractionParams__Initialize
+   \   00000046   0x2801             CMP      R0,#+1
+   \   00000048   0xD170             BNE.N    ??RemoteFunctionExtraction__DoCommand_6
+    286          				{
+    287          					ParametersParser(&params[ENABLE_PAR_TIMEOUT_HIGH_BYTE_OFFS]);
+   \   0000004A   0x1C6E             ADDS     R6,R5,#+1
+   \   0000004C   0x7871             LDRB     R1,[R6, #+1]
+   \   0000004E   0x7830             LDRB     R0,[R6, #+0]
+   \   00000050   0x.... 0x....      BL       Utilities__Merg2BytesTo16bits
+   \   00000054   0x8360             STRH     R0,[R4, #+26]
+   \   00000056   0x78B0             LDRB     R0,[R6, #+2]
+   \   00000058   0x7660             STRB     R0,[R4, #+25]
+   \   0000005A   0x7931             LDRB     R1,[R6, #+4]
+   \   0000005C   0x78F0             LDRB     R0,[R6, #+3]
+   \   0000005E   0x.... 0x....      BL       Utilities__Merg2BytesTo16bits
+   \   00000062   0x83E0             STRH     R0,[R4, #+30]
+    288          
+    289          					High_Speed_Parameters.Velocity_Minimum_Required_Div10 = params[ENABLE_PAR_HS_VEL_MIN_REQ_OFFS];
+   \   00000064   0x79E8             LDRB     R0,[R5, #+7]
+   \   00000066   0x7420             STRB     R0,[R4, #+16]
+    290          					High_Speed_Parameters.Velocity_Maximum_Limit_Div10 = params[ENABLE_PAR_HS_VEL_MAX_LIM_OFFS];
+   \   00000068   0x7A28             LDRB     R0,[R5, #+8]
+   \   0000006A   0x7460             STRB     R0,[R4, #+17]
+    291          					High_Speed_Parameters.Extended_Plateau_Duration_Div10 = params[ENABLE_PAR_HS_EXTD_PLATEAU_DUR_OFFS];
+   \   0000006C   0x7A68             LDRB     R0,[R5, #+9]
+   \   0000006E   0x74A0             STRB     R0,[R4, #+18]
+    292          
+    293          					High_Speed_Parameters.Param_Max_Allowable_ramp_time = params[ENABLE_PAR_MAX_ALLOWABLE_RAMP_TIME];
+   \   00000070   0x7AA8             LDRB     R0,[R5, #+10]
+   \   00000072   0x74E0             STRB     R0,[R4, #+19]
+    294          					High_Speed_Parameters.Param_Drum_Targ_Vel_Err = params[ENABLE_PAR_DRUM_TARG_VEL_ERR];
+   \   00000074   0x7AE8             LDRB     R0,[R5, #+11]
+   \   00000076   0x7520             STRB     R0,[R4, #+20]
+    295          
+    296          					Remote_Function_Extraction_Countdown_Start = Remote_Function_Extraction_Countdown;
+   \   00000078   0x8B60             LDRH     R0,[R4, #+26]
+   \   0000007A   0x83A0             STRH     R0,[R4, #+28]
+    297          
+    298          					// Latch the Spin Activities with the displacement = params.
+    299          					Enabled_remote_function = TRUE;
+   \   0000007C   0x2001             MOVS     R0,#+1
+   \   0000007E   0x7620             STRB     R0,[R4, #+24]
+    300          
+    301          					// Trigger Extraction start sequence
+    302          					START_EXTRACTION();
+   \   00000080   0x.... 0x....      BL       Extraction__ResetLoadMass
+   \   00000084   0x.... 0x....      BL       Extraction__Handler5ms
+   \   00000088   0x.... 0x....      BL       Extraction__Start
+   \   0000008C   0x.... 0x....      BL       Extraction__Handler5ms
+    303          
+    304          					ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_NO_ERR;
+   \   00000090   0x7067             STRB     R7,[R4, #+1]
+    305          					response = REMOTE_FUNCTION_CONTROL_RESPONSE_ACTIVE;
+   \   00000092   0x2701             MOVS     R7,#+1
+   \   00000094   0xE04A             B.N      ??RemoteFunctionExtraction__DoCommand_6
+    306          				}
+    307          			}
+    308          			else
+    309          			{
+    310          				ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_ERR_COMMAND_PARAM;
+   \                     ??RemoteFunctionExtraction__DoCommand_5: (+1)
+   \   00000096   0x2001             MOVS     R0,#+1
+   \   00000098   0x7060             STRB     R0,[R4, #+1]
+    311          			}
+    312          
+    313                  	// Force status trasmission
+    314                  	memset(&ExtractionProcess_status_previous, 0xFF, sizeof(ExtractionProcess_status_previous));
+   \   0000009A   0xE047             B.N      ??RemoteFunctionExtraction__DoCommand_6
+    315                  	break;
+    316          
+    317                  case REMOTE_FUNCTION_EXTRACTION_COMMAND_UPDATE:
+    318          			{
+    319          				if ((params != NULL) && (size >= UPDATE_PAR_CNT))
+   \                     ??RemoteFunctionExtraction__DoCommand_7: (+1)
+   \   0000009C   0xB185             CBZ.N    R5,??RemoteFunctionExtraction__DoCommand_8
+   \   0000009E   0xF1B8 0x0F05      CMP      R8,#+5
+   \   000000A2   0xDB0D             BLT.N    ??RemoteFunctionExtraction__DoCommand_8
+    320          				{
+    321          					ParametersParser(&params[UPDATE_PAR_TIMEOUT_HIGH_BYTE_OFFS]);
+   \   000000A4   0x7869             LDRB     R1,[R5, #+1]
+   \   000000A6   0x7828             LDRB     R0,[R5, #+0]
+   \   000000A8   0x.... 0x....      BL       Utilities__Merg2BytesTo16bits
+   \   000000AC   0x8360             STRH     R0,[R4, #+26]
+   \   000000AE   0x78A8             LDRB     R0,[R5, #+2]
+   \   000000B0   0x7660             STRB     R0,[R4, #+25]
+   \   000000B2   0x7929             LDRB     R1,[R5, #+4]
+   \   000000B4   0x78E8             LDRB     R0,[R5, #+3]
+   \   000000B6   0x.... 0x....      BL       Utilities__Merg2BytesTo16bits
+   \   000000BA   0x83E0             STRH     R0,[R4, #+30]
+    322          				}
+    323          				else
+    324          				{
+    325          					ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_ERR_COMMAND_PARAM;
+    326          				}
+    327          
+    328          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_ACTIVE;
+    329          			}
+    330                      break;
+    331          
+    332                  case REMOTE_FUNCTION_EXTRACTION_COMMAND_RESET:
+    333          			{
+    334          				Remote_Function_Extraction_Countdown = Remote_Function_Extraction_Countdown_Start;
+    335          
+    336          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_ACTIVE;
+    337          			}
+    338                      break;
+    339          
+    340                  case REMOTE_FUNCTION_EXTRACTION_COMMAND_RETURN_TO_DISTR:
+    341          			{
+    342          				Remote_Function_Extraction_Countdown = Remote_Function_Extraction_Countdown_Start;
+    343          
+    344          				// Trigger extraction return to distribution velocity
+    345          				NOTIFY_FOAM_DETECTION();
+    346          
+    347          			    // Force status trasmission
+    348          				memset(&ExtractionProcess_status_previous, 0xFF, sizeof(ExtractionProcess_status_previous));
+    349          
+    350          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_ACTIVE;
+    351          			}
+    352                      break;
+    353          
+    354                  case REMOTE_FUNCTION_COMMAND_RESUME:
+    355              		if ((params != NULL) && (size >= ENABLE_PAR_CNT))
+    356              		{
+    357          				Remote_Function_Extraction_Countdown = Utilities__Merg2BytesTo16bits(params[ENABLE_PAR_TIMEOUT_HIGH_BYTE_OFFS], params[ENABLE_PAR_TIMEOUT_LOW_BYTE_OFFS]);
+    358          				Remote_Function_Extraction_Countdown_Start = Remote_Function_Extraction_Countdown;
+    359          				// Latch the Spin Activities with the displacement = params.
+    360          				Enabled_remote_function = TRUE;
+    361          
+    362          				// Trigger Extraction start sequence
+    363          				RESUME_EXTRACTION();
+    364          
+    365          				ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_NO_ERR;
+    366          
+    367          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_ACTIVE;
+   \   000000BC   0x2701             MOVS     R7,#+1
+   \   000000BE   0xE040             B.N      ??RemoteFunctionExtraction__DoCommand_9
+   \                     ??RemoteFunctionExtraction__DoCommand_8: (+1)
+   \   000000C0   0x2001             MOVS     R0,#+1
+   \   000000C2   0x7060             STRB     R0,[R4, #+1]
+   \   000000C4   0x2701             MOVS     R7,#+1
+   \   000000C6   0xE03C             B.N      ??RemoteFunctionExtraction__DoCommand_9
+   \                     ??RemoteFunctionExtraction__DoCommand_10: (+1)
+   \   000000C8   0x8BA0             LDRH     R0,[R4, #+28]
+   \   000000CA   0x8360             STRH     R0,[R4, #+26]
+   \   000000CC   0x2701             MOVS     R7,#+1
+   \   000000CE   0xE038             B.N      ??RemoteFunctionExtraction__DoCommand_9
+   \                     ??RemoteFunctionExtraction__DoCommand_11: (+1)
+   \   000000D0   0x8BA0             LDRH     R0,[R4, #+28]
+   \   000000D2   0x8360             STRH     R0,[R4, #+26]
+   \   000000D4   0x.... 0x....      BL       Extraction__NotifyFoamDetection
+   \   000000D8   0x.... 0x....      BL       Extraction__Handler5ms
+   \   000000DC   0x22FF             MOVS     R2,#+255
+   \   000000DE   0x210F             MOVS     R1,#+15
+   \   000000E0   0xF104 0x0020      ADD      R0,R4,#+32
+   \   000000E4   0x.... 0x....      BL       __aeabi_memset4
+   \   000000E8   0x2701             MOVS     R7,#+1
+   \   000000EA   0xE02A             B.N      ??RemoteFunctionExtraction__DoCommand_9
+   \                     ??RemoteFunctionExtraction__DoCommand_12: (+1)
+   \   000000EC   0xB34D             CBZ.N    R5,??RemoteFunctionExtraction__DoCommand_9
+   \   000000EE   0xF1B8 0x0F0C      CMP      R8,#+12
+   \   000000F2   0xDB26             BLT.N    ??RemoteFunctionExtraction__DoCommand_9
+   \   000000F4   0x78A9             LDRB     R1,[R5, #+2]
+   \   000000F6   0x7868             LDRB     R0,[R5, #+1]
+   \   000000F8   0x.... 0x....      BL       Utilities__Merg2BytesTo16bits
+   \   000000FC   0x8360             STRH     R0,[R4, #+26]
+   \   000000FE   0x83A0             STRH     R0,[R4, #+28]
+   \   00000100   0x2001             MOVS     R0,#+1
+   \   00000102   0x7620             STRB     R0,[R4, #+24]
+   \   00000104   0x.... 0x....      BL       Extraction__Resume
+   \   00000108   0x.... 0x....      BL       Extraction__Handler5ms
+   \   0000010C   0x2000             MOVS     R0,#+0
+   \   0000010E   0x7060             STRB     R0,[R4, #+1]
+   \   00000110   0x2701             MOVS     R7,#+1
+   \   00000112   0xE016             B.N      ??RemoteFunctionExtraction__DoCommand_9
+    368              		}
+    369                     	break;
+    370          
+    371                  case REMOTE_FUNCTION_COMMAND_END:
+    372          			{
+    373          				// End extraction activity
+    374          				END_EXTRACTION();
+   \                     ??RemoteFunctionExtraction__DoCommand_13: (+1)
+   \   00000114   0x.... 0x....      BL       Extraction__End
+   \   00000118   0x.... 0x....      BL       Extraction__Handler5ms
+    375          
+    376          				Remote_Function_Extraction_Countdown = 0;
+   \   0000011C   0x2000             MOVS     R0,#+0
+   \   0000011E   0x8360             STRH     R0,[R4, #+26]
+    377          				Enabled_remote_function = FALSE;
+   \   00000120   0x7620             STRB     R0,[R4, #+24]
+    378          				ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_STATUS_DISABLE;
+   \                     ??RemoteFunctionExtraction__DoCommand_3: (+1)
+   \   00000122   0x2003             MOVS     R0,#+3
+   \   00000124   0x7060             STRB     R0,[R4, #+1]
+    379          				ExtractionParams__ResetSettingFileError();
+   \   00000126   0x.... 0x....      BL       ExtractionParams__ResetSettingFileError
+    380          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_INACTIVE;
+   \   0000012A   0x2700             MOVS     R7,#+0
+    381          
+    382          				// Force status trasmission
+    383          				memset(&ExtractionProcess_status_previous, 0xFF, sizeof(ExtractionProcess_status_previous));
+   \                     ??RemoteFunctionExtraction__DoCommand_6: (+1)
+   \   0000012C   0x22FF             MOVS     R2,#+255
+   \   0000012E   0x210F             MOVS     R1,#+15
+   \   00000130   0xF104 0x0020      ADD      R0,R4,#+32
+   \   00000134   0x.... 0x....      BL       __aeabi_memset4
+    384          			}
+    385                     	break;
+   \   00000138   0xE003             B.N      ??RemoteFunctionExtraction__DoCommand_9
+    386          
+    387          
+    388                  default:
+    389          			{
+    390          				ExtractionProcess_status[INDEX_EXTR_STATUS_ERR] = EXTRACTION_STATUS_DISABLE;
+   \                     ??RemoteFunctionExtraction__DoCommand_2: (+1)
+   \   0000013A   0x2003             MOVS     R0,#+3
+   \   0000013C   0x7060             STRB     R0,[R4, #+1]
+    391          				response = REMOTE_FUNCTION_CONTROL_RESPONSE_INVALID;
+   \   0000013E   0xF04F 0x37FF      MOV      R7,#-1
+    392          			}
+    393                      break;
+    394              }
+    395          
+    396              sendStatusData((uint8)API013_CLIENT_FUNCTION_EXTRACTION);
+   \                     ??RemoteFunctionExtraction__DoCommand_9: (+1)
+   \   00000142   0x.... 0x....      BL       PrepareStatusData
+   \   00000146   0x220F             MOVS     R2,#+15
+   \   00000148   0xF104 0x0120      ADD      R1,R4,#+32
+   \   0000014C   0x4620             MOV      R0,R4
+   \   0000014E   0x.... 0x....      BL       memcmp
+   \   00000152   0xB150             CBZ.N    R0,??RemoteFunctionExtraction__DoCommand_14
+   \   00000154   0x220F             MOVS     R2,#+15
+   \   00000156   0x4621             MOV      R1,R4
+   \   00000158   0x2000             MOVS     R0,#+0
+   \   0000015A   0x.... 0x....      BL       API013RemoteFunction__PublishStatus
+   \   0000015E   0x220F             MOVS     R2,#+15
+   \   00000160   0x4621             MOV      R1,R4
+   \   00000162   0xF104 0x0020      ADD      R0,R4,#+32
+   \   00000166   0x.... 0x....      BL       __aeabi_memcpy4
+    397          
+    398              return response;
+   \                     ??RemoteFunctionExtraction__DoCommand_14: (+1)
+   \   0000016A   0xB278             SXTB     R0,R7
+   \   0000016C   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    399          }
+    400          
+    401          
+    402          //---------------------------------------------------------------------------------------------------------------------
+    403          /**
+    404           * Remote Function API Function: Get the current status of the Remote Function.
+    405           * @param status = This function sets the referenced pointer to point to the buffer that holds the function status data.
+    406           * @param size = This function sets the referenced byte to the number of bytes in the function status data.
+    407           */
+
+   \                                 In section .text, align 2, keep-with-next
+    408          void RemoteFunctionExtraction__GetStatus(uint8** status, uint8* size)
+    409          {
+   \                     RemoteFunctionExtraction__GetStatus: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x4604             MOV      R4,R0
+   \   00000004   0x460D             MOV      R5,R1
+    410          	PrepareStatusData();
+   \   00000006   0x.... 0x....      BL       PrepareStatusData
+    411          
+    412          	memcpy (ExtractionProcess_status_previous, ExtractionProcess_status, sizeof(ExtractionProcess_status));
+   \   0000000A   0x....             LDR.N    R6,??DataTable11
+   \   0000000C   0x220F             MOVS     R2,#+15
+   \   0000000E   0x4631             MOV      R1,R6
+   \   00000010   0xF106 0x0020      ADD      R0,R6,#+32
+   \   00000014   0x.... 0x....      BL       __aeabi_memcpy4
+    413          
+    414          	*status = &ExtractionProcess_status[EXTRACTION_NO_ERR];
+   \   00000018   0x6026             STR      R6,[R4, #+0]
+    415              *size = EXTRACTION_STATUS_SIZE;
+   \   0000001A   0x200F             MOVS     R0,#+15
+   \   0000001C   0x7028             STRB     R0,[R5, #+0]
+    416          }
+   \   0000001E   0xBD70             POP      {R4-R6,PC}       ;; return
+    417          
+    418          
+    419          //---------------------------------------------------------------------------------------------------------------------
+    420          /**
+    421           * Return the value of the Water Temperature
+    422           */
+
+   \                                 In section .text, align 2, keep-with-next
+    423          uint8 RemoteFunctionExtraction__GetTemperature(void)
+    424          {
+    425          	return Water_Temperature;
+   \                     RemoteFunctionExtraction__GetTemperature: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7E40             LDRB     R0,[R0, #+25]
+   \   00000004   0x4770             BX       LR               ;; return
+    426          }
+    427          
+    428          
+    429          //---------------------------------------------------------------------------------------------------------------------
+    430          /**
+    431           * Return the value of the Load Mass
+    432           */
+
+   \                                 In section .text, align 2, keep-with-next
+    433          float32 RemoteFunctionExtraction__GetLoadMass(void)
+    434          {
+    435          	return (Load_Mass / 10.0f);
+   \                     RemoteFunctionExtraction__GetLoadMass: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x8BC0             LDRH     R0,[R0, #+30]
+   \   00000004   0xEE00 0x0A10      VMOV     S0,R0
+   \   00000008   0xEEB8 0x0A40      VCVT.F32.U32 S0,S0
+   \   0000000C   0xEEF2 0x0A04      VMOV.F32 S1,#10.0
+   \   00000010   0xEE80 0x0A20      VDIV.F32 S0,S0,S1
+   \   00000014   0x4770             BX       LR               ;; return
+    436          }
+    437          
+    438          
+    439          //---------------------------------------------------------------------------------------------------------------------
+    440          /**
+    441           * Return the value of the High Speed Velocity Minimum Required parameter
+    442           */
+
+   \                                 In section .text, align 2, keep-with-next
+    443          uint16 RemoteFunctionExtraction__HSVelocityMinReq(void)
+    444          {
+    445          	return (High_Speed_Parameters.Velocity_Minimum_Required_Div10 * 10);
+   \                     RemoteFunctionExtraction__HSVelocityMinReq: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7C00             LDRB     R0,[R0, #+16]
+   \   00000004   0xEB00 0x0180      ADD      R1,R0,R0, LSL #+2
+   \   00000008   0x0048             LSLS     R0,R1,#+1
+   \   0000000A   0xB280             UXTH     R0,R0
+   \   0000000C   0x4770             BX       LR               ;; return
+    446          }
+    447          
+    448          
+    449          //---------------------------------------------------------------------------------------------------------------------
+    450          /**
+    451           * Return the value of the High Speed Velocity Maximum Limit parameter
+    452           */
+
+   \                                 In section .text, align 2, keep-with-next
+    453          uint16 RemoteFunctionExtraction__HSVelocityMaxLim(void)
+    454          {
+    455          	return (High_Speed_Parameters.Velocity_Maximum_Limit_Div10 * 10);
+   \                     RemoteFunctionExtraction__HSVelocityMaxLim: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7C40             LDRB     R0,[R0, #+17]
+   \   00000004   0xEB00 0x0180      ADD      R1,R0,R0, LSL #+2
+   \   00000008   0x0048             LSLS     R0,R1,#+1
+   \   0000000A   0xB280             UXTH     R0,R0
+   \   0000000C   0x4770             BX       LR               ;; return
+    456          }
+    457          
+    458          
+    459          //---------------------------------------------------------------------------------------------------------------------
+    460          /**
+    461           * Return the value of the High Speed Velocity Maximum Limit parameter
+    462           */
+
+   \                                 In section .text, align 2, keep-with-next
+    463          uint16 RemoteFunctionExtraction__HSExtdPlateauDur(void)
+    464          {
+    465          	return (High_Speed_Parameters.Extended_Plateau_Duration_Div10 * 10);
+   \                     RemoteFunctionExtraction__HSExtdPlateauDur: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7C80             LDRB     R0,[R0, #+18]
+   \   00000004   0xEB00 0x0180      ADD      R1,R0,R0, LSL #+2
+   \   00000008   0x0048             LSLS     R0,R1,#+1
+   \   0000000A   0xB280             UXTH     R0,R0
+   \   0000000C   0x4770             BX       LR               ;; return
+    466          }
+    467          
+    468          
+
+   \                                 In section .text, align 2, keep-with-next
+    469          uint8 RemoteFunctionExtraction__ParMaxAllowRampTime (void)
+    470          {
+    471          	return (High_Speed_Parameters.Param_Max_Allowable_ramp_time);
+   \                     RemoteFunctionExtraction__ParMaxAllowRampTime: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7CC0             LDRB     R0,[R0, #+19]
+   \   00000004   0x4770             BX       LR               ;; return
+    472          }
+    473          
+    474          
+
+   \                                 In section .text, align 2, keep-with-next
+    475          uint8 RemoteFunctionExtraction__ParDrumTargVelErr (void)
+    476          {
+    477          	return (High_Speed_Parameters.Param_Drum_Targ_Vel_Err );
+   \                     RemoteFunctionExtraction__ParDrumTargVelErr: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable11
+   \   00000002   0x7D00             LDRB     R0,[R0, #+20]
+   \   00000004   0x4770             BX       LR               ;; return
+    478          }
+    479          
+    480          //=====================================================================================================================
+    481          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    482          //=====================================================================================================================
+    483          
+
+   \                                 In section .text, align 2, keep-with-next
+    484          static void PrepareStatusData (void)
+    485          {
+   \                     PrepareStatusData: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xED2D 0x8B02      VPUSH    {D8}
+   \   00000006   0xB082             SUB      SP,SP,#+8
+    486          	uint16 Extr_Load_Mass;
+    487          	uint32 Extr_Get_Fault_Bitmap;
+    488          	boolean_T Rebalance_In_Progress;
+    489          
+    490          	// Management of Status MBCD and ERR datas.
+    491          	ExtractionProcess_status[INDEX_EXTR_STATUS_ALGO] = Extraction__GetState();
+   \   00000008   0x....             LDR.N    R4,??DataTable11
+   \   0000000A   0x.... 0x....      BL       Extraction__GetState
+   \   0000000E   0x7020             STRB     R0,[R4, #+0]
+    492          
+    493          	// Test if a setting file error has been detected
+    494          	if (ExtractionParams__GetSettingFileError() == TRUE)
+   \   00000010   0x.... 0x....      BL       ExtractionParams__GetSettingFileError
+   \   00000014   0x2801             CMP      R0,#+1
+   \   00000016   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000018   0xBF0C             ITE      EQ 
+    495              {
+    496              	BIT_SET(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], SETTING_FILE_ERROR_BIT);
+   \   0000001A   0xF040 0x0001      ORREQ    R0,R0,#0x1
+    497              }
+    498              else
+    499              {
+    500              	BIT_CLR(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], SETTING_FILE_ERROR_BIT);
+   \   0000001E   0xF000 0x00FE      ANDNE    R0,R0,#0xFE
+    501              }
+    502          
+    503          	// Test if Enable BackGround is Active
+    504          	if (Enabled_remote_function == TRUE)
+   \   00000022   0x7E21             LDRB     R1,[R4, #+24]
+   \   00000024   0x70A0             STRB     R0,[R4, #+2]
+   \   00000026   0x2901             CMP      R1,#+1
+   \   00000028   0x78A0             LDRB     R0,[R4, #+2]
+   \   0000002A   0xBF0C             ITE      EQ 
+    505              {
+    506              	BIT_SET(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], ENABLE_BACKGR_FUNC);
+   \   0000002C   0xF040 0x0008      ORREQ    R0,R0,#0x8
+    507              }
+    508              else
+    509              {
+    510              	BIT_CLR(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], ENABLE_BACKGR_FUNC);
+   \   00000030   0xF000 0x00F7      ANDNE    R0,R0,#0xF7
+   \   00000034   0x70A0             STRB     R0,[R4, #+2]
+    511              }
+    512          
+    513          	// Test if a data from API007 have not received
+    514          	if (API007App__AreAllDataReceived() == TRUE)
+   \   00000036   0x.... 0x....      BL       API007App__AreAllDataReceived
+   \   0000003A   0x2801             CMP      R0,#+1
+   \   0000003C   0x78A0             LDRB     R0,[R4, #+2]
+   \   0000003E   0xBF0C             ITE      EQ 
+    515              {
+    516              	BIT_SET(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], DATA_RECEIVED_BIT);
+   \   00000040   0xF040 0x0002      ORREQ    R0,R0,#0x2
+    517              }
+    518              else
+    519              {
+    520              	BIT_CLR(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], DATA_RECEIVED_BIT);
+   \   00000044   0xF000 0x00FD      ANDNE    R0,R0,#0xFD
+   \   00000048   0x70A0             STRB     R0,[R4, #+2]
+    521              }
+    522          
+    523          	// Test if a Motion module is idle
+    524          	if(Motion__GetStatus() == MOTION_STATUS_IDLE)
+   \   0000004A   0x.... 0x....      BL       Motion__GetStatus
+   \   0000004E   0x2800             CMP      R0,#+0
+   \   00000050   0x78A0             LDRB     R0,[R4, #+2]
+   \   00000052   0xBF0C             ITE      EQ 
+    525              {
+    526              	BIT_CLR(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], MOTION_BUSY_BIT);
+   \   00000054   0xF000 0x00FB      ANDEQ    R0,R0,#0xFB
+    527              }
+    528              else
+    529              {
+    530              	BIT_SET(ExtractionProcess_status[INDEX_EXTR_REPORT_FLAGS], MOTION_BUSY_BIT);
+   \   00000058   0xF040 0x0004      ORRNE    R0,R0,#0x4
+   \   0000005C   0x70A0             STRB     R0,[R4, #+2]
+    531              }
+    532          	////
+    533          
+    534          	Extr_Load_Mass = (uint16)(Extraction__GetFloat(EXTR_FLOAT_FB_ENUM_LOAD_MASS_LOW_SPEED) * 10.0f + 0.5f);
+   \   0000005E   0xEEB2 0x8A04      VMOV.F32 S16,#10.0
+   \   00000062   0x2000             MOVS     R0,#+0
+   \   00000064   0x.... 0x....      BL       Extraction__GetFloat
+   \   00000068   0xEEF6 0x0A00      VMOV.F32 S1,#0.5
+   \   0000006C   0xEE40 0x0A08      VMLA.F32 S1,S0,S16
+   \   00000070   0xEEBD 0x0AE0      VCVT.S32.F32 S0,S1
+   \   00000074   0xEE10 0x0A10      VMOV     R0,S0
+   \   00000078   0xB280             UXTH     R0,R0
+    535          	ExtractionProcess_status[INDEX_EXTR_LOWSPD_LOADMASS_0] = LOBYTE(Extr_Load_Mass);
+   \   0000007A   0x70E0             STRB     R0,[R4, #+3]
+    536          	ExtractionProcess_status[INDEX_EXTR_LOWSPD_LOADMASS_1] = HIBYTE(Extr_Load_Mass);
+   \   0000007C   0x0A00             LSRS     R0,R0,#+8
+   \   0000007E   0x7120             STRB     R0,[R4, #+4]
+    537          
+    538          	Extr_Load_Mass = (uint16)(Extraction__GetFloat(EXTR_FLOAT_FB_ENUM_LOAD_MASS_HIGH_SPEED) * 10.0f + 0.5f);
+   \   00000080   0x2001             MOVS     R0,#+1
+   \   00000082   0x.... 0x....      BL       Extraction__GetFloat
+   \   00000086   0xEEF6 0x0A00      VMOV.F32 S1,#0.5
+   \   0000008A   0xEE40 0x0A08      VMLA.F32 S1,S0,S16
+   \   0000008E   0xEEBD 0x0AE0      VCVT.S32.F32 S0,S1
+   \   00000092   0xEE10 0x0A10      VMOV     R0,S0
+   \   00000096   0xB280             UXTH     R0,R0
+    539          	ExtractionProcess_status[INDEX_EXTR_HIGHSPD_LOADMASS_0] = LOBYTE(Extr_Load_Mass);
+   \   00000098   0x72A0             STRB     R0,[R4, #+10]
+    540          	ExtractionProcess_status[INDEX_EXTR_HIGHSPD_LOADMASS_1] = HIBYTE(Extr_Load_Mass);
+   \   0000009A   0x0A00             LSRS     R0,R0,#+8
+   \   0000009C   0x72E0             STRB     R0,[R4, #+11]
+    541          	////
+    542          
+    543          	ExtractionProcess_status[INDEX_EXTR_LOW_SPD_REB_CNT]   = (uint8)Extraction__GetInteger(EXTR_INT32_FB_ENUM_REBAL_CNT_LOW_SPEED);
+   \   0000009E   0x2000             MOVS     R0,#+0
+   \   000000A0   0x.... 0x....      BL       Extraction__GetInteger
+   \   000000A4   0x7160             STRB     R0,[R4, #+5]
+    544          	ExtractionProcess_status[INDEX_EXTR_HIGHT_SPD_REB_CNT] = (uint8)Extraction__GetInteger(EXTR_INT32_FB_ENUM_REBAL_CNT_HIGH_SPEED);
+   \   000000A6   0x2001             MOVS     R0,#+1
+   \   000000A8   0x.... 0x....      BL       Extraction__GetInteger
+   \   000000AC   0x71A0             STRB     R0,[R4, #+6]
+    545          	ExtractionProcess_status[INDEX_EXTR_HIGHT_SP_STATUS]   = (uint8)Extraction__GetInteger(EXTR_INT32_FB_ENUM_HIGH_SPEED_STATUS);
+   \   000000AE   0x2007             MOVS     R0,#+7
+   \   000000B0   0x.... 0x....      BL       Extraction__GetInteger
+   \   000000B4   0x73A0             STRB     R0,[R4, #+14]
+    546          
+    547          
+    548          	Extraction__IsRebInProgress(&Rebalance_In_Progress);
+   \   000000B6   0xA800             ADD      R0,SP,#+0
+   \   000000B8   0x.... 0x....      BL       Extraction__IsRebInProgress
+    549          
+    550          	if (Rebalance_In_Progress == TRUE)
+   \   000000BC   0xF89D 0x1000      LDRB     R1,[SP, #+0]
+   \   000000C0   0x79E0             LDRB     R0,[R4, #+7]
+   \   000000C2   0x2901             CMP      R1,#+1
+   \   000000C4   0xBF0C             ITE      EQ 
+    551          	{
+    552          		BIT_SET(ExtractionProcess_status[INDEX_EXTR_STATUS_FLAGS], REBALANCE_IN_PROGRESS);
+   \   000000C6   0xF040 0x0001      ORREQ    R0,R0,#0x1
+    553          	}
+    554          	else
+    555          	{
+    556          		BIT_CLR(ExtractionProcess_status[INDEX_EXTR_STATUS_FLAGS], REBALANCE_IN_PROGRESS);
+   \   000000CA   0xF000 0x00FE      ANDNE    R0,R0,#0xFE
+   \   000000CE   0x71E0             STRB     R0,[R4, #+7]
+    557          	}
+    558          
+    559          	Extr_Get_Fault_Bitmap = Extraction__GetFault() & CLEAN_WASHER_LOAD_DET_MASK; //! Temporary solution to avoid that ACU enters the fault condition improperly.
+   \   000000D0   0x.... 0x....      BL       Extraction__GetFault
+    560          
+    561          	ExtractionProcess_status[INDEX_EXTR_FAULT_FLAGS_1] = HIBYTE(LOWORD(Extr_Get_Fault_Bitmap));
+   \   000000D4   0x2100             MOVS     R1,#+0
+   \   000000D6   0x8121             STRH     R1,[R4, #+8]
+    562          
+    563          	ExtractionProcess_status[INDEX_EXTR_FAULT_FLAGS_0] = LOBYTE(LOWORD(Extr_Get_Fault_Bitmap));
+    564          
+    565          	ExtractionProcess_status[INDEX_EXTR_FAULT_FLAGS_3] = HIBYTE(HIWORD(Extr_Get_Fault_Bitmap));
+   \   000000D8   0x7321             STRB     R1,[R4, #+12]
+   \   000000DA   0xF400 0x1070      AND      R0,R0,#0x3C0000
+    566          
+    567          	ExtractionProcess_status[INDEX_EXTR_FAULT_FLAGS_2] = LOBYTE(HIWORD(Extr_Get_Fault_Bitmap));
+   \   000000DE   0x0C01             LSRS     R1,R0,#+16
+   \   000000E0   0x7361             STRB     R1,[R4, #+13]
+    568          
+    569          	if (Extr_Get_Fault_Bitmap != 0x0000)
+   \   000000E2   0xB108             CBZ.N    R0,??PrepareStatusData_0
+    570          	{
+    571          		Extraction__ClearFault();
+   \   000000E4   0x.... 0x....      BL       Extraction__ClearFault
+    572          	}
+    573          	//
+    574          }
+   \                     ??PrepareStatusData_0: (+1)
+   \   000000E8   0xB002             ADD      SP,SP,#+8
+   \   000000EA   0xECBD 0x8B02      VPOP     {D8}
+   \   000000EE   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \   00000000   0x........         DC32     ExtractionProcess_status
+    575          
+    576          
+    577          static void sendStatusData (uint8 server_function_index_local)
+    578          {
+    579          	PrepareStatusData();
+    580          
+    581          	if (memcmp (ExtractionProcess_status, ExtractionProcess_status_previous, EXTRACTION_STATUS_SIZE))
+    582          	{
+    583          		API013RemoteFunction__PublishStatus (server_function_index_local, ExtractionProcess_status, EXTRACTION_STATUS_SIZE);
+    584          		memcpy (ExtractionProcess_status_previous, ExtractionProcess_status, sizeof(ExtractionProcess_status));
+    585          	}
+    586          }
+    587          
+    588          /**
+    589           * @brief  Process and store data received through API013.
+    590           *
+    591           * @param start_address = pointer to the start address of the data.
+    592           */
+    593          static void ParametersParser(uint8 *start_address)
+    594          {
+    595          	Remote_Function_Extraction_Countdown = Utilities__Merg2BytesTo16bits(start_address[0], start_address[1]);
+    596          
+    597              Water_Temperature = start_address[2];
+    598              Load_Mass = Utilities__Merg2BytesTo16bits(start_address[3], start_address[4]);;
+    599          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   PrepareStatusData
+        24   -> API007App__AreAllDataReceived
+        24   -> ExtractionParams__GetSettingFileError
+        24   -> Extraction__ClearFault
+        24   -> Extraction__GetFault
+        24   -> Extraction__GetFloat
+        24   -> Extraction__GetInteger
+        24   -> Extraction__GetState
+        24   -> Extraction__IsRebInProgress
+        24   -> Motion__GetStatus
+      16   RemoteFunctionExtraction__Background
+        16   -> API013RemoteFunction__PublishStatus
+        16   -> PrepareStatusData
+        16   -> __aeabi_memcpy4
+        16   -> memcmp
+      24   RemoteFunctionExtraction__DoCommand
+        24   -> API013RemoteFunction__PublishStatus
+        24   -> ExtractionParams__Initialize
+        24   -> ExtractionParams__ResetSettingFileError
+        24   -> Extraction__End
+        24   -> Extraction__Handler5ms
+        24   -> Extraction__NotifyFoamDetection
+        24   -> Extraction__ResetLoadMass
+        24   -> Extraction__Resume
+        24   -> Extraction__Start
+        24   -> Extraction__Stop
+        24   -> PrepareStatusData
+        24   -> SettingFile__IsValid
+        24   -> Utilities__Merg2BytesTo16bits
+        24   -> __aeabi_memcpy4
+        24   -> __aeabi_memset4
+        24   -> memcmp
+       0   RemoteFunctionExtraction__GetLoadMass
+      16   RemoteFunctionExtraction__GetStatus
+        16   -> PrepareStatusData
+        16   -> __aeabi_memcpy4
+       0   RemoteFunctionExtraction__GetTemperature
+       0   RemoteFunctionExtraction__HSExtdPlateauDur
+       0   RemoteFunctionExtraction__HSVelocityMaxLim
+       0   RemoteFunctionExtraction__HSVelocityMinReq
+      16   RemoteFunctionExtraction__Initialize
+        16   -> __aeabi_memset4
+       0   RemoteFunctionExtraction__ParDrumTargVelErr
+       0   RemoteFunctionExtraction__ParMaxAllowRampTime
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+      48  ExtractionProcess_status
+          High_Speed_Parameters
+          Enabled_remote_function
+          Water_Temperature
+          Remote_Function_Extraction_Countdown
+          Remote_Function_Extraction_Countdown_Start
+          Load_Mass
+          ExtractionProcess_status_previous
+     240  PrepareStatusData
+      88  RemoteFunctionExtraction__Background
+     368  RemoteFunctionExtraction__DoCommand
+      22  RemoteFunctionExtraction__GetLoadMass
+      32  RemoteFunctionExtraction__GetStatus
+       6  RemoteFunctionExtraction__GetTemperature
+      14  RemoteFunctionExtraction__HSExtdPlateauDur
+      14  RemoteFunctionExtraction__HSVelocityMaxLim
+      14  RemoteFunctionExtraction__HSVelocityMinReq
+      60  RemoteFunctionExtraction__Initialize
+       6  RemoteFunctionExtraction__ParDrumTargVelErr
+       6  RemoteFunctionExtraction__ParMaxAllowRampTime
+
+ 
+  48 bytes in section .bss
+ 874 bytes in section .text
+ 
+ 874 bytes of CODE memory
+  48 bytes of DATA memory
+
+Errors: none
+Warnings: none

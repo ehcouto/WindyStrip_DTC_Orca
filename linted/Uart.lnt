@@ -1,0 +1,152 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c (C)
+            &UART0,
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:154: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            &UART1,
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:160: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					SIM.SCGC4 |= SIM_SCGC4_UART0_MASK;											//Clock Enabled for UART0 module
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:265: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						PCIPORTB.PCR[17] = PORT_PCR_MUX(3);										//PTB17 pin - UART Tx
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:276: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						PCIPORTB.PCR[16] = PORT_PCR_MUX(3);										//PTB16 pin - UART Rx
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:277: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					SIM.SCGC4 |= SIM_SCGC4_UART1_MASK;											//Clock Enabled for UART1 module
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:286: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						PCIPORTC.PCR[4] = PORT_PCR_MUX(3);										//PTE0 pin - UART Tx
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:288: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+						PCIPORTC.PCR[3] = PORT_PCR_MUX(3);										//PTE1 pin - UART Rx
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:289: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint16 *)(&UART0_LastData)) = 0;
+                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:432: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                *((uint16 *)(&UART1_LastData)) = 0;
+                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:446: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                        *((uint16 *)(&UART0_LastData)) = *((uint16 *)(&UART0_Rx_Buffer[pt]));
+                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:743: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:743: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                        *((uint16 *)(&UART1_LastData)) = *((uint16 *)(&UART1_Rx_Buffer[pt]));
+                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:775: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:775: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+    return (response);
+                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:832: Info: Lint: 438 Last value assigned to variable 'pt' (defined at line 729) not used
+
+					Gpio__PinWrite(PORTA,3,0);
+                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:911: Info: Lint: 64 Type mismatch (arg. no. 3) (int/enum)
+
+					Gpio__PinWrite(PORTC,7,0);
+                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:923: Info: Lint: 64 Type mismatch (arg. no. 3) (int/enum)
+
+            	if(((UART0.UART_C2 & UART_C2_TE_MASK)== FALSE)||
+                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1246: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+           			((UART0.UART_C2 & UART_C2_TIE_MASK)== FALSE))
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1247: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            	if(((UART1.UART_C2 & UART_C2_TE_MASK)== FALSE)||
+                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1262: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+           			((UART1.UART_C2 & UART_C2_TIE_MASK)== FALSE))
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1263: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	status.UART_S1 = UART0.UART_S1;					//Read UART Status Register 1
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1303: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		data = (UART0.UART_DATA & (uint8) 0xFF);                          //Read data from UART_DATA register
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1309: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			*((uint16 *) (&UART0_Rx_Buffer[index])) = 0;
+                                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1315: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+			*((uint16 *) (&UART0_Rx_Buffer[index])) = (uint8) status.UART_S1;
+                                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1317: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+			if (((UART0.UART_S1 & UART_S1_FE_MASK) != FALSE) && (UART0_Rx_Buffer[index].data == 0))
+                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1321: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if ((UART0.UART_C2 & UART_C2_TIE_MASK) != FALSE)
+                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1343: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					UART0.UART_C2 &= (uint8) ~(UART_C2_TIE_MASK);
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1351: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				UART0.UART_DATA = (UART0_Tx_Buffer[UART0_Tx_Read_Index]	& (uint16) 0x01FF);
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1363: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	status.UART_S1 = UART1.UART_S1;					//Read UART Status Register 1
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1394: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		data = (UART1.UART_DATA & (uint8) 0xFF);                        //Read data from UART_DATA register
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1400: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			*((uint16 *) (&UART1_Rx_Buffer[index])) = 0;
+                                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1407: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+			*((uint16 *) (&UART1_Rx_Buffer[index])) = (uint8) status.UART_S1;
+                                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1408: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+			if (((UART1.UART_S1 & UART_S1_FE_MASK) != FALSE) && (UART1_Rx_Buffer[index].data == 0))
+                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1412: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if ((UART1.UART_C2 & UART_C2_TIE_MASK) != FALSE)
+                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1434: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+					UART1.UART_C2 &= (uint8) ~(UART_C2_TIE_MASK);
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1442: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				UART1.UART_DATA = (UART1_Tx_Buffer[UART1_Tx_Read_Index]	& (uint16) 0x01FF);   //Transmit UART data
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1454: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	UART2.UART_C2 &= (uint8) ~((uint8) (UART_C2_TIE_MASK | UART_C2_RIE_MASK | UART_C2_TE_MASK | UART_C2_RE_MASK));
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Uart\Uart.c:1555: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

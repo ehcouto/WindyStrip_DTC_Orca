@@ -1,0 +1,22 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c (C)
+    mci_class_a_prm_internal_ptr = (uint8*)Mcl_Params_SF;
+                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c:349: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            Mcl_SF_Displs[displ_address++] = (addr_t)mci_class_a_prm_internal_ptr;
+                                                                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c:411: Info: Lint: 923 cast from pointer to long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    mci_class_b_prm_internal_ptr = (uint8*)Motor_Sr_Params_SF;
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c:456: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        Mci_Sr_SF_Displs[displ_address++] = (addr_t)mci_class_b_prm_internal_ptr;
+                                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c:552: Info: Lint: 923 cast from pointer to long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SRMotorSafetyMgr__SetParams((void *)*Mci_Sr_SF_Displs);
+                                                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Application\MciParametersLoader\MciParametersLoader.c:559: Info: Lint: 923 cast from long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

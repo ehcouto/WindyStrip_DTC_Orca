@@ -1,0 +1,13 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c (C)
+    return response;
+                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c:398: Info: Lint: 644 Variable 'response' (line 246) may not have been initialized
+
+
+    --- Wrap-up for Module: C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionExtraction.c
+
+:0: Info: Lint: 766 Header file 'C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\AccelBaseline.h' not used in module 'RemoteFunctionExtraction.c'
+
+:0: Info: Lint: 766 Header file 'C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\Extraction\JtagTestInterface.h' not used in module 'RemoteFunctionExtraction.c'
+

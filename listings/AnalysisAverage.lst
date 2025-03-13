@@ -1,0 +1,427 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:11
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        Category\Application\ApplicationWasherMcu\AnalysisAverage\AnalysisAverage.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        AnalysisAverage.obj -l ..\listings\AnalysisAverage.lst
+#        Category\Application\ApplicationWasherMcu\AnalysisAverage\AnalysisAverage.c
+#    List file    =  ..\listings\AnalysisAverage.lst
+#    Object file  =  AnalysisAverage.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ApplicationWasherMcu\AnalysisAverage\AnalysisAverage.c
+      1          /**
+      2           * @file
+      3           * @brief       Reads and averages specific MCU sampled values.
+      4           *
+      5           * @details
+      6           *
+      7           * @copyright   Copyright 2016 Whirlpool Corporation.  All rights reserved - CONFIDENTIAL.
+      8           */
+      9          
+     10          //  --- Include Files -------------------------------------------------------------------------------------------------
+     11          
+     12          // -- This Module --
+     13          #include "SystemConfig.h"
+     14          #include "AnalysisAverage.h"
+
+  #if (API039MOTIONCTRL_FEATURE == ENABLED)
+       ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ApplicationWasherMcu\AnalysisAverage\AnalysisAverage.h",19  Remark[Pe193]: 
+          zero used for undefined preprocessing identifier
+          "API039MOTIONCTRL_FEATURE"
+     15          
+     16          #ifndef API039MOTIONCTRL_FEATURE
+     17          	#define API039MOTIONCTRL_FEATURE DISABLED
+     18          #endif
+     19          
+     20          #if (API039MOTIONCTRL_FEATURE == ENABLED)
+     21          // -- Other Modules --
+     22          #include "Mci.h"
+     23          #include "ParamEst.h"
+     24          #include "SensorsAlgorithms.h"
+     25          #include <string.h>
+     26          
+     27          
+     28          //  --- Private Declarations ------------------------------------------------------------------------------------------
+     29          
+     30          
+     31          // -- Private Constant Declarations --
+     32          
+     33          
+     34          // -- Private Enumerated Constant Declarations --
+     35          
+     36          //! Enumerated list of values that can be averaged.
+     37          typedef enum AA_CHANNEL_ENUM
+     38          {
+     39              AA_CHANNEL_UB_TORQUE_INDEX      = 0,
+     40              AA_CHANNEL_UB_G                 = 1,
+     41              AA_CHANNEL_END
+     42          } AA_CHANNEL_TYPE;
+     43          
+     44          //! Data element ID for publishing calculated results.
+     45          typedef enum AA_DATA_ELEMENT_ID_ENUM
+     46          {
+     47              AA_DATA_ELEMENT_SAMPLE          = 0,
+     48              AA_DATA_ELEMENT_AVERAGE         = 1
+     49          } AA_DATA_ELEMENT_ID_TYPE;
+     50          
+     51          
+     52          // -- Private Structure Type Declarations --
+     53          
+     54          typedef union AA_SOURCE_UNION
+     55          {
+     56              uint8 Whole;
+     57              struct AA_SOURCE_STRUCT
+     58              {
+     59                  AA_CHANNEL_TYPE Channel     : 6;
+     60                  uint8 Publish_Sample        : 1;
+     61                  uint8 Publish_Average       : 1;
+     62              } Field;
+     63          } AA_SOURCE_TYPE;
+     64          
+     65          //! Variables used by the AnalysisAverage module.
+     66          typedef struct ANALYSIS_AVERAGE_DATA_STRUCT
+     67          {
+     68              //! The sum of the samples taken so far in the current average calculation.
+     69              uint32 Sum;
+     70          
+     71              //! The most recent calculated average of the samples.
+     72              uint16 Result;
+     73          
+     74              //! The most recent sampled value.
+     75              uint16 Sample;
+     76          
+     77              //! The number of samples taken so far in the average calculation.
+     78              uint8 Sample_Count;
+     79          
+     80              //! The number of samples to average for each average calculation.
+     81              uint8 Samples_To_Average;
+     82          
+     83              //! The type of data to sample and the type of publication to produce.
+     84              //! Refer to the AA_SOURCE_TYPE for details.
+     85              AA_SOURCE_TYPE Source;
+     86          
+     87              //! TRUE if the module is actively handling source samples.
+     88              BOOL_TYPE Enabled               : 1;
+     89          
+     90              //! TRUE if the module is skipping samples before starting the averaging.
+     91              BOOL_TYPE Skipping              : 1;
+     92          
+     93              //! TRUE if the calculated average is ready for publication.
+     94              BOOL_TYPE Average_Ready         : 1;
+     95          
+     96              //! TRUE if the sampled value is ready for publication.
+     97              BOOL_TYPE Sample_Ready          : 1;
+     98          } ANALYSIS_AVERAGE_DATA_TYPE;
+     99          
+    100          
+    101          //  --- Private Definitions -------------------------------------------------------------------------------------------
+    102          
+    103          
+    104          // -- Private Variable Definitions --
+    105          
+    106          //! Define variables used by the AnalysisAverage module.
+    107          static ANALYSIS_AVERAGE_DATA_TYPE Analysis_Average;
+    108          
+    109          
+    110          //  --- Private Function Prototypes -----------------------------------------------------------------------------------
+    111          
+    112          
+    113          //=====================================================================================================================
+    114          //  --- Public Functions ----------------------------------------------------------------------------------------------
+    115          //=====================================================================================================================
+    116          
+    117          
+    118          //---------------------------------------------------------------------------------------------------------------------
+    119          /**
+    120           * Initialize the AnalysisAverage module variables.
+    121           */
+    122          void AnalysisAverage__Initialize(void)
+    123          {
+    124              memset(&Analysis_Average, 0, sizeof(Analysis_Average));
+    125          }
+    126          
+    127          
+    128          //---------------------------------------------------------------------------------------------------------------------
+    129          /**
+    130           * Check for a new sample and add it to the average calculation if found.
+    131           * Prepare for publication if all the desired samples were received.
+    132           */
+    133          void AnalysisAverage__Background5ms(void)
+    134          {
+    135              uint16 new_sample;
+    136          
+    137              if (Analysis_Average.Enabled == TRUE)
+    138              {
+    139                  // Measure the value based on the source and avoid reusing previously processed values.
+    140                  BOOL_TYPE new_sample_found = FALSE;
+    141                  switch (Analysis_Average.Source.Field.Channel)
+    142                  {
+    143                      case AA_CHANNEL_UB_TORQUE_INDEX:
+    144                          new_sample = (uint16)SensorsAlgorithms__GetAnalog(SENSORS_AI_BALANCE);
+    145                          // TODO: Figure out a better way to know that there is a new unbalance torque index sample.
+    146                          if (Analysis_Average.Sample != new_sample)
+    147                          {
+    148                              Analysis_Average.Sample = new_sample;
+    149                              Analysis_Average.Sample_Ready = TRUE;
+    150                              new_sample_found = TRUE;
+    151                          }
+    152                          break;
+    153          
+    154                      case AA_CHANNEL_UB_G:
+    155                          new_sample = (uint16)ParamEst__GetParameterValue(PARAM_EST_UBMAG);
+    156                          // TODO: Figure out a better way to know that there is a new unbalance magnitude sample.
+    157                          if (Analysis_Average.Sample != new_sample)
+    158                          {
+    159                              Analysis_Average.Sample = new_sample;
+    160                              Analysis_Average.Sample_Ready = TRUE;
+    161                              new_sample_found = TRUE;
+    162                          }
+    163                          break;
+    164          
+    165                      default:
+    166                          break;
+    167                  }
+    168          
+    169                  // Accumulate individual samples and calculate the average.
+    170                  if (Analysis_Average.Samples_To_Average > 0)
+    171                  {
+    172                      if (Analysis_Average.Skipping == TRUE)
+    173                      {
+    174                          if (new_sample_found == TRUE)
+    175                          {
+    176                              Analysis_Average.Sample_Count--;    // Count down while skipping samples.
+    177                              if (Analysis_Average.Sample_Count == 0)
+    178                              {
+    179                                  // Done skipping samples
+    180                                  Analysis_Average.Skipping = FALSE;
+    181                              }
+    182                          }
+    183                      }
+    184                      else
+    185                      {
+    186                          if ((new_sample_found == TRUE) &&
+    187                              (Analysis_Average.Sample_Count < Analysis_Average.Samples_To_Average))
+    188                          {
+    189                              Analysis_Average.Sum += Analysis_Average.Sample;
+    190                              Analysis_Average.Sample_Count++;    // Count up while averaging samples.
+    191                          }
+    192                          if ((Analysis_Average.Average_Ready == FALSE) &&
+    193                              (Analysis_Average.Sample_Count >= Analysis_Average.Samples_To_Average))
+    194                          {
+    195                              Analysis_Average.Result = Analysis_Average.Sum / Analysis_Average.Sample_Count;
+    196                              Analysis_Average.Sum = 0;
+    197                              Analysis_Average.Sample_Count = 0;
+    198                              Analysis_Average.Average_Ready = TRUE;
+    199                          }
+    200                      }
+    201                  }
+    202              }
+    203          }
+    204          
+    205          
+    206          //---------------------------------------------------------------------------------------------------------------------
+    207          /**
+    208           * Background Analysis API Function: Execute a background analysis command.
+    209           * @param command = The command that the background analysis should execute.
+    210           *                  A command value of 0 indicates that the background analysis should disable itself.
+    211           * @param params = A pointer to the parameter bytes that are being passed along with the command.
+    212           *                  The params memory is only valid during the function call.
+    213           * @param size = The number of parameter bytes that are being passed along with the command.
+    214           * @retval ANALYSIS_COMMAND_RESPONSE_INACTIVE = The analysis is inactive. Do not call the background function.
+    215           * @retval ANALYSIS_COMMAND_RESPONSE_ACTIVE = The analysis is active. Call the background function periodically.
+    216           * @retval ANALYSIS_COMMAND_RESPONSE_INVALID = The command is not supported.
+    217           */
+    218          ANALYSIS_COMMAND_RESPONSE_TYPE AnalysisAverage__DoCommand(uint8 command, uint8* params, uint8 size)
+    219          {
+    220              ANALYSIS_COMMAND_RESPONSE_TYPE response = ANALYSIS_COMMAND_RESPONSE_INVALID;
+    221          
+    222              switch ((ANALYSIS_AVERAGE_COMMAND_TYPE)command)
+    223              {
+    224                  case ANALYSIS_AVERAGE_COMMAND_DISABLE:
+    225                      response = ANALYSIS_COMMAND_RESPONSE_INACTIVE;
+    226                      break;
+    227          
+    228                  case ANALYSIS_AVERAGE_COMMAND_ENABLE:
+    229                      if (size >= 3)
+    230                      {
+    231                          AA_SOURCE_TYPE source;
+    232                          source.Whole = params[0];
+    233                          if (source.Field.Channel < AA_CHANNEL_END)
+    234                          {
+    235                              // Reset any previously active averaging.
+    236                              memset(&Analysis_Average, 0, sizeof(Analysis_Average));
+    237                              Analysis_Average.Source.Whole = source.Whole;
+    238          
+    239                              Analysis_Average.Sample_Count = params[1];
+    240                              Analysis_Average.Skipping = (BOOL_TYPE)(Analysis_Average.Sample_Count > 0);
+    241          
+    242                              Analysis_Average.Samples_To_Average = params[2];
+    243                              Analysis_Average.Enabled = TRUE;
+    244          
+    245                              response = ANALYSIS_COMMAND_RESPONSE_ACTIVE;
+    246                          }
+    247                      }
+    248                      break;
+    249          
+    250                  default:
+    251                      break;
+    252              }
+    253          
+    254              return response;
+    255          }
+    256          
+    257          
+    258          //---------------------------------------------------------------------------------------------------------------------
+    259          /**
+    260           * Background Analysis API Function: Get the data elements associated with the background analysis.
+    261           * @param first_data_element_id = The ID to use for data element #0. Data element #1 uses this value + 1, etc.
+    262           * @param data_elements = Array of ANALYSIS_DATA_ELEMENT_TYPE structures. One for each data element.
+    263           * @param count = The number of data elements that are being returned by this function.
+    264           */
+    265          void AnalysisAverage__GetData(uint8 first_data_element_id, ANALYSIS_DATA_ELEMENT_TYPE* data_elements, uint8* count)
+    266          {
+    267              uint8 result_count = 0;
+    268              if ((Analysis_Average.Source.Field.Publish_Sample == TRUE) &&
+    269                  (Analysis_Average.Sample_Ready == TRUE))
+    270              {
+    271                  data_elements[result_count].Id = first_data_element_id + AA_DATA_ELEMENT_SAMPLE;
+    272                  data_elements[result_count].Value_Hi_Byte = HIBYTE(Analysis_Average.Sample);
+    273                  data_elements[result_count].Value_Lo_Byte = LOBYTE(Analysis_Average.Sample);
+    274                  result_count++;
+    275                  Analysis_Average.Sample_Ready = FALSE;
+    276              }
+    277              if ((Analysis_Average.Source.Field.Publish_Average == TRUE) &&
+    278                  (Analysis_Average.Average_Ready == TRUE))
+    279              {
+    280                  data_elements[result_count].Id = first_data_element_id + AA_DATA_ELEMENT_AVERAGE;
+    281                  data_elements[result_count].Value_Hi_Byte = HIBYTE(Analysis_Average.Result);
+    282                  data_elements[result_count].Value_Lo_Byte = LOBYTE(Analysis_Average.Result);
+    283                  result_count++;
+    284                  Analysis_Average.Average_Ready = FALSE;
+    285              }
+    286              *count = result_count;
+    287          }
+    288          #endif
+    289          
+    290          //=====================================================================================================================
+    291          //  --- Private Functions ---------------------------------------------------------------------------------------------
+    292          //=====================================================================================================================
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

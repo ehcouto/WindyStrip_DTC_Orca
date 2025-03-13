@@ -1,0 +1,62 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_serial.c (C)
+    return MC_CopyFromBuffer((MC_ADDR)(MC_U8*)pDest, pSrc, 2);
+                                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:40: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:40: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    return MC_CopyFromBuffer((MC_ADDR)(MC_U8*)pDest, pSrc, 4);
+                                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:45: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:45: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    return MC_CopyToBuffer(pDest, (MC_ADDR)(MC_U8*)&src, 2);
+                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:50: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:50: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    return MC_CopyToBuffer(pDest, (MC_ADDR)(MC_U8*)&src, 4);
+                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:55: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:55: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	return *(MC_S8*)addr;
+                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:97: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	return *(MC_U8*)addr;
+                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:102: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	return *(MC_S16*)(MC_U8*)addr;
+                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:107: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:107: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	return *(MC_U16*)(MC_U8*)addr;
+                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:112: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:112: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	return *(MC_S32*)(MC_U8*)addr;
+                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:117: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:117: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+    return *(MC_U32*)(MC_U8*)addr;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:122: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_llmem.h:122: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+}
+^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\MasterCommander\Source\mc_serial.c:857: Info: Lint: 438 Last value assigned to variable 'pResponse' (defined at line 768) not used
+

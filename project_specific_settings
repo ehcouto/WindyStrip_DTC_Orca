@@ -1,0 +1,149 @@
+.INCLUDEDIRS : $(PROJECT_DIR)
+.INCLUDE : LintPath
+
+
+CC = ..\CX\ICCARM
+AS = ..\CX\IASMARM
+LINK = .\CX\ILINKARM
+ELFTOOL = .\CX\IELFTOOL
+
+
+# Set macros for build program options (compiler and assembler)
+
+#This commented out line includes the -i which shows the include files in the listings. Removed because it makes the listings very large.
+#CFLAGS = $(INCLUDE_PATH) --remarks --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --use_c++_inline --only_stdout --dlib_config ..\cx\inc\DLib_Config_Normal.h -r -e --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o $(<:b).obj -l ..\listings\$(<:b).lst
+
+# CFLAGS RECOMMENDED FOR PRODUCTION
+CFLAGS = $(INCLUDE_PATH) --remarks --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config ..\cx\inc\DLib_Config_Normal.h -r $(DBUG_OPTION)  -D ARM_MATH_CM4  -e --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o $(<:b).obj -l ..\listings\$(<:b).lst
+
+# CFLAGS RECOMMENDED FOR PRODUCTION - Optimized for size
+CFLAGS_SIZE = $(INCLUDE_PATH) --remarks --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config ..\cx\inc\DLib_Config_Normal.h -r $(DBUG_OPTION)  -D ARM_MATH_CM4 -e --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohz -o $(<:b).obj -l ..\listings\$(<:b).lst
+
+# CFLAGS FOR MULTI FILE COMPILATION - Optimized for Speed
+CFLAGS_MFC = $(INCLUDE_PATH) --remarks --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config ..\cx\inc\DLib_Config_Normal.h -r $(DBUG_OPTION)  -D ARM_MATH_CM4  -e --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs
+
+# CFLAGS FOR MULTI FILE COMPILATION - Optimized for Size
+CFLAGS_MFC_SIZE = $(INCLUDE_PATH) --remarks --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config ..\cx\inc\DLib_Config_Normal.h -r $(DBUG_OPTION)  -D ARM_MATH_CM4  -e --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohz
+
+#--remarks
+#--no_cse 
+#--no_unroll 
+#--no_inline 
+#--no_code_motion
+#--no_tbaa 
+#--no_clustering 
+#--no_scheduling 
+#--debug 
+#--use_c++_inline
+#--require_prototypes 
+
+
+ 
+
+
+
+AFLAGS = -r -S -o ..\obj\$(<:b).obj --cpu Cortex-M4 --fpu VFPv4_sp -l ..\listings\$(<:b).lst
+#-s+
+#-M<>
+#-w+
+#-t8
+
+
+# Add compilers, linkers, etc. to the path that recipes are run with
+
+PATH := C:\lint;$(PATH)
+
+
+PROJ_NAME = Windy_Mcu_Nucleus_Plt_2_5_sBpm
+
+
+
+# Source files used for MFC 
+
+MCI_SRC = XCategory\Hbl\Mci\Mci.c \
+XCategory\Hbl\Mci\Mcl\Mcl.c \
+XCategory\Hbl\Mci\Mcl\Braking\Braking.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclDqCtrl.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclDqRef.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclInputProc.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclObserver.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclPwm.c \
+XCategory\Hbl\Mci\Mcl\MacroBlocks\MclSpeedCtrl.c \
+XCategory\Hbl\Mci\Mcl\MclFvt\MclFvt.c \
+XCategory\Hbl\Mci\Mcl\MicroBlocks\ClrkPark\ClrkPark.c \
+XCategory\Hbl\Mci\Mcl\MicroBlocks\Filters\Filters.c \
+XCategory\Hbl\Mci\Mcl\MicroBlocks\Math\MathCalc.c \
+XCategory\Hbl\Mci\Mcl\MicroBlocks\Pi\Pi.c \
+XCategory\Hbl\Mci\Mcl\MicroBlocks\PwmModulation\PwmModulation.c \
+XCategory\Hbl\Mci\Mcl\ResistanceEstimation\ResistanceEstimation.c \
+XCategory\Hbl\Mci\SpeedRefGen\SpeedRefGen.c \
+XCategory\Hbl\Mci\InverterTemp\InverterTemp.c \
+XCategory\Hbl\Mci\SurgeRelay\SurgeRelay.c \
+XCategory\Driver\SRMCAtod\SRMCAtod.c \
+XCategory\Driver\SRMCPwm\SRMCPwm.c \
+XCategory\Hbl\SRMotorSafetyMgr\SRMotorSafetyMgr.c \
+
+
+
+EXTRACTION_SRC = Category/Application/Extraction\ExtractionParams.c \
+Category/Application/Extraction\JtagTestInterface.c \
+Category/Application/Extraction\CodeGeneration\Extraction.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\binsearch_u32u16.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\binsearch_u8u16.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\binsearch_u8u8.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\const_params.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\div_nzp_repeat_u32.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp1d_s16ffu8fl.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp1d_u16ffu8fl.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp1d_u16ffu8fla.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp1d_u8ffu8fl.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp2d_u16ffu32fl.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\intrp2d_u16ffu8fla.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\look1_iu16lfyu16DfIf_binlcas.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\plook_u32u16u32n31_binc_f.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\plook_u8fu16f_binc.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\plook_u8u16f_binc.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\plook_u8u8f_binc.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\plook_u8u8f_binca.c \
+Category/Application/Extraction\CodeGeneration\SharedUtils\rt_modf.c \
+Category/Application/Extraction\Dependencies\AggregateP2PTorque.c \
+Category/Application/Extraction\Dependencies\AverageTorque.c \
+Category/Application/Extraction\Dependencies\Callback.c \
+Category/Application/Extraction\Dependencies\DistributionUtils.c \
+Category/Application/Extraction\Dependencies\DistUtils_sfun_wrapper.c \
+Category/Application/Extraction\Dependencies\Dxdt.c \
+Category/Application/Extraction\Dependencies\HighPassFilter.c \
+Category/Application/Extraction\Dependencies\ParamEstExc_sfun_wrapper.c \
+Category/Application/Extraction\Dependencies\ParamEst_sfun_wrapper.c \
+Category/Application/Extraction\Dependencies\Satelization.c \
+Category/Application/Extraction\Dependencies\SNRD.c \
+Category/Application/Extraction\Dependencies\WindowPower.c \
+
+
+MOTION_SRC=Category/Application/ApplicationWasherMcu/Motion\Motion\Motion.c \
+Category/Application/ApplicationWasherMcu/Motion\MotionError\MotionError.c \
+Category/Application/ApplicationWasherMcu/Motion\Pulse\Pulse.c \
+Category/Application/ApplicationWasherMcu/Motion\RotateXDeg\RotateXDeg.c \
+Category/Application/ApplicationWasherMcu/Motion\SpinDrum\SpinDrum.c \
+Category/Application/ApplicationWasherMcu/Motion\StopDrum\StopDrum.c \
+Category/Application/ApplicationWasherMcu/Motion\Wash\Wash.c \
+Category/Application/ApplicationWasherMcu/MotorActivity\MotorActivity.c \
+Category/Application/ApplicationWasherMcu/SpeedMaintain\SpeedMaintain.c \
+
+
+APIS_SRC=XCategory/Application/Reveal_APIs\API003Disc\API003Disc.c \
+XCategory/Application/Reveal_APIs\API005LowLevel\API005LowLevel.c \
+XCategory/Application/Reveal_APIs\API007Data\API007BulkData.c \
+XCategory/Application/Reveal_APIs\API007Data\API007Data.c \
+XCategory/Application/Reveal_APIs\API009System\API009System.c \
+XCategory/Application/Reveal_APIs\API010PollVar\API010PollVar.c \
+XCategory/Application/Reveal_APIs\API011AppCtr\API011AppCtrl.c \
+XCategory/Application/Reveal_APIs\API013RemoteFunction\API013RemoteFunction.c \
+XCategory/Application/Reveal_APIs\API018Diagnostic\API018Diagnostic.c \
+XCategory/Application/Reveal_APIs\API019ProductInfo\API019ProductInfo.c \
+XCategory/Application/Reveal_APIs\API220MotorControl\APIMotorControl.c \
+XCategory/Application/Reveal_APIs\API221MotionCtrl\API221MotionCtrl.c \
+XCategory/Application/Reveal_APIs\SRAPI020Safety\SRAPI020Safety.c \
+ProjectSpecific/Application/API007App/Api007App.c \
+
+

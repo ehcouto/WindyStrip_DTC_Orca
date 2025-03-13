@@ -1,0 +1,128 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c (C)
+const volatile GPIO_DEF * GPIO_PORT_LIST[] = {  (volatile GPIO_DEF *)GPIOA_BASE,
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:36: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile GPIO_DEF *)GPIOB_BASE,
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:37: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile GPIO_DEF *)GPIOC_BASE,
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:38: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile GPIO_DEF *)GPIOD_BASE,
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:39: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile GPIO_DEF *)GPIOE_BASE};
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:40: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+const volatile PORTx_DEF * PCI_PORT_LIST[] = {  (volatile PORTx_DEF *)PORTA_BASE,
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:42: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile PORTx_DEF *)PORTB_BASE,
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:43: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile PORTx_DEF *)PORTC_BASE,
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:44: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile PORTx_DEF *)PORTD_BASE,
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:45: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                (volatile PORTx_DEF *)PORTE_BASE};
+                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:46: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SIM.SCGC5 |= (SIM_SCGC5_PORTA_MASK |			// Connect the GPIOA device to the Core bus
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:70: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			GPIOA.PDDR = UpdateMaskedRegister(GPIOA.PDDR,PORTA_MASK, PORTA_PDDR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:99: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:99: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			PCIPORTA.PCR[0] = UpdateMaskedRegister(PCIPORTA.PCR[0],PORTA_MASK, PORTA_PCR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:109: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:109: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			GPIOB.PDDR = UpdateMaskedRegister(GPIOB.PDDR,PORTB_MASK, PORTB_PDDR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:119: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:119: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			GPIOC.PDDR = UpdateMaskedRegister(GPIOC.PDDR,PORTC_MASK, PORTC_PDDR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:148: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:148: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			GPIOD.PDDR = UpdateMaskedRegister(GPIOD.PDDR,PORTD_MASK, PORTD_PDDR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:177: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:177: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			GPIOE.PDDR = UpdateMaskedRegister(GPIOE.PDDR,PORTE_MASK, PORTE_PDDR_DEFAULT);
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:206: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:206: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:274: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	pci_ptr = (volatile PORTx_DEF *) PCI_PORT_LIST[port];
+                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:275: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:341: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:374: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:410: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	pci_ptr = (volatile PORTx_DEF *) PCI_PORT_LIST[port];
+                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:411: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:488: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:520: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                volatile GPIO_DEF * port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                                                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:555: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+    volatile GPIO_DEF * port_ptr = (volatile GPIO_DEF *) GPIO_PORT_LIST[port];
+                                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio.c:622: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+

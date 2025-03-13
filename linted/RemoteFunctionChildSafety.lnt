@@ -1,0 +1,18 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionChildSafety.c (C)
+        Child_Safety_Params = (CHILD_SAFETY_PARAMS_TYPE *)loader.Data;	//loader.Data;	//lint !e927 Suppress Info: cast from pointer to pointer [MISRA 2004 Rule 11.4]
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionChildSafety.c:162: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                        drum_position_s32 += (MciSensorsWm__GetAnalog(MOTOR0, MCI_AI_ACTUAL_SPEED_S16)>>CS_SPEED_SHIFT);
+                                                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionChildSafety.c:279: Info: Lint: 64 Type mismatch (arg. no. 2) (enum/enum)
+
+    return retval;
+                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionChildSafety.c:368: Info: Lint: 644 Variable 'retval' (line 199) may not have been initialized
+
+	API013RemoteFunction__PublishStatus (server_function_index_local, ((uint8*)&Child_Safety_Status), sizeof(Child_Safety_Status));
+                                                                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\ProjectSpecific\Application\RemoteFunctions\RemoteFunctionChildSafety.c:469: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+

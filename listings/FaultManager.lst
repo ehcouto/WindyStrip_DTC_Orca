@@ -1,0 +1,736 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:23
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  Category\Application\FaultManager\FaultManager.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        FaultManager.obj -l ..\listings\FaultManager.lst
+#        Category\Application\FaultManager\FaultManager.c
+#    List file    =  ..\listings\FaultManager.lst
+#    Object file  =  FaultManager.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\FaultManager\FaultManager.c
+      1          /**
+      2           *  @file       FaultManager.c
+      3           *
+      4           *  @brief      Fault collector and remapping to Indesit Legacy codes
+      5           *
+      6           *  $Header: $
+      7           *
+      8           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+      9           */
+     10          //---------------------------------------------------------------------------------------------------------------------
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          
+     14          //-------------------------------------- Include Files ----------------------------------------------------------------
+     15          #include "FaultManager.h"
+     16          //#include "SensorsAlgorithms.h"
+     17          #include "MciSetWm.h"
+     18          #include "CommandManager.h"
+     19          #include "ProtocolMainExternal.h"
+     20          #include "Mci.h"
+     21          #include "Gpio.h"
+
+  extern const volatile GPIO_DEF * GPIO_PORT_LIST[];
+  ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Gpio\Gpio_macros.h",34  Remark[Pe083]: 
+          type qualifier specified more than once
+
+  PACKED typedef struct
+         ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\API\Gpio\Gpio.h",41  Remark[Pe082]: 
+          storage class is not first
+     22          #include "Comparator.h"
+     23          #include "SRException.h"
+     24          #include "BoardDebugging.h"
+     25          
+     26          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     27          
+     28          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     29          #define CMP1_DAC_VOLTAGE_SELECT		48          // V_th = 2.5 V (VOSEL = 48)
+     30          #define RESET_DELAY_TIMEOUT         2000        // 2 s @ 1 ms handler
+     31          
+
+   \                                 In section .bss, align 2
+     32          FAULT_ENUM_TYPE Fault_To_Publish;
+   \                     Fault_To_Publish:
+   \   00000000                      DS8 2
+     33          FAULT_ENUM_TYPE Fault_To_Publish_Holder;
+   \                     Fault_To_Publish_Holder:
+   \   00000002                      DS8 2
+     34          
+
+   \                                 In section .bss, align 2
+   \   00000000                      DS8 2
+     35          static uint16 F028486_Flag;
+
+   \                                 In section .bss, align 2
+   \   00000000                      DS8 2
+     36          static uint16 Reset_Flag;
+
+   \                                 In section .bss, align 2
+   \   00000000                      DS8 2
+     37          static uint16 Reset_Delay_Cnt;
+     38          static volatile uint16 Reset_Comparator_Status;
+     39          
+     40          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+     41          static void DecodeReset(void);
+     42          static void InitReset(void);
+     43          
+     44          
+     45          //=====================================================================================================================
+     46          //-------------------------------------- Public Functions -------------------------------------------------------------
+     47          //=====================================================================================================================
+     48          
+     49          //---------------------------------------------------------------------------------------------------------------------
+     50          /**
+     51           *  @brief      It Initializes the module FaultManager and its variables.
+     52           *
+     53           *
+     54           */
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void FaultManager__Initialize(void)
+     56          {
+   \                     FaultManager__Initialize: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+     57          	InitReset();
+   \   00000004   0x2030             MOVS     R0,#+48
+   \   00000006   0x9000             STR      R0,[SP, #+0]
+   \   00000008   0x2301             MOVS     R3,#+1
+   \   0000000A   0x2207             MOVS     R2,#+7
+   \   0000000C   0x2100             MOVS     R1,#+0
+   \   0000000E   0x2001             MOVS     R0,#+1
+   \   00000010   0x.... 0x....      BL       Comparator__Config
+     58              Fault_To_Publish = NO_FAULT;
+   \   00000014   0x....             LDR.N    R0,??DataTable3
+   \   00000016   0x2100             MOVS     R1,#+0
+   \   00000018   0x8001             STRH     R1,[R0, #+0]
+     59              Fault_To_Publish_Holder = Fault_To_Publish;
+   \   0000001A   0x8041             STRH     R1,[R0, #+2]
+     60              F028486_Flag = 0;
+     61              Reset_Delay_Cnt = RESET_DELAY_TIMEOUT;  //the comparator state is not evaluated before 2 s from reset. Micro will be indipendent from RC circuit time constant (around 512ms). In that case the micro startup can have a duration until 2 s.
+     62          }
+   \   0000001C   0xB001             ADD      SP,SP,#+4
+   \   0000001E   0xBD00             POP      {PC}             ;; return
+     63          
+     64          
+     65          //---------------------------------------------------------------------------------------------------------------------
+     66          /**
+     67           *  @brief      It Reset the module FaultManager and its variables.
+     68           *
+     69           *
+     70           */
+
+   \                                 In section .text, align 2, keep-with-next
+     71          void FaultManager__Reset(void)
+     72          {
+     73              Fault_To_Publish = NO_FAULT;
+   \                     FaultManager__Reset: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable3
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x8001             STRH     R1,[R0, #+0]
+     74              Fault_To_Publish_Holder = Fault_To_Publish;
+   \   00000006   0x8041             STRH     R1,[R0, #+2]
+     75              F028486_Flag = 0;
+     76          }
+   \   00000008   0x4770             BX       LR               ;; return
+     77          
+     78          /**
+     79           *  @brief      Update the Fault To Publish.
+     80           *
+     81           *
+     82           */
+
+   \                                 In section .text, align 2, keep-with-next
+     83          void FaultManager__UpdateFault(void)
+     84          {
+   \                     FaultManager__UpdateFault: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     85              FAULT_ENUM_TYPE actual_fault;
+     86              actual_fault = NO_FAULT;
+     87          
+     88              // MCI Fault handling
+     89              if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_ANY_ERROR_FOUND))
+   \   00000002   0x2100             MOVS     R1,#+0
+   \   00000004   0x2400             MOVS     R4,#+0
+   \   00000006   0x4608             MOV      R0,R1
+   \   00000008   0x.... 0x....      BL       Mci__GetError
+   \   0000000C   0x2801             CMP      R0,#+1
+   \   0000000E   0xF040 0x80CC      BNE.W    ??FaultManager__UpdateFault_0
+     90              {    
+     91                  if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_HW_OVER_CURRENT))
+   \   00000012   0x210B             MOVS     R1,#+11
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x.... 0x....      BL       Mci__GetError
+   \   0000001A   0x2801             CMP      R0,#+1
+   \   0000001C   0xBF08             IT       EQ 
+     92                  {
+     93                      actual_fault = HARDWARE_OVERCURRENT_A;
+   \   0000001E   0xF240 0x1481      MOVWEQ   R4,#+385
+   \   00000022   0xF000 0x80CE      BEQ.W    ??FaultManager__UpdateFault_1
+     94                  }
+     95          //        else if(TRUE == Mci__GetError(MOTOR0, MCI_DI_MOTOR_UNDER_OVERCURRENT))
+     96          //        {
+     97          //        	actual_fault = UNDERCURRENT_FAULT;
+     98          //        }
+     99                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_SW_OVER_CURRENT))
+   \   00000026   0x210A             MOVS     R1,#+10
+   \   00000028   0x2000             MOVS     R0,#+0
+   \   0000002A   0x.... 0x....      BL       Mci__GetError
+   \   0000002E   0x2801             CMP      R0,#+1
+   \   00000030   0xBF08             IT       EQ 
+    100                  {
+    101                  	actual_fault = OVERCURRENT_FAULT;
+   \   00000032   0xF240 0x2482      MOVWEQ   R4,#+642
+   \   00000036   0xF000 0x80C4      BEQ.W    ??FaultManager__UpdateFault_1
+    102                  }
+    103                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_DCBUS_OVER_VOLTAGE))
+   \   0000003A   0x2102             MOVS     R1,#+2
+   \   0000003C   0x2000             MOVS     R0,#+0
+   \   0000003E   0x.... 0x....      BL       Mci__GetError
+   \   00000042   0x2801             CMP      R0,#+1
+   \   00000044   0xBF08             IT       EQ 
+    104                  {
+    105                      actual_fault = OVERVOLTAGE;
+   \   00000046   0x2406             MOVEQ    R4,#+6
+   \   00000048   0xF000 0x80BB      BEQ.W    ??FaultManager__UpdateFault_1
+    106                  }
+    107                  else if(TRUE == Mci__GetError(MOTOR0,  MCI_ERROR_DCBUS_UNDER_VOLTAGE))
+   \   0000004C   0x2103             MOVS     R1,#+3
+   \   0000004E   0x2000             MOVS     R0,#+0
+   \   00000050   0x.... 0x....      BL       Mci__GetError
+   \   00000054   0x2801             CMP      R0,#+1
+   \   00000056   0xBF08             IT       EQ 
+    108                  {
+    109                      actual_fault = UNDERVOLTAGE;
+   \   00000058   0x2401             MOVEQ    R4,#+1
+   \   0000005A   0xF000 0x80B2      BEQ.W    ??FaultManager__UpdateFault_1
+    110                  }
+    111                  else if(TRUE == Mci__GetDigital(MOTOR0, MCI_DI_OVER_TORQUE))
+   \   0000005E   0x2100             MOVS     R1,#+0
+   \   00000060   0x4608             MOV      R0,R1
+   \   00000062   0x.... 0x....      BL       Mci__GetDigital
+   \   00000066   0x2801             CMP      R0,#+1
+   \   00000068   0xBF08             IT       EQ 
+    112                  {
+    113                      actual_fault = OVERTORQUE_WARNING;
+   \   0000006A   0x2402             MOVEQ    R4,#+2
+   \   0000006C   0xF000 0x80A9      BEQ.W    ??FaultManager__UpdateFault_1
+    114                  }
+    115                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_OBSERVER_FAILURE))
+   \   00000070   0x2114             MOVS     R1,#+20
+   \   00000072   0x2000             MOVS     R0,#+0
+   \   00000074   0x.... 0x....      BL       Mci__GetError
+   \   00000078   0x2801             CMP      R0,#+1
+   \   0000007A   0xBF08             IT       EQ 
+    116                 {
+    117                     actual_fault = MCL_FAULT;
+   \   0000007C   0xF240 0x248D      MOVWEQ   R4,#+653
+   \   00000080   0xF000 0x809F      BEQ.W    ??FaultManager__UpdateFault_1
+    118                 }
+    119                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_SPEED_CHECK_FAILED))
+   \   00000084   0x210C             MOVS     R1,#+12
+   \   00000086   0x2000             MOVS     R0,#+0
+   \   00000088   0x.... 0x....      BL       Mci__GetError
+   \   0000008C   0x2801             CMP      R0,#+1
+   \   0000008E   0xBF08             IT       EQ 
+    120                  {
+    121                      actual_fault = TARGET_ZERO_NOT_REACHED_FAULT;
+   \   00000090   0xF240 0x2487      MOVWEQ   R4,#+647
+   \   00000094   0xF000 0x8095      BEQ.W    ??FaultManager__UpdateFault_1
+    122                  }
+    123                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_INPUTCAPTURE_PLAUSIBILITY_MIN_FAILED))
+   \   00000098   0x210E             MOVS     R1,#+14
+   \   0000009A   0x2000             MOVS     R0,#+0
+   \   0000009C   0x.... 0x....      BL       Mci__GetError
+   \   000000A0   0x2801             CMP      R0,#+1
+   \   000000A2   0xBF08             IT       EQ 
+    124                  {
+    125                      actual_fault = MIN_TACH_FAULT;
+   \   000000A4   0xF44F 0x7422      MOVEQ    R4,#+648
+   \   000000A8   0xF000 0x808B      BEQ.W    ??FaultManager__UpdateFault_1
+    126                  }
+    127                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_INPUTCAPTURE_PLAUSIBILITY_MAX_FAILED))
+   \   000000AC   0x210F             MOVS     R1,#+15
+   \   000000AE   0x2000             MOVS     R0,#+0
+   \   000000B0   0x.... 0x....      BL       Mci__GetError
+   \   000000B4   0x2801             CMP      R0,#+1
+   \   000000B6   0xBF08             IT       EQ 
+    128                  {
+    129                      actual_fault = MAX_SPEED_CHANGE_FAULT;
+   \   000000B8   0xF240 0x2489      MOVWEQ   R4,#+649
+   \   000000BC   0xF000 0x8081      BEQ.W    ??FaultManager__UpdateFault_1
+    130                  }
+    131          //        else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_SPEED_CHECK_FAILED))
+    132          //        {
+    133          //            actual_fault = MCI_LEGACY_SPD_SENSOR_FAILEDD;
+    134          //        }
+    135                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_CURRENT_SENSOR_FAILED))
+   \   000000C0   0x2108             MOVS     R1,#+8
+   \   000000C2   0x2000             MOVS     R0,#+0
+   \   000000C4   0x.... 0x....      BL       Mci__GetError
+   \   000000C8   0x2801             CMP      R0,#+1
+   \   000000CA   0xBF08             IT       EQ 
+    136                  {
+    137                      actual_fault = MCI_LEGACY_ELECTRONIC_FAILED;
+   \   000000CC   0xF240 0x2492      MOVWEQ   R4,#+658
+   \   000000D0   0xD077             BEQ.N    ??FaultManager__UpdateFault_1
+    138                  }
+    139                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_VOLTAGE_SENSOR_FAILED))
+   \   000000D2   0x2109             MOVS     R1,#+9
+   \   000000D4   0x2000             MOVS     R0,#+0
+   \   000000D6   0x.... 0x....      BL       Mci__GetError
+   \   000000DA   0x2801             CMP      R0,#+1
+   \   000000DC   0xBF08             IT       EQ 
+    140                  {
+    141                      actual_fault = MCI_LEGACY_MOTOR_TEST_FAILED;
+   \   000000DE   0xF240 0x2493      MOVWEQ   R4,#+659
+   \   000000E2   0xD06E             BEQ.N    ??FaultManager__UpdateFault_1
+    142                  }
+    143                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_INVERTER_OVER_TEMP))
+   \   000000E4   0x2104             MOVS     R1,#+4
+   \   000000E6   0x2000             MOVS     R0,#+0
+   \   000000E8   0x.... 0x....      BL       Mci__GetError
+   \   000000EC   0x2801             CMP      R0,#+1
+   \   000000EE   0xBF08             IT       EQ 
+    144                  {
+    145                      actual_fault = MCI_LEGACY_INVERTER_OVER_TEMP;
+   \   000000F0   0xF44F 0x7425      MOVEQ    R4,#+660
+   \   000000F4   0xD065             BEQ.N    ??FaultManager__UpdateFault_1
+    146                  }
+    147                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_STATOR_OVER_TEMP))
+   \   000000F6   0x2111             MOVS     R1,#+17
+   \   000000F8   0x2000             MOVS     R0,#+0
+   \   000000FA   0x.... 0x....      BL       Mci__GetError
+   \   000000FE   0x2801             CMP      R0,#+1
+   \   00000100   0xBF08             IT       EQ 
+    148                  {
+    149                      actual_fault = MCI_LEGACY_STATOR_OVER_TEMP;
+   \   00000102   0xF240 0x2495      MOVWEQ   R4,#+661
+   \   00000106   0xD05C             BEQ.N    ??FaultManager__UpdateFault_1
+    150                  }
+    151                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_LOCKED_ROTOR_AT_STARTUP))
+   \   00000108   0x2105             MOVS     R1,#+5
+   \   0000010A   0x2000             MOVS     R0,#+0
+   \   0000010C   0x.... 0x....      BL       Mci__GetError
+   \   00000110   0x2801             CMP      R0,#+1
+   \   00000112   0xBF08             IT       EQ 
+    152                  {
+    153                      actual_fault = NO_COMMUTATION_AFTER_START_FAULT;
+   \   00000114   0xF44F 0x7421      MOVEQ    R4,#+644
+    154                      F028486_Flag = 1;
+   \   00000118   0xD053             BEQ.N    ??FaultManager__UpdateFault_1
+    155                  }
+    156                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_LOCKED_ROTOR_IN_RUNNING))
+   \   0000011A   0x2106             MOVS     R1,#+6
+   \   0000011C   0x2000             MOVS     R0,#+0
+   \   0000011E   0x.... 0x....      BL       Mci__GetError
+   \   00000122   0x2801             CMP      R0,#+1
+   \   00000124   0xBF08             IT       EQ 
+    157                  {
+    158                      actual_fault = STALL_AFTER_COMMUTATION_FAULT;
+   \   00000126   0xF240 0x2485      MOVWEQ   R4,#+645
+   \   0000012A   0xD04A             BEQ.N    ??FaultManager__UpdateFault_1
+    159                  }
+    160          //        else if(TRUE == Mci__GetError(MOTOR0, MCI_DI_UNDERTORQUE))
+    161          //        {
+    162          //            actual_fault = STALL_LOW_SPEED_FAULT;
+    163          //            F028486_Flag = 1;
+    164          //        }
+    165                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_DCBUS_OUT_OF_RANGE))
+   \   0000012C   0x2115             MOVS     R1,#+21
+   \   0000012E   0x2000             MOVS     R0,#+0
+   \   00000130   0x.... 0x....      BL       Mci__GetError
+   \   00000134   0x2801             CMP      R0,#+1
+   \   00000136   0xBF08             IT       EQ 
+    166                  {
+    167                      actual_fault = SR_DCBUS_OUT_OF_RANGE;
+   \   00000138   0xF240 0x249B      MOVWEQ   R4,#+667
+   \   0000013C   0xD041             BEQ.N    ??FaultManager__UpdateFault_1
+    168                  }
+    169                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_PHASE_LOST))
+   \   0000013E   0x210D             MOVS     R1,#+13
+   \   00000140   0x2000             MOVS     R0,#+0
+   \   00000142   0x.... 0x....      BL       Mci__GetError
+   \   00000146   0x2801             CMP      R0,#+1
+   \   00000148   0xBF08             IT       EQ 
+    170                  {
+    171                      actual_fault = MCI_LEGACY_PHASE_LOST;
+   \   0000014A   0xF240 0x2497      MOVWEQ   R4,#+663
+   \   0000014E   0xD038             BEQ.N    ??FaultManager__UpdateFault_1
+    172                  }
+    173                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_INT_DISABLED))
+   \   00000150   0x2110             MOVS     R1,#+16
+   \   00000152   0x2000             MOVS     R0,#+0
+   \   00000154   0x.... 0x....      BL       Mci__GetError
+   \   00000158   0x2801             CMP      R0,#+1
+   \   0000015A   0xBF08             IT       EQ 
+    174                  {    
+    175                      actual_fault = MCI_LEGACY_INT_DISABLED;
+   \   0000015C   0xF44F 0x7426      MOVEQ    R4,#+664
+   \   00000160   0xD02F             BEQ.N    ??FaultManager__UpdateFault_1
+    176                  }
+    177                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_MOTOR_OVERHEATING))
+   \   00000162   0x2107             MOVS     R1,#+7
+   \   00000164   0x2000             MOVS     R0,#+0
+   \   00000166   0x.... 0x....      BL       Mci__GetError
+   \   0000016A   0x2801             CMP      R0,#+1
+   \   0000016C   0xBF08             IT       EQ 
+    178                  {
+    179                      actual_fault = OH_FAULT;
+   \   0000016E   0xF240 0x248A      MOVWEQ   R4,#+650
+   \   00000172   0xD026             BEQ.N    ??FaultManager__UpdateFault_1
+    180                  }
+    181                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_CLASS_B_FORCE2STOP))
+   \   00000174   0x2112             MOVS     R1,#+18
+   \   00000176   0x2000             MOVS     R0,#+0
+   \   00000178   0x.... 0x....      BL       Mci__GetError
+   \   0000017C   0x2801             CMP      R0,#+1
+   \   0000017E   0xBF08             IT       EQ 
+    182                  {
+    183                      actual_fault = MCI_LEGACY_FORCE2STOP;
+   \   00000180   0xF44F 0x7427      MOVEQ    R4,#+668
+   \   00000184   0xD01D             BEQ.N    ??FaultManager__UpdateFault_1
+    184                  }
+    185                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_SHUTDOWN_HARDWARE_FAILED))
+   \   00000186   0x2113             MOVS     R1,#+19
+   \   00000188   0x2000             MOVS     R0,#+0
+   \   0000018A   0x.... 0x....      BL       Mci__GetError
+   \   0000018E   0x2801             CMP      R0,#+1
+   \   00000190   0xBF08             IT       EQ 
+    186          		{
+    187          		   actual_fault = MCI_LEGACY_SHUTDOWN_FAILED;
+   \   00000192   0xF240 0x249D      MOVWEQ   R4,#+669
+   \   00000196   0xD014             BEQ.N    ??FaultManager__UpdateFault_1
+    188          		}
+    189          
+    190                  else if(TRUE == Mci__GetError(MOTOR0, MCI_ERROR_INITIALIZATION_FAILED))
+   \   00000198   0x2101             MOVS     R1,#+1
+   \   0000019A   0x2000             MOVS     R0,#+0
+   \   0000019C   0x.... 0x....      BL       Mci__GetError
+   \   000001A0   0x2801             CMP      R0,#+1
+   \   000001A2   0xD10E             BNE.N    ??FaultManager__UpdateFault_1
+    191                  {
+    192                      actual_fault = MCI_INITIALIZATION_FAULT;
+   \   000001A4   0xF240 0x249A      MOVW     R4,#+666
+   \   000001A8   0xE00B             B.N      ??FaultManager__UpdateFault_1
+    193                  }
+    194              }
+    195              // CommandManager Fault Handling
+    196              else if ((FAULT_ENUM_TYPE) CommandManager__GetFault() != NO_FAULT)
+   \                     ??FaultManager__UpdateFault_0: (+1)
+   \   000001AA   0x.... 0x....      BL       CommandManager__GetFault
+   \   000001AE   0xB110             CBZ.N    R0,??FaultManager__UpdateFault_2
+    197              {
+    198                  actual_fault = (FAULT_ENUM_TYPE) CommandManager__GetFault();
+   \   000001B0   0x.... 0x....      BL       CommandManager__GetFault
+   \   000001B4   0xE004             B.N      ??FaultManager__UpdateFault_3
+    199              }
+    200              // ProtocolMainExternal Fault Handling
+    201              else if ((FAULT_ENUM_TYPE) ProtocolMainExternal__GetFault() != NO_FAULT)
+   \                     ??FaultManager__UpdateFault_2: (+1)
+   \   000001B6   0x.... 0x....      BL       ProtocolMainExternal__GetFault
+   \   000001BA   0xB110             CBZ.N    R0,??FaultManager__UpdateFault_1
+    202              {
+    203                  actual_fault = (FAULT_ENUM_TYPE)ProtocolMainExternal__GetFault();
+   \   000001BC   0x.... 0x....      BL       ProtocolMainExternal__GetFault
+   \                     ??FaultManager__UpdateFault_3: (+1)
+   \   000001C0   0x4604             MOV      R4,R0
+    204              }
+    205              
+    206              if(Fault_To_Publish == NO_FAULT) // Not overwrite a fault if it is already present
+   \                     ??FaultManager__UpdateFault_1: (+1)
+   \   000001C2   0x....             LDR.N    R0,??DataTable3
+   \   000001C4   0x8801             LDRH     R1,[R0, #+0]
+   \   000001C6   0xB901             CBNZ.N   R1,??FaultManager__UpdateFault_4
+    207              {
+    208              	Fault_To_Publish = (FAULT_ENUM_TYPE)actual_fault;
+   \   000001C8   0x8004             STRH     R4,[R0, #+0]
+    209              }
+    210          
+    211          
+    212          #if (COMMAND_MODE == MAIN_uC)
+    213          #if((WINDY_STRIP_BOARD == 1)|| (DEA_702_BOARD == 1))
+    214              // decode a reset command
+    215              DecodeReset();
+    216          #endif
+    217          #endif
+    218          }
+   \                     ??FaultManager__UpdateFault_4: (+1)
+   \   000001CA   0xBD10             POP      {R4,PC}          ;; return
+    219          
+    220          
+    221          /**
+    222           *  @brief      Get the Fault To Publish.
+    223           *
+    224           *  @return     Value of the fault, as updated by the FaultManager__UpdateFault
+    225           *
+    226           */
+
+   \                                 In section .text, align 2, keep-with-next
+    227          FAULT_ENUM_TYPE FaultManager__GetFaultToPublish(void)
+    228          {
+   \                     FaultManager__GetFaultToPublish: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    229          	COMMAND_DATA_TYPE *command_data;
+    230          
+    231          	command_data = ProtocolMainExternal__GetCommandData(LOAD_1);
+   \   00000004   0x2001             MOVS     R0,#+1
+   \   00000006   0x.... 0x....      BL       ProtocolMainExternal__GetCommandData
+    232          
+    233          	if((command_data->Speed != 0)||(HIBYTE(Fault_To_Publish) == 0x09))
+   \   0000000A   0x....             LDR.N    R1,??DataTable3
+   \   0000000C   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   00000010   0x880A             LDRH     R2,[R1, #+0]
+   \   00000012   0xB910             CBNZ.N   R0,??FaultManager__GetFaultToPublish_0
+   \   00000014   0x0A10             LSRS     R0,R2,#+8
+   \   00000016   0x2809             CMP      R0,#+9
+   \   00000018   0xD100             BNE.N    ??FaultManager__GetFaultToPublish_1
+    234          	{
+    235          		Fault_To_Publish_Holder = Fault_To_Publish;
+   \                     ??FaultManager__GetFaultToPublish_0: (+1)
+   \   0000001A   0x804A             STRH     R2,[R1, #+2]
+    236          	}
+    237          
+    238          	return Fault_To_Publish_Holder;
+   \                     ??FaultManager__GetFaultToPublish_1: (+1)
+   \   0000001C   0x8848             LDRH     R0,[R1, #+2]
+   \   0000001E   0xB001             ADD      SP,SP,#+4
+   \   00000020   0xBD00             POP      {PC}             ;; return
+    239          }
+    240          
+    241          //---------------------------------------------------------------------------------------------------------------------
+    242          /**
+    243           *  @brief      Get the Reset state
+    244           *
+    245           *  @return     TRUE if reset request, FALSE otherwise
+    246           */
+
+   \                                 In section .text, align 2, keep-with-next
+    247          BOOL_TYPE FaultManager__GetResetState(void)
+    248          {
+    249              return (BOOL_TYPE) Reset_Flag;
+   \                     FaultManager__GetResetState: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x4770             BX       LR               ;; return
+    250          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x........         DC32     Fault_To_Publish
+    251          
+    252          //=====================================================================================================================
+    253          //-------------------------------------- Private Functions ------------------------------------------------------------
+    254          //=====================================================================================================================
+    255          
+    256          static void InitReset(void)
+    257          {
+    258              Comparator__Config(COMPARATOR_CHANNEL1, COMPARATOR_INVERTED_INPUT0, COMPARATOR_NONINVERTED_INPUT7, COMPARATOR_MODE_CONTINUOUS, CMP1_DAC_VOLTAGE_SELECT);
+    259          }
+    260          
+    261          
+    262          static void DecodeReset(void)
+    263          {
+    264          
+    265              Reset_Comparator_Status = Comparator__GetStatus(COMPARATOR_CHANNEL1);
+    266          
+    267              if ((Reset_Comparator_Status == 0)&&(Reset_Delay_Cnt == 0))
+    268          	{// Comparator Status is zero and Reset Delay is expired
+    269          	    Reset_Flag = 1;
+    270          
+    271          		//SensorsAlgorithms__Initialize();
+    272          	    ProtocolMainExternal__Initialize();
+    273          	    MciSetWm__Initialize();
+    274          	    MciSensorsWm__Initialize();
+                 	    ^
+Warning[Pe223]: function "MciSensorsWm__Initialize" declared implicitly
+
+  static uint16 F028486_Flag;
+                ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\FaultManager\FaultManager.c",35  Warning[Pe550]: 
+          variable "F028486_Flag" was set but never used
+
+  static void DecodeReset(void)
+              ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\FaultManager\FaultManager.c",262  Warning[Pe177]: 
+          function "DecodeReset" was declared but never referenced
+    275          		CommandManager__Initialize();	
+    276          		//BoardDebugging__Initialize();
+    277          		//Mci__SetDigital(MOTOR0, MCI_DO_CLEAR_ALL_FAILURE, TRUE);
+    278          		Mci__ClearError(MOTOR0);
+    279          
+    280          		Fault_To_Publish = NO_FAULT;
+    281          		Fault_To_Publish_Holder = Fault_To_Publish;
+    282          
+    283          #ifdef MOTOR_CIM_TYPE
+    284          		if(F028486_Flag == 1)
+    285          		{
+    286          			F028486_Flag = 0;
+    287          			MciSetWm__SoftStart(SOFT_START_MAX_REQUEST);
+    288          		}
+    289          #endif
+    290          	}
+    291          	else
+    292          	{
+    293          		if(Reset_Delay_Cnt > 0)
+    294          		{
+    295          	    	Reset_Delay_Cnt--;
+    296          		}	
+    297          		
+    298          	    Reset_Flag = 0;
+    299          	}
+    300          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   FaultManager__GetFaultToPublish
+         8   -> ProtocolMainExternal__GetCommandData
+       0   FaultManager__GetResetState
+       8   FaultManager__Initialize
+         8   -> Comparator__Config
+       0   FaultManager__Reset
+       8   FaultManager__UpdateFault
+         8   -> CommandManager__GetFault
+         8   -> Mci__GetDigital
+         8   -> Mci__GetError
+         8   -> ProtocolMainExternal__GetFault
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       2  F028486_Flag
+      34  FaultManager__GetFaultToPublish
+       4  FaultManager__GetResetState
+      32  FaultManager__Initialize
+      10  FaultManager__Reset
+     460  FaultManager__UpdateFault
+       4  Fault_To_Publish
+          Fault_To_Publish_Holder
+       2  Reset_Delay_Cnt
+       2  Reset_Flag
+
+ 
+  10 bytes in section .bss
+ 544 bytes in section .text
+ 
+ 544 bytes of CODE memory
+  10 bytes of DATA memory
+
+Errors: none
+Warnings: 3

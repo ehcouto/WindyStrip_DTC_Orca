@@ -1,0 +1,39 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c (C)
+    LUT_Pointers[0] = ((uint16)(&SF_Application_Params) >> 1);
+                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:142: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[1] = ((uint16)(&Mcl_Quantities) >> 1);
+                                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:143: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[2] = ((uint16)(&FvtResult) >> 1);
+                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:145: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[11] = ((uint16)(&Mci_ClassB_Prm) >> 1);
+                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:162: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[12] = ((uint16)(&ClassB_Signature[0]) >> 1);
+                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:163: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[13] = ((uint16)(&Micro_Flash_Crc_Holder) >> 1);
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:164: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    LUT_Pointers[14] = ((uint16)(&LUT_Data_Sizes) >> 1);
+                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:165: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    Ident_Table.LUT_Pointers_Address = ((uint16)(&LUT_Pointers) >> 1); // address in word format
+                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c:172: Info: Lint: 923 cast from pointer to unsigned short [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+
+    --- Wrap-up for Module: C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\ProtocolInfo\ProtocolInfo.c
+
+:0: Info: Lint: 766 Header file 'C:\Data\Python\Windy_sBpm_Floating\source\Category\Common\BoardDebugging\BoardDebugging.h' not used in module 'ProtocolInfo.c'
+

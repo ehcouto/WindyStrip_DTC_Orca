@@ -1,0 +1,181 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c (C)
+	SIM.FCFG1 &= ~(SIM_FCFG1_FLASHDIS_MASK);				//Flash module clock Enabled
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:87: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if ((destination > FLASH_LOW_LIMIT_VAL)	&&
+#...      (FLASH_LOW_LIMIT - 1)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:121: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			((destination + (FLASH_ADDRESS_TYPE) size)<= FLASH_HIGH_LIMIT_VAL))
+#...                                               (FLASH_HIGH_LIMIT + 1)
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:122: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				response = FlashProgram1LongWord(destination,*((uint32 *) source));
+                                                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:139: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                response = FlashProgram1LongWord((destination ), (FLASH_HIGHBYTE_DEFAULT_1_BYTE | (*((uint32 *) source))));
+                                                                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:148: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            	response = FlashProgram1LongWord((destination ), (FLASH_HIGHBYTE_DEFAULT_2_BYTE | (*((uint32 *) source))));
+                                                                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:154: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                response = FlashProgram1LongWord((destination ), (FLASH_HIGHBYTE_DEFAULT_3_BYTE | (*((uint32 *) source))));
+                                                                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:160: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	if ((page_init > FLASH_LOW_LIMIT_VAL)&& (page_init < FLASH_HIGH_LIMIT_VAL))
+#...    (FLASH_LOW_LIMIT - 1)
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:206: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if ((page_init > FLASH_LOW_LIMIT_VAL)&& (page_init < FLASH_HIGH_LIMIT_VAL))
+#...                                       (FLASH_HIGH_LIMIT + 1)
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:206: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if((FTFA.FSTAT && FTFA_FSTAT_CCIF_MASK) == TRUE)
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:211: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			FTFA.FSTAT = 0x30;										//ACCERR & FPVIOL No access and protection violation detected
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:222: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			FTFA.FCCOB0 = 0x09;										//Flash Erase Command
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:223: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			FTFA.FCCOB1 = page_init >> 16;							//Memory address bits [23:16]
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:224: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			FTFA.FCCOB2 = page_init >> 8;							//Memory address bits [15:8]
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:225: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			FTFA.FCCOB3 = page_init;								//Memory address bits [7:0]
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:226: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			if(FTFA.FSTAT & FTFA_FSTAT_ACCERR_MASK)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:230: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			if(FTFA.FSTAT & FTFA_FSTAT_FPVIOL_MASK)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:236: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			if(FTFA.FSTAT & FTFA_FSTAT_MGSTAT0_MASK)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:241: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if ((start_address > FLASH_LOW_LIMIT_VAL) && (end_address < FLASH_HIGH_LIMIT_VAL))
+#...        (FLASH_LOW_LIMIT - 1)
+                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:295: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if ((start_address > FLASH_LOW_LIMIT_VAL) && (end_address < FLASH_HIGH_LIMIT_VAL))
+#...                                              (FLASH_HIGH_LIMIT + 1)
+                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:295: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    return(Flash__Format(FLASH_LOW_LIMIT, FLASH_HIGH_LIMIT));
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:335: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:335: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if (((uint32) destination >= (FLASH_ADDRESS_TYPE) RAM_LOW_LIMIT) &&
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:373: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:373: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			(((uint32) destination + (uint32) size - (uint32) 1)<= (FLASH_ADDRESS_TYPE) RAM_HIGH_LIMIT))
+                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:374: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:374: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			destination[count] = ((uint8 *) source)[count];
+                                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:378: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FSTAT = 0x30;								//ACCERR & FPVIOL No access and protection violation detected
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:418: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB0 = FLASH_PROGRAM_LONGWORD;			//Program flash command
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:419: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB1 = address >> 16;					//Memory address bits [23:16]
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:420: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB2 = address >> 8;						//Memory address bits [15:8]
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:421: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB3 = address;							//Memory address bits [7:0]
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:422: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB4 = data >> 24;					     //Big Endian 0A0B0C0D       Memory
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:424: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB5 = data >> 16;                        //               | | | |------  a|0A|
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:425: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB6 = data >> 8;						 //               | | |------- a+1|0B|
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:426: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FCCOB7 = data;						         //               | |--------- a+2|0C|
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:427: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if(FTFA.FSTAT & FTFA_FSTAT_ACCERR_MASK)
+           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:435: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if(FTFA.FSTAT & FTFA_FSTAT_FPVIOL_MASK)
+           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:440: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if(FTFA.FSTAT & FTFA_FSTAT_MGSTAT0_MASK)
+           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:445: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	FTFA.FSTAT |= (FTFA_FSTAT_CCIF_MASK);
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:468: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		while (!(FTFA.FSTAT & FTFA_FSTAT_CCIF_MASK));
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:473: Info: Lint: 923 cast from int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SMC.PMPROT.BIT.AHSRUN = 0;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:497: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SMC.PMCTRL = SMC_PMCTRL_RUNM(0);
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:500: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if (SMC.PMSTAT != 0x01)
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Flash\Flash.c:505: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+

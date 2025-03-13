@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1386051752</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\exe\Windy_Mcu_Nucleus_Plt_2_5_sBpm.out</file>
+      <file>$PROJ_DIR$\..\..\source\XCategory\Driver\Micro\InterruptVector.c</file>
+      <file>$PROJ_DIR$\..\..\source\XCategory\Common\SRMain\SRMain.c</file>
+      <file>$PROJ_DIR$\..\..\source\XCategory\Hbl\Mci\Mcl\MicroBlocks\Math\MathCalc.c</file>
+      <file>$PROJ_DIR$\..\..\source\XCategory\Hbl\Mci\Mcl\MacroBlocks\MclDqRef.c</file>
+    </outputs>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

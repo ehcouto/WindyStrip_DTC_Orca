@@ -1,0 +1,1929 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.5.7591/W32 for ARM        19/Nov/2024  13:15:15
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  Category\Application\CommandManager\CommandManager.c
+#    Command line =  
+#        -I./ -I../cx/ -I../cx/inc/ -ICategory/ -ICategory/Application/
+#        -ICategory/Application/ApplicationWasherMcu/
+#        -ICategory/Application/ApplicationWasherMcu/AnalysisAverage/
+#        -ICategory/Application/ApplicationWasherMcu/Arbitration/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Motion/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/MotionError/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Pulse/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/RotateXDeg/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/SpinDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/StopDrum/
+#        -ICategory/Application/ApplicationWasherMcu/Motion/Wash/
+#        -ICategory/Application/ApplicationWasherMcu/MotorActivity/
+#        -ICategory/Application/ApplicationWasherMcu/SpeedMaintain/
+#        -ICategory/Application/BandLimiter/ -ICategory/Application/Beagle/
+#        -ICategory/Application/CommandManager/
+#        -ICategory/Application/DigitalFilter/
+#        -ICategory/Application/Extraction/
+#        -ICategory/Application/Extraction/CodeGeneration/
+#        -ICategory/Application/Extraction/CodeGeneration/SharedUtils/
+#        -ICategory/Application/Extraction/Dependencies/
+#        -ICategory/Application/FaultManager/
+#        -ICategory/Application/MciSensorsWm/ -ICategory/Application/MciSetWm/
+#        -ICategory/Application/MciSetWmFloat/ -ICategory/Application/ParamEst/
+#        -ICategory/Application/ParamEstExc/ -ICategory/Application/Params/
+#        -ICategory/Application/ProtocolInfo/
+#        -ICategory/Application/ProtocolMainExternal/
+#        -ICategory/Application/SRMotorSafetyInfoParamsMgr_Core/
+#        -ICategory/Application/ThermalModel/
+#        -ICategory/Application/ThermalModel/ThermalModelCore/
+#        -ICategory/Common/ -ICategory/Common/BoardDebugging/
+#        -ICategory/Common/MasterCommander/
+#        -ICategory/Common/MasterCommander/Source/
+#        -ICategory/Common/MasterCommander/Source/HAL/ -ICategory/Hbl/
+#        -IProjectSpecific/ -IProjectSpecific/Application/
+#        -IProjectSpecific/Application/API007App/
+#        -IProjectSpecific/Application/Api221_Filter_Mci_Err/
+#        -IProjectSpecific/Application/ModeManagement/
+#        -IProjectSpecific/Application/ProductInfo/
+#        -IProjectSpecific/Application/RemoteFunctions/
+#        -IProjectSpecific/Application/SRMcuSpeedMonitor/
+#        -IProjectSpecific/Application/ThermalModel/
+#        -IProjectSpecific/CommonCore/ -IProjectSpecific/Driver/
+#        -IProjectSpecific/Indesit/ -IProjectSpecific/MasterCommander/
+#        -IProjectSpecific/Mci/ -IProjectSpecific/Mci/Mcl/
+#        -IProjectSpecific/Mci/Mcl/old_xls/ -IXCategory/
+#        -IXCategory/Application/ -IXCategory/Application/MciParametersLoader/
+#        -IXCategory/Application/Mode/ -IXCategory/Application/Reveal_APIs/
+#        -IXCategory/Application/Reveal_APIs/API003Disc/
+#        -IXCategory/Application/Reveal_APIs/API005LowLevel/
+#        -IXCategory/Application/Reveal_APIs/API007Data/
+#        -IXCategory/Application/Reveal_APIs/API009System/
+#        -IXCategory/Application/Reveal_APIs/API010PollVar/
+#        -IXCategory/Application/Reveal_APIs/API011AppCtr/
+#        -IXCategory/Application/Reveal_APIs/API013RemoteFunction/
+#        -IXCategory/Application/Reveal_APIs/API018Diagnostic/
+#        -IXCategory/Application/Reveal_APIs/API019ProductInfo/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/
+#        -IXCategory/Application/Reveal_APIs/API220MotorControl/API/
+#        -IXCategory/Application/Reveal_APIs/API221MotionCtrl/
+#        -IXCategory/Application/Reveal_APIs/SRAPI020Safety/
+#        -IXCategory/Application/SFUpdater/ -IXCategory/Common/
+#        -IXCategory/Common/Crc16/ -IXCategory/Common/Crc8/
+#        -IXCategory/Common/Log/ -IXCategory/Common/SettingFile/
+#        -IXCategory/Common/SRClockMonitor/ -IXCategory/Common/SRData/
+#        -IXCategory/Common/SRException/ -IXCategory/Common/SRFlow/
+#        -IXCategory/Common/SRIsrMonitor/ -IXCategory/Common/SRMain/
+#        -IXCategory/Common/SRMcuSpeedMonitor/ -IXCategory/Common/SRPowerMgr/
+#        -IXCategory/Common/SRSignature/ -IXCategory/Common/SRSystemConfig/
+#        -IXCategory/Common/SRTimerReference/ -IXCategory/Common/SystemConfig/
+#        -IXCategory/Common/SystemTimers/ -IXCategory/Common/Utilities/
+#        -IXCategory/Driver/ -IXCategory/Driver/API/
+#        -IXCategory/Driver/API/Comparator/ -IXCategory/Driver/API/DataFlash/
+#        -IXCategory/Driver/API/Dma/ -IXCategory/Driver/API/Flash/
+#        -IXCategory/Driver/API/Gpio/ -IXCategory/Driver/API/Micro/
+#        -IXCategory/Driver/API/Spi/ -IXCategory/Driver/API/SRMCAtod/
+#        -IXCategory/Driver/API/SRMCPwm/ -IXCategory/Driver/API/TimerInterrupt/
+#        -IXCategory/Driver/API/Uart/ -IXCategory/Driver/Comparator/
+#        -IXCategory/Driver/DataFlash/ -IXCategory/Driver/Dma/
+#        -IXCategory/Driver/Flash/ -IXCategory/Driver/Gpio/
+#        -IXCategory/Driver/Micro/ -IXCategory/Driver/Spi/
+#        -IXCategory/Driver/SRMCAtod/ -IXCategory/Driver/SRMCPwm/
+#        -IXCategory/Driver/TimerInterrupt/ -IXCategory/Driver/Uart/
+#        -IXCategory/Hbl/ -IXCategory/Hbl/Mci/
+#        -IXCategory/Hbl/Mci/InverterTemp/ -IXCategory/Hbl/Mci/Mcl/
+#        -IXCategory/Hbl/Mci/Mcl/Braking/ -IXCategory/Hbl/Mci/Mcl/MacroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MclFvt/ -IXCategory/Hbl/Mci/Mcl/MicroBlocks/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/ClrkPark/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Filters/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Math/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/Pi/
+#        -IXCategory/Hbl/Mci/Mcl/MicroBlocks/PwmModulation/
+#        -IXCategory/Hbl/Mci/Mcl/ResistanceEstimation/
+#        -IXCategory/Hbl/Mci/PowerModuleManager/
+#        -IXCategory/Hbl/Mci/SpeedRefGen/ -IXCategory/Hbl/Mci/SurgeRelay/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/
+#        -IXCategory/Hbl/SRMotorSafetyMgr/API/ -IXCategory/Service/
+#        -IXCategory/Service/Reveal/ -IXCategory/Service/Win/ --remarks
+#        --no_tbaa --debug --use_c++_inline --only_stdout --dlib_config
+#        ..\cx\inc\DLib_Config_Normal.h -r -D
+#        ENABLE_JUMP_TO_APPLICATION_WITHOUT_IAP_FIRMWARE -D ARM_MATH_CM4 -e
+#        --silent --endian=little --cpu Cortex-M4 --fpu=VFPv4_sp -Ohs -o
+#        CommandManager.obj -l ..\listings\CommandManager.lst
+#        Category\Application\CommandManager\CommandManager.c
+#    List file    =  ..\listings\CommandManager.lst
+#    Object file  =  CommandManager.obj
+#
+###############################################################################
+
+C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\CommandManager\CommandManager.c
+      1          /**
+      2           *  @file       CommandManager.c
+      3           *
+      4           *  @brief      Decoding and execution of commands coming from the protocol
+      5           *
+      6           *  $Header: $
+      7           *
+      8           *  @copyright  Copyright 2016-$Date$. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+      9           */
+     10          //---------------------------------------------------------------------------------------------------------------------
+     11          //---------------------------------------------------------------------------------------------------------------------
+     12          
+     13          
+     14          //-------------------------------------- Include Files ----------------------------------------------------------------
+     15          #include "CommandManager.h"
+     16          #include "CommandManager_prv.h"
+     17          #include "MciSetWm.h"
+     18          #include "MciSensorsWm.h"
+     19          #include "Mci.h"
+     20          #include "IQMath.h"
+     21          #include "MathCalc.h"
+     22          #include "Params.h"
+
+  PACKED typedef struct
+         ^
+"C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Common\SettingFile\SettingFile.h",39  Remark[Pe082]: 
+          storage class is not first
+     23          
+     24          //-------------------------------------- PUBLIC (Variables) -----------------------------------------------------------
+     25          
+     26          //-------------------------------------- PRIVATE (Variables, Constants & Defines) -------------------------------------
+     27          //! movement state machine definition
+     28          typedef enum MOVEMENT_STATE_MACHINE
+     29          {
+     30              PAUSE_STATE                     = 0,    //!< 0
+     31              STEADY_STATE                    = 1,    //!< 1, steady-state: Platform_Final_Speed == actual speed
+     32              CONTROLLED_RAMP_STATE           = 2,    //!< 2, closed loop ramp-up or controlled ramp-down
+     33          	CONTROLLED_RAMP_TO_ZERO_STATE   = 3,    //!< 3, controlled ramp down to zero in case of Platform_Final_Speed == 0 or speed inversion requested
+     34          	FREE_RAMP_DOWN_TO_ZERO_STATE    = 4,    //!< 4, free ramp down to zero in case of Platform_Final_Speed == 0 or speed inversion requested
+     35              FREE_RAMP_DOWN_STATE            = 5,    //!< 5, not controlled ramp down with |RampEndSpeed| <= MedReg_ThSpeed
+     36              FVT_RUNNING_STATE               = 6,    //!< 6, FVT procedure in progress
+     37              FVT_FINISHED_STATE              = 7,    //!< 7, FVT procedure finished
+     38              FVT_ABORTED_STATE               = 8,    //!< 8, FVT procedure aborted
+     39              MSM_DUMMY                       = 256
+     40          } MOVEMENT_STATE_MACHINE_ENUM_T;
+     41          
+     42          //! master command definition
+     43          typedef enum DMC_RETURNS
+     44          {
+     45          
+     46              DMC_COMMAND_PAUSE           = 0,    //!< 0, Master Command Pause condition
+     47              DMC_SPEED_INVERSION         = 1,    //!< 1, Speed inversion requested
+     48              DMC_RAMP_UP                 = 2,    //!< 2, Ramp-up condition
+     49              DMC_FREE_RAMP_DOWN          = 3,    //!< 3, not controlled Ramp-down
+     50              DMC_CONTROLLED_RAMP_DOWN    = 4,    //!< 4, controlled Ramp-down
+     51              DMC_STOP_RAMP               = 5,    //!< 5, stop ramp to spinning speed
+     52              DMC_SKIP_COMMAND            = 6,    //!< 6, Skip Command
+     53              DMC_NACK_CONDITION          = 7,    //!< 7, NACK Fault condition
+     54              DMC_INVALID                 = 8,    //!< 8, invalid return condition
+     55              DMC_START_FVT               = 9,    //!< 9, request for starting fvt
+     56              DMC_STOP_FVT                = 10,   //!<10, request for stopping fvt
+     57              DMC_DUMMY                   = 256
+     58          }DMC_RETURNS_E_T;
+     59          
+     60          //! Define the main states of this controller
+     61          typedef enum
+     62          {
+     63              MCI_NOT_DEFINED = 0,                            //!< 0  - reserved 0 index - shall not be used
+     64              MCI_FVT_MODE,                                   //!< 1  - Function Verification Test (FVT) Mode.
+     65              MCI_INITIALIZING,                               //!< 2  - initializing state
+     66              MCI_IDLE,                                       //!< 3  - idling
+     67              MCI_CLASS_B_STARTING,                           //!< 4  - hardware starting, checking and power up
+     68              MCI_CLASS_B_STOPPING,                           //!< 5  - stopping Class B, executes before idling
+     69              MCI_FAILED,                                     //!< 6  - something has failed
+     70              MCI_STARTING,                                   //!< 7  - starting the motor, executes before running
+     71              MCI_RUNNING,                                    //!< 8  - running
+     72              MCI_STOPPING,                                   //!< 9  - stopping the motor, executes before Class B stopping
+     73              MCI_DEBUGGING,                                  //!< 10 - debugging, shall not be used for production
+     74              MCI_MANUAL_CONTROL,                             //!< 11 - manual control of inverter bridge, used for AC or DC, voltage or current control
+     75          } COPY_OF_MCI_CONTROL_STATE_TYPE;
+     76          
+     77          static BOOL_TYPE ParamsReady;
+     78          static MOVEMENT_STATE_MACHINE_ENUM_T Movement_State;
+     79          static BOOL_TYPE Command_Speed_Negative; //!< TRUE if negative
+     80          
+     81          static uint16 Power_On_Free_Down_Cnt;
+     82          static DMC_RETURNS_E_T DMC_State;
+     83          
+     84          static sint16 Platform_Final_Speed;      // [rpm_M]
+     85          static sint16 Ramp_End_Speed;
+     86          static sint16 Ramp_Time_Or_Acc;
+     87          
+     88          static uint16 Free_Down_Cnt;
+
+   \                                 In section .bss, align 4
+   \   00000000                      DS8 4
+     89          static uint32 Max_Acceleration;
+     90          static volatile uint32 Max_Deceleration;
+     91          static uint16 Max_Distr_Speed_Rpm_M;
+     92          static sint16 Min_Allowed_Speed;      	// [rpm_M]
+     93          
+     94          #ifdef MOTOR_BPM_TYPE
+
+   \                                 In section .bss, align 2
+   \   00000000                      DS8 2
+
+   \                                 In section .data, align 4
+   \   __absolute signed short Command_Params_SF[10]
+   \                     Command_Params_SF:
+   \   00000000   0x0BB3 0x2478      DC16 2995, 9336, 1740, 702, 1030, 14976, 585, 176, 1544, 293
+   \              0x06CC 0x02BE
+   \              0x0406 0x3A80
+   \              0x0249 0x00B0
+   \              0x0608 0x0125
+   \   00000014   0x00               DC8 0
+   \   00000015   0x00               DC8 0
+   \   00000016   0x00 0x00          DC8 0, 0
+   \   00000018   0x00 0x00          DC8 0, 0
+   \   0000001A   0x00 0x00          DC8 0, 0
+   \   0000001C   0x00 0x00          DC8 0, 0
+   \   0000001E   0x00 0x00          DC8 0, 0
+   \   00000020   0x00 0x00          DC8 0, 0
+   \   00000022   0x00 0x00          DC8 0, 0
+   \   00000024   0x00 0x00          DC8 0, 0
+   \   00000026   0x00 0x00          DC8 0, 0
+   \   00000028   0x00 0x00          DC8 0, 0
+   \   0000002A   0x00 0x00          DC8 0, 0
+   \   0000002C   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \   00000030   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+     95          static uint16 Ramp_Down_Flag;
+     96          #endif
+     97          
+     98          #if MCI_FVT_TESTS == ENABLED
+     99          void ClearFvtResult(MCI_FVT_TEST_RESULT_TYPE *fvt_data_result);
+    100          MCI_FVT_TEST_RESULT_TYPE FvtResult;
+   \                     FvtResult:
+   \   00000034   0x00 0x00          DC8 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+   \              0x00 0x00    
+    101          #define FVT_TEST_FLAGS      0xFF
+    102          #endif
+    103          
+    104          static COMMAND_PARAMS_TYPE *Command_Params;
+    105          static COMMAND_PARAMS_TYPE Command_Params_Ram;
+    106          
+    107          static MCL_PARAMS_DISPL4_TYPE *Command_SpeedCntrl_Params;
+    108          static MCISENSORSWM_PARAMS_TYPE *Command_MciSensorsWm_Params;
+    109          
+    110          static uint16 Fault;
+
+   \                                 In section .bss, align 4
+    111          PARAMS_LOADER_TYPE Command_Wm_Prm_Ram_1;
+   \                     Command_Wm_Prm_Ram_1:
+   \   00000000                      DS8 8
+
+   \                                 In section .bss, align 4
+    112          PARAMS_LOADER_TYPE Command_Wm_Prm_Ram_2;
+   \                     Command_Wm_Prm_Ram_2:
+   \   00000000                      DS8 8
+    113          
+    114          //-------------------------------------- PRIVATE (Function Prototypes) ------------------------------------------------
+    115          static void ApplicationStateMachine(void);
+    116          void ExecuteMasterCommand(void);
+    117          void Stop_Motor(void);
+    118          uint16 Run_Motor(sint16 acceleration_limit);
+    119          //=====================================================================================================================
+    120          //-------------------------------------- Public Functions -------------------------------------------------------------
+    121          //=====================================================================================================================
+    122          
+    123          //---------------------------------------------------------------------------------------------------------------------
+    124          /**
+    125           *  @brief      It Initializes the module CommandManager and its variables.
+    126           *
+    127           */
+
+   \                                 In section .text, align 2, keep-with-next
+    128          void CommandManager__Initialize(void)
+    129          {
+   \                     CommandManager__Initialize: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    130          #ifdef MOTOR_CIM_TYPE
+    131          	MciSetWm__SoftStart(SOFT_START_INITIALIZATION);
+    132          #endif
+    133          	ParamsReady = FALSE;
+   \   00000002   0x.... 0x....      LDR.W    R4,??DataTable8
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x7520             STRB     R0,[R4, #+20]
+    134              Free_Down_Cnt = 0;
+   \   0000000A   0x8460             STRH     R0,[R4, #+34]
+    135              Ramp_End_Speed = 0;
+   \   0000000C   0x83E0             STRH     R0,[R4, #+30]
+    136              Movement_State = FREE_RAMP_DOWN_TO_ZERO_STATE;
+    137          
+    138              // Fictious Free_Down_Counter to avoid false PAUSE STATE
+    139              Power_On_Free_Down_Cnt = POWERON_FREEDOWN_INIT;
+    140              Command_Speed_Negative = FALSE;
+    141          
+    142              Fault = 0;
+    143          
+    144              // Stop the motor when command manager is initialize
+    145              Mci__Stop(MOTOR0, 0);
+   \   0000000E   0x2100             MOVS     R1,#+0
+   \   00000010   0x2004             MOVS     R0,#+4
+   \   00000012   0x82E0             STRH     R0,[R4, #+22]
+   \   00000014   0xF44F 0x707A      MOV      R0,#+1000
+   \   00000018   0x8320             STRH     R0,[R4, #+24]
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x7560             STRB     R0,[R4, #+21]
+   \   0000001E   0x8520             STRH     R0,[R4, #+40]
+   \   00000020   0x.... 0x....      BL       Mci__Stop
+    146          
+    147              #if MCI_FVT_TESTS == ENABLED
+    148              ClearFvtResult(&FvtResult);
+   \   00000024   0xF104 0x0034      ADD      R0,R4,#+52
+   \   00000028   0xE8BD 0x4010      POP      {R4,LR}
+   \   0000002C   0x....             B.N      ClearFvtResult
+    149              #endif
+    150          }
+    151          
+    152          
+    153          
+    154          
+    155          /**
+    156           *  @brief      CommandManager 2ms handler.
+    157           *
+    158           */
+
+   \                                 In section .text, align 2, keep-with-next
+    159          void CommandManager__5msHandler(void)
+    160          {
+    161              if (ParamsReady == TRUE)
+   \                     CommandManager__5msHandler: (+1)
+   \   00000000   0x.... 0x....      LDR.W    R0,??DataTable8
+   \   00000004   0x7D01             LDRB     R1,[R0, #+20]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xBF08             IT       EQ 
+    162              {
+    163                  ApplicationStateMachine();
+   \   0000000A   0x.... 0x....      BEQ.W    ApplicationStateMachine
+    164          
+    165          
+    166                  //DEBUG_FAGNAL
+    167          //
+    168          //        SF_Application_Params.TransmissionRatio = (uint16)((((uint32)Command_Params->Transmission_Ratio)<<15)/19800.0);
+    169          //        SF_Application_Params.Base_Voltage = 256;
+    170          //        SF_Application_Params.Base_Bus_Voltage = 444;
+    171          //        SF_Application_Params.Base_Current = 8220;
+    172          //        SF_Application_Params.Base_Torque = 40775;
+    173          //        SF_Application_Params.Base_Speed = 19800;
+    174          //        SF_Application_Params.Base_OverHeating = 200;
+    175          //        SF_Application_Params.Base_Bemf = 650;
+    176          
+    177          
+    178                //  memcpy(SF_Application_Params.Dummy_Start, OldSettingFile, sizeof(OldSettingFile));
+    179          
+    180              }
+    181              else
+    182              {
+    183          #ifdef MCI_INTERNAL_PARAMS
+    184                  ParamsReady = TRUE;
+   \   0000000E   0x2101             MOVS     R1,#+1
+   \   00000010   0x7501             STRB     R1,[R0, #+20]
+    185                  Command_Params = (COMMAND_PARAMS_TYPE *)&Command_Params_SF[0];
+   \   00000012   0x6300             STR      R0,[R0, #+48]
+    186          
+    187                  Max_Acceleration = Command_Params->Max_Acceleration_Low_Speed;
+    188                  Max_Deceleration = Command_Params->Max_Deceleration_Low_Speed;
+   \   00000014   0x8981             LDRH     R1,[R0, #+12]
+   \   00000016   0x62C1             STR      R1,[R0, #+44]
+    189          
+    190                  Max_Distr_Speed_Rpm_M = (uint16)((MAX_DISTR_SPEED * Command_Params->Transmission_Ratio)>>8);
+   \   00000018   0xF9B0 0x1000      LDRSH    R1,[R0, #+0]
+   \   0000001C   0xEBC1 0x11C1      RSB      R1,R1,R1, LSL #+7
+   \   00000020   0x1209             ASRS     R1,R1,#+8
+   \   00000022   0x8481             STRH     R1,[R0, #+36]
+    191          
+    192                  Min_Allowed_Speed = 225; //[rpm-M]
+   \   00000024   0x21E1             MOVS     R1,#+225
+   \   00000026   0x84C1             STRH     R1,[R0, #+38]
+    193          
+    194          
+    195          #else
+    196                  if((Params__BasicLoader(SF_PTR_MCU_CLASS_A_MCI, SF_DISPL_MOTOR_SPEED_CTRL, &Command_Wm_Prm_Ram_1) == PASS)&& \
+    197                     (Params__BasicLoader(SF_PTR_MCU_MCA, SF_DISPL_MOTOR_MCI_SENSORS_WM, &Command_Wm_Prm_Ram_2) == PASS))
+    198                  {
+    199                      Command_SpeedCntrl_Params = (MCL_PARAMS_DISPL4_TYPE*)Command_Wm_Prm_Ram_1.Data;
+    200                      Command_MciSensorsWm_Params = (MCISENSORSWM_PARAMS_TYPE*)Command_Wm_Prm_Ram_2.Data;
+    201          
+    202          
+    203                      Command_Params = &Command_Params_Ram;
+    204          
+    205                      Command_Params->Transmission_Ratio = (sint16)(Command_MciSensorsWm_Params->Transmission_Ratio*256.0f);
+    206                      Command_Params->Free_Down_Gain = 27300; //Slow Control Loop Frequency /(Threshold Wash * Transmission Ratio)  *32768
+    207                      Command_Params->Max_Allowed_Speed = (sint16)(0.93f*19800.0f/Command_MciSensorsWm_Params->Transmission_Ratio);
+    208          
+    209                      Command_Params->Low_Regulators_Thr_Speed = (sint16)(Command_SpeedCntrl_Params->SpeedCtrlPrm.speed_gains_table[0].speed_abs);
+    210                      Command_Params->Med_Regulators_Thr_Speed = (sint16)(Command_SpeedCntrl_Params->SpeedCtrlPrm.speed_gains_table[1].speed_abs);
+    211                      Command_Params->High_Regulators_Thr_Speed = (sint16)(Command_SpeedCntrl_Params->SpeedCtrlPrm.speed_gains_table[2].speed_abs);
+    212          
+    213                      Command_Params->Max_Deceleration_Low_Speed = (sint16)(70.0f*Command_MciSensorsWm_Params->Transmission_Ratio);
+    214                      Command_Params->Max_Deceleration_High_Speed = (sint16)(27.0f*Command_MciSensorsWm_Params->Transmission_Ratio);
+    215          
+    216                      Command_Params->Max_Acceleration_Low_Speed = (sint16)(70.0f*Command_MciSensorsWm_Params->Transmission_Ratio);
+    217                      Command_Params->Max_Acceleration_High_Speed = (sint16)(27.0f*Command_MciSensorsWm_Params->Transmission_Ratio);
+    218          
+    219                      Max_Acceleration = Command_Params->Max_Acceleration_Low_Speed;
+    220                      Max_Deceleration = Command_Params->Max_Deceleration_Low_Speed;
+    221          
+    222                      Max_Distr_Speed_Rpm_M = (uint16)((MAX_DISTR_SPEED * Command_Params->Transmission_Ratio)>>8);
+    223          
+    224                      Min_Allowed_Speed = 225; //[rpm-M]
+    225          
+    226                      ParamsReady = TRUE;
+    227                  }
+    228          #endif
+    229          
+    230              }
+    231          }
+   \   00000028   0x4770             BX       LR               ;; return
+    232          
+    233          
+    234          /**
+    235           *  @brief      CommandManager Unlock Acceleration -> For EOL
+    236           *
+    237           */
+
+   \                                 In section .text, align 2, keep-with-next
+    238          void CommandManager__UnLockAcceleration(void)
+    239          {
+    240          
+    241              sint32 temp32_2;
+    242              sint32 temp32;
+    243          
+    244              if (ParamsReady == TRUE)
+   \                     CommandManager__UnLockAcceleration: (+1)
+   \   00000000   0x.... 0x....      LDR.W    R0,??DataTable8
+   \   00000004   0x7D01             LDRB     R1,[R0, #+20]
+   \   00000006   0x2901             CMP      R1,#+1
+   \   00000008   0xD10F             BNE.N    ??CommandManager__UnLockAcceleration_0
+    245              {
+    246                  // Ramp Limits
+    247                  temp32_2 = IQMATH__I17Q15MULI17Q15(19800,500);
+    248          
+    249                  temp32 = (sint32)((SF_Application_Params.u16MaxDeltaSpeedSetPointHighSpeed_Hi<<16) + (uint16)(SF_Application_Params.u16MaxDeltaSpeedSetPointHighSpeed_Lo));
+    250                  temp32 = temp32>>1;
+    251                  Command_Params->Max_Acceleration_High_Speed = IQMATH__Q15MULQ15(temp32, temp32_2);
+   \   0000000A   0x.... 0x....      LDR.W    R1,??DataTable8_1
+   \   0000000E   0xF8B1 0x2138      LDRH     R2,[R1, #+312]
+   \   00000012   0xF8B1 0x113A      LDRH     R1,[R1, #+314]
+   \   00000016   0x6B00             LDR      R0,[R0, #+48]
+   \   00000018   0x0412             LSLS     R2,R2,#+16
+   \   0000001A   0xFA12 0xF181      UXTAH    R1,R2,R1
+   \   0000001E   0x1049             ASRS     R1,R1,#+1
+   \   00000020   0xF44F 0x7297      MOV      R2,#+302
+   \   00000024   0x4351             MULS     R1,R1,R2
+   \   00000026   0x13C9             ASRS     R1,R1,#+15
+   \   00000028   0x8241             STRH     R1,[R0, #+18]
+    252              }
+    253          
+    254          }
+   \                     ??CommandManager__UnLockAcceleration_0: (+1)
+   \   0000002A   0x4770             BX       LR               ;; return
+    255          
+    256          /**
+    257           *  @brief      Decode the Command coming from the ACU
+    258           *
+    259           *  @param[in]  command The command data coming from the ACU
+    260           */
+
+   \                                 In section .text, align 2, keep-with-next
+    261          void CommandManager__DecodeMasterCommand(sint16 speed_rpm, sint16 ramp_rpm_per_s, uint16 flags)
+    262          {
+   \                     CommandManager__DecodeMasterCommand: (+1)
+   \   00000000   0xE92D 0x46F0      PUSH     {R4-R7,R9,R10,LR}
+    263              sint16 platform_final_speed_abs;      // [rpm_D]
+    264              DMC_RETURNS_E_T dmc_state_temp = DMC_SKIP_COMMAND;
+    265          	sint32 speed_set_point;
+    266          
+    267          #ifdef MOTOR_BPM_TYPE
+    268              sint32 max_delta_speed_temp1;
+    269          	sint32 max_delta_speed_temp2;
+    270          	sint32 speed_set_point_abs;
+    271          	BOOL_TYPE command_speed_negative_old;
+    272          #endif
+    273          
+    274              if(ParamsReady == TRUE)
+   \   00000004   0x.... 0x....      LDR.W    R5,??DataTable8
+   \   00000008   0x4606             MOV      R6,R0
+   \   0000000A   0x7D28             LDRB     R0,[R5, #+20]
+   \   0000000C   0x2406             MOVS     R4,#+6
+   \   0000000E   0xB081             SUB      SP,SP,#+4
+   \   00000010   0x468A             MOV      R10,R1
+   \   00000012   0x2801             CMP      R0,#+1
+   \   00000014   0xF040 0x80D9      BNE.W    ??CommandManager__DecodeMasterCommand_0
+    275              {
+    276                  #if MCI_FVT_TESTS == ENABLED
+    277                  if (flags == FVT_TEST_FLAGS)
+   \   00000018   0x2AFF             CMP      R2,#+255
+   \   0000001A   0xD10C             BNE.N    ??CommandManager__DecodeMasterCommand_1
+    278                  {
+    279                      if ((speed_rpm != 0) && (Movement_State == PAUSE_STATE))
+   \   0000001C   0xF9B5 0x0016      LDRSH    R0,[R5, #+22]
+   \   00000020   0xB126             CBZ.N    R6,??CommandManager__DecodeMasterCommand_2
+   \   00000022   0x2800             CMP      R0,#+0
+   \   00000024   0xF040 0x80CC      BNE.W    ??CommandManager__DecodeMasterCommand_3
+   \   00000028   0x2409             MOVS     R4,#+9
+   \   0000002A   0xE0C9             B.N      ??CommandManager__DecodeMasterCommand_3
+   \                     ??CommandManager__DecodeMasterCommand_2: (+1)
+   \   0000002C   0x2800             CMP      R0,#+0
+   \   0000002E   0xF000 0x80C7      BEQ.W    ??CommandManager__DecodeMasterCommand_3
+    280                      {
+    281                          //
+    282                          dmc_state_temp = DMC_START_FVT;
+    283                      }
+    284          
+    285                      if ((speed_rpm == 0) && (Movement_State != PAUSE_STATE))
+    286                      {
+    287                              dmc_state_temp = DMC_STOP_FVT;
+   \   00000032   0x240A             MOVS     R4,#+10
+   \   00000034   0xE0C4             B.N      ??CommandManager__DecodeMasterCommand_3
+    288                      }
+    289          
+    290                  }
+    291                  else
+    292                  #endif
+    293                  {
+    294                      
+    295              #ifdef MOTOR_BPM_TYPE
+    296                      command_speed_negative_old = Command_Speed_Negative;
+   \                     ??CommandManager__DecodeMasterCommand_1: (+1)
+   \   00000036   0xF895 0x9015      LDRB     R9,[R5, #+21]
+    297              #endif
+    298          
+    299                      platform_final_speed_abs = MATHCALC__ABS(speed_rpm);
+   \   0000003A   0x2E00             CMP      R6,#+0
+   \   0000003C   0xBF47             ITTEE    MI 
+   \   0000003E   0x4277             RSBMI    R7,R6,#+0
+   \   00000040   0xB23F             SXTHMI   R7,R7
+   \   00000042   0x4637             MOVPL    R7,R6
+    300                      if(speed_rpm < 0)
+    301                      {
+    302                          Command_Speed_Negative = TRUE;
+    303                      }
+    304                      else
+    305                      {
+    306                          Command_Speed_Negative = FALSE;
+   \   00000044   0x2000             MOVPL    R0,#+0
+    307                      }
+   \   00000046   0x7568             STRB     R0,[R5, #+21]
+    308              #ifdef INDESIT_LEGACY
+    309                      if(FaultManager__GetFaultToPublish())
+   \   00000048   0x.... 0x....      BL       FaultManager__GetFaultToPublish
+   \   0000004C   0x2800             CMP      R0,#+0
+   \   0000004E   0xF040 0x80B7      BNE.W    ??CommandManager__DecodeMasterCommand_3
+    310                      {// [ fault condition --> skip command ]
+    311                          dmc_state_temp = DMC_SKIP_COMMAND;
+    312                      }
+    313              #else
+    314                      if(FALSE)
+    315                      {
+    316          
+    317                      }
+    318              #endif
+    319              #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    320                      else if(platform_final_speed_abs >= Command_Params->Max_Allowed_Speed)
+   \   00000052   0x6B28             LDR      R0,[R5, #+48]
+   \   00000054   0xF9B0 0x0004      LDRSH    R0,[R0, #+4]
+   \   00000058   0x4287             CMP      R7,R0
+   \   0000005A   0xDA60             BGE.N    ??CommandManager__DecodeMasterCommand_4
+    321                      {// [ final speed not allowed --> set Nack condition ]
+    322                          dmc_state_temp = DMC_NACK_CONDITION;
+    323                      }
+    324              #else//APPLIANCE_TYPE_DISHWASHER TODO
+    325              //        else if ((DataType == PILOT_TYPE_WASH) && (TestBit(DOOR_STATUS,uw16Flags) == 0))
+    326              //		{// Wash pump is active but Door Status is NOT_CLOSED
+    327              //        	dmc_state_temp = DMC_SKIP_COMMAND;
+    328              //		}
+    329              #endif
+    330          
+    331                      else if((((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_IDLE)&& //MCI_IDLE
+    332                              ((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_RUNNING)) //MCI_RUNNING
+    333                              &&(speed_rpm!= 0))
+   \   0000005C   0x2118             MOVS     R1,#+24
+   \   0000005E   0x2000             MOVS     R0,#+0
+   \   00000060   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000064   0x2803             CMP      R0,#+3
+   \   00000066   0xD008             BEQ.N    ??CommandManager__DecodeMasterCommand_5
+   \   00000068   0x2118             MOVS     R1,#+24
+   \   0000006A   0x2000             MOVS     R0,#+0
+   \   0000006C   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000070   0x2808             CMP      R0,#+8
+   \   00000072   0xBF18             IT       NE 
+   \   00000074   0x2E00             CMPNE    R6,#+0
+   \   00000076   0xF040 0x80A3      BNE.W    ??CommandManager__DecodeMasterCommand_3
+    334                      {// [ if(free_ramp_flag == 1) <--> free ramp down in progress --> skip command ]
+    335                          dmc_state_temp = DMC_SKIP_COMMAND;
+    336                      }
+    337                      else if((((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_IDLE)&& //MCI_IDLE
+    338                              ((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_RUNNING)&& //MCI_RUNNING
+    339                              ((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_CLASS_B_STARTING)&& //MCI_CLASS_B_STARTING
+    340                              ((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_MANUAL_CONTROL)&& //MCI_MANUAL_CONTROL
+    341                              ((Mci__GetAnalog(MOTOR0, MCI_AI_INTERNAL_MCI_STATE)) != MCI_STARTING))  //MCI_STARTING
+    342                              &&(speed_rpm == 0))
+   \                     ??CommandManager__DecodeMasterCommand_5: (+1)
+   \   0000007A   0x2118             MOVS     R1,#+24
+   \   0000007C   0x2000             MOVS     R0,#+0
+   \   0000007E   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000082   0x2803             CMP      R0,#+3
+   \   00000084   0xD01A             BEQ.N    ??CommandManager__DecodeMasterCommand_6
+   \   00000086   0x2118             MOVS     R1,#+24
+   \   00000088   0x2000             MOVS     R0,#+0
+   \   0000008A   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000008E   0x2808             CMP      R0,#+8
+   \   00000090   0xD014             BEQ.N    ??CommandManager__DecodeMasterCommand_6
+   \   00000092   0x2118             MOVS     R1,#+24
+   \   00000094   0x2000             MOVS     R0,#+0
+   \   00000096   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000009A   0x2804             CMP      R0,#+4
+   \   0000009C   0xD00E             BEQ.N    ??CommandManager__DecodeMasterCommand_6
+   \   0000009E   0x2118             MOVS     R1,#+24
+   \   000000A0   0x2000             MOVS     R0,#+0
+   \   000000A2   0x.... 0x....      BL       Mci__GetAnalog
+   \   000000A6   0x280B             CMP      R0,#+11
+   \   000000A8   0xD008             BEQ.N    ??CommandManager__DecodeMasterCommand_6
+   \   000000AA   0x2118             MOVS     R1,#+24
+   \   000000AC   0x2000             MOVS     R0,#+0
+   \   000000AE   0x.... 0x....      BL       Mci__GetAnalog
+   \   000000B2   0x2807             CMP      R0,#+7
+   \   000000B4   0xD002             BEQ.N    ??CommandManager__DecodeMasterCommand_6
+   \   000000B6   0x2E00             CMP      R6,#+0
+   \   000000B8   0xF000 0x8082      BEQ.W    ??CommandManager__DecodeMasterCommand_3
+    343                      {// [ if(free_ramp_flag == 1) <--> free ramp down in progress --> skip command ]
+    344                          dmc_state_temp = DMC_SKIP_COMMAND;
+    345                      }
+    346                      else if(Movement_State >= CONTROLLED_RAMP_TO_ZERO_STATE)
+   \                     ??CommandManager__DecodeMasterCommand_6: (+1)
+   \   000000BC   0xF9B5 0x0016      LDRSH    R0,[R5, #+22]
+   \   000000C0   0x2803             CMP      R0,#+3
+   \   000000C2   0xDA7D             BGE.N    ??CommandManager__DecodeMasterCommand_3
+    347                      {// [ if(free_ramp_flag == 1) <--> free ramp down in progress --> skip command ]
+    348                          dmc_state_temp = DMC_SKIP_COMMAND;
+    349                      }
+    350              #ifdef MOTOR_CIM_TYPE
+    351                      else if(speed_rpm == 0)
+    352                      {// [ null final speed --> Master Command Pause ]
+    353                          
+    354                          //always free ramp down in case of PAUSE
+    355                          dmc_state_temp = DMC_COMMAND_PAUSE;
+    356                      }
+    357              #endif
+    358                      else
+    359                      {// [ final speed not null --> Command Evaluation ]
+    360                          // [DONE: Platform_Final_Speed calculation ]
+    361                          if((FALSE == Mci__GetDigital(MOTOR0, MCI_DI_REACHED_TARGET_SPEED)) && // if(sRampParams.uw16RampStatus)
+    362                             (TRUE == Mci__GetDigital(MOTOR0, MCI_DI_MOTOR_RUNNING)))
+   \   000000C4   0x2102             MOVS     R1,#+2
+   \   000000C6   0x2000             MOVS     R0,#+0
+   \   000000C8   0x.... 0x....      BL       Mci__GetDigital
+   \   000000CC   0xB968             CBNZ.N   R0,??CommandManager__DecodeMasterCommand_7
+   \   000000CE   0x2104             MOVS     R1,#+4
+   \   000000D0   0x.... 0x....      BL       Mci__GetDigital
+   \   000000D4   0x2801             CMP      R0,#+1
+   \   000000D6   0xD108             BNE.N    ??CommandManager__DecodeMasterCommand_7
+    363                          {// [ ramp in progress ]
+    364              #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    365                              if(Ramp_End_Speed <= Max_Distr_Speed_Rpm_M)
+   \   000000D8   0x8CA8             LDRH     R0,[R5, #+36]
+   \   000000DA   0xF9B5 0x101E      LDRSH    R1,[R5, #+30]
+   \   000000DE   0x4288             CMP      R0,R1
+   \   000000E0   0xDA6E             BGE.N    ??CommandManager__DecodeMasterCommand_3
+    366                              {// [ in ramp with target speed < MAX_DISTR_SPEED --> skip command ]
+    367                                  dmc_state_temp = DMC_SKIP_COMMAND;
+    368                              }
+    369                              // [ in ramp with target speed > MAX_DISTR_SPEED ]
+    370                              else if((speed_rpm >= 0) && (speed_rpm <= MAX_DISTR_SPEED))
+   \   000000E2   0x2E80             CMP      R6,#+128
+   \   000000E4   0xD26C             BCS.N    ??CommandManager__DecodeMasterCommand_3
+    371                              {// [ if new target speed is >= 0, but <= MAX_DISTR_SPEED -->
+    372                                  // stop ramp to accept the new command]
+    373                                  dmc_state_temp = DMC_STOP_RAMP;
+   \   000000E6   0x2405             MOVS     R4,#+5
+   \   000000E8   0xE06A             B.N      ??CommandManager__DecodeMasterCommand_3
+    374                              }
+    375              #else
+    376                              if(speed_rpm == 0)
+    377                              {
+    378                                  // stop ramp to accept the new command]
+    379                                  dmc_state_temp = DMC_STOP_RAMP;
+    380                              }
+    381              #endif
+    382                              else
+    383                              {
+    384                                  dmc_state_temp = DMC_SKIP_COMMAND;
+    385                              }
+    386                          }
+    387                          else
+    388                          {
+    389                              // [ command accepted ]
+    390                              Platform_Final_Speed = (sint16)((Command_Params->Transmission_Ratio * platform_final_speed_abs)>>8);
+   \                     ??CommandManager__DecodeMasterCommand_7: (+1)
+   \   000000EA   0x6B28             LDR      R0,[R5, #+48]
+   \   000000EC   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+    391                              Ramp_Time_Or_Acc = ramp_rpm_per_s;
+   \   000000F0   0xF8A5 0xA020      STRH     R10,[R5, #+32]
+   \   000000F4   0xFB17 0xF000      SMULBB   R0,R7,R0
+   \   000000F8   0x1200             ASRS     R0,R0,#+8
+   \   000000FA   0x83A8             STRH     R0,[R5, #+28]
+    392                              speed_set_point = Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16;
+   \   000000FC   0x2101             MOVS     R1,#+1
+   \   000000FE   0x2000             MOVS     R0,#+0
+   \   00000100   0x.... 0x....      BL       Mci__GetAnalog
+    393          
+    394              #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    395                              if((Platform_Final_Speed > Command_Params->Med_Regulators_Thr_Speed) && (speed_rpm<0))
+   \   00000104   0x6B2A             LDR      R2,[R5, #+48]
+   \   00000106   0xF9B2 0x3008      LDRSH    R3,[R2, #+8]
+   \   0000010A   0x1401             ASRS     R1,R0,#+16
+   \   0000010C   0xF9B5 0x001C      LDRSH    R0,[R5, #+28]
+   \   00000110   0x4283             CMP      R3,R0
+   \   00000112   0xDA01             BGE.N    ??CommandManager__DecodeMasterCommand_8
+   \   00000114   0x2E00             CMP      R6,#+0
+   \   00000116   0xD402             BMI.N    ??CommandManager__DecodeMasterCommand_4
+    396                              {// [ if Platform_Final_Speed < -MedReg_ThSpeed --> set Nack condition ]
+    397                                  dmc_state_temp = DMC_NACK_CONDITION;
+    398                              }
+    399              #else
+    400                              if(platform_final_speed_abs >= Command_Params->Max_Allowed_Speed)
+    401                              {// [ final speed not allowed --> set skip condition ]
+    402                                  dmc_state_temp = DMC_SKIP_COMMAND;
+    403                              }
+    404              #endif
+    405                              else if(speed_set_point == 0)
+   \                     ??CommandManager__DecodeMasterCommand_8: (+1)
+   \   00000118   0xB9F9             CBNZ.N   R1,??CommandManager__DecodeMasterCommand_9
+    406                              {// initial speed is zero
+    407          
+    408              #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    409                                  //-------------------- Extended Command Plausibility - begin --------------------
+    410                                  if (platform_final_speed_abs > MAX_DISTR_SPEED)
+   \   0000011A   0x2F80             CMP      R7,#+128
+   \   0000011C   0xDB01             BLT.N    ??CommandManager__DecodeMasterCommand_10
+    411                                  {
+    412                                      dmc_state_temp = DMC_NACK_CONDITION;
+   \                     ??CommandManager__DecodeMasterCommand_4: (+1)
+   \   0000011E   0x2407             MOVS     R4,#+7
+   \   00000120   0xE04E             B.N      ??CommandManager__DecodeMasterCommand_3
+    413                                  }
+    414              #ifdef MOTOR_BPM_TYPE
+    415                                  else if(Platform_Final_Speed == speed_set_point)
+   \                     ??CommandManager__DecodeMasterCommand_10: (+1)
+   \   00000122   0x2800             CMP      R0,#+0
+   \   00000124   0xD04C             BEQ.N    ??CommandManager__DecodeMasterCommand_3
+    416                                  {// [ final speed already reached --> skip command ]
+    417                                      // use the Last_Platform_Final_Speed to avoid conversion errors
+    418                                      dmc_state_temp = DMC_SKIP_COMMAND;
+    419                                  }
+    420              #endif
+    421                                  else
+    422                                  {
+    423          
+    424          
+    425              #ifdef MOTOR_BPM_TYPE
+    426                                      max_delta_speed_temp1 = (sint32)(platform_final_speed_abs * 10);
+    427                                      max_delta_speed_temp2 = (sint32)(Ramp_Time_Or_Acc * MIN_ACCELERATION_DRUM);
+    428          
+    429                                      if(max_delta_speed_temp1 < max_delta_speed_temp2)
+   \   00000126   0xF9B5 0x3020      LDRSH    R3,[R5, #+32]
+   \   0000012A   0xEB07 0x0187      ADD      R1,R7,R7, LSL #+2
+   \   0000012E   0x2419             MOVS     R4,#+25
+   \   00000130   0x0049             LSLS     R1,R1,#+1
+   \   00000132   0xFB13 0xF304      SMULBB   R3,R3,R4
+   \   00000136   0x4299             CMP      R1,R3
+   \   00000138   0xDA08             BGE.N    ??CommandManager__DecodeMasterCommand_11
+    430                                      { // Acceleration is lower than minimum admitted at startup
+    431          
+    432                                          Ramp_Time_Or_Acc = 0;
+    433          
+    434                                          if (Platform_Final_Speed > Min_Allowed_Speed)
+   \   0000013A   0xF9B5 0x2026      LDRSH    R2,[R5, #+38]
+   \   0000013E   0x2100             MOVS     R1,#+0
+   \   00000140   0x8429             STRH     R1,[R5, #+32]
+   \   00000142   0x4282             CMP      R2,R0
+   \   00000144   0xDA16             BGE.N    ??CommandManager__DecodeMasterCommand_12
+    435                                          {
+    436                                              Platform_Final_Speed = Min_Allowed_Speed;
+   \   00000146   0x83AA             STRH     R2,[R5, #+28]
+    437                                          }
+    438                                      }
+    439                                      else if (Platform_Final_Speed > Command_Params->Low_Regulators_Thr_Speed)
+    440              #else
+    441                                      if (Platform_Final_Speed > Command_Params->Low_Regulators_Thr_Speed)
+    442              #endif
+    443                                      {
+    444                                          Platform_Final_Speed = Command_Params->Low_Regulators_Thr_Speed;
+    445                                      }
+    446                                      //-------------------- Extended Command Plausibility - end --------------------
+    447                                      dmc_state_temp = DMC_RAMP_UP;
+    448                                  }
+    449              #else //APPLIANCE_TYPE_DISHWASHER
+    450          
+    451                                  if(Platform_Final_Speed == 0)
+    452                                  {// [ final speed already reached --> skip command ]
+    453                                      // use the Last_Platform_Final_Speed to avoid conversion errors
+    454                                      dmc_state_temp = DMC_SKIP_COMMAND;
+    455                                  }
+    456                                  else
+    457                                  {
+    458          
+    459                                      if (Platform_Final_Speed < Min_Allowed_Speed)
+    460                                      {
+    461                                          Platform_Final_Speed = Min_Allowed_Speed;
+    462                                      }
+    463          
+    464                                      dmc_state_temp = DMC_RAMP_UP;
+    465                                  }
+    466              #endif
+    467                              }
+    468                              else
+    469                              {
+    470                                  if(((speed_rpm > 0) && (speed_set_point < 0)) ||
+    471                                     ((speed_rpm < 0) && (speed_set_point > 0)))
+    472                                  {// [ if different sign between speed reference and platform speed --> set inversion speed ]
+    473              #ifdef  MOTOR_CIM_TYPE
+    474                                      dmc_state_temp = DMC_SPEED_INVERSION;
+    475              #else
+    476          
+    477                                      if(speed_set_point < 0)
+    478                                      {
+    479                                          Command_Speed_Negative = TRUE;
+    480                                      }
+    481                                      else
+    482                                      {
+    483                                          Command_Speed_Negative = FALSE;
+    484                                      }
+    485          
+    486                                      speed_set_point_abs = MATHCALC__ABS(speed_set_point);
+    487          
+    488                                      if(speed_set_point_abs >= Min_Allowed_Speed)
+    489                                      {
+    490                                          Platform_Final_Speed = Min_Allowed_Speed -1;
+    491          
+    492                                          dmc_state_temp = DMC_CONTROLLED_RAMP_DOWN;
+    493                                      }
+    494                                      else
+    495                                      {
+    496                                          dmc_state_temp = DMC_COMMAND_PAUSE;
+    497                                      }
+    498              #endif
+    499                                  }
+    500                                  else if(Platform_Final_Speed == Ramp_End_Speed)
+    501                                  {// [ final speed already reached --> skip command ]
+    502                                      // use the Last_Platform_Final_Speed to avoid conversion errors
+    503                                      dmc_state_temp = DMC_SKIP_COMMAND;
+    504                                  }
+    505                                  else if (MATHCALC__ABS(speed_set_point) < Platform_Final_Speed)
+    506                                  { // [ set Ramp-up condition ]
+    507                                      dmc_state_temp = DMC_RAMP_UP;
+   \   00000148   0x2402             MOVS     R4,#+2
+   \   0000014A   0xE039             B.N      ??CommandManager__DecodeMasterCommand_3
+   \                     ??CommandManager__DecodeMasterCommand_11: (+1)
+   \   0000014C   0xF9B2 0x1006      LDRSH    R1,[R2, #+6]
+   \   00000150   0x4281             CMP      R1,R0
+   \   00000152   0xDA0F             BGE.N    ??CommandManager__DecodeMasterCommand_12
+   \   00000154   0x83A9             STRH     R1,[R5, #+28]
+   \   00000156   0x2402             MOVS     R4,#+2
+   \   00000158   0xE032             B.N      ??CommandManager__DecodeMasterCommand_3
+   \                     ??CommandManager__DecodeMasterCommand_9: (+1)
+   \   0000015A   0x2E01             CMP      R6,#+1
+   \   0000015C   0xDB0C             BLT.N    ??CommandManager__DecodeMasterCommand_13
+   \   0000015E   0x2900             CMP      R1,#+0
+   \   00000160   0xD40E             BMI.N    ??CommandManager__DecodeMasterCommand_14
+   \                     ??CommandManager__DecodeMasterCommand_15: (+1)
+   \   00000162   0xF9B5 0x201E      LDRSH    R2,[R5, #+30]
+   \   00000166   0x4290             CMP      R0,R2
+   \   00000168   0xD02A             BEQ.N    ??CommandManager__DecodeMasterCommand_3
+   \   0000016A   0x2900             CMP      R1,#+0
+   \   0000016C   0xBF48             IT       MI 
+   \   0000016E   0x4249             RSBMI    R1,R1,#+0
+   \   00000170   0x4281             CMP      R1,R0
+   \   00000172   0xDA14             BGE.N    ??CommandManager__DecodeMasterCommand_16
+   \                     ??CommandManager__DecodeMasterCommand_12: (+1)
+   \   00000174   0x2402             MOVS     R4,#+2
+   \   00000176   0xE023             B.N      ??CommandManager__DecodeMasterCommand_3
+    508                                  }
+   \                     ??CommandManager__DecodeMasterCommand_13: (+1)
+   \   00000178   0x2E00             CMP      R6,#+0
+   \   0000017A   0xD5F2             BPL.N    ??CommandManager__DecodeMasterCommand_15
+   \   0000017C   0x2901             CMP      R1,#+1
+   \   0000017E   0xDBF0             BLT.N    ??CommandManager__DecodeMasterCommand_15
+   \                     ??CommandManager__DecodeMasterCommand_14: (+1)
+   \   00000180   0x2900             CMP      R1,#+0
+   \   00000182   0xD503             BPL.N    ??CommandManager__DecodeMasterCommand_17
+   \   00000184   0x2001             MOVS     R0,#+1
+   \   00000186   0x7568             STRB     R0,[R5, #+21]
+   \   00000188   0x4249             RSBS     R1,R1,#+0
+   \   0000018A   0xE001             B.N      ??CommandManager__DecodeMasterCommand_18
+   \                     ??CommandManager__DecodeMasterCommand_17: (+1)
+   \   0000018C   0x2000             MOVS     R0,#+0
+   \   0000018E   0x7568             STRB     R0,[R5, #+21]
+   \                     ??CommandManager__DecodeMasterCommand_18: (+1)
+   \   00000190   0xF9B5 0x2026      LDRSH    R2,[R5, #+38]
+   \   00000194   0x4291             CMP      R1,R2
+   \   00000196   0xDB10             BLT.N    ??CommandManager__DecodeMasterCommand_19
+   \   00000198   0x1E50             SUBS     R0,R2,#+1
+   \   0000019A   0x83A8             STRH     R0,[R5, #+28]
+   \   0000019C   0xE00F             B.N      ??CommandManager__DecodeMasterCommand_20
+    509                                  else
+    510                                  { // [ Ramp-down condition: set FREE_RAMP_DOWN or CONTROLLED_RAMP_DOWN state ]
+    511          
+    512              #ifdef  MOTOR_CIM_TYPE
+    513                                      if(ramp_rpm_per_s == 0)
+    514                                      {// [ ramp down not controlled mode ]
+    515                                          dmc_state_temp = DMC_FREE_RAMP_DOWN;
+    516                                      }
+    517                                      else if(Platform_Final_Speed <= Command_Params->Med_Regulators_Thr_Speed)
+    518                                      {// [ ramp down not controlled mode ]
+    519                                          dmc_state_temp = DMC_FREE_RAMP_DOWN;
+    520                                      }
+    521                                      else
+    522                                      {
+    523                                          // [ controlled ramp down ]
+    524                                          dmc_state_temp = DMC_CONTROLLED_RAMP_DOWN;
+    525                                      }
+    526              #else
+    527                                      if((Platform_Final_Speed >= Min_Allowed_Speed)||(Platform_Final_Speed == 0))
+   \                     ??CommandManager__DecodeMasterCommand_16: (+1)
+   \   0000019E   0xF9B5 0x2026      LDRSH    R2,[R5, #+38]
+   \   000001A2   0x4290             CMP      R0,R2
+   \   000001A4   0xDA01             BGE.N    ??CommandManager__DecodeMasterCommand_21
+   \   000001A6   0xB958             CBNZ.N   R0,??CommandManager__DecodeMasterCommand_3
+   \   000001A8   0xE000             B.N      ??CommandManager__DecodeMasterCommand_22
+    528                                      {
+    529          
+    530                                          if(Platform_Final_Speed == 0)
+   \                     ??CommandManager__DecodeMasterCommand_21: (+1)
+   \   000001AA   0xB940             CBNZ.N   R0,??CommandManager__DecodeMasterCommand_20
+    531                                          {//Stop command
+    532                                              speed_set_point_abs = MATHCALC__ABS(speed_set_point);
+    533          
+    534                                              if(speed_set_point_abs >= Min_Allowed_Speed)
+   \                     ??CommandManager__DecodeMasterCommand_22: (+1)
+   \   000001AC   0x4291             CMP      R1,R2
+   \   000001AE   0xDB04             BLT.N    ??CommandManager__DecodeMasterCommand_19
+    535                                              {//Forced a controlled ramp until the minimum allowed speed
+    536                                                  Platform_Final_Speed = Min_Allowed_Speed -1;
+   \   000001B0   0x1E50             SUBS     R0,R2,#+1
+   \   000001B2   0x83A8             STRH     R0,[R5, #+28]
+    537                                                  Command_Speed_Negative = command_speed_negative_old;
+   \   000001B4   0xF885 0x9015      STRB     R9,[R5, #+21]
+    538          
+    539                                                  dmc_state_temp = DMC_CONTROLLED_RAMP_DOWN;
+   \   000001B8   0xE001             B.N      ??CommandManager__DecodeMasterCommand_20
+    540                                              }
+    541                                              else
+    542                                              {
+    543                                                  dmc_state_temp = DMC_COMMAND_PAUSE;
+   \                     ??CommandManager__DecodeMasterCommand_19: (+1)
+   \   000001BA   0x2400             MOVS     R4,#+0
+   \   000001BC   0xE000             B.N      ??CommandManager__DecodeMasterCommand_3
+    544                                              }
+    545                                          }
+    546                                          else
+    547                                          {
+    548                                              dmc_state_temp = DMC_CONTROLLED_RAMP_DOWN;
+   \                     ??CommandManager__DecodeMasterCommand_20: (+1)
+   \   000001BE   0x2404             MOVS     R4,#+4
+    549                                          }
+    550                                      }
+    551                                      else
+    552                                      {
+    553                                          dmc_state_temp = DMC_SKIP_COMMAND;
+    554                                      }
+    555              #endif
+    556                                  }
+    557                              }
+    558                          }
+    559                      }
+    560                  }
+    561                  DMC_State = dmc_state_temp;
+   \                     ??CommandManager__DecodeMasterCommand_3: (+1)
+   \   000001C0   0x836C             STRH     R4,[R5, #+26]
+    562                  ExecuteMasterCommand();
+   \   000001C2   0xB001             ADD      SP,SP,#+4
+   \   000001C4   0xE8BD 0x46F0      POP      {R4-R7,R9,R10,LR}
+   \   000001C8   0x....             B.N      ExecuteMasterCommand
+    563              }
+    564          }
+   \                     ??CommandManager__DecodeMasterCommand_0: (+1)
+   \   000001CA   0xB001             ADD      SP,SP,#+4
+   \   000001CC   0xE8BD 0x86F0      POP      {R4-R7,R9,R10,PC}  ;; return
+    565          
+    566          /**
+    567           *  @brief      Get CommandManager last Fault
+    568           *
+    569           *  @return     Value of last fault detected by the module
+    570           */
+
+   \                                 In section .text, align 2, keep-with-next
+    571          uint16 CommandManager__GetFault(void)
+    572          {
+    573              return Fault;
+   \                     CommandManager__GetFault: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable8
+   \   00000002   0x8D00             LDRH     R0,[R0, #+40]
+   \   00000004   0x4770             BX       LR               ;; return
+    574          }
+    575          
+    576          
+    577          
+    578          
+    579          
+    580          //=====================================================================================================================
+    581          //-------------------------------------- Private Functions ------------------------------------------------------------
+    582          //=====================================================================================================================
+    583          
+
+   \                                 In section .text, align 4, keep-with-next
+    584          void ExecuteMasterCommand(void)
+    585          {
+   \                     ExecuteMasterCommand: (+1)
+   \   00000000   0xB530             PUSH     {R4,R5,LR}
+    586              uint16 temp_fault = 0;
+    587              sint32 acceleration = 0;
+    588          
+    589              switch (DMC_State)
+   \   00000002   0x....             LDR.N    R4,??DataTable8
+   \   00000004   0xF9B4 0x001A      LDRSH    R0,[R4, #+26]
+   \   00000008   0x2500             MOVS     R5,#+0
+   \   0000000A   0xB081             SUB      SP,SP,#+4
+   \   0000000C   0x280A             CMP      R0,#+10
+   \   0000000E   0xF200 0x8083      BHI.W    ??ExecuteMasterCommand_1
+   \   00000012   0xE8DF 0xF000      TBB      [PC, R0]
+   \                     ??ExecuteMasterCommand_0:
+   \   00000016   0x06 0x0A          DC8      0x6,0xA,0x1C,0x4C
+   \              0x1C 0x4C    
+   \   0000001A   0x2E 0x0E          DC8      0x2E,0xE,0x81,0x59
+   \              0x81 0x59    
+   \   0000001E   0x81 0x5F          DC8      0x81,0x5F,0x6F,0x0
+   \              0x6F 0x00    
+    590              {
+    591               //---------------------
+    592                  case DMC_SKIP_COMMAND:
+    593                  break;
+    594              //---------------------
+    595          
+    596              //---------------------
+    597                  case DMC_NACK_CONDITION:
+    598                  temp_fault = NACK;
+    599                  break;
+    600              //---------------------
+    601          
+    602              //---------------------
+    603                  case DMC_COMMAND_PAUSE:    
+    604                  
+    605                  if(Movement_State == PAUSE_STATE)
+   \                     ??ExecuteMasterCommand_2: (+1)
+   \   00000022   0xF9B4 0x0016      LDRSH    R0,[R4, #+22]
+   \   00000026   0x2800             CMP      R0,#+0
+   \   00000028   0xD07A             BEQ.N    ??ExecuteMasterCommand_3
+    606                  {// [ Target_Flag = 1, free_ramp_flag == 0, ramp_down_to_zero_flag == 0, RampEndSpeed = 0 ]
+    607                      break;
+    608                  }
+    609          
+    610              //---------------------
+    611                  
+    612              //---------------------
+    613                  case DMC_SPEED_INVERSION:
+    614                  Stop_Motor();
+   \                     ??ExecuteMasterCommand_4: (+1)
+   \   0000002A   0xB001             ADD      SP,SP,#+4
+   \   0000002C   0xE8BD 0x4030      POP      {R4,R5,LR}
+   \   00000030   0x....             B.N      Stop_Motor
+    615                  
+    616                  break;
+    617              //---------------------
+    618          
+    619          
+    620              //---------------------
+    621                  case DMC_STOP_RAMP:
+    622                  Mci__Run(MOTOR0, (Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16) + STOP_RAMP_DELTA_SPEED, (MAX_RPM_PER_SEC_ACCEL - 1));
+   \                     ??ExecuteMasterCommand_5: (+1)
+   \   00000032   0x2101             MOVS     R1,#+1
+   \   00000034   0x2000             MOVS     R0,#+0
+   \   00000036   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000003A   0x1400             ASRS     R0,R0,#+16
+   \   0000003C   0x1D41             ADDS     R1,R0,#+5
+   \   0000003E   0x4628             MOV      R0,R5
+   \   00000040   0xB001             ADD      SP,SP,#+4
+   \   00000042   0xE8BD 0x4030      POP      {R4,R5,LR}
+   \   00000046   0xF640 0x729F      MOVW     R2,#+3999
+   \   0000004A   0x.... 0x....      B.W      Mci__Run
+    623                  break;
+    624              //---------------------
+    625          
+    626              //---------------------
+    627                  case DMC_RAMP_UP:
+    628          #ifdef MOTOR_BPM_TYPE
+    629                  Ramp_Down_Flag = 0;
+    630          #endif
+    631                  if (Platform_Final_Speed > HIGH_SPEED_THRESHOLD)
+   \                     ??ExecuteMasterCommand_6: (+1)
+   \   0000004E   0xF9B4 0x101C      LDRSH    R1,[R4, #+28]
+   \   00000052   0x6B20             LDR      R0,[R4, #+48]
+   \   00000054   0xF242 0x22CF      MOVW     R2,#+8911
+   \   00000058   0x4291             CMP      R1,R2
+   \   0000005A   0xBFAC             ITE      GE 
+    632                  { // High Speed Region over 45% of max speed
+    633                      Max_Acceleration = Command_Params->Max_Acceleration_High_Speed;
+   \   0000005C   0x8A40             LDRHGE   R0,[R0, #+18]
+    634                  }
+    635                  else
+    636                  {  // Low Speed Region below 45% of max speed
+    637                      Max_Acceleration = Command_Params->Max_Acceleration_Low_Speed;
+   \   0000005E   0x8A00             LDRHLT   R0,[R0, #+16]
+    638                  }
+    639                  
+    640                  temp_fault = Run_Motor(Max_Acceleration);
+   \   00000060   0xB200             SXTH     R0,R0
+   \   00000062   0x.... 0x....      BL       Run_Motor
+   \   00000066   0x0005             MOVS     R5,R0
+    641          
+    642                  if(temp_fault == 0)
+   \   00000068   0xD156             BNE.N    ??ExecuteMasterCommand_1
+   \   0000006A   0x2002             MOVS     R0,#+2
+   \   0000006C   0x82E0             STRH     R0,[R4, #+22]
+    643          		{
+    644          			Movement_State = CONTROLLED_RAMP_STATE;
+    645          		}
+    646                  break;
+    647              //---------------------
+    648                  
+    649              //---------------------
+    650                  case DMC_CONTROLLED_RAMP_DOWN:
+    651          #ifdef MOTOR_BPM_TYPE
+    652                  Ramp_Down_Flag = 1;
+    653          #endif
+    654                  if ((Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16) > HIGH_SPEED_THRESHOLD_DEC)
+    655                  { // High Speed Region over 45% of max speed
+    656                      Max_Deceleration = Command_Params->Max_Deceleration_High_Speed;
+    657                  }
+    658                  else
+    659                  {  // Low Speed Region below 45% of max speed
+    660                      Max_Deceleration = Command_Params->Max_Deceleration_Low_Speed;
+    661                  }
+    662          
+    663                  temp_fault = Run_Motor(Max_Deceleration);
+    664          
+    665                  if(temp_fault == 0)
+    666          		{
+    667          
+    668          #ifdef MOTOR_CIM_TYPE
+    669              		Movement_State = CONTROLLED_RAMP_STATE;
+    670          
+    671          #else
+    672                  	if (Platform_Final_Speed > Min_Allowed_Speed)
+    673              		{
+    674                  		Movement_State = CONTROLLED_RAMP_STATE;
+    675              		}
+    676              		else
+    677              		{
+    678              			Movement_State = CONTROLLED_RAMP_TO_ZERO_STATE;
+    679              		}
+    680          #endif
+    681          
+    682          		}
+    683                  break;
+    684              //---------------------
+    685          
+    686              //---------------------
+    687                  case DMC_FREE_RAMP_DOWN:
+    688          
+    689                  acceleration = 0;
+    690          
+    691                  temp_fault = Run_Motor(acceleration);
+    692          
+    693                  if(temp_fault == 0)
+    694             		{
+    695                  	 Movement_State = FREE_RAMP_DOWN_STATE;
+    696             		}
+    697                  break;
+    698              //---------------------
+    699          
+    700          #if MCI_FVT_TESTS == ENABLED
+    701              //---------------------
+    702                  case DMC_START_FVT:
+    703                  if (Movement_State == PAUSE_STATE)
+    704                  {
+    705                      // clear previous results and start the fvt sequence
+    706                      ClearFvtResult(&FvtResult);
+    707                      temp_fault = Mci__FvtStart(MOTOR0);
+    708          
+    709                      if(temp_fault == 0)
+    710                      {
+    711                           Movement_State = FVT_RUNNING_STATE;
+    712                      }
+    713                  }
+    714                  break;
+    715              //---------------------
+    716          
+    717              //---------------------
+    718                  case DMC_STOP_FVT:
+    719                  if (Movement_State == FVT_RUNNING_STATE)
+    720                  {
+    721                      temp_fault = Mci__FvtStop(MOTOR0);
+    722          
+    723                      if(temp_fault == 0)
+    724                      {
+    725                           Movement_State = FVT_ABORTED_STATE;
+    726                      }
+    727                  }
+    728                  else if (Movement_State == FVT_FINISHED_STATE)
+    729                  {
+    730                      Movement_State = PAUSE_STATE;
+    731                  }
+    732                  break;
+    733              //---------------------
+    734          #endif
+    735          
+    736          
+    737              //---------------------
+    738                  default:
+    739                  break;
+    740              //---------------------
+    741              }
+    742          
+    743          #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    744              // Update Speed Regulator only if needed
+    745              if (DMC_State < DMC_SKIP_COMMAND)
+    746              {
+    747          //#ifdef MOTOR_BPM_TYPE
+    748          //    	if(Ramp_Down_Flag == 0)
+    749          //#endif
+    750          //    	{
+    751          //    		MciSetWm__UpdateSpeedRegulator(Ramp_End_Speed);
+    752          //    	}
+    753              }
+    754          #endif
+    755              //---------------------
+    756          
+    757              if (temp_fault)
+    758              {
+    759                  Stop_Motor();
+    760                  Fault = temp_fault;
+    761              }
+    762          }
+   \   0000006E   0xB001             ADD      SP,SP,#+4
+   \   00000070   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_7: (+1)
+   \   00000072   0x2101             MOVS     R1,#+1
+   \   00000074   0x2000             MOVS     R0,#+0
+   \   00000076   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000007A   0x1400             ASRS     R0,R0,#+16
+   \   0000007C   0xF241 0x1195      MOVW     R1,#+4501
+   \   00000080   0x4288             CMP      R0,R1
+   \   00000082   0x6B20             LDR      R0,[R4, #+48]
+   \   00000084   0xBFAC             ITE      GE 
+   \   00000086   0x89C0             LDRHGE   R0,[R0, #+14]
+   \   00000088   0x8980             LDRHLT   R0,[R0, #+12]
+   \   0000008A   0x62E0             STR      R0,[R4, #+44]
+   \   0000008C   0x6AE0             LDR      R0,[R4, #+44]
+   \   0000008E   0xB200             SXTH     R0,R0
+   \   00000090   0x.... 0x....      BL       Run_Motor
+   \   00000094   0x0005             MOVS     R5,R0
+   \   00000096   0xD13F             BNE.N    ??ExecuteMasterCommand_1
+   \   00000098   0xF9B4 0x0026      LDRSH    R0,[R4, #+38]
+   \   0000009C   0xF9B4 0x101C      LDRSH    R1,[R4, #+28]
+   \   000000A0   0x4288             CMP      R0,R1
+   \   000000A2   0xBFB4             ITE      LT 
+   \   000000A4   0x2002             MOVLT    R0,#+2
+   \   000000A6   0x2003             MOVGE    R0,#+3
+   \   000000A8   0x82E0             STRH     R0,[R4, #+22]
+   \   000000AA   0xB001             ADD      SP,SP,#+4
+   \   000000AC   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_8: (+1)
+   \   000000AE   0xF9B4 0x101C      LDRSH    R1,[R4, #+28]
+   \   000000B2   0x7D60             LDRB     R0,[R4, #+21]
+   \   000000B4   0x83E1             STRH     R1,[R4, #+30]
+   \   000000B6   0x2801             CMP      R0,#+1
+   \   000000B8   0xBF04             ITT      EQ 
+   \   000000BA   0x4249             RSBEQ    R1,R1,#+0
+   \   000000BC   0xB209             SXTHEQ   R1,R1
+   \   000000BE   0x2200             MOVS     R2,#+0
+   \   000000C0   0x4610             MOV      R0,R2
+   \   000000C2   0x.... 0x....      BL       Mci__Run
+   \   000000C6   0xB108             CBZ.N    R0,??ExecuteMasterCommand_9
+   \                     ??ExecuteMasterCommand_10: (+1)
+   \   000000C8   0x2503             MOVS     R5,#+3
+   \   000000CA   0xE026             B.N      ??ExecuteMasterCommand_11
+   \                     ??ExecuteMasterCommand_9: (+1)
+   \   000000CC   0x2005             MOVS     R0,#+5
+   \   000000CE   0x82E0             STRH     R0,[R4, #+22]
+   \   000000D0   0xB001             ADD      SP,SP,#+4
+   \   000000D2   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_12: (+1)
+   \   000000D4   0xF9B4 0x0016      LDRSH    R0,[R4, #+22]
+   \   000000D8   0xBB10             CBNZ.N   R0,??ExecuteMasterCommand_3
+   \   000000DA   0xF104 0x0034      ADD      R0,R4,#+52
+   \   000000DE   0x.... 0x....      BL       ClearFvtResult
+   \   000000E2   0x2000             MOVS     R0,#+0
+   \   000000E4   0x.... 0x....      BL       Mci__FvtStart
+   \   000000E8   0xB285             UXTH     R5,R0
+   \   000000EA   0xB9AD             CBNZ.N   R5,??ExecuteMasterCommand_1
+   \   000000EC   0x2006             MOVS     R0,#+6
+   \   000000EE   0x82E0             STRH     R0,[R4, #+22]
+   \   000000F0   0xB001             ADD      SP,SP,#+4
+   \   000000F2   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_13: (+1)
+   \   000000F4   0xF9B4 0x0016      LDRSH    R0,[R4, #+22]
+   \   000000F8   0x2806             CMP      R0,#+6
+   \   000000FA   0xD108             BNE.N    ??ExecuteMasterCommand_14
+   \   000000FC   0x2000             MOVS     R0,#+0
+   \   000000FE   0x.... 0x....      BL       Mci__FvtStop
+   \   00000102   0xB285             UXTH     R5,R0
+   \   00000104   0xB945             CBNZ.N   R5,??ExecuteMasterCommand_1
+   \   00000106   0x2008             MOVS     R0,#+8
+   \   00000108   0x82E0             STRH     R0,[R4, #+22]
+   \   0000010A   0xB001             ADD      SP,SP,#+4
+   \   0000010C   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_14: (+1)
+   \   0000010E   0x2807             CMP      R0,#+7
+   \   00000110   0xD106             BNE.N    ??ExecuteMasterCommand_3
+   \   00000112   0x82E5             STRH     R5,[R4, #+22]
+   \   00000114   0xB001             ADD      SP,SP,#+4
+   \   00000116   0xBD30             POP      {R4,R5,PC}
+   \                     ??ExecuteMasterCommand_1: (+1)
+   \   00000118   0xB115             CBZ.N    R5,??ExecuteMasterCommand_3
+   \                     ??ExecuteMasterCommand_11: (+1)
+   \   0000011A   0x.... 0x....      BL       Stop_Motor
+   \   0000011E   0x8525             STRH     R5,[R4, #+40]
+   \                     ??ExecuteMasterCommand_3: (+1)
+   \   00000120   0xB001             ADD      SP,SP,#+4
+   \   00000122   0xBD30             POP      {R4,R5,PC}       ;; return
+    763          
+    764          
+    765          
+
+   \                                 In section .text, align 4, keep-with-next
+    766          static void ApplicationStateMachine(void)
+    767          {
+   \                     ApplicationStateMachine: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    768              sint32 actual_speed_abs;
+    769              sint32 delta_speed_abs;
+    770          
+    771          #ifdef MOTOR_BPM_TYPE
+    772              sint32 speed_set_point_abs;
+                            ^
+Warning[Pe550]: variable "speed_set_point_abs" was set but never used
+    773          
+    774              speed_set_point_abs = MATHCALC__ABS(Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16);
+   \   00000002   0x2101             MOVS     R1,#+1
+   \   00000004   0x2000             MOVS     R0,#+0
+   \   00000006   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000000A   0x2101             MOVS     R1,#+1
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x.... 0x....      BL       Mci__GetAnalog
+    775          #endif
+    776          
+    777              actual_speed_abs =  MATHCALC__ABS( (Mci__GetAnalog(MOTOR0, MCI_AI_ACTUAL_SPEED_S16)>>16));
+   \   00000012   0x2102             MOVS     R1,#+2
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000001A   0x1400             ASRS     R0,R0,#+16
+   \   0000001C   0xD506             BPL.N    ??ApplicationStateMachine_1
+   \   0000001E   0x2102             MOVS     R1,#+2
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000026   0x1400             ASRS     R0,R0,#+16
+   \   00000028   0x4240             RSBS     R0,R0,#+0
+   \   0000002A   0xE004             B.N      ??ApplicationStateMachine_2
+   \                     ??ApplicationStateMachine_1: (+1)
+   \   0000002C   0x2102             MOVS     R1,#+2
+   \   0000002E   0x2000             MOVS     R0,#+0
+   \   00000030   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000034   0x1400             ASRS     R0,R0,#+16
+    778              delta_speed_abs = Ramp_End_Speed - actual_speed_abs;
+    779              delta_speed_abs = MATHCALC__ABS(delta_speed_abs);
+    780          
+    781          	if (Power_On_Free_Down_Cnt>0)
+   \                     ??ApplicationStateMachine_2: (+1)
+   \   00000036   0x....             LDR.N    R4,??DataTable8
+   \   00000038   0x8B21             LDRH     R1,[R4, #+24]
+   \   0000003A   0xB111             CBZ.N    R1,??ApplicationStateMachine_3
+    782              {
+    783                  --Power_On_Free_Down_Cnt;
+   \   0000003C   0x1E48             SUBS     R0,R1,#+1
+   \   0000003E   0x8320             STRH     R0,[R4, #+24]
+   \   00000040   0xBD10             POP      {R4,PC}
+    784              }        
+    785              else
+    786              {
+    787          
+    788          #if (APPLIANCE_TYPE == APPLIANCE_TYPE_WASHER)
+    789          #ifdef MOTOR_BPM_TYPE
+    790          //    	if(Ramp_Down_Flag == 1)
+    791          //    	{
+    792          //    		MciSetWm__UpdateSpeedRegulator(speed_set_point_abs);
+    793          //    	}
+    794          #endif
+    795          #endif
+    796                  switch (Movement_State)
+   \                     ??ApplicationStateMachine_3: (+1)
+   \   00000042   0xF9B4 0x1016      LDRSH    R1,[R4, #+22]
+   \   00000046   0x1E89             SUBS     R1,R1,#+2
+   \   00000048   0x2906             CMP      R1,#+6
+   \   0000004A   0xD833             BHI.N    ??ApplicationStateMachine_4
+   \   0000004C   0xE8DF 0xF001      TBB      [PC, R1]
+   \                     ??ApplicationStateMachine_0:
+   \   00000050   0x04 0x0B          DC8      0x4,0xB,0x12,0x1C
+   \              0x12 0x1C    
+   \   00000054   0x22 0x32          DC8      0x22,0x32,0x30,0x0
+   \              0x30 0x00    
+    797                  {
+    798                       //---------------------
+    799                      case PAUSE_STATE:
+    800                      // [ Target_Flag = 1, free_ramp_flag == 0, ramp_down_to_zero_flag == 0, RampEndSpeed = 0 ]
+    801                      
+    802                      break;
+    803                      //---------------------
+    804                       
+    805                       //---------------------
+    806                      case STEADY_STATE:
+    807                      // [ Target_Flag = 1, free_ramp_flag == 0, ramp_down_to_zero_flag == 0, RampEndSpeed != 0 ]
+    808          #ifdef MOTOR_BPM_TYPE
+    809          			Ramp_Down_Flag = 0;
+    810          #endif
+    811                      break;
+    812                      //---------------------
+    813                       
+    814                      //---------------------
+    815                      case CONTROLLED_RAMP_STATE:
+    816                      // [ Target_Flag = 0, free_ramp_flag == 0, ramp_down_to_zero_flag == 0, RampEndSpeed != 0 ]
+    817                      
+    818                      //--------------------- DONE ---------------------
+    819                      // [ Check Target Reached  ]
+    820                      if(TRUE == Mci__GetDigital(MOTOR0, MCI_DI_REACHED_TARGET_SPEED))
+   \                     ??ApplicationStateMachine_5: (+1)
+   \   00000058   0x2102             MOVS     R1,#+2
+   \   0000005A   0x2000             MOVS     R0,#+0
+   \   0000005C   0x.... 0x....      BL       Mci__GetDigital
+   \   00000060   0x2801             CMP      R0,#+1
+   \   00000062   0xD127             BNE.N    ??ApplicationStateMachine_4
+    821                      {    // [if(Target Reached) --> eMovementStateMachine = STEADY_STATE
+    822                          Movement_State = STEADY_STATE;
+   \   00000064   0xE025             B.N      ??ApplicationStateMachine_6
+    823                      }
+    824                      
+    825                      break;
+    826                      //---------------------
+    827                      
+    828                      //---------------------
+    829                      case CONTROLLED_RAMP_TO_ZERO_STATE:
+    830                      // [ Target_Flag = 0, free_ramp_flag == 0, ramp_down_to_zero_flag == 0, RampEndSpeed != 0 ]
+    831          
+    832                      // [ Check Min Speed Reached  ]
+    833                      if(actual_speed_abs < Min_Allowed_Speed)
+   \                     ??ApplicationStateMachine_7: (+1)
+   \   00000066   0xF9B4 0x1026      LDRSH    R1,[R4, #+38]
+   \   0000006A   0x4288             CMP      R0,R1
+   \   0000006C   0xDA22             BGE.N    ??ApplicationStateMachine_4
+    834          			{
+    835          				Stop_Motor();
+   \   0000006E   0xE8BD 0x4010      POP      {R4,LR}
+   \   00000072   0x....             B.N      Stop_Motor
+    836          			}
+    837          
+    838                      break;
+    839                      //---------------------
+    840          
+    841                      //---------------------
+    842                      case FREE_RAMP_DOWN_TO_ZERO_STATE:
+    843                      // [ Target_Flag = 0, free_ramp_flag == 1, ramp_down_to_zero_flag == 1, RampEndSpeed == 0 ]
+    844                      if (Free_Down_Cnt!=0)
+   \                     ??ApplicationStateMachine_8: (+1)
+   \   00000074   0x8C60             LDRH     R0,[R4, #+34]
+   \   00000076   0xB110             CBZ.N    R0,??ApplicationStateMachine_9
+    845                      {
+    846                          --Free_Down_Cnt;
+   \   00000078   0x1E40             SUBS     R0,R0,#+1
+   \   0000007A   0x8460             STRH     R0,[R4, #+34]
+   \   0000007C   0xBD10             POP      {R4,PC}
+    847                      }
+    848                      else
+    849                      {
+    850                          if(Mci__GetAnalog(MOTOR0, MCI_AI_ACTUAL_SPEED_S16) == 0)
+   \                     ??ApplicationStateMachine_9: (+1)
+   \   0000007E   0x2102             MOVS     R1,#+2
+   \   00000080   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000084   0xB9B0             CBNZ.N   R0,??ApplicationStateMachine_4
+    851                          {
+    852                              Movement_State = PAUSE_STATE;
+   \   00000086   0xE014             B.N      ??ApplicationStateMachine_6
+    853                          }
+    854                      }
+    855              
+    856                      break;
+    857                      //---------------------
+    858                       
+    859                      //---------------------
+    860                      case FREE_RAMP_DOWN_STATE:
+    861          
+    862                      // [ Target_Flag = 1, free_ramp_flag == 1, ramp_down_to_zero_flag == 0, RampEndSpeed != 0 ]
+    863                      if(Ramp_End_Speed >= actual_speed_abs)
+   \                     ??ApplicationStateMachine_10: (+1)
+   \   00000088   0xF9B4 0x101E      LDRSH    R1,[R4, #+30]
+   \   0000008C   0x4281             CMP      R1,R0
+   \   0000008E   0xDB11             BLT.N    ??ApplicationStateMachine_4
+    864                      {
+    865                      	Movement_State = STEADY_STATE;        // [ free_ramp_flag = 0 ]
+   \   00000090   0x2001             MOVS     R0,#+1
+   \   00000092   0xE00E             B.N      ??ApplicationStateMachine_6
+    866                      }
+    867                      break;
+    868                      //---------------------
+    869          
+    870          #if MCI_FVT_TESTS == ENABLED
+    871                      //---------------------
+    872                      case FVT_RUNNING_STATE:
+    873                          if (Mci__FvtGetStatus(MOTOR0, MCI_FVT_STATUS_FINISHED))
+   \                     ??ApplicationStateMachine_11: (+1)
+   \   00000094   0x2101             MOVS     R1,#+1
+   \   00000096   0x2000             MOVS     R0,#+0
+   \   00000098   0x.... 0x....      BL       Mci__FvtGetStatus
+   \   0000009C   0xB150             CBZ.N    R0,??ApplicationStateMachine_4
+    874                          {
+    875                              Movement_State = FVT_FINISHED_STATE;
+   \   0000009E   0x2007             MOVS     R0,#+7
+   \   000000A0   0x82E0             STRH     R0,[R4, #+22]
+    876                              // FVT is finished --> we can get the results
+    877                              Mci__FvtGetResult(MOTOR0, &FvtResult);
+   \   000000A2   0xF104 0x0134      ADD      R1,R4,#+52
+   \   000000A6   0xE8BD 0x4010      POP      {R4,LR}
+   \   000000AA   0x2000             MOVS     R0,#+0
+   \   000000AC   0x.... 0x....      B.W      Mci__FvtGetResult
+    878                          }
+    879                      break;
+    880                      //---------------------
+    881                      //---------------------
+    882                      case FVT_ABORTED_STATE:
+    883                          Movement_State = PAUSE_STATE;
+   \                     ??ApplicationStateMachine_12: (+1)
+   \   000000B0   0x2000             MOVS     R0,#+0
+   \                     ??ApplicationStateMachine_6: (+1)
+   \   000000B2   0x82E0             STRH     R0,[R4, #+22]
+    884                      break;
+    885                      //---------------------
+    886          
+    887          
+    888          #endif
+    889          
+    890          
+    891                      default:
+    892                      break;
+    893                  }
+    894          
+    895              } 
+    896          }
+   \                     ??ApplicationStateMachine_4: (+1)
+   \   000000B4   0xBD10             POP      {R4,PC}          ;; return
+    897          
+
+   \                                 In section .text, align 2, keep-with-next
+    898          void Stop_Motor()
+    899          {
+   \                     Stop_Motor: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB081             SUB      SP,SP,#+4
+    900          
+    901          #ifdef MOTOR_CIM_TYPE
+    902          	//Soft Start calculation
+    903          	MciSetWm__SoftStart(SOFT_START_ON_STOP);
+    904          #endif
+    905          
+    906              // [DONE: Free_Down_Cnt calculation ]
+    907              // Free_Down_Gain is different from -32768 for definition --> we do not have risk of saturation in the multiplication
+    908              Free_Down_Cnt = IQMATH__Q15MULQ15(MATHCALC__ABS((Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16)), Command_Params->Free_Down_Gain);
+   \   00000004   0x2101             MOVS     R1,#+1
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000000C   0x1400             ASRS     R0,R0,#+16
+   \   0000000E   0xD506             BPL.N    ??Stop_Motor_0
+   \   00000010   0x2101             MOVS     R1,#+1
+   \   00000012   0x2000             MOVS     R0,#+0
+   \   00000014   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000018   0x1400             ASRS     R0,R0,#+16
+   \   0000001A   0x4240             RSBS     R0,R0,#+0
+   \   0000001C   0xE004             B.N      ??Stop_Motor_1
+   \                     ??Stop_Motor_0: (+1)
+   \   0000001E   0x2101             MOVS     R1,#+1
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x.... 0x....      BL       Mci__GetAnalog
+   \   00000026   0x1400             ASRS     R0,R0,#+16
+   \                     ??Stop_Motor_1: (+1)
+   \   00000028   0x....             LDR.N    R1,??DataTable8
+   \   0000002A   0x6B0A             LDR      R2,[R1, #+48]
+   \   0000002C   0x8853             LDRH     R3,[R2, #+2]
+   \   0000002E   0x4358             MULS     R0,R0,R3
+   \   00000030   0x13C0             ASRS     R0,R0,#+15
+   \   00000032   0x8448             STRH     R0,[R1, #+34]
+    909          
+    910              Ramp_End_Speed = 0;
+   \   00000034   0x2000             MOVS     R0,#+0
+    911          
+    912          #ifdef MOTOR_BPM_TYPE
+    913              Platform_Final_Speed = 0;
+   \   00000036   0x61C8             STR      R0,[R1, #+28]
+    914              Ramp_Down_Flag = 0;
+    915          #endif
+    916          
+    917              Movement_State = FREE_RAMP_DOWN_TO_ZERO_STATE;
+   \   00000038   0x2004             MOVS     R0,#+4
+   \   0000003A   0x82C8             STRH     R0,[R1, #+22]
+    918          
+    919              Mci__Stop(MOTOR0, Command_Params->Max_Acceleration_Low_Speed);
+   \   0000003C   0x2000             MOVS     R0,#+0
+   \   0000003E   0x8A11             LDRH     R1,[R2, #+16]
+   \   00000040   0xB001             ADD      SP,SP,#+4
+   \   00000042   0xF85D 0xEB04      POP      {LR}
+   \   00000046   0x.... 0x....      B.W      Mci__Stop
+    920          }
+    921          
+    922          
+    923          
+    924          //---------------------------------------------------------------------------------------------------------------------
+    925          /**
+    926           *  @brief     Run motor
+    927           *  @details
+    928           *
+    929           *
+    930           *  @param[in]
+    931           *  @param[out]
+    932           *  @return
+    933           */
+
+   \                                 In section .text, align 2, keep-with-next
+    934          uint16 Run_Motor(sint16 acceleration_limit)
+    935          {
+   \                     Run_Motor: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+    936              sint16 temp_fault = 0;
+    937              sint16 speed = 0;
+    938              sint32 acceleration = 0;
+    939          
+    940          	// [ final speed in RPM format ]
+    941          	Ramp_End_Speed = Platform_Final_Speed;
+   \   00000002   0x....             LDR.N    R5,??DataTable8
+   \   00000004   0xF9B5 0x601C      LDRSH    R6,[R5, #+28]
+   \   00000008   0x83EE             STRH     R6,[R5, #+30]
+   \   0000000A   0x4604             MOV      R4,R0
+    942          
+    943          	speed = Ramp_End_Speed;
+    944          	if(Command_Speed_Negative == TRUE)
+   \   0000000C   0x7D68             LDRB     R0,[R5, #+21]
+   \   0000000E   0x2200             MOVS     R2,#+0
+   \   00000010   0x2801             CMP      R0,#+1
+   \   00000012   0xBF04             ITT      EQ 
+    945          	{
+    946          		speed = -speed;
+   \   00000014   0x4276             RSBEQ    R6,R6,#+0
+   \   00000016   0xB236             SXTHEQ   R6,R6
+    947          	}
+    948          
+    949          	if(acceleration_limit != 0)
+   \   00000018   0xB1D4             CBZ.N    R4,??Run_Motor_0
+    950          	{
+    951          
+    952          #ifdef INDESIT_LEGACY
+    953          		if(Ramp_Time_Or_Acc == 0)
+   \   0000001A   0xF9B5 0x0020      LDRSH    R0,[R5, #+32]
+   \   0000001E   0xB908             CBNZ.N   R0,??Run_Motor_1
+    954          		{
+    955          			Ramp_Time_Or_Acc = 1; //avoid division by 0
+   \   00000020   0x2001             MOVS     R0,#+1
+   \   00000022   0x8428             STRH     R0,[R5, #+32]
+    956          		}
+    957          
+    958          		acceleration = (speed - (Mci__GetAnalog(MOTOR0, MCI_AI_SPEED_REFERENCE_RPM_S16)>>16)) * 10;
+   \                     ??Run_Motor_1: (+1)
+   \   00000024   0x2101             MOVS     R1,#+1
+   \   00000026   0x2000             MOVS     R0,#+0
+   \   00000028   0x.... 0x....      BL       Mci__GetAnalog
+   \   0000002C   0xEBA6 0x4020      SUB      R0,R6,R0, ASR #+16
+   \   00000030   0xEB00 0x0180      ADD      R1,R0,R0, LSL #+2
+   \   00000034   0x0048             LSLS     R0,R1,#+1
+    959          		acceleration = (sint32)((MATHCALC__ABS(acceleration)) / Ramp_Time_Or_Acc); // Ramp_Time_Or_Acc Resolution is 100ms
+   \   00000036   0xBF48             IT       MI 
+   \   00000038   0x4240             RSBMI    R0,R0,#+0
+   \   0000003A   0xF9B5 0x1020      LDRSH    R1,[R5, #+32]
+   \   0000003E   0xFB90 0xF2F1      SDIV     R2,R0,R1
+    960          #else
+    961          		if(Ramp_Time_Or_Acc == 0)
+    962          		{
+    963          			Ramp_Time_Or_Acc = acceleration_limit; 
+    964          		}
+    965          		
+    966          		
+    967          		acceleration = Ramp_Time_Or_Acc;
+    968          #endif
+    969          
+    970          		if(acceleration > acceleration_limit)
+   \   00000042   0x4294             CMP      R4,R2
+   \   00000044   0xBFB8             IT       LT 
+    971          		{
+    972          			acceleration = acceleration_limit;
+   \   00000046   0x4622             MOVLT    R2,R4
+   \   00000048   0xDB02             BLT.N    ??Run_Motor_0
+    973          		}
+    974          		else if(acceleration < 1)
+   \   0000004A   0x2A01             CMP      R2,#+1
+   \   0000004C   0xBFB8             IT       LT 
+    975          		{
+    976          			acceleration = 2;
+   \   0000004E   0x2202             MOVLT    R2,#+2
+    977          		}
+    978          	}
+    979          	else
+    980          	{
+    981          	     acceleration = 0;
+    982          	}
+    983          
+    984          	temp_fault = Mci__Run(MOTOR0, speed, acceleration);
+    985          
+    986          	if(temp_fault)
+   \                     ??Run_Motor_0: (+1)
+   \   00000050   0x4631             MOV      R1,R6
+   \   00000052   0x2000             MOVS     R0,#+0
+   \   00000054   0x.... 0x....      BL       Mci__Run
+   \   00000058   0xB100             CBZ.N    R0,??Run_Motor_2
+    987          	{
+    988          		temp_fault = NACK;
+   \   0000005A   0x2003             MOVS     R0,#+3
+    989          	}
+    990          	else
+    991          	{
+    992          		temp_fault = 0;
+    993          	}
+    994          
+    995          #ifdef MOTOR_CIM_TYPE
+    996              //Soft Start calculation
+    997          	MciSetWm__SoftStart(SOFT_START_ON_START);
+    998          #endif
+    999          
+   1000          	return temp_fault;
+   \                     ??Run_Motor_2: (+1)
+   \   0000005C   0xBD70             POP      {R4-R6,PC}       ;; return
+   1001          
+   1002          }
+   1003          
+   1004          #if MCI_FVT_TESTS == ENABLED
+
+   \                                 In section .text, align 2, keep-with-next
+   1005          void ClearFvtResult(MCI_FVT_TEST_RESULT_TYPE *fvt_data_result)
+   1006          {
+   1007              fvt_data_result->Error_List                         = 0;
+                                                                         ^
+Warning[Pe188]: enumerated type mixed with another type
+
+  static uint16 Ramp_Down_Flag;
+                ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\CommandManager\CommandManager.c",95  Warning[Pe550]: 
+          variable "Ramp_Down_Flag" was set but never used
+
+  static COMMAND_PARAMS_TYPE Command_Params_Ram;
+                             ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\CommandManager\CommandManager.c",105  Warning[Pe177]: 
+          variable "Command_Params_Ram" was declared but never referenced
+
+  static MCL_PARAMS_DISPL4_TYPE *Command_SpeedCntrl_Params;
+                                 ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\CommandManager\CommandManager.c",107  Warning[Pe177]: 
+          variable "Command_SpeedCntrl_Params" was declared but never
+          referenced
+
+  static MCISENSORSWM_PARAMS_TYPE *Command_MciSensorsWm_Params;
+                                   ^
+"C:\Data\Python\Windy_sBpm_Floating\source\Category\Application\CommandManager\CommandManager.c",108  Warning[Pe177]: 
+          variable "Command_MciSensorsWm_Params" was declared but never
+          referenced
+   \                     ClearFvtResult: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0x74C1             STRB     R1,[R0, #+19]
+   1008              fvt_data_result->OC_Test_Found                      = 0;
+   \   00000004   0x7481             STRB     R1,[R0, #+18]
+   1009              fvt_data_result->Sensors_Test_Avg_Curr_A            = 0;
+   \   00000006   0x8101             STRH     R1,[R0, #+8]
+   1010              fvt_data_result->Sensors_Test_Avg_Curr_B            = 0;
+   \   00000008   0x8141             STRH     R1,[R0, #+10]
+   1011              fvt_data_result->Sensors_Test_Avg_Curr_C            = 0;
+   \   0000000A   0x8181             STRH     R1,[R0, #+12]
+   1012              fvt_data_result->Sensors_Test_Avg_DC_Bus_Volt       = 0;
+   \   0000000C   0x8001             STRH     R1,[R0, #+0]
+   1013              fvt_data_result->Sensors_Test_Avg_Phase_Volt_A      = 0;
+   \   0000000E   0x8041             STRH     R1,[R0, #+2]
+   1014              fvt_data_result->Sensors_Test_Avg_Phase_Volt_B      = 0;
+   \   00000010   0x8081             STRH     R1,[R0, #+4]
+   1015              fvt_data_result->Sensors_Test_Avg_Phase_Volt_C      = 0;
+   \   00000012   0x80C1             STRH     R1,[R0, #+6]
+   1016              fvt_data_result->Surge_Test_Avg_DC_Bus_Volt_Close   = 0;
+   \   00000014   0x8201             STRH     R1,[R0, #+16]
+   1017              fvt_data_result->Surge_Test_Avg_DC_Bus_Volt_Open    = 0;
+   \   00000016   0x81C1             STRH     R1,[R0, #+14]
+   1018          }
+   \   00000018   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \   00000000   0x........         DC32     Command_Params_SF
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \   00000000   0x........         DC32     SF_Application_Params
+   1019          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   ApplicationStateMachine
+         0   -> Mci__FvtGetResult
+         8   -> Mci__FvtGetStatus
+         8   -> Mci__GetAnalog
+         8   -> Mci__GetDigital
+         0   -> Stop_Motor
+       0   ClearFvtResult
+       0   CommandManager__5msHandler
+         0   -> ApplicationStateMachine
+      32   CommandManager__DecodeMasterCommand
+         0   -> ExecuteMasterCommand
+        32   -> FaultManager__GetFaultToPublish
+        32   -> Mci__GetAnalog
+        32   -> Mci__GetDigital
+       0   CommandManager__GetFault
+       8   CommandManager__Initialize
+         0   -> ClearFvtResult
+         8   -> Mci__Stop
+       0   CommandManager__UnLockAcceleration
+      16   ExecuteMasterCommand
+        16   -> ClearFvtResult
+        16   -> Mci__FvtStart
+        16   -> Mci__FvtStop
+        16   -> Mci__GetAnalog
+         0   -> Mci__Run
+        16   -> Mci__Run
+        16   -> Run_Motor
+         0   -> Stop_Motor
+        16   -> Stop_Motor
+      16   Run_Motor
+        16   -> Mci__GetAnalog
+        16   -> Mci__Run
+       8   Stop_Motor
+         8   -> Mci__GetAnalog
+         0   -> Mci__Stop
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+     182  ApplicationStateMachine
+      26  ClearFvtResult
+      42  CommandManager__5msHandler
+     464  CommandManager__DecodeMasterCommand
+       6  CommandManager__GetFault
+      46  CommandManager__Initialize
+      44  CommandManager__UnLockAcceleration
+      72  Command_Params_SF
+          ParamsReady
+          Command_Speed_Negative
+          Movement_State
+          Power_On_Free_Down_Cnt
+          DMC_State
+          Platform_Final_Speed
+          Ramp_End_Speed
+          Ramp_Time_Or_Acc
+          Free_Down_Cnt
+          Max_Distr_Speed_Rpm_M
+          Min_Allowed_Speed
+          Fault
+          Max_Deceleration
+          Command_Params
+          FvtResult
+       8  Command_Wm_Prm_Ram_1
+       8  Command_Wm_Prm_Ram_2
+     292  ExecuteMasterCommand
+       4  Max_Acceleration
+       2  Ramp_Down_Flag
+      94  Run_Motor
+      74  Stop_Motor
+
+ 
+    22 bytes in section .bss
+    72 bytes in section .data
+ 1 278 bytes in section .text
+ 
+ 1 278 bytes of CODE memory
+    94 bytes of DATA memory
+
+Errors: none
+Warnings: 6

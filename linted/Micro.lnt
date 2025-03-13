@@ -1,0 +1,650 @@
+
+--- Module:   C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c (C)
+static const MICRO_ID_TYPE MICRO_CPU_IDENTIFICATION = {(uint8 *)MICRO_ID,5};
+                                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:515: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	RCM.SSRS0 |= RCM_SSRS0_SWDOG_MASK;							//Clear Watchdog Timeout flag
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:747: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    NVIC.Disable[0] = 0xFFFFFFFF;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:750: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    NVIC.Clear[0] = 0xFFFFFFFF;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:751: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        NVIC.Priority[index] = NVIC_INTERRUPT_PRIORITY_CLEAR;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:756: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SCB.AIRCR = AIRC_VECTKEY_MASK | (0x5 << SCB_AIRCR_PRIGROUP_POS);
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:760: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SCB.CCR |= 0x10;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:771: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SCB.VTOR = NVIC_VECTTAB_FLASH;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:774: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:774: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        Micro_Flash_Crc_Pt = MICRO_FLASH_START_ADDRESS;
+                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:785: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	    SRData__UpdateLong((uint32 PACKED *)&Run_Time_Stack_Pointer, (uint32 PACKED *)&Run_Time_Stack_Pointer_Inv,MICRO_STACK_TEST_START_ADDRESS);
+                                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:789: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:789: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        pt_stack_test = (uint32*)MICRO_STACK_TEST_END_ADDRESS;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:791: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        pt_stack_test = (uint32*)MICRO_STACK_TEST_START_ADDRESS;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:797: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        SIM.SCGC5 |= SIM_SCGC5_LPTMR_MASK;									//Enable LPTMR module clock
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:808: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.CSR = 0;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:810: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.CMR = LPTMR_CMR_COMPARE(MICRO_LPTIMER_COMPARE_VAL); 			//Set the compare value to the number of ms to delay
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:811: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.PSR = LPTMR_PSR_PCS(0x1) | LPTMR_PSR_PBYP_MASK; 				//Use LPO clock and bypass prescale
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:812: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.CSR |= LPTMR_CSR_TEN_MASK | LPTMR_CSR_TIE_MASK;				//Start the timer
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:813: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        NVIC.Clear[1]|=0x04000000;											//Clear pending IRQ before enabling this IRQ
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:814: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		MCG.MCG_C2.BYTE|= MCG_C2_IRCS_MASK;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:841: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		temp_reg = MCG.MCG_C1.BYTE;
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:843: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		MCG.MCG_C1.BYTE = 1<< MCG_C1_CLKS_SHIFT;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:846: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+				if (!(MCG.MCG_S.BYTE & MCG_S_IRCST_MASK))
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:852: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			if (((MCG.MCG_S.BYTE & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x1)
+                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:860: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		MCG.MCG_C1.BIT.IRCLKEN = TRUE;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:864: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		MCG.MCG_SC.BIT.FCRDIV = 0;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:865: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		MCG.MCG_C6.BYTE = 0<<MCG_C6_PLLS_SHIFT;   				//FLL is selected
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:866: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+}
+^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:873: Info: Lint: 438 Last value assigned to variable 'temp_reg' (defined at line 831) not used
+
+		PMC.LVDSC1.BIT.LVDACK = 1;                      //LVWF must be clear by writing LVWACK first
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:884: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			PMC.LVDSC1.BIT.LVDRE = FALSE;               //LVD events do not generate hardware resets
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:892: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			PMC.LVDSC1.BIT.LVDIE = FALSE;               //Configure the interrupt i.e Low-voltage warning Interrupt Disable.
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:893: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		PMC.LVDSC1.BYTE |= PMC_LVDSC1_LVDV(LVD_LEVEL);             //Selects Low-Voltage Detect Voltage Select
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:898: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		PMC.LVDSC2.BIT.LVWACK = 1;                      //LVWF must be clear by writing LVWACK first
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:901: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+			PMC.LVDSC2.BIT.LVWIE = FALSE;               //Enables hardware interrupt requests for LVWF.
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:907: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		PMC.LVDSC2.BYTE |= PMC_LVDSC2_LVWV(LVW_LEVEL);             //Selects Low-Voltage Warning Voltage Select
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:914: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            PMC.LVDSC2.BIT.LVWACK = 1;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:940: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        if(PMC.LVDSC1.BIT.LVDRE == TRUE)
+           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:960: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    tmppriority = (0x700 - ((SCB.AIRCR) & (uint32)0x700))>> 0x08;
+                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:997: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	    SCB.SHP[((uint32)(irqchnl) & 0xF)-4] = tmppriority;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1007: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	    NVIC.Priority[(uint32)(irqchnl)] = tmppriority;
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1011: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        NVIC.Enable[(uint32)((uint32)irqchnl) >> 5] = (uint32)(1 << ((uint32)((uint32)irqchnl) & (uint32)0x1F));
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1014: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	   	NVIC.Disable[((uint32)(irqchnl) >> 5)] = (1 << ((uint32)(irqchnl) & 0x1F));
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1032: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    if ((SCB.HFSR & (1 << 30)) != 0)
+         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1044: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        if ((SCB.CFSR & (1UL << 25)) != 0)
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1046: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.CSR |= LPTMR_CSR_TCF_MASK;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1081: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        LPTMR0.CSR = (LPTMR_CSR_TEN_MASK | LPTMR_CSR_TIE_MASK | LPTMR_CSR_TCF_MASK);
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1082: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        save_reset_value    =   (*(uint8 *)(&Micro_ResetInfo.Actual_Reset));
+                                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1228: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        save_reset_value   |=   ((*(uint8 *)(&Micro_ResetInfo.Reset)) << 8);
+                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1229: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            for (counter = MICRO_RAM_START_ADDRESS; counter <= MICRO_RAM_END_ADDRESS; counter++)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1247: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1247: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint8 *)counter) = 0;
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1249: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_START_ADDRESS; counter <= MICRO_RAM_END_ADDRESS; counter++)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1253: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1253: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                if (*((uint8 *)counter) != 0)
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1255: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint8 *)counter) = 0xFF;
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1259: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_START_ADDRESS; counter <= MICRO_RAM_END_ADDRESS; counter++)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1265: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1265: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                if (*((uint8 *)counter) != 0xFF)
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1267: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint8 *)counter) = 0x0;
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1271: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_END_ADDRESS; counter >= MICRO_RAM_START_ADDRESS; counter--)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1275: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1275: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                if (*((uint8 *)counter) != 0)
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1277: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint8 *)counter) = 0xFF;
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1281: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_END_ADDRESS; counter >= MICRO_RAM_START_ADDRESS; counter--)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1288: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1288: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                if (*((uint8 *)counter) != 0xFF)
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1290: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint8 *)counter) = 0x0;
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1294: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_START_ADDRESS; counter <= MICRO_RAM_END_ADDRESS; counter++)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1299: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1299: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                if (*((uint8 *)counter) != 0)
+                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1301: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            for (counter = MICRO_RAM_START_ADDRESS; counter <= MICRO_RAM_END_ADDRESS; counter += 4)
+                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1315: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1315: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                result = *((uint32 *) counter);
+                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1319: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    *((uint32 *) counter) = mask;
+                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1323: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    if (*((uint32 *) counter) != mask)
+                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1324: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                *((uint32 *) counter) = result;
+                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1330: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        (*(uint8 *)(&Micro_ResetInfo.Reset))        = (save_reset_value >> 8) & 0xFF;
+                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1344: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        (*(uint8 *)(&Micro_ResetInfo.Actual_Reset)) = save_reset_value & 0xFF;
+                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1345: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        if(SRData__CheckLong((uint32 PACKED *)&Run_Time_Stack_Pointer,(uint32 PACKED *)&Run_Time_Stack_Pointer_Inv)== SRDATA_OK)
+                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1436: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1436: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            stack_test_ptr = (uint8 *)Run_Time_Stack_Pointer;
+                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1444: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            stack_next_location_ptr = (uint8 *)stack_test_ptr+1;
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1445: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            stack_previous_location_ptr = (uint8 *)(stack_test_ptr - 1);
+                                                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1446: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                if ( stack_test_ptr == (uint8 *)MICRO_STACK_TEST_START_ADDRESS)
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1451: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    stack_next_location_ptr = (uint8 *)(stack_test_ptr + 1);
+                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1453: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                    stack_previous_location_ptr = (uint8 *)(stack_test_ptr + 2);
+                                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1454: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                if ( stack_test_ptr == (uint8 *)MICRO_STACK_TEST_END_ADDRESS)
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1457: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    stack_next_location_ptr = (uint8 *)(stack_test_ptr - 2);
+                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1459: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                    stack_previous_location_ptr = (uint8 *)(stack_test_ptr - 1);
+                                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1460: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                if ( stack_test_ptr == (uint8 *)MICRO_STACK_TEST_END_ADDRESS)
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1517: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    stack_test_ptr = (uint8 *)MICRO_STACK_TEST_START_ADDRESS;
+                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1519: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                    stack_next_location_ptr = (uint8 *)(stack_test_ptr + 1);
+                                                                           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1525: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                    stack_previous_location_ptr = (uint8 *)(stack_test_ptr - 1);
+                                                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1526: Info: Lint: 926 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            Run_Time_Stack_Pointer = (uint32 *)stack_test_ptr;
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1531: Info: Lint: 927 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            Run_Time_Stack_Pointer_Inv = ((uint32 *)~((uint32)Run_Time_Stack_Pointer));
+                                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1532: Info: Lint: 923 cast from pointer to unsigned long [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                                                     ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1532: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        if ((stack_test_data & RUN_TIME_STACK_TEST_TRUE) == 0)
+                                                             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1537: Info: Lint: 644 Variable 'stack_test_data' (line 1401) may not have been initialized
+
+            MICRO_SR_EXCEPTION_CONTINUOUS_RAM(Run_Time_Stack_Pointer);
+#... (EXCEPTION_RAM_RUNTIME_CORRUPTION,(uint8)Run_Time_Stack_Pointer,0)
+                                                                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1540: Info: Lint: 923 cast from pointer to unsigned char [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        pt_stack_test = (uint32*)MICRO_STACK_TEST_END_ADDRESS;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1554: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        pt_stack_test = (uint32*)MICRO_STACK_TEST_START_ADDRESS;
+                                 ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1566: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        SMC.PMPROT.BIT.AHSRUN = 1;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1604: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+        SMC.PMCTRL = SMC_PMCTRL_RUNM(3);
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1607: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+            if (SMC.PMSTAT != 0x80)
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1612: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    Micro_ResetInfo.Warm_Reset_Actions &= ~warm_reset_action;
+                                                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1780: Info: Lint: 64 Type mismatch (assignment) (int/enum)
+
+            Micro_Flash_Crc = Crc16__ConstRangeProcess((uint8 *)Micro_Flash_Crc_Pt,Micro_Flash_Crc,4);
+                                                                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1847: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+            if (Micro_Flash_Crc_Pt >= (uint32 *)MICRO_FLASH_END_ADDRESS)
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1852: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1852: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                Micro_Flash_Crc_Pt = (uint32 *)MICRO_FLASH_START_ADDRESS;
+                                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1862: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1862: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+    return (MICRO_CPU_ID());
+                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1895: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	if(PMC.REGSC.BYTE & PMC_REGSC_ACKISO_MASK)
+           ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1926: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		PMC.REGSC.BYTE |= PMC_REGSC_ACKISO_MASK;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1928: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	temp2_reg = SIM.CLKDIV1;
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1931: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SIM.CLKDIV1 = temp2_reg;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1935: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        OSC.OSC_CR |= (OSC_CR_ERCLKEN_MASK) | (MICRO_OSC_SC2P << OSC_CR_SC2P_SHIFT) | (MICRO_OSC_SC4P << OSC_CR_SC4P_SHIFT) | \
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1947: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C2.BYTE = 0;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1953: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        temp_reg = MCG.MCG_C2.BYTE;
+                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1954: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C2.BYTE = temp_reg;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1970: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        temp_reg = MCG.MCG_C1.BYTE;
+                                   ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1974: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C1.BYTE = temp_reg;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1977: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                            if (MCG.MCG_S.BYTE & MCG_S_OSCINIT0_MASK)
+                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1982: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                            if (!(MCG.MCG_S.BYTE & MCG_S_IREFST_MASK))
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1989: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                            if (((MCG.MCG_S.BYTE & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x2)
+                                  ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:1996: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C6.BYTE |= MCG_C6_CME0_MASK;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2002: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C4.BIT.DMX32 = 1;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2004: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                        MCG.MCG_C4.BIT.DRST_DRS = DCO_RANGE;
+                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2005: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    MCG.MCG_C4.BIT.DRST_DRS = DCO_RANGE_INT;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2226: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    MCG.MCG_C4.BIT.DMX32 = 1;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2232: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	SIM.CLKDIV1 = temp2_reg;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2234: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	tmp = (MCG.MCG_S.BYTE & MCG_S_CLKST_MASK);					//Get SYSCLK source
+               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2252: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		tmp = (MCG.MCG_C1.BYTE & MCG_C1_IREFS_MASK);
+                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2258: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		if (MCG.MCG_S.BIT.IRCST == 1)
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2295: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	Micro_ClocksStatus.SYSCLK_Frequency = (Micro_ClocksStatus.SYSCLK_Frequency / (((SIM.CLKDIV1 & SIM_CLKDIV1_OUTDIV1_MASK) >> SIM_CLKDIV1_OUTDIV1_SHIFT) + 1));
+                                                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2317: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	Micro_ClocksStatus.BUSCLK_Frequency = (Micro_ClocksStatus.BUSCLK_Frequency / (((SIM.CLKDIV1 & SIM_CLKDIV1_OUTDIV2_MASK) >> SIM_CLKDIV1_OUTDIV2_SHIFT) + 1));
+                                                                                        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2323: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	Micro_ClocksStatus.FLEXBUS_Frequency = (Micro_ClocksStatus.FLEXBUS_Frequency / (((SIM.CLKDIV1 & SIM_CLKDIV1_OUTDIV3_MASK) >> SIM_CLKDIV1_OUTDIV3_SHIFT) + 1));
+                                                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2326: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	Micro_ClocksStatus.FLASH_Frequency = (Micro_ClocksStatus.FLASH_Frequency / (((SIM.CLKDIV1 & SIM_CLKDIV1_OUTDIV4_MASK) >> SIM_CLKDIV1_OUTDIV4_SHIFT) + 1));
+                                                                                      ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2329: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SYSTICK.CTRL &= SYSTICK_COUNTER_DISABLE;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2342: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    SCB.CPACR |= MICRO_SCB_CPACR_ENABLE_CP10_CP11_CO_PROCESSOR;
+    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2347: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG_Unlock();
+#...                    {WDOG.UNLOCK = 0xC520; WDOG.UNLOCK = 0xD928;}
+                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2386: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG_Unlock();
+#... OG.UNLOCK = 0xC520; WDOG.UNLOCK = 0xD928;}
+                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2386: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.STCTRLH = WDOG_STCTRLH_BYTESEL(0x00) |		// test byte 0 when in byte test mode
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2388: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.PRESC = WDOG_PRESC_PRESCVAL(WDG_PRESCALER);			// prescalar = PRESC+1
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2399: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.WINH = 0;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2400: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.WINL = 0;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2401: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.TOVALH = 0;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2404: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+		WDOG.TOVALL = IWDG_RELOAD_VALUE;
+                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2405: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	WDOG_Unlock();
+#...            {WDOG.UNLOCK = 0xC520; WDOG.UNLOCK = 0xD928;}
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2422: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	WDOG_Unlock();
+#... K = 0xC520; WDOG.UNLOCK = 0xD928;}
+                    ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2422: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	WDOG.STCTRLH &= ~WDOG_STCTRLH_WDOGEN_MASK;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2425: Info: Lint: 923 cast from unsigned int to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	*((uint8 *) (&reset)) = 0;
+                            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2439: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+	if ((RCM.SRS0 & RCM_SRS0_WDOG_MASK) || (RCM.SSRS0 & RCM_SSRS0_SWDOG_MASK))				//if ((SIM_CLK.SIM_SRSID & SIM_SRSID_WDOGRSTF) != FALSE)
+             ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2442: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2442: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if (RCM.SRS0 & RCM_SRS0_LVD_MASK)
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2448: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if (RCM.SRS1 & RCM_SRS1_SW_MASK)
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2454: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if (RCM.SRS0 & RCM_SRS0_POR_MASK)
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2460: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	if (RCM.SRS0 & RCM_SRS0_PIN_MASK)
+            ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2470: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	RCM.SSRS0 = 0x7F;						//Clear System Reset Status Register
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2475: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+	RCM.SSRS1 = 0x3F;
+        ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2476: Info: Lint: 923 cast from unsigned long to pointer [Encompasses MISRA 2004 Rule 11.1], [MISRA 2004 Rule 11.3]
+
+    for ( Micro_Flash_Crc_Pt = MICRO_FLASH_START_ADDRESS; Micro_Flash_Crc_Pt <= MICRO_FLASH_END_ADDRESS; Micro_Flash_Crc_Pt++ )
+                               ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2534: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+                                                                                ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2534: Info: Lint: 929 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        Micro_Flash_Crc = Crc16__RangeProcess((uint8 *)Micro_Flash_Crc_Pt,Micro_Flash_Crc,4);
+                                                                         ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2537: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+        local_reset_info.Warm_Reset_Actions &= ~MICRO_WARM_RESET_ACTION_SKIP_WATCHDOG_TEST;
+                                                                                          ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2601: Info: Lint: 64 Type mismatch (assignment) (int/enum)
+
+    (*(uint8 *)&(Micro_ResetInfo.Reset))        = 0;
+                                       ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2631: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
+    (*(uint8 *)&(Micro_ResetInfo.Actual_Reset)) = 0;
+                                              ^
+C:\Data\Python\Windy_sBpm_Floating\source\XCategory\Driver\Micro\Micro.c:2632: Info: Lint: 928 cast from pointer to pointer [MISRA 2004 Rule 11.4]
+
