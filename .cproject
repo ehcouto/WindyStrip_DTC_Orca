@@ -2,8 +2,13 @@
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		<cconfiguration id="0.1938129809">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1938129809" moduleId="org.eclipse.cdt.core.settings" name="Default">
+=======
+		<cconfiguration id="0.1004834516">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1004834516" moduleId="org.eclipse.cdt.core.settings" name="Default">
+>>>>>>> Stashed changes
 =======
 		<cconfiguration id="0.1004834516">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.1004834516" moduleId="org.eclipse.cdt.core.settings" name="Default">
@@ -20,6 +25,7 @@
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				<configuration buildProperties="" description="" id="0.1938129809" name="Default" optionalBuildProperties="" parent="org.eclipse.cdt.build.core.prefbase.cfg">
 					<folderInfo id="0.1938129809." name="/" resourcePath="">
 						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.2067594544" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
@@ -35,6 +41,8 @@
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1498108115" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1823760810" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 =======
+=======
+>>>>>>> Stashed changes
 				<configuration buildProperties="" description="" id="0.1004834516" name="Default" optionalBuildProperties="" parent="org.eclipse.cdt.build.core.prefbase.cfg">
 					<folderInfo id="0.1004834516." name="/" resourcePath="">
 						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1367073488" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
@@ -49,6 +57,9 @@
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.50990310" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.287270925" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 							</tool>
 						</toolChain>
@@ -60,7 +71,11 @@
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		<project id="WindyStrip_DTC_Orca.null.511963515" name="WindyStrip_DTC_Orca"/>
+=======
+		<project id="ProjectTemplate.null.872095359" name="ProjectTemplate"/>
+>>>>>>> Stashed changes
 =======
 		<project id="ProjectTemplate.null.872095359" name="ProjectTemplate"/>
 >>>>>>> Stashed changes
@@ -70,6 +85,7 @@
 		<scannerConfigBuildInfo instanceId="0.1004834516">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		<scannerConfigBuildInfo instanceId="0.1938129809">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
@@ -84,6 +100,8 @@
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
 =======
+=======
+>>>>>>> Stashed changes
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
@@ -93,4 +111,7 @@
 		</configuration>
 	</storageModule>
 </cproject>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
