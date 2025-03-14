@@ -7,6 +7,14 @@
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+			<triggers>clean,full,incremental,</triggers>
+>>>>>>> Stashed changes
+=======
+			<triggers>clean,full,incremental,</triggers>
+>>>>>>> Stashed changes
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -21,6 +29,12 @@
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		<nature>org.eclipse.cdt.core.ccnature</nature>
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 	</natures>
 </projectDescription>
